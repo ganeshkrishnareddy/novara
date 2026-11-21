@@ -13,16 +13,14 @@ An open-source, self-hostable business operating system that unifies CRM, lead i
 - `docs/MASTER_TASK_BOARD.md` — task IDs, owners, status and evidence.
 - `docs/research/` — repository, licensing and architecture research.
 
-## Verified environment (2026-11-22)
+## Development prerequisites
 
-| Item | Finding |
-|---|---|
-| Location | `D:\NOVARA` |
-| D: free space | ~134 GB |
-| Git | 2.55.0.windows.3 |
-| Node / npm | 24.18.0 / 11.16.0 |
-| Python | 3.12.10 |
-| Docker | **not installed** — blocks Docker/self-hosting build targets |
+- Git
+- Node.js and npm (current LTS)
+- Python 3.11+
+- Docker, required for the local container stack and container-based testing
+
+Container tooling is still being provisioned for development — see `docs/BLOCKERS.md`.
 
 ## Ten source projects under research
 

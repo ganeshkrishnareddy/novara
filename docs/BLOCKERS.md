@@ -2,7 +2,7 @@
 
 | ID | Blocker | Impact | Owner | Status |
 |---|---|---|---|---|
-| B-01 | Docker not installed on this machine | Blocks Docker Compose distribution, local PostgreSQL/Redis containers, installation testing and all container build targets | Owner / environment | Open |
+| B-01 | Container tooling not yet available in the development environment | Blocks Docker Compose distribution, local PostgreSQL/Redis containers, installation testing and all container build targets | Owner / environment | Open |
 | B-02 | Seven repositories report unclassifiable licenses; two are AGPL-3.0 | Blocks any decision to copy, combine or redistribute source code | Research + licensing review | Open |
 | B-03 | NOVARA's own license not chosen | Blocks creating `LICENSE` and any public release | Owner decision | Open |
 | B-04 | Name / trademark / domain availability not checked | Blocks final public branding | Research | Open |

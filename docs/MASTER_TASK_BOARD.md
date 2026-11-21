@@ -4,7 +4,7 @@ Living board. Status values: TODO / IN PROGRESS / DONE / BLOCKED. Evidence means
 
 | Task ID | Description | Owner | Status | Dependencies | Branch / workspace | Test evidence | Review |
 |---|---|---|---|---|---|---|---|
-| T-001 | Inspect environment and create D:\NOVARA workspace | MausBot | DONE | — | `D:\NOVARA` | Directory + `docs/PROJECT_STATUS.md` | — |
+| T-001 | Inspect environment and create project workspace | MausBot | DONE | — | project workspace | Directory + `docs/PROJECT_STATUS.md` | — |
 | T-002 | Verify ten source repositories and record metadata | MausBot | DONE | T-001 | `docs/research/REPOSITORY_AUDIT.md` | GitHub API, 2026-11-22 | — |
 | T-003 | Deep audit: Formbricks, Meilisearch, GrowthBook | Nova | IN PROGRESS | T-002 | `docs/research/repos/01-*.md` | Pending | Pending |
 | T-004 | Deep audit: Papermark, Chatwoot, Novu | Tango | IN PROGRESS | T-002 | `docs/research/repos/02-*.md` | Pending | Pending |

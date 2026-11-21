@@ -8,10 +8,10 @@ Pre-development. Research phase started. **No product code, no modules, no build
 
 ## Phase 0 — Environment inspection: DONE
 
-- `D:\NOVARA` created as the dedicated working directory; D: has ~134 GB free.
-- Git 2.55.0, Node 24.18.0, npm 11.16.0, Python 3.12.10 available.
-- Docker **not installed** (see `BLOCKERS.md`).
-- Official repository created by the owner: `https://github.com/ganeshkrishnareddy/novara` (public, default branch `main`). Local workspace at `D:\NOVARA` is connected to it.
+- Dedicated development workspace created and connected to the repository.
+- Standard toolchain available: Git, Node.js, npm and Python.
+- Container tooling is a prerequisite for the local stack; provisioning is pending (see `BLOCKERS.md`).
+- Official repository created by the owner: `https://github.com/ganeshkrishnareddy/novara` (public, default branch `main`).
 - All ten source repositories verified live on GitHub; metadata recorded in `docs/research/REPOSITORY_AUDIT.md`.
 
 ## Phase 1 — Research and licensing: IN PROGRESS

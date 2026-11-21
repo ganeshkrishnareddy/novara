@@ -4,7 +4,7 @@ Recorded limitations as of 2026-11-22. This list grows as audits land.
 
 ## Environment
 
-- Docker is not installed, so no container can be built or run yet. Local Docker Compose installation and all container-based testing are unavailable.
+- Container tooling is not yet available in the development environment, so no container can be built or run yet. Local Docker Compose installation and all container-based testing are unavailable.
 - No CI runner, remote Git host or test database exists yet.
 - No code signing, notarisation or store submission credentials exist.
 
