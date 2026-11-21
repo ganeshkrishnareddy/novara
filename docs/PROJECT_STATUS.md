@@ -18,10 +18,10 @@ Pre-development. Research phase started. **No product code, no modules, no build
 
 - Repository metadata audit: done.
 - License gate: complete. Actual license texts were read; per-repository decisions and attribution are recorded in `docs/research/LICENSE_COMPLIANCE.md` and `THIRD_PARTY_NOTICES.md`. No source was copied.
-- Per-repository deep source audit: three of four reports complete; the Formbricks/Meilisearch/GrowthBook report is in rework after placeholders were found. Outputs in `docs/research/repos/`.
-- Architecture, API, database and event contracts: not started.
+- Per-repository deep source audit: complete. All four reports cover all ten repositories with 15 verified sections each, in `docs/research/repos/`. The Formbricks/Meilisearch/GrowthBook rework was verified: no placeholders remain.
+- Architecture, API, database and event contracts: in progress (T-008).
 
-## Phase 2 — Architecture and contracts: NOT STARTED
+## Phase 2 — Architecture and contracts: IN PROGRESS
 
 ## Phase 3 — Module implementation: NOT STARTED
 
