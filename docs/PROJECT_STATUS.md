@@ -17,8 +17,8 @@ Pre-development. Research phase started. **No product code, no modules, no build
 ## Phase 1 — Research and licensing: IN PROGRESS
 
 - Repository metadata audit: done.
-- License gate: opened; 7 unclassifiable licenses and 2 AGPL projects need manual review (`docs/research/LICENSE_COMPLIANCE.md`).
-- Per-repository deep source audit: assigned to parallel research agents; outputs in `docs/research/repos/`.
+- License gate: complete. Actual license texts were read; per-repository decisions and attribution are recorded in `docs/research/LICENSE_COMPLIANCE.md` and `THIRD_PARTY_NOTICES.md`. No source was copied.
+- Per-repository deep source audit: three of four reports complete; the Formbricks/Meilisearch/GrowthBook report is in rework after placeholders were found. Outputs in `docs/research/repos/`.
 - Architecture, API, database and event contracts: not started.
 
 ## Phase 2 — Architecture and contracts: NOT STARTED
