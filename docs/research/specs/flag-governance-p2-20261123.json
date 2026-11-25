@@ -1,0 +1,31 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "GrowthBook / advanced feature-flag governance",
+    "location": "apps/api/novara_core/modules/feature_flag_governance.py; apps/web/app.js (flag-governance Operations route); apps/api/tests/test_feature_flag_governance_p2.py",
+    "backend": "complete: clean-room feature-flag governance implemented locally with the standard library — scheduled state resolution, salted SHA-256 secure attributes, deterministic sticky bucketing, prerequisites with targeting conditions, local redirect rule results, environment inheritance with overrides, reusable templates, guardrail safe rollouts, require-project workspace settings, linear ramp schedules, scheduled revisions and typed feature configurations; all state is persisted in workspace-scoped records",
+    "frontend": "complete: dedicated flag-governance Operations route renders the local contract and every schedule, secure-attribute, sticky, prerequisite, redirect, environment, template, safe-rollout, setting, ramp, revision and configuration control; each control has one dispatcher guarded by test_ui_wiring.py",
+    "database": "complete: twelve additive workspace-scoped tables created by Alembic revision f6a7b8c9d0e1 (fg_schedules, fg_secure_attributes, fg_sticky_assignments, fg_prerequisites, fg_redirects, fg_environments, fg_templates, fg_safe_rollouts, fg_settings, fg_ramps, fg_revisions, fg_configs); no existing table altered",
+    "api": "complete: one stable flag-governance API group with a generated local contract, named operation ids and 404/409/422 failure modes; external_calls=false on every response",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads and require(NOTE_WRITE) for writes and mutations; cross-workspace identifiers fail closed with 404 or empty results; every mutation is audited",
+    "integration": "complete: publishes flag.governance_changed to NOVARA's shared event spine; behaviour derives from documented public methods only — no GrowthBook source, SDK, hosted endpoint, licence server, warehouse or external service is contacted",
+    "evidence": "docs/evidence/flag-governance-p2-20261123.md; apps/api/tests/test_feature_flag_governance_p2.py; apps/api/tests/test_ui_wiring.py",
+    "remaining": "None for this row. Each capability is a local clean-room equivalent derived from the published method; no licensed GrowthBook source, enterprise entitlement or external dependency is claimed. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "GB-183"},
+    {"id": "GB-196"},
+    {"id": "GB-206"},
+    {"id": "GB-209"},
+    {"id": "GB-210"},
+    {"id": "GB-211"},
+    {"id": "GB-224"},
+    {"id": "GB-225"},
+    {"id": "GB-231"},
+    {"id": "GB-232"},
+    {"id": "GB-233"},
+    {"id": "GB-247"},
+    {"id": "GB-248"},
+    {"id": "GB-249"}
+  ]
+}

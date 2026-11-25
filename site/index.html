@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#176B55" />
+  <title>NOVARA — Your Entire Business. One Connected System.</title>
+  <meta name="description" content="NOVARA is a self-hostable business operating system connecting CRM, sales, marketing, support, projects, documents, automation and analytics." />
+  <link rel="canonical" href="https://ganeshkrishnareddy.github.io/novara/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NOVARA" />
+  <meta property="og:title" content="NOVARA — Your Entire Business. One Connected System." />
+  <meta property="og:description" content="One self-hostable workspace for customer management, sales, marketing, support, projects, documents, analytics and automation." />
+  <meta property="og:url" content="https://ganeshkrishnareddy.github.io/novara/" />
+  <meta property="og:image" content="https://ganeshkrishnareddy.github.io/novara/assets/img/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NOVARA — Your Entire Business. One Connected System." />
+  <meta name="twitter:description" content="One self-hostable workspace for customer management, sales, marketing, support, projects, documents, analytics and automation." />
+  <meta name="twitter:image" content="https://ganeshkrishnareddy.github.io/novara/assets/img/twitter-card.png" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/css/styles.css" as="style" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NOVARA",
+    "description": "A locally hosted, modular business operating system with a shared customer identity, workspace, permission model and event spine.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Cross-platform local install (Python 3.11+)",
+    "url": "https://ganeshkrishnareddy.github.io/novara/",
+    "programmingLanguage": ["Python", "JavaScript"],
+    "softwareRequirements": "Python 3.11 or newer and a modern browser"
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.4-3 2.5-4.7 5.5-4.7s5.1 1.7 5.5 4.7"/><path d="M16 6.2a3 3 0 0 1 0 5.6M17 14.4c2 .5 3.2 2 3.5 4.6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.8"/><circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13.4 2.5 5.2 13.1h5.3l-.9 8.4 8.2-10.6h-5.3z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.4 8.5-6.4"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M7.5 15.5 11 11l3 2.5 4.5-6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 4.2 4.2"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6.5a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6.5 16.5h11l-1.3-2V10a4.2 4.2 0 0 0-8.4 0v4.5z"/><path d="M10 19a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><rect x="2.5" y="9" width="5" height="5" rx="1"/><rect x="16.5" y="3" width="5" height="5" rx="1"/><rect x="16.5" y="16" width="5" height="5" rx="1"/><path d="M7.5 11.5h4.5V5.5h4.5M12 11.5v7h4.5"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M8.5 12.5h.01M15.5 12.5h.01M9 16h6"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8 20 6v5.5c0 5-3.3 8.3-8 9.7-4.7-1.4-8-4.7-8-9.7V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.8 18.2A2 2 0 0 0 6.5 21h11a2 2 0 0 0 1.7-2.8L14 9V3"/><path d="M7.5 15h9"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13.8a4 4 0 0 0 5.7 0l2.6-2.6a4 4 0 0 0-5.7-5.7L11.3 6.8"/><path d="M14 10.2a4 4 0 0 0-5.7 0l-2.6 2.6a4 4 0 0 0 5.7 5.7l1.3-1.3"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.9c-2.7.6-3.3-1.1-3.3-1.1-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7 1 .7 2v2.9c0 .3.1.6.6.5A9.5 9.5 0 0 0 12 2.5z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="NOVARA home">
+      <img src="assets/img/novara-logo.svg" alt="NOVARA" width="150" height="34" />
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a href="#problem">The problem</a>
+      <a href="#why">Why NOVARA</a>
+      <a href="#modules">Modules</a>
+      <a href="#workflows">Workflows</a>
+      <a href="#opensource">Self-hosting</a>
+      <a href="#community">Community</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost header-github" href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span>View on GitHub</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- A. Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> One connected workspace · Local-first by default</p>
+        <h1 id="hero-title">Your Entire Business.<br /><em>One Connected System.</em></h1>
+        <p class="hero-lede">NOVARA brings customer management, sales, marketing, support, projects, analytics, documents and automation together in one extensible business operating system.</p>
+        <p class="hero-tagline">Everything Connected. Everything Under Control.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#modules">Explore NOVARA <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-outline" href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> View on GitHub</a>
+          <a class="text-link" href="#workflows">Explore features <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <p class="hero-note">Active development. Not a release candidate. Local install only; nothing is published or sent externally.</p>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="window-frame">
+          <div class="window-bar"><span class="dot red"></span><span class="dot gold"></span><span class="dot green"></span><span class="window-label">NOVARA · Command Center</span></div>
+          <img src="assets/screenshots/01_dashboard.png" alt="NOVARA Command Center dashboard showing a light-theme workspace with connected module navigation and activity" width="1280" height="720" />
+        </div>
+        <p class="visual-caption"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Real application screen · local QA capture with synthetic data</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="evidence-strip reveal" aria-label="Repository evidence">
+        <div class="evidence-item"><strong>1,418</strong><span>catalogued features verified complete</span></div>
+        <div class="evidence-item"><strong>70</strong><span>documented compatible replacements</span></div>
+        <div class="evidence-item"><strong>1,641</strong><span>backend tests passing locally</span></div>
+        <div class="evidence-item"><strong>8</strong><span>connected end-to-end workflows exercised</span></div>
+      </div>
+      <p class="evidence-footnote">Counts from the repository parity dashboard and local QA evidence, 24 November 2026. They describe local implementation and tests, not a hosted service, production deployment or release.</p>
+    </div>
+  </section>
+
+  <!-- B. Problem -->
+  <section class="section" id="problem" aria-labelledby="problem-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">01 · The problem</p>
+        <h2 id="problem-title">Too many tools. Too little connection.</h2>
+        <p class="section-lede">A growing business tends to accumulate separate systems for every job. Each one holds a piece of the customer, and none of them sees the whole.</p>
+      </div>
+      <div class="scatter-grid reveal">
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span>CRM</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>Email marketing</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><span>Customer support</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg><span>Project management</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><span>Analytics</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>Surveys</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>Documents</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>Search</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><span>Notifications</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-flow"/></svg><span>Automation</span></div>
+        <div class="scatter-card"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><span>Sales intelligence</span></div>
+      </div>
+      <div class="problem-list reveal">
+        <div><span>01</span><p>Repeated customer records and conflicting contact details.</p></div>
+        <div><span>02</span><p>Conversations scattered across inboxes, threads and tabs.</p></div>
+        <div><span>03</span><p>Separate permission systems and no single audit trail.</p></div>
+        <div><span>04</span><p>Fragmented analytics that cannot follow one customer journey.</p></div>
+        <div><span>05</span><p>Manual copy-paste work where a connected event should do it.</p></div>
+        <div><span>06</span><p>Rising software costs and dependence on external vendors.</p></div>
+      </div>
+      <p class="reveal section-closing">NOVARA's answer is one application with one customer identity, one workspace, one permission model and one event spine. <a href="#why" class="text-link">See the approach <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- C. Why -->
+  <section class="section section-tint" id="why" aria-labelledby="why-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">02 · Why NOVARA</p>
+        <h2 id="why-title">One foundation. Many capabilities.</h2>
+        <p class="section-lede">The difference is structural: modules share the same data model and the same audit event stream, so an action in one place can be visible everywhere.</p>
+      </div>
+      <div class="why-grid reveal">
+        <article><span class="num">01</span><h3>Unified business workspace</h3><p>One installation instead of a stack of disconnected applications.</p></article>
+        <article><span class="num">02</span><h3>Modular architecture</h3><p>Capability modules are built against a documented internal contract.</p></article>
+        <article><span class="num">03</span><h3>Self-hosted deployment</h3><p>Local-first by default; your database stays in your project folder.</p></article>
+        <article><span class="num">04</span><h3>Open-source foundation</h3><p>Source is available for local use, subject to final repository licensing review.</p></article>
+        <article><span class="num">05</span><h3>Shared customer identity</h3><p>A contact created by a form, visit or inbox conversation is one record.</p></article>
+        <article><span class="num">06</span><h3>Connected workflows</h3><p>Local events link lead, task, notification, draft and audit history.</p></article>
+        <article><span class="num">07</span><h3>Integrated automation</h3><p>Workflows run through NOVARA's own durable local job queue.</p></article>
+        <article><span class="num">08</span><h3>Search across modules</h3><p>A universal search surface backed by a local search implementation.</p></article>
+        <article><span class="num">09</span><h3>Centralized notifications</h3><p>In-app notifications and notification workflows in one place.</p></article>
+        <article><span class="num">10</span><h3>Analytics and experimentation</h3><p>Flags, experiments, exposure and statistics evaluated locally.</p></article>
+        <article><span class="num">11</span><h3>Extensible integrations</h3><p>Configuration-only adapters with explicit, honest capability states.</p></article>
+        <article><span class="num">12</span><h3>Local data ownership</h3><p>No telemetry, activation check, hosted account or mandatory subscription.</p></article>
+        <article><span class="num">13</span><h3>Developer-friendly architecture</h3><p>FastAPI, SQLAlchemy and Alembic with a documented REST surface.</p></article>
+        <article><span class="num">14</span><h3>Transparent provider dependencies</h3><p>Provider-backed features stay blocked until a real provider is configured and verified.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- D. Alternatives -->
+  <section class="section" id="alternatives" aria-labelledby="alternatives-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 · Context</p>
+        <h2 id="alternatives-title">Ten projects that shaped the scope</h2>
+        <p class="section-lede">NOVARA studies ten capability areas from established open projects. These are functional alternatives and inspiration sources, not partners and not copied codebases.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table class="data-table">
+          <thead><tr><th scope="col">Project</th><th scope="col">Capability area it inspired</th><th scope="col">NOVARA's approach</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Formbricks</th><td>Surveys and feedback</td><td>Feedback Studio survey lifecycle with local display and response records.</td></tr>
+            <tr><th scope="row">Meilisearch</th><td>Search</td><td>Local search engine and advanced search routes; no external search server.</td></tr>
+            <tr><th scope="row">GrowthBook</th><td>Feature flags and experimentation</td><td>Feature flags, experiment delivery, exposure and statistics evaluated locally.</td></tr>
+            <tr><th scope="row">Papermark</th><td>Documents and data rooms</td><td>Document metadata, share links and engagement events; NOVARA serves no file bytes.</td></tr>
+            <tr><th scope="row">Plane</th><td>Project management</td><td>Projects, work items, collaboration and governance on the shared event spine.</td></tr>
+            <tr><th scope="row">Mautic</th><td>Marketing automation</td><td>Campaign and marketing-content modules with local records and no outbound delivery.</td></tr>
+            <tr><th scope="row">Chatwoot</th><td>Customer support</td><td>Customer inbox, conversation operations and support reporting with shared identity.</td></tr>
+            <tr><th scope="row">Novu</th><td>Notifications</td><td>Notification center and workflows using in-app, polling-based delivery records.</td></tr>
+            <tr><th scope="row">Marketing Skills</th><td>Marketing workflows and skills</td><td>A pinned, locally vendored skills catalogue with no upstream script execution.</td></tr>
+            <tr><th scope="row">Sellbird</th><td>Sales and prospecting capabilities</td><td>Lead intelligence and sales engagement drafts with an explicit no-send safety gate.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout reveal">
+        <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <div><strong>Licensing is respected.</strong> No source was copied or redistributed from these projects. Where a capability is implemented differently, NOVARA records a compatible local replacement rather than claiming an upstream integration. Terms are documented in <code>THIRD_PARTY_NOTICES.md</code> and <code>docs/research/LICENSE_COMPLIANCE.md</code>.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. Modules -->
+  <section class="section section-tint" id="modules" aria-labelledby="modules-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 · Explore</p>
+        <h2 id="modules-title">All sixteen NOVARA modules</h2>
+        <p class="section-lede">Each card explains what the module does, the problem it removes, and the workflow it joins. Every description reflects locally implemented capability.</p>
+      </div>
+      <div class="module-grid reveal">
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></div><h3>Command Center</h3><p class="role">The daily view of work across the workspace.</p><p><strong>Solves:</strong> not knowing what changed or what needs attention.</p><p><strong>Capabilities:</strong> activity, counts and module navigation.</p><p><strong>Workflow:</strong> start here, then follow a task or customer.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></div><h3>CRM and Contacts</h3><p class="role">One authoritative customer record with a unified timeline.</p><p><strong>Solves:</strong> duplicate contacts and scattered history.</p><p><strong>Capabilities:</strong> contacts, companies, custom fields, lifecycle and timeline.</p><p><strong>Workflow:</strong> lead acquisition and customer support.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div><h3>Lead Intelligence</h3><p class="role">Qualify, score and convert inbound interest.</p><p><strong>Solves:</strong> lost context between form submission and follow-up.</p><p><strong>Capabilities:</strong> lead scoring, qualification and assignment.</p><p><strong>Workflow:</strong> website form to CRM to task.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg></div><h3>Sales Autopilot</h3><p class="role">Governed sales signals, offers and outreach drafts.</p><p><strong>Solves:</strong> untracked prospecting and unchecked messaging.</p><p><strong>Capabilities:</strong> cohorts, drafts, approval gate, opt-out and no-send boundary.</p><p><strong>Workflow:</strong> signal to draft to authorised approval.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></div><h3>Campaign Studio</h3><p class="role">Audience, journey and engagement records for campaigns.</p><p><strong>Solves:</strong> campaigns that live outside the customer record.</p><p><strong>Capabilities:</strong> campaign lifecycle, journeys, enrollments and analytics.</p><p><strong>Workflow:</strong> audience to campaign to analytics; delivery is not executed.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Marketing Intelligence</h3><p class="role">Content, consent and engagement measurement.</p><p><strong>Solves:</strong> marketing data disconnected from CRM identity.</p><p><strong>Capabilities:</strong> landing pages, forms, consent, suppression and email engagement records.</p><p><strong>Workflow:</strong> form submission to contact to timeline.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Customer Inbox</h3><p class="role">Conversations and tickets tied to the customer record.</p><p><strong>Solves:</strong> support threads that never reach the CRM timeline.</p><p><strong>Capabilities:</strong> tickets, messages, internal notes, labels and reporting.</p><p><strong>Workflow:</strong> conversation to identification to resolution.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><h3>Feedback Studio</h3><p class="role">Surveys, targeting, segments and feedback intelligence.</p><p><strong>Solves:</strong> feedback that never reaches the customer or product record.</p><p><strong>Capabilities:</strong> survey display, responses, segments and insights.</p><p><strong>Workflow:</strong> survey to response to customer timeline.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Analytics and Experimentation</h3><p class="role">Flags, experiments, exposure, statistics and reporting.</p><p><strong>Solves:</strong> decisions made without a traceable local record.</p><p><strong>Capabilities:</strong> feature flags, experiments, A/A tests, SRM and bandit recommendations.</p><p><strong>Workflow:</strong> hypothesis to flag to measured outcome.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div><h3>Universal Search</h3><p class="role">One search entry point across module records.</p><p><strong>Solves:</strong> hunting through separate tools for one detail.</p><p><strong>Capabilities:</strong> global search, indexes, vectors and advanced search evaluation.</p><p><strong>Workflow:</strong> find a contact, document or work item in one place.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg></div><h3>Projects and Work</h3><p class="role">Projects, work items, wiki pages and collaboration.</p><p><strong>Solves:</strong> plans that drift away from customer commitments.</p><p><strong>Capabilities:</strong> planning, dependencies, estimates, recurring work and time logs.</p><p><strong>Workflow:</strong> lead to task to project delivery.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><h3>Documents and Data Rooms</h3><p class="role">Document metadata, rooms, links and engagement.</p><p><strong>Solves:</strong> no visibility into who engaged with a shared document.</p><p><strong>Capabilities:</strong> rooms, share policies, visit and page-view records, revocation.</p><p><strong>Workflow:</strong> upload metadata to secure link to activity.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></div><h3>Notification Center</h3><p class="role">In-app notifications and notification workflows.</p><p><strong>Solves:</strong> important events that nobody sees.</p><p><strong>Capabilities:</strong> digests, preferences, routing and local workflow execution.</p><p><strong>Workflow:</strong> event to notification to follow-up.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-flow"/></svg></div><h3>Visual Automation Builder</h3><p class="role">Triggers, conditions and actions on the event spine.</p><p><strong>Solves:</strong> repetitive manual steps between modules.</p><p><strong>Capabilities:</strong> workflows, approvals, scheduled materialisation and durable jobs.</p><p><strong>Workflow:</strong> trigger to condition to action to approval.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg></div><h3>AI Agent Control Center</h3><p class="role">Governed, local agent configuration and runs.</p><p><strong>Solves:</strong> untraceable automated suggestions and actions.</p><p><strong>Capabilities:</strong> local agents, step limits, human approval and audit events.</p><p><strong>Workflow:</strong> request to governed run to reviewed output.</p></article>
+        <article class="module-card"><div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg></div><h3>Settings and Integrations</h3><p class="role">Workspaces, roles, permissions, API keys and adapter configuration.</p><p><strong>Solves:</strong> unclear access boundaries and hidden dependencies.</p><p><strong>Capabilities:</strong> seven roles, custom roles, access governance, integration records.</p><p><strong>Workflow:</strong> configure, verify, then connect deliberately.</p></article>
+      </div>
+      <p class="reveal module-footnote">Capability descriptions reflect the repository's implementation and parity evidence. Modules that depend on an external provider remain explicitly blocked until that provider is configured and verified; no delivery is simulated as successful.</p>
+    </div>
+  </section>
+
+  <!-- F. Workflows -->
+  <section class="section" id="workflows" aria-labelledby="workflows-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">05 · Connected workflows</p>
+        <h2 id="workflows-title">One customer, one continuous story</h2>
+        <p class="section-lede">These are NOVARA-supported paths observed in local testing. Steps that depend on an external provider are labelled honestly rather than presented as delivered.</p>
+      </div>
+      <div class="workflow-list">
+        <article class="workflow reveal">
+          <div class="workflow-head"><span class="wf-badge">01</span><h3>Lead acquisition</h3><span class="wf-status">Observed end to end</span></div>
+          <ol class="flow"><li>Website form</li><li>CRM contact</li><li>Lead scoring</li><li>Assignment</li><li>Task</li><li>Notification</li></ol>
+          <p>A single submission becomes one contact with a lead, a task, an in-app notification and an audit event.</p>
+        </article>
+        <article class="workflow reveal">
+          <div class="workflow-head"><span class="wf-badge">02</span><h3>Marketing</h3><span class="wf-status wf-status-warn">Delivery not executed</span></div>
+          <ol class="flow"><li>Audience</li><li>Campaign</li><li>Approval</li><li>Delivery adapter</li><li>Analytics</li></ol>
+          <p>Campaign, approval and analytics records are real. The delivery adapter is a local boundary: no email, SMS or WhatsApp message is sent.</p>
+        </article>
+        <article class="workflow reveal">
+          <div class="workflow-head"><span class="wf-badge">03</span><h3>Customer support</h3><span class="wf-status">Observed end to end</span></div>
+          <ol class="flow"><li>Conversation</li><li>Customer identification</li><li>Assignment</li><li>Resolution</li><li>CRM timeline</li></ol>
+          <p>Support activity writes back to the same contact record instead of living in a separate inbox.</p>
+        </article>
+        <article class="workflow reveal">
+          <div class="workflow-head"><span class="wf-badge">04</span><h3>Documents</h3><span class="wf-status">Observed end to end</span></div>
+          <ol class="flow"><li>Metadata record</li><li>Secure link</li><li>Recorded access</li><li>Page analytics</li><li>Customer activity</li></ol>
+          <p>NOVARA records engagement and policy decisions. It does not store or serve the underlying file bytes.</p>
+        </article>
+        <article class="workflow reveal">
+          <div class="workflow-head"><span class="wf-badge">05</span><h3>Automation</h3><span class="wf-status">Observed end to end</span></div>
+          <ol class="flow"><li>Trigger</li><li>Condition</li><li>Action</li><li>Approval</li><li>Local execution</li></ol>
+          <p>Workflows run through the local job queue. Outbound effects stay gated behind explicit approval and a configured adapter.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- G. Open source and self-hosting -->
+  <section class="section section-dark" id="opensource" aria-labelledby="opensource-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">06 · Open source and self-hosting</p>
+        <h2 id="opensource-title">Run it on your own machine.</h2>
+        <p class="section-lede">NOVARA is local-first. Basic use needs no hosted account, licence key, PostgreSQL, Redis or Docker. All data stays in one SQLite file unless you deliberately configure something else.</p>
+      </div>
+      <div class="host-grid reveal">
+        <div class="install-panel">
+          <h3>Install locally</h3>
+          <p>Python 3.11 or newer and a modern browser are enough.</p>
+          <div class="code-block"><div class="code-head"><span>Windows PowerShell</span><button class="copy-btn" type="button" data-copy=".\scripts\start-local.ps1" aria-label="Copy Windows install command"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg> Copy</button></div><code>.\scripts\start-local.ps1</code></div>
+          <div class="code-block"><div class="code-head"><span>macOS / Linux</span><button class="copy-btn" type="button" data-copy="sh scripts/start-local.sh" aria-label="Copy macOS and Linux install command"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg> Copy</button></div><code>sh scripts/start-local.sh</code></div>
+          <p class="install-note">Open <a href="http://localhost:8000" target="_blank" rel="noopener noreferrer">http://localhost:8000</a> and complete first-run setup. API documentation is at <code>/docs</code>.</p>
+          <div class="host-links">
+            <a href="https://github.com/ganeshkrishnareddy/novara/blob/main/docs/INSTALL.md" target="_blank" rel="noopener noreferrer">Installation guide <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            <a href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer">Source code <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            <a href="https://github.com/ganeshkrishnareddy/novara/blob/main/docs/DEPLOYMENT_RUNBOOK.md" target="_blank" rel="noopener noreferrer">Deployment runbook <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+            <a href="#contribute">Contribution guide <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="host-detail">
+          <h3>Supported and planned</h3>
+          <div class="support-table">
+            <div><span class="pill pill-yes">Local today</span><p>Python virtual environment, SQLite, light-theme browser app, REST API and Alembic migrations.</p></div>
+            <div><span class="pill pill-maybe">Prepared, unverified</span><p>Docker definitions, PostgreSQL configuration and container-based deployment.</p></div>
+            <div><span class="pill pill-no">Not provided</span><p>Native mobile installers, hosted SaaS, managed backups and outbound notification delivery.</p></div>
+          </div>
+          <div class="host-callout"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p><strong>Licensing is a gate, not a claim.</strong> Dependency and upstream licence review is complete, but the repository licence file is still an owner decision. Until it is added, treat NOVARA as an open-source foundation subject to final repository licensing review; licence file pending owner decision.</p></div>
+          <p class="host-links"><a href="https://github.com/ganeshkrishnareddy/novara/blob/main/THIRD_PARTY_NOTICES.md" target="_blank" rel="noopener noreferrer">Third-party notices <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a><a href="https://github.com/ganeshkrishnareddy/novara/blob/main/docs/research/LICENSE_COMPLIANCE.md" target="_blank" rel="noopener noreferrer">Licensing review <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- H. Demonstration -->
+  <section class="section" id="demo" aria-labelledby="demo-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">07 · Product demonstration</p>
+        <h2 id="demo-title">See the real application.</h2>
+        <p class="section-lede">Recorded locally during isolated QA with synthetic data. No external message was sent and no hosted service was contacted to produce these videos. The embedded demo shows real clicks and forms, not a sequence of still pages.</p>
+      </div>
+      <div class="demo-grid reveal">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline poster="assets/img/demo-poster.png" aria-label="NOVARA connected customer journey demonstration">
+            <source src="videos/NOVARA_Product_Demo_2.0.mp4" type="video/mp4" />
+            Your browser does not support embedded MP4 video.
+          </video>
+          <div class="video-meta"><div><h3>NOVARA Product Demo 2.0 — one connected journey</h3><p>3 minutes 12 seconds · a website form creates a contact, lead, task, draft and notification under one correlation id, then an audience segment, campaign draft, human approval gate, linked support ticket, completed task and refreshed insights · real UI actions</p></div><span class="video-tag">Actual recording</span></div>
+          <p class="caption">The earlier <a href="videos/NOVARA_Product_Demo_1.0.mp4" target="_blank" rel="noopener noreferrer">Product Demo 1.0 module tour <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a> remains available for a broader route overview.</p>
+        </div>
+        <div class="demo-side">
+          <h3>What the connected journey shows</h3>
+          <ul class="check-list"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> A website form submitted through the real interface</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> One correlation id across contact, lead, task, draft and notification</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> A contact timeline, an audience segment and a campaign draft</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> A human approval gate — no email or message is sent</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> A linked support ticket, completed task, refreshed insights and audit trail</li></ul>
+          <a class="btn btn-outline btn-full" href="videos/NOVARA_QA_Evidence_Walkthrough.mp4" target="_blank" rel="noopener noreferrer">Watch the QA Evidence Walkthrough · 3:16 <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+          <div class="shot-strip">
+            <figure><img src="assets/screenshots/02_contacts.png" alt="NOVARA Contacts screen, local QA capture with synthetic data" loading="lazy" /><figcaption>Contacts</figcaption></figure>
+            <figure><img src="assets/screenshots/08_projects.png" alt="NOVARA Projects screen, local QA capture with synthetic data" loading="lazy" /><figcaption>Projects</figcaption></figure>
+            <figure><img src="assets/screenshots/10_experimentation.png" alt="NOVARA Experimentation screen, local QA capture with synthetic data" loading="lazy" /><figcaption>Experimentation</figcaption></figure>
+          </div>
+          <p class="caption">All screenshots are genuine local QA captures with synthetic data, not fabricated interface concepts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- I. Community -->
+  <section class="section section-tint" id="community" aria-labelledby="community-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">08 · Community and GitHub</p>
+        <h2 id="community-title">Find the source. Join the work.</h2>
+        <p class="section-lede">The official repository is <a href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer">github.com/ganeshkrishnareddy/novara</a>. Every action below is a normal link you choose to open. Starring and following are voluntary GitHub actions performed by you.</p>
+      </div>
+      <div class="community-grid reveal">
+        <a href="https://github.com/ganeshkrishnareddy/novara/stargazers" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><h3>Star NOVARA</h3><p>Voluntary, on GitHub only.</p></a>
+        <a href="https://github.com/ganeshkrishnareddy/novara/fork" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-flow"/></svg><h3>Fork NOVARA</h3><p>Build on the source yourself.</p></a>
+        <a href="https://github.com/ganeshkrishnareddy/novara/releases" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Watch releases</h3><p>Follow project updates.</p></a>
+        <a href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><h3>Explore source code</h3><p>Read the actual implementation.</p></a>
+        <a href="https://github.com/ganeshkrishnareddy/novara/issues/new" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg><h3>Report a bug</h3><p>Reproducible reports are valued.</p></a>
+        <a href="https://github.com/ganeshkrishnareddy/novara/issues/new" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><h3>Request a feature</h3><p>Describe the real workflow.</p></a>
+        <a href="https://github.com/ganeshkrishnareddy/novara/discussions" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><h3>Start a discussion</h3><p>Ask and share with others.</p></a>
+        <a href="https://github.com/ganeshkrishnareddy/novara/blob/main/README.md" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><h3>Read documentation</h3><p>Install, configure and test.</p></a>
+      </div>
+      <div class="policy-note reveal"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p><strong>GitHub engagement policy.</strong> NOVARA does not offer credits, tools, premium access or gifts in exchange for stars or follows. No feature is locked behind a star or fork. No automated starring, following or endorsement is performed. Community support is voluntary.</p></div>
+    </div>
+  </section>
+
+  <!-- J. Contribution program -->
+  <section class="section" id="contribute" aria-labelledby="contribute-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">09 · Contribute</p>
+        <h2 id="contribute-title">Recognition for real work.</h2>
+        <p class="section-lede">The contribution program is designed around useful participation, never GitHub engagement metrics. Eligibility and benefits are subject to published criteria, an approved budget and human review.</p>
+      </div>
+      <div class="contrib-grid reveal">
+        <div>
+          <h3>Eligible activities</h3>
+          <ul class="check-list"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Accepted bug reports with reproduction steps</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Merged code contributions</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Documentation improvements</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Verified translations and accessibility improvements</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Reproducible QA reports and useful integration adapters</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Authorised security research, tutorials and design contributions</li></ul>
+        </div>
+        <div>
+          <h3>Queue and review</h3>
+          <p>Submit a GitHub username, contribution URL, pull request, accepted issue, documentation change or QA evidence. A human reviewer moves each submission through these states:</p>
+          <div class="status-flow"><span>Submitted</span><span>Under review</span><span>Accepted</span><span>Needs changes</span><span>Rejected</span><span>Benefit approved</span><span>Completed</span></div>
+          <p class="caption">A star is not a qualifying contribution and never unlocks a benefit.</p>
+          <h3 class="space-top">Possible benefits</h3>
+          <p>Contributor recognition, early access to experimental features, a community toolkit, beta testing opportunities, a public contributor profile, technical discussion invitations, and limited credits for eligible NOVARA-hosted services <em>if actually offered</em>. No benefit is promised until funded and approved.</p>
+        </div>
+      </div>
+      <div class="privacy-panel reveal"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Privacy-conscious verification</h3><p>Optional GitHub OAuth may verify identity with explicit consent, minimum necessary permissions, a secure server-side session and no unnecessary token storage. No passwords are collected. Account deletion and privacy controls must be available. If OAuth is unavailable, a safe manual verification path is used. Nothing here automates a GitHub action.</p><a class="text-link" href="https://github.com/ganeshkrishnareddy/novara/blob/main/docs/COMMUNITY_CONTRIBUTION_PROGRAM.md" target="_blank" rel="noopener noreferrer">Read the contribution program <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
+    </div>
+  </section>
+
+  <!-- L. FAQ -->
+  <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+    <div class="container faq-layout">
+      <div class="section-head reveal">
+        <p class="eyebrow">10 · FAQ</p>
+        <h2 id="faq-title">Straight answers.</h2>
+        <p class="section-lede">Every answer reflects repository evidence rather than an aspiration.</p>
+        <a class="btn btn-outline" href="https://github.com/ganeshkrishnareddy/novara/discussions" target="_blank" rel="noopener noreferrer">Ask a question <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary>What is NOVARA?</summary><p>One locally hosted business operating system with a shared customer identity, workspace, permission model and event spine. Its modules cover CRM, sales, marketing, support, feedback, projects, documents, analytics, search, automation and governed local agents.</p></details>
+        <details><summary>Is NOVARA open source?</summary><p>The source and foundation are available locally, and upstream licence review is complete. There is no repository licence file yet: treat NOVARA as an open-source foundation subject to final repository licensing review; licence file pending owner decision.</p></details>
+        <details><summary>Is it free?</summary><p>Local use requires no hosted account, licence key, paid AI API or mandatory subscription. There is no hosted commercial service in this build.</p></details>
+        <details><summary>Can I self-host it?</summary><p>Yes, locally on your own machine with Python 3.11+ and a browser. Self-hosted deployment beyond the local install is prepared but not yet verified; see the hosting section above.</p></details>
+        <details><summary>What are its system requirements?</summary><p>Python 3.11 or newer (3.12 recommended) and a modern browser for the default SQLite setup. PostgreSQL and Docker paths exist but have not been verified in this environment.</p></details>
+        <details><summary>Does it require paid AI APIs?</summary><p>No. Local agents and governance features do not require a paid AI API. No hosted model call is made by the core service.</p></details>
+        <details><summary>Can I use local AI?</summary><p>Agent configuration and runs are local and governed with step limits and human approval. No external model provider is contacted by default.</p></details>
+        <details><summary>Does it replace multiple business tools?</summary><p>It aims to cover the capability areas of several tools in one application. Some capabilities are compatible local replacements rather than integrations with the original products; those boundaries are documented.</p></details>
+        <details><summary>Can developers extend it?</summary><p>Yes. The API is FastAPI with a published OpenAPI document, the data layer uses SQLAlchemy and Alembic, and modules follow a documented internal contract.</p></details>
+        <details><summary>How can I contribute?</summary><p>Use the GitHub issue and pull request flows, or the documented contribution queue. Review is human and based on substantive work, never stars or follows.</p></details>
+        <details><summary>Where is the GitHub repository?</summary><p><a href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer">github.com/ganeshkrishnareddy/novara</a>. This is the official NOVARA project site.</p></details>
+        <details><summary>How do integrations work?</summary><p>Through configuration-only adapter records and explicit capability states. Provider-backed features stay blocked until you configure and verify a real provider; no fake delivery is reported.</p></details>
+        <details><summary>Is NOVARA production-ready?</summary><p>No. It is active development and not a release candidate. Local tests are extensive, but deployment, containers, live PostgreSQL, outbound delivery and non-Chromium browsers remain unverified.</p></details>
+        <details><summary>What deployment targets are supported?</summary><p>A verified local install is supported today. Container and PostgreSQL definitions are prepared but unverified. There is no hosted SaaS or native mobile target in this build.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/img/novara-logo-light.svg" alt="NOVARA" width="160" height="36" />
+      <p>Everything Connected. Everything Under Control.</p>
+      <p class="footer-small">Official public project site. Not a release candidate.</p>
+    </div>
+    <div><h3>Product</h3><a href="#modules">Modules</a><a href="#workflows">Workflows</a><a href="#demo">Demonstration</a><a href="#opensource">Self-hosting</a></div>
+    <div><h3>Project</h3><a href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/ganeshkrishnareddy/novara/blob/main/docs/INSTALL.md" target="_blank" rel="noopener noreferrer">Installation</a><a href="#contribute">Contribution guide</a><a href="https://github.com/ganeshkrishnareddy/novara/blob/main/docs/SECURITY_REPORT.md" target="_blank" rel="noopener noreferrer">Security policy</a></div>
+    <div><h3>Legal</h3><a href="https://github.com/ganeshkrishnareddy/novara/blob/main/THIRD_PARTY_NOTICES.md" target="_blank" rel="noopener noreferrer">Licence notices</a><a href="#faq">FAQ</a><a href="https://github.com/ganeshkrishnareddy/novara/discussions" target="_blank" rel="noopener noreferrer">Community</a><a href="https://github.com/ganeshkrishnareddy/novara/issues/new" target="_blank" rel="noopener noreferrer">Contact / issues</a></div>
+  </div>
+  <div class="container footer-bottom"><p>&copy; 2026 NOVARA contributors. Attribution and third-party notices are preserved in <code>THIRD_PARTY_NOTICES.md</code>. Repository licence pending owner decision.</p><a href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

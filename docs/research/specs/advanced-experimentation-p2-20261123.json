@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "GrowthBook / advanced experimentation statistics",
+    "location": "apps/api/novara_core/modules/experiment_advanced_stats.py; apps/web/app.js (advanced-experiments Operations route); apps/api/tests/test_experiment_advanced_stats_p2.py",
+    "backend": "complete: clean-room statistical algorithms implemented locally with the standard library — CUPED variance reduction, size-weighted post-stratification, mSPRT plus O'Brien-Fleming sequential boundaries, quantile metrics with deterministic bootstrap intervals, retention curves, weighted compound scores, Thompson/UCB bandits and Pearson correlation; computed results are persisted with inputs in workspace-scoped records",
+    "frontend": "complete: dedicated advanced-experiments Operations route renders the local contract, saved analyses, bandit arm state, reward and recommendation controls and holdout assignment; every control has one dispatcher guarded by test_ui_wiring.py",
+    "database": "complete: three additive workspace-scoped tables created by Alembic revision e5f6a7b8c9d0 (adv_analyses, adv_bandit_arms, adv_holdouts); no existing table altered",
+    "api": "complete: one stable advanced-experiments API group with a generated local contract, named operation ids and 404/409/422 failure modes; external_calls=false on every response",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads and require(NOTE_WRITE) for writes and mutations; cross-workspace analysis ids and bandit state fail closed with 404 or empty results; every mutation is audited",
+    "integration": "complete: publishes advanced.analysis_saved, advanced.bandit_recommended, advanced.bandit_rewarded and advanced.holdout_created to NOVARA's shared event spine; algorithms derive from the documented public method only — no GrowthBook source, stats package, hosted platform, warehouse, SDK or external statistics service is contacted",
+    "evidence": "docs/evidence/advanced-experimentation-p2-20261123.md; apps/api/tests/test_experiment_advanced_stats_p2.py; apps/api/tests/test_ui_wiring.py",
+    "remaining": "None for this row. Each algorithm is a local clean-room equivalent derived from the published method; no licensed GrowthBook source, enterprise entitlement or external statistics dependency is claimed. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "GB-187"},
+    {"id": "GB-188"},
+    {"id": "GB-189"},
+    {"id": "GB-214"},
+    {"id": "GB-215"},
+    {"id": "GB-217"},
+    {"id": "GB-222"},
+    {"id": "GB-237"}
+  ]
+}

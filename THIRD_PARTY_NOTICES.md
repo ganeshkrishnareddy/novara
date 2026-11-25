@@ -52,8 +52,8 @@ Source of truth for terms: `docs/research/LICENSE_COMPLIANCE.md`. Each entry cit
   > The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 ### Marketing Skills — Corey Haines
-- Source: https://github.com/coreyhaines31/marketingskills (branch `main`)
-- License file: https://github.com/coreyhaines31/marketingskills/blob/main/LICENSE
+- Source: https://github.com/coreyhaines31/marketingskills (pinned commit `5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1`, plugin 2.14.25; `main` is never fetched at runtime)
+- License file: https://github.com/coreyhaines31/marketingskills/blob/5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1/LICENSE
 - Required notice:
   > MIT License
   >

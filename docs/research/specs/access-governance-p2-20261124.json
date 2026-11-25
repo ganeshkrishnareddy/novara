@@ -1,0 +1,80 @@
+{
+  "defaults": {},
+  "rows": [
+    {
+      "id": "CW-130",
+      "status": "VERIFIED_COMPLETE",
+      "module": "access_governance",
+      "location": "apps/api/novara_core/modules/access_governance.py; apps/api/novara_core/permissions.py; apps/api/novara_core/dependencies.py; apps/web/app.js",
+      "backend": "complete clean-room custom role definitions with allow-listed permissions, workspace scope and server-side enforcement",
+      "frontend": "complete Access governance SPA route with custom role create/assign/revoke controls",
+      "database": "complete additive custom_roles table with workspace scope and audited create/update/delete/assign/revoke events",
+      "api": "complete access-governance custom-role and permission-check endpoints",
+      "permissions": "complete workspace:manage for role administration, self/manager permission checks, cross-workspace denial",
+      "integration": "complete NOVARA permission resolution extended for custom:<id> roles through dependencies.require",
+      "evidence": "apps/api/tests/test_access_governance_p2.py; apps/web/tests/ui_v70_access_governance_contract.py; docs/evidence/access-governance-p2-20261124.md",
+      "remaining": "None for the recorded local acceptance criteria. External IdP/SCIM/hosted enterprise policy engines remain out of scope.",
+      "criteria": "A custom role can be created, assigned, changed and revoked; each permission is enforced server side and cross-workspace use is denied."
+    },
+    {
+      "id": "CW-139",
+      "status": "VERIFIED_COMPLETE",
+      "module": "access_governance",
+      "location": "apps/api/novara_core/modules/access_governance.py; apps/api/novara_core/permissions.py; apps/api/novara_core/dependencies.py; apps/web/app.js",
+      "backend": "complete immutable audit query/export over real append-only event spine with actor/type/timestamp/correlation fields",
+      "frontend": "complete Access governance SPA audit table showing real stored fields only and ip_recorded=false",
+      "database": "complete read-only use of existing append-only events table; no IP field invented",
+      "api": "complete audit and audit/export endpoints scoped to workspace with event_type/entity_id/actor_id filters",
+      "permissions": "complete audit:read permission required; workspace isolation enforced; no fabricated IP data",
+      "integration": "complete integration with NOVARA shared event spine and publish_event audit events",
+      "evidence": "apps/api/tests/test_access_governance_p2.py; apps/web/tests/ui_v70_access_governance_contract.py; docs/evidence/access-governance-p2-20261124.md",
+      "remaining": "None for the recorded local acceptance criteria. External SIEM/export sinks and IP capture are not claimed.",
+      "criteria": "An audit query returns real actor, type, timestamp and correlation rows scoped to one workspace."
+    },
+    {
+      "id": "PL-124",
+      "status": "VERIFIED_COMPLETE",
+      "module": "access_governance",
+      "location": "apps/api/novara_core/modules/access_governance.py; apps/api/novara_core/permissions.py; apps/api/novara_core/dependencies.py; apps/web/app.js",
+      "backend": "complete clean-room custom role editor over allow-listed NOVARA permissions",
+      "frontend": "complete Access governance SPA custom-role editor forms and permission list contract",
+      "database": "complete additive custom_roles table",
+      "api": "complete custom role create/list/update/delete and permissions allow-list endpoints",
+      "permissions": "complete workspace:manage required; wildcard and unknown permissions rejected; custom roles cannot grant *",
+      "integration": "complete NOVARA permission matrix extension; dependencies.require resolves custom role refs",
+      "evidence": "apps/api/tests/test_access_governance_p2.py; apps/web/tests/ui_v70_access_governance_contract.py; docs/evidence/access-governance-p2-20261124.md",
+      "remaining": "None for the recorded local acceptance criteria.",
+      "criteria": "Custom roles can be created and assigned without copying Plane code."
+    },
+    {
+      "id": "PL-125",
+      "status": "VERIFIED_COMPLETE",
+      "module": "access_governance",
+      "location": "apps/api/novara_core/modules/access_governance.py; apps/api/novara_core/permissions.py; apps/api/novara_core/dependencies.py; apps/web/app.js",
+      "backend": "complete clean-room permission scheme model with project assignment and effective-permission resolution",
+      "frontend": "complete Access governance SPA scheme create/assign controls and scheme display",
+      "database": "complete additive permission_schemes and permission_scheme_assignments tables with workspace scope",
+      "api": "complete scheme create/list/update/assign/assignments/effective-permissions endpoints",
+      "permissions": "complete workspace:manage for scheme administration; effective-permission checks scoped to self or manager; cross-workspace denial",
+      "integration": "complete project assignment records and effective permission narrowing over built-in/custom roles",
+      "evidence": "apps/api/tests/test_access_governance_p2.py; apps/web/tests/ui_v70_access_governance_contract.py; docs/evidence/access-governance-p2-20261124.md",
+      "remaining": "None for the recorded local acceptance criteria. External identity provider scheme sync is out of scope.",
+      "criteria": "Scheme changes propagate to all assigned projects and are audited."
+    },
+    {
+      "id": "NV-070",
+      "status": "VERIFIED_COMPLETE",
+      "module": "access_governance",
+      "location": "apps/api/novara_core/modules/access_governance.py; apps/api/novara_core/permissions.py; apps/api/novara_core/dependencies.py; apps/web/app.js",
+      "backend": "complete fine-grained NOVARA-native notification workflow/integration/webhook/billing/audit permissions allow-listed in custom roles",
+      "frontend": "complete Access governance SPA permission check form and governance permission contract display",
+      "database": "complete reuse of custom_roles permissions storage; no external RBAC tables copied",
+      "api": "complete permissions list and permission-check endpoints exposing NV-070 governance permissions",
+      "permissions": "complete server-side denial tests for notification_workflow/integration/webhook/billing permissions; no external EE auth packages",
+      "integration": "complete integration with NOVARA role matrix and custom-role enforcement",
+      "evidence": "apps/api/tests/test_access_governance_p2.py; apps/web/tests/ui_v70_access_governance_contract.py; docs/evidence/access-governance-p2-20261124.md",
+      "remaining": "None for the recorded local acceptance criteria. Novu Enterprise auth packages are not used.",
+      "criteria": "Each sensitive notification action maps to a NOVARA permission with a named denial test."
+    }
+  ]
+}
