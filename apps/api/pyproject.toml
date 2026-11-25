@@ -1,0 +1,26 @@
+[project]
+name = "novara-core"
+version = "0.1.0"
+description = "NOVARA: one shared business operating system core"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "python-multipart>=0.0.9",
+  "uvicorn>=0.30",
+  "sqlalchemy>=2.0",
+  "pydantic>=2",
+  "bcrypt>=4.0",
+  "pypdf>=4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+postgres = ["psycopg[binary]>=3.1"]
+migrate = ["alembic>=1.13"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["novara_core*"]

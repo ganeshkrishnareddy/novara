@@ -1,0 +1,156 @@
+NOVARA native CI preparation - static local validation
+Date: 2026-11-25
+Path note: machine-specific paths are shown as repository-relative paths or <VENV_PYTHON> placeholders; validation outputs are unchanged.
+Branch: main
+HEAD: f1dcfefe162faac644e974f075a411eb0975f4cb (short f1dcfef)
+No commit, push, tag, release, upload, reset, clean, stash or checkout was performed.
+No native CI workflow was triggered. No Linux or macOS artifact was produced.
+
+--- Command 1: YAML + package structural validation (system Python, PyYAML 6.0.3) ---
+
+python - <<'PY'
+from pathlib import Path
+import json
+import yaml
+
+root = Path(".")  # repository root
+workflow = yaml.load((root / ".github/workflows/desktop-build.yml").read_text(encoding="utf-8"), Loader=yaml.BaseLoader)
+assert "on" in workflow, "missing on key"
+assert set(workflow["jobs"]) == {"backend-tests", "desktop-build"}
+matrix = workflow["jobs"]["desktop-build"]["strategy"]["matrix"]["include"]
+actual = [(m["os"], m["platform"], m["arch"], m["build_script"], m["build_args"]) for m in matrix]
+expected = [
+    ("windows-latest", "windows", "x64", "build:win", ""),
+    ("ubuntu-latest", "linux", "x64", "build:linux", ""),
+    ("macos-15-intel", "macos", "x64", "build:mac", "--x64"),
+    ("macos-latest", "macos", "arm64", "build:mac", "--arm64"),
+]
+assert actual == expected, actual
+build_names = [s["name"] for s in workflow["jobs"]["desktop-build"]["steps"]]
+for name in [
+    "Create log directory",
+    "Install Linux packaging dependencies",
+    "Prepare bundled backend payload",
+    "Smoke-test bundled backend payload",
+    "Run desktop shell tests",
+    "Build installer",
+    "Verify expected artifact types",
+    "Write checksums and build manifest",
+    "Checksum build logs",
+    "Upload build logs",
+    "Upload workflow artifacts",
+]:
+    assert name in build_names, name
+backend_names = [s["name"] for s in workflow["jobs"]["backend-tests"]["steps"]]
+assert "Run full backend suite" in backend_names
+assert "Check Alembic heads" in backend_names
+assert "Upload backend check logs" in backend_names
+assert workflow["defaults"]["run"]["shell"] == "bash"
+package = json.loads((root / "desktop/package.json").read_text(encoding="utf-8"))
+assert package["scripts"]["build:mac"] == "electron-builder --mac"
+assert package["build"]["mac"]["target"] == ["dmg"]
+print("YAML_OK: 2 jobs, 4 native matrix legs, 11 build steps, bash shell")
+print("PACKAGE_OK: mac script and native dmg target aligned with matrix")
+PY
+
+Output:
+YAML_OK: 2 jobs, 4 native matrix legs, 11 build steps, bash shell
+PACKAGE_OK: mac script and native dmg target aligned with matrix
+
+Re-check after adding root.mkdir in the log-checksum step:
+YAML_RECHECK_OK 2 4 15
+
+--- Command 2: Python script syntax ---
+
+& "<VENV_PYTHON>" -m py_compile scripts/prepare_desktop_backend.py scripts/smoke_desktop_payload.py scripts/verify_desktop_artifact.py scripts/write_desktop_build_manifest.py
+
+Output:
+PY_COMPILE_OK: 4 scripts
+exit=0
+
+--- Command 3: JavaScript syntax ---
+
+node --check desktop\src\main.js
+node --check desktop\src\security-helpers.js
+node --check desktop\tests\security-helpers.test.js
+node --check desktop\tests\posix-permissions.test.js
+
+Output:
+NODE_CHECK_OK: 4 files
+exit=0
+
+--- Command 4: Focused desktop tests ---
+
+node --test desktop\tests\security-helpers.test.js desktop\tests\posix-permissions.test.js
+
+Output:
+- data directories stay traversable and files stay private (1.4736ms) # SKIP
++ inherited backend overrides are removed (1.472ms)
++ explicit overrides are applied after sanitizing (0.2962ms)
++ health checks use the protocol of the configured URL (0.9709ms)
++ healthGet delegates to the matching client (0.3295ms)
++ data modes keep directories traversable (0.3329ms)
+tests 6
+pass 5
+fail 0
+skipped 1
+duration_ms 166.0138
+exit=0
+
+The POSIX chmod test is skipped on Windows by design; it will execute on the native Linux and macOS matrix legs.
+
+--- Command 5: Read-only artifact verification and hash ---
+
+& "<VENV_PYTHON>" scripts/verify_desktop_artifact.py --platform windows --arch x64
+& "<VENV_PYTHON>" -c "import hashlib,pathlib; p=pathlib.Path('desktop/dist/NOVARA-Setup-0.1.0-desktop-x64.exe'); print('ARTIFACT_HASH', p.stat().st_size, hashlib.sha256(p.read_bytes()).hexdigest())"
+
+Output:
+NOVARA-Setup-0.1.0-desktop-x64.exe platform=windows arch=x64 size=146465197 sha256=b291e32ec0e02db640aa1e837fe8f396a4920cc2e75f9517d556c7c8cc05f6d6 format_ok=True
+PASS: expected windows x64 artifact types verified
+ARTIFACT_HASH 146465197 b291e32ec0e02db640aa1e837fe8f396a4920cc2e75f9517d556c7c8cc05f6d6
+
+The existing verified Windows installer was not overwritten. desktop/dist/build-manifest.json still records generatedAt 2026-11-25T14:17:56.606073+00:00, signed=false, published=false.
+
+--- Command 6: Git snapshot ---
+
+git rev-parse --short HEAD
+git rev-parse --abbrev-ref HEAD
+git status --short | Measure-Object | Select-Object -ExpandProperty Count
+git diff --cached --stat
+
+Output:
+f1dcfef
+main
+695
+(no staged diff)
+
+695 was the count at first inspection. New untracked files added during this preparation are:
+.github/workflows/desktop-build.yml (already present), desktop/tests/posix-permissions.test.js,
+scripts/verify_desktop_artifact.py, docs/DESKTOP_RELEASE/CI_NATIVE_PREP_REVIEW.md and this evidence file.
+
+--- Required workflow inputs ---
+
+All of the following exist locally. Only apps/web/app.js is tracked in HEAD; the other listed workflow inputs are untracked and must be included in the authorized commit before the remote workflow can use them:
+
+.github/workflows/desktop-build.yml
+desktop/package.json
+desktop/package-lock.json
+desktop/build/icon.png
+desktop/src/main.js
+desktop/src/security-helpers.js
+desktop/tests/security-helpers.test.js
+desktop/tests/posix-permissions.test.js
+scripts/prepare_desktop_backend.py
+scripts/smoke_desktop_payload.py
+scripts/verify_desktop_artifact.py
+scripts/write_desktop_build_manifest.py
+apps/api/pyproject.toml
+apps/api/alembic.ini
+apps/api/novara_core/modules/storage.py
+apps/api/tests/test_presign_secret_hardening.py
+apps/web/app.js
+docs/DESKTOP_RELEASE/NEXT_STAGE_REPORT.md
+
+--- Scope limits ---
+
+Static YAML/JSON parsing and local tests are not a GitHub Actions run. No native Linux or macOS result is claimed. Remote workflow availability, runner scheduling and artifact upload remain unverified until an authorized push and run occur.

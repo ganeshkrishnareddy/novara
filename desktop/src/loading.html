@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NOVARA — Connecting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="utility-page">
+  <main class="utility-card" data-name="connection">
+    <div class="brand-mark" aria-hidden="true">N</div>
+    <h1>NOVARA</h1>
+    <p class="tagline">Everything connected. Everything under control.</p>
+    <div class="status-line">
+      <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+      <span id="status-text" role="status">Starting the NOVARA backend…</span>
+    </div>
+    <p class="detail" id="detail-text">Preparing a secure loopback connection on this machine.</p>
+    <p class="detail mono" id="url-text"></p>
+    <div class="actions">
+      <button type="button" class="btn primary" id="retry" hidden>Retry</button>
+      <button type="button" class="btn" id="settings" hidden>Backend settings</button>
+    </div>
+    <details class="diagnostics">
+      <summary>Connection help</summary>
+      <p>Local mode starts NOVARA's own FastAPI service on a loopback-only port and stores data in the application data folder. Remote mode connects to a NOVARA server you already run. Both modes keep the same light-theme client.</p>
+    </details>
+  </main>
+  <script src="ui.js"></script>
+</body>
+</html>

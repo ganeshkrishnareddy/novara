@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NOVARA settings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="utility-page">
+  <main class="utility-card" data-name="backend-settings">
+    <h1>Backend settings</h1>
+    <p class="tagline">Choose how this desktop client reaches NOVARA.</p>
+    <form id="settings-form">
+      <fieldset>
+        <legend>Connection mode</legend>
+        <label class="choice">
+          <input type="radio" name="backendMode" value="local" checked />
+          <span><strong>Bundled local backend</strong><br />Start NOVARA on a private loopback port. Data stays in this computer's application data folder.</span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="backendMode" value="remote" />
+          <span><strong>Existing NOVARA server</strong><br />Connect to a NOVARA backend you already run and configure.</span>
+        </label>
+      </fieldset>
+      <label class="field" for="remoteUrl">Server address</label>
+      <input type="url" id="remoteUrl" name="remoteUrl" value="http://127.0.0.1:8000" spellcheck="false" />
+      <p class="caption">Remote servers must use https://. Plain http:// is accepted only for loopback development addresses such as 127.0.0.1. The client never sends data anywhere else.</p>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+      <div class="actions">
+        <button type="submit" class="btn primary">Save and restart</button>
+        <button type="button" class="btn" id="cancel">Cancel</button>
+      </div>
+    </form>
+  </main>
+  <script src="ui.js"></script>
+</body>
+</html>

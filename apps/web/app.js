@@ -1,4 +1,4 @@
-﻿/* NOVARA ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â unified web application
+﻿/* NOVARA — unified web application
    Vanilla JS single-page app. No build step, no external dependencies.
    Every record shown here comes from the NOVARA API. */
 
@@ -100,7 +100,7 @@ const state = {
 };
 
 /* ------------------------------------------------------------------ *
- * Icons ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â professional inline SVG, no fonts or emoji
+ * Icons — professional inline SVG, no fonts or emoji
  * ------------------------------------------------------------------ */
 
 const ICONS = {
@@ -206,9 +206,9 @@ function errMessage(err) {
 }
 
 function fmtDate(value) {
-  if (!value) return 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  if (!value) return '—';
   const d = new Date(value);
-  if (isNaN(d.getTime())) return 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  if (isNaN(d.getTime())) return '—';
   return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
@@ -218,16 +218,16 @@ function dateValue(value) {
 }
 
 function fmtDateTime(value) {
-  if (!value) return 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  if (!value) return '—';
   const d = new Date(value);
-  if (isNaN(d.getTime())) return 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  if (isNaN(d.getTime())) return '—';
   return d.toLocaleString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
 }
 
 function relTime(value) {
-  if (!value) return 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  if (!value) return '—';
   const d = new Date(value);
-  if (isNaN(d.getTime())) return 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  if (isNaN(d.getTime())) return '—';
   const seconds = Math.round((Date.now() - d.getTime()) / 1000);
   if (seconds < 0) return fmtDate(value);
   if (seconds < 60) return 'just now';
@@ -339,7 +339,7 @@ function toast(message, kind) {
 }
 
 /* ------------------------------------------------------------------ *
- * API layer ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â bearer auth, one refresh attempt, honest errors
+ * API layer — bearer auth, one refresh attempt, honest errors
  * ------------------------------------------------------------------ */
 
 async function refreshAccess() {
@@ -627,7 +627,7 @@ function renderAuth(route, initialError) {
       return '<div class="auth-feature"><div class="auth-feature-icon">' + icon(f[0], 17) + '</div><div>' +
         '<div class="auth-feature-title">' + esc(f[1]) + '</div><div class="auth-feature-text">' + esc(f[2]) + '</div></div></div>';
     }).join('') + '</div></div></div>' +
-    '<div class="auth-story-foot">' + icon('shield', 14) + ' NOVARA Ãƒâ€šÃ‚Â· Everything Connected. Everything Under Control.</div>' +
+    '<div class="auth-story-foot">' + icon('shield', 14) + ' NOVARA · Everything Connected. Everything Under Control.</div>' +
     '</section><main class="auth-panel"><div class="auth-card">' +
     '<div class="brand"><div class="brand-mark">N</div><div><div class="brand-name">NOVARA</div>' +
     '<div class="brand-sub">Business operating system</div></div></div>' +
@@ -666,6 +666,8 @@ const NAV = [
     { route: 'work-item-planning', label: 'Work-item planning', icon: 'layers', perm: P.taskRead },
     { route: 'work-collab', label: 'Work collaboration', icon: 'user', perm: P.taskRead },
     { route: 'advanced-experiments', label: 'Advanced experimentation', icon: 'insights', perm: P.contactRead },
+    { route: 'parity-capabilities', label: 'Parity capabilities', icon: 'layers', perm: P.contactRead },
+    { route: 'final-capabilities', label: 'Final capabilities', icon: 'layers', perm: P.contactRead },
     { route: 'flag-governance', label: 'Flag governance', icon: 'toggleLeft', perm: P.manageSettings },
     { route: 'access-governance', label: 'Access governance', icon: 'shield', perm: P.manageSettings },
     { route: 'support-reporting', label: 'Support reporting', icon: 'insights', perm: P.contactRead },
@@ -699,6 +701,7 @@ const NAV = [
     { route: 'workspaces', label: 'Workspaces', icon: 'grid' },
     { route: 'profile', label: 'My profile', icon: 'user' },
     { route: 'settings', label: 'Settings', icon: 'settings' },
+    { route: 'community', label: 'Community', icon: 'link' },
   ] },
 ];
 
@@ -750,6 +753,7 @@ const ROUTE_META = {
   workspaces: ['Workspaces', 'Account'],
   profile: ['My profile', 'Account'],
   settings: ['Settings', 'Account'],
+  community: ['Community', 'Account'],
 };
 
 function routeMeta(route) {
@@ -798,10 +802,10 @@ function renderApp() {
     '<div class="scrim" data-action="close-sidebar"></div>' +
     '<div class="main-wrap"><header class="topbar">' +
     '<button class="topbar-btn menu-btn" data-action="toggle-sidebar" aria-label="Open navigation">' + icon('menu', 18) + '</button>' +
-    '<div><div class="topbar-title">' + esc(meta[0]) + '</div><div class="topbar-crumb">' + esc(meta[1]) + ' Ãƒâ€šÃ‚Â· ' +
+    '<div><div class="topbar-title">' + esc(meta[0]) + '</div><div class="topbar-crumb">' + esc(meta[1]) + ' · ' +
     esc(state.me ? cap(state.me.role) : '') + '</div></div><div class="topbar-spacer"></div>' +
     '<div class="search-box"><div class="search-input-wrap">' + icon('search', 16) +
-    '<input id="global-search" type="search" placeholder="Search everythingÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦" autocomplete="off" data-input="global-search" aria-label="Global search">' +
+    '<input id="global-search" type="search" placeholder="Search everything…" autocomplete="off" data-input="global-search" aria-label="Global search">' +
     '<span class="search-kbd">/</span></div><div id="search-results-host"></div></div>' +
     '<button class="workspace-chip" data-action="nav" data-route="workspaces" title="Switch workspace">' +
     '<span class="workspace-chip-icon">' + icon('grid', 14) + '</span>' +
@@ -964,6 +968,8 @@ async function loadView() {
     case 'work-item-planning': return loadWorkItemPlanning(token);
     case 'work-collab': return loadWorkCollaboration(token);
     case 'advanced-experiments': return loadAdvancedExperiments(token);
+    case 'parity-capabilities': return loadParityCapabilities(token);
+    case 'final-capabilities': return loadFinalCapabilities(token);
     case 'flag-governance': return loadFlagGovernance(token);
     case 'access-governance': return loadAccessGovernance(token);
     case 'support-reporting': return loadSupportReporting(token);
@@ -998,12 +1004,13 @@ async function loadView() {
     case 'workspaces': return loadWorkspacesPage(token);
     case 'profile': return loadProfile(token);
     case 'settings': return loadSettings(token);
+    case 'community': return loadCommunity(token);
     default: return loadDashboard(token);
   }
 }
 
 /* ------------------------------------------------------------------ *
- * Governance notices ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â shown wherever a build makes no external calls
+ * Governance notices — shown wherever a build makes no external calls
  * ------------------------------------------------------------------ */
 
 function governanceNote(text) {
@@ -1011,7 +1018,7 @@ function governanceNote(text) {
 }
 
 /* ------------------------------------------------------------------ *
- * Agent center ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â governed configuration and runs, no external AI calls
+ * Agent center — governed configuration and runs, no external AI calls
  * ------------------------------------------------------------------ */
 
 async function loadAgents(token) {
@@ -1071,7 +1078,7 @@ async function loadAgents(token) {
           return '<tr><td><div class="cell-primary"><div class="cell-title">' + esc(a.name) + '</div>' +
             '<div class="cell-sub mono">' + esc(String(a.id).slice(0, 8)) + '</div></div></td>' +
             '<td class="muted small">' + esc(a.purpose) + '</td>' +
-            '<td class="small">' + esc(cap(a.model_provider)) + ' Ãƒâ€šÃ‚Â· ' + esc(a.model_name) + '</td>' +
+            '<td class="small">' + esc(cap(a.model_provider)) + ' · ' + esc(a.model_name) + '</td>' +
             '<td>' + statusBadge(a.status) + (a.requires_approval ? ' <span class="badge badge--amber">approval</span>' : '') + '</td>' +
             '<td class="muted small">' + esc(a.max_steps) + ' steps</td>' +
             '<td class="muted small">' + esc(fmtDate(a.created_at)) + '</td>' +
@@ -1100,8 +1107,8 @@ async function loadAgents(token) {
             '<td>' + statusBadge(r.status) + '</td>' +
             '<td class="muted small">' + esc(r.steps_taken) + '</td>' +
             '<td class="muted small">' + esc(fmtDateTime(r.requested_at)) + '</td>' +
-            '<td class="muted small">' + esc(r.finished_at ? fmtDateTime(r.finished_at) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td>' +
-            '<td><div class="row">' + (buttons.length ? buttons.join('') : '<span class="faint small">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</div></td></tr>';
+            '<td class="muted small">' + esc(r.finished_at ? fmtDateTime(r.finished_at) : '—') + '</td>' +
+            '<td><div class="row">' + (buttons.length ? buttons.join('') : '<span class="faint small">—</span>') + '</div></td></tr>';
         }).join('') + '</tbody></table></div>'
       : emptyState('activity', 'No runs yet', 'Request a run from an active agent to record governed activity.')) +
     '</section>';
@@ -1111,7 +1118,7 @@ async function loadAgents(token) {
 }
 
 /* ------------------------------------------------------------------ *
- * Integrations ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â non-sensitive settings and an honest capability catalog
+ * Integrations — non-sensitive settings and an honest capability catalog
  * ------------------------------------------------------------------ */
 
 async function loadIntegrations(token) {
@@ -1167,9 +1174,9 @@ async function loadIntegrations(token) {
           '<div class="cell-sub mono">' + esc(entry.provider) + '</div></td>' +
           '<td>' + statusBadge(entry.status) + '</td>' +
           '<td class="small">' + (entry.configured ? 'Yes' : 'No') + '</td>' +
-          '<td class="small">' + (keys.length ? '<span class="mono">' + esc(keys.join(', ')) + '</span>' : '<span class="faint">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</td>' +
+          '<td class="small">' + (keys.length ? '<span class="mono">' + esc(keys.join(', ')) + '</span>' : '<span class="faint">—</span>') + '</td>' +
           '<td class="muted small">' + esc(entry.notes) + '</td>' +
-          '<td><div class="row">' + (buttons.length ? buttons.join('') : '<span class="faint small">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</div></td></tr>';
+          '<td><div class="row">' + (buttons.length ? buttons.join('') : '<span class="faint small">—</span>') + '</div></td></tr>';
       }).join('') + '</tbody></table></div>'
       : emptyState('link', 'No providers listed', 'The capability catalog is empty for this workspace.')) +
     '</section>';
@@ -1178,7 +1185,54 @@ async function loadIntegrations(token) {
 }
 
 /* ------------------------------------------------------------------ *
- * Phase 3 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â business intelligence aggregates
+ * Community — voluntary public links, no engagement automation
+ * ------------------------------------------------------------------ */
+
+function loadCommunity(token) {
+  const repo = 'https://github.com/ganeshkrishnareddy/novara';
+  const links = [
+    ['link', 'Website', 'Prepared locally; not published.', ''],
+    ['link', 'View source', 'Read the implementation on GitHub.', repo],
+    ['zap', 'Star on GitHub', 'Voluntary action performed by you.', repo + '/stargazers'],
+    ['link', 'Fork on GitHub', 'Voluntary action performed by you.', repo + '/fork'],
+    ['bell', 'Watch releases', 'Voluntary action performed by you.', repo + '/releases'],
+    ['users', 'Discussions', 'Ask and share with the community.', repo + '/discussions'],
+    ['note', 'Documentation', 'Install, configure and test.', repo + '/blob/main/README.md'],
+  ];
+
+  let html = pageHead('Community', 'NOVARA community',
+    'Voluntary links to the public project. No feature is gated by stars, forks or follows.');
+  html += governanceNote('No GitHub action is automated. Stars, forks, watches and issues are always performed by the user on GitHub. The public website is prepared locally and has not been published.');
+  html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
+    '<div class="card-title">Public project links</div>' +
+    '<div class="card-sub">Open-source participation stays voluntary</div></div></div>' +
+    '<div class="card-body"><div class="row" style="flex-wrap:wrap;gap:10px">' +
+    links.map(function (entry) {
+      const glyph = icon(entry[0], 15);
+      if (!entry[3]) {
+        return '<div class="btn btn--ghost" style="opacity:.7;cursor:default">' + glyph + ' ' +
+          esc(entry[1]) + ' — ' + esc(entry[2]) + '</div>';
+      }
+      return '<a class="btn" href="' + attr(entry[3]) + '" target="_blank" rel="noopener noreferrer">' +
+        glyph + ' ' + esc(entry[1]) + '</a>';
+    }).join('') +
+    '</div></div></section>';
+
+  html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
+    '<div class="card-title">Contribute</div>' +
+    '<div class="card-sub">Recognition follows useful work, not engagement metrics</div></div></div>' +
+    '<div class="card-body"><p class="muted">Accepted bug reports, merged code, documentation, translations, accessibility work, reproducible QA reports and useful integration adapters are eligible for human review. Benefits are subject to published criteria and an approved budget. A star is not a qualifying contribution and never unlocks a feature.</p>' +
+    '<div class="row" style="flex-wrap:wrap;gap:10px">' +
+    '<a class="btn" href="' + attr(repo + '/issues/new') + '" target="_blank" rel="noopener noreferrer">' + icon('zap', 15) + ' Report an issue</a>' +
+    '<a class="btn" href="' + attr(repo + '/blob/main/docs/COMMUNITY_CONTRIBUTION_PROGRAM.md') + '" target="_blank" rel="noopener noreferrer">' + icon('note', 15) + ' Contribution guide</a>' +
+    '<a class="btn" href="' + attr(repo + '/blob/main/docs/SECURITY_REPORT.md') + '" target="_blank" rel="noopener noreferrer">' + icon('shield', 15) + ' Security policy</a>' +
+    '</div></div></section>';
+
+  renderViewHtml(html);
+}
+
+/* ------------------------------------------------------------------ *
+ * Phase 3 — business intelligence aggregates
  * ------------------------------------------------------------------ */
 
 async function loadInsights(token) {
@@ -1206,11 +1260,11 @@ async function loadInsights(token) {
   const leads = Number(funnel.leads || 0);
   const converted = Number(funnel.converted_leads || 0);
   const tasks = Number(funnel.tasks || 0);
-  const rate = leads ? (converted / leads * 100).toFixed(1) + '%' : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  const rate = leads ? (converted / leads * 100).toFixed(1) + '%' : '—';
   const maxCount = volume.reduce(function (max, row) { return Math.max(max, Number(row.count || 0)); }, 0);
 
   let html = pageHead('Workspace', 'Insights',
-    'Counts are calculated by the API from current workspace rows ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not cached or estimated.',
+    'Counts are calculated by the API from current workspace rows — not cached or estimated.',
     '<button class="btn" data-action="refresh-view">' + icon('refresh', 15) + ' Refresh</button>');
   html += governanceNote('These are descriptive counts of recorded activity. They are not a forecast, and no external analytics service receives data.');
   html += '<div class="stats">' +
@@ -1249,7 +1303,7 @@ async function loadInsights(token) {
 
   html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
     '<div class="card-title">Experiments</div>' +
-    '<div class="card-sub">A hypothesis, a metric and measured results ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â stored in this workspace only</div></div>' +
+    '<div class="card-sub">A hypothesis, a metric and measured results — stored in this workspace only</div></div>' +
     (manageExperiments ? '<button class="btn btn--sm btn--primary" data-action="experiment-create">' +
       icon('plus', 14) + ' New experiment</button>' : '') + '</div>' +
     (results[2].status === 'rejected'
@@ -1262,7 +1316,7 @@ async function loadInsights(token) {
               (e.hypothesis ? '<div class="small muted">' + esc(e.hypothesis) + '</div>' : '') + '</td>' +
               '<td>' + statusBadge(e.status) + '</td>' +
               '<td class="mono small">' + esc(e.metric_name) + '</td>' +
-              '<td class="small">' + (e.target == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : esc(String(e.target))) + '</td>' +
+              '<td class="small">' + (e.target == null ? '—' : esc(String(e.target))) + '</td>' +
               '<td><div class="cell-actions">' +
               '<button class="btn btn--sm" data-action="experiment-results" data-id="' + attr(e.id) + '">' +
                 icon('activity', 13) + ' Results</button>' +
@@ -1284,7 +1338,7 @@ async function loadInsights(token) {
 }
 
 /* ------------------------------------------------------------------ *
- * Phase 3 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â durable jobs, local adapters and system health
+ * Phase 3 — durable jobs, local adapters and system health
  * ------------------------------------------------------------------ */
 
 function eventAccessBlocked(title) {
@@ -1315,13 +1369,13 @@ async function loadJobs(token) {
     'Background work recorded in this workspace and processed by local handlers.',
     '<button class="btn" data-action="job-recover">' + icon('refresh', 15) + ' Recover stale</button>' +
     '<button class="btn btn--primary" data-action="job-run">' + icon('zap', 15) + ' Run worker</button>');
-  html += governanceNote('Jobs are durable rows. Retries use exponential backoff and exhausted jobs move to dead-letter. Every handler is local ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no external system is contacted.');
+  html += governanceNote('Jobs are durable rows. Retries use exponential backoff and exhausted jobs move to dead-letter. Every handler is local — no external system is contacted.');
   html += '<div class="stats">' +
-    statCard('clock', 'Queued', String(stats.queued == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : stats.queued), 'Waiting for a worker', 'amber') +
-    statCard('activity', 'Running', String(stats.running == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : stats.running), 'Claimed by a worker', 'blue') +
-    statCard('check', 'Succeeded', String(stats.succeeded == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : stats.succeeded), 'Completed locally') +
-    statCard('alert', 'Dead letter', String(stats.dead_letter == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : stats.dead_letter), 'Needs attention', 'amber') +
-    statCard('grid', 'Total', String(stats.total == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : stats.total), 'All job records') +
+    statCard('clock', 'Queued', String(stats.queued == null ? '—' : stats.queued), 'Waiting for a worker', 'amber') +
+    statCard('activity', 'Running', String(stats.running == null ? '—' : stats.running), 'Claimed by a worker', 'blue') +
+    statCard('check', 'Succeeded', String(stats.succeeded == null ? '—' : stats.succeeded), 'Completed locally') +
+    statCard('alert', 'Dead letter', String(stats.dead_letter == null ? '—' : stats.dead_letter), 'Needs attention', 'amber') +
+    statCard('grid', 'Total', String(stats.total == null ? '—' : stats.total), 'All job records') +
     '</div>' + (results[1].status === 'rejected' ? errorBlock('Jobs could not be loaded: ' + errMessage(results[1].reason)) : '');
 
   html += '<div class="stack">';
@@ -1335,7 +1389,7 @@ async function loadJobs(token) {
 
   html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
     '<div class="card-title">Job records</div>' +
-    '<div class="card-sub">Newest first Ãƒâ€šÃ‚Â· up to 100 records</div></div></div>' +
+    '<div class="card-sub">Newest first · up to 100 records</div></div></div>' +
     (jobs.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Type</th><th>Status</th>' +
       '<th>Attempts</th><th>Run at</th><th>Correlation</th><th>Last error</th><th></th></tr></thead><tbody>' +
       jobs.map(function (job) {
@@ -1352,8 +1406,8 @@ async function loadJobs(token) {
           '<td class="muted small">' + esc(job.attempts) + ' / ' + esc(job.max_attempts) + '</td>' +
           '<td class="muted small">' + esc(fmtDateTime(job.run_at)) + '</td>' +
           '<td class="muted small mono">' + esc(String(job.correlation_id || '').slice(0, 8)) + '</td>' +
-          '<td class="muted small">' + (job.last_error ? esc(String(job.last_error).slice(0, 60)) : '<span class="faint">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</td>' +
-          '<td><div class="row">' + (buttons.length ? buttons.join('') : '<span class="faint small">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</div></td></tr>';
+          '<td class="muted small">' + (job.last_error ? esc(String(job.last_error).slice(0, 60)) : '<span class="faint">—</span>') + '</td>' +
+          '<td><div class="row">' + (buttons.length ? buttons.join('') : '<span class="faint small">—</span>') + '</div></td></tr>';
       }).join('') + '</tbody></table></div>'
       : emptyState('activity', 'No jobs yet', 'Jobs appear here when a workflow enqueues durable work.')) +
     '</section></div>';
@@ -1404,14 +1458,14 @@ async function loadAdapters(token) {
           '<td class="small">' + (provider.local_mock_available ? 'Yes' : 'No') + '</td>' +
           '<td>' + (manage && provider.local_mock_available
             ? '<button class="btn btn--sm" data-action="adapter-test" data-provider="' + attr(provider.provider) + '">' + icon('zap', 14) + ' Test mock</button>'
-            : '<span class="faint small">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</td></tr>';
+            : '<span class="faint small">—</span>') + '</td></tr>';
       }).join('') + '</tbody></table></div>'
       : emptyState('link', 'No adapters listed', 'The adapter catalog is empty for this workspace.')) +
     '</section>';
 
   html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
     '<div class="card-title">Recorded calls</div>' +
-    '<div class="card-sub">Redacted summaries only ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no request bodies or secrets</div></div></div>' +
+    '<div class="card-sub">Redacted summaries only — no request bodies or secrets</div></div></div>' +
     (calls.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Provider</th><th>Operation</th>' +
       '<th>Status</th><th>Result note</th><th>Recorded</th></tr></thead><tbody>' +
       calls.map(function (call) {
@@ -1450,12 +1504,12 @@ async function loadOperations(token) {
     '<button class="btn" data-action="refresh-view">' + icon('refresh', 15) + ' Refresh</button>');
   html += governanceNote(summary.notes || 'All counts come from stored rows. No external system is queried.');
   html += '<div class="stats">' +
-    statCard('users', 'Contacts', String(summary.contacts == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : summary.contacts), 'Stored records') +
-    statCard('target', 'Leads', String(summary.leads == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : summary.leads), 'All stages') +
-    statCard('checkSquare', 'Open tasks', String(summary.open_tasks == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : summary.open_tasks), 'Not complete', 'amber') +
-    statCard('mail', 'Pending drafts', String(summary.pending_drafts == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : summary.pending_drafts), 'Awaiting approval', 'amber') +
-    statCard('activity', 'Audit events', String(summary.events_total == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : summary.events_total), 'Append-only', 'blue') +
-    statCard('clock', 'Queued jobs', String(summary.jobs_queued == null ? 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â' : summary.jobs_queued), 'Awaiting a worker') +
+    statCard('users', 'Contacts', String(summary.contacts == null ? '—' : summary.contacts), 'Stored records') +
+    statCard('target', 'Leads', String(summary.leads == null ? '—' : summary.leads), 'All stages') +
+    statCard('checkSquare', 'Open tasks', String(summary.open_tasks == null ? '—' : summary.open_tasks), 'Not complete', 'amber') +
+    statCard('mail', 'Pending drafts', String(summary.pending_drafts == null ? '—' : summary.pending_drafts), 'Awaiting approval', 'amber') +
+    statCard('activity', 'Audit events', String(summary.events_total == null ? '—' : summary.events_total), 'Append-only', 'blue') +
+    statCard('clock', 'Queued jobs', String(summary.jobs_queued == null ? '—' : summary.jobs_queued), 'Awaiting a worker') +
     '</div>';
 
   html += '<div class="stack">';
@@ -1473,7 +1527,7 @@ async function loadOperations(token) {
 
   html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
     '<div class="card-title">Recent audit entries</div>' +
-    '<div class="card-sub">Newest first Ãƒâ€šÃ‚Â· up to 25 entries</div></div></div>' +
+    '<div class="card-sub">Newest first · up to 25 entries</div></div></div>' +
     (audit.length ? '<div class="timeline">' + audit.slice(0, 12).map(function (event) {
       return eventItem(event, true);
     }).join('') + '</div>' : emptyState('activity', 'No audit entries', 'Workspace actions are recorded here.')) +
@@ -1482,7 +1536,7 @@ async function loadOperations(token) {
 }
 
 /* ------------------------------------------------------------------ *
- * Dashboard ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â all numbers are derived from live API lists
+ * Dashboard — all numbers are derived from live API lists
  * ------------------------------------------------------------------ */
 
 function statCard(iconName, label, value, note, tone) {
@@ -1498,8 +1552,8 @@ function eventItem(event, compact) {
   return '<div class="timeline-item"><div class="timeline-dot">' + icon(eventIcon(type), 14) + '</div>' +
     '<div class="timeline-body"><div class="timeline-title">' + esc(cap(type)) + '</div>' +
     '<div class="timeline-meta">' + esc(relTime(event.occurred_at)) +
-    (event.entity_id ? ' Ãƒâ€šÃ‚Â· Record ' + esc(String(event.entity_id).slice(0, 8)) : '') +
-    (compact ? '' : ' Ãƒâ€šÃ‚Â· Correlation ' + esc(String(event.correlation_id || '').slice(0, 8))) + '</div>' +
+    (event.entity_id ? ' · Record ' + esc(String(event.entity_id).slice(0, 8)) : '') +
+    (compact ? '' : ' · Correlation ' + esc(String(event.correlation_id || '').slice(0, 8))) + '</div>' +
     (payload && !compact ? '<div class="timeline-payload mono">' + esc(payload) + '</div>' : '') +
     '</div></div>';
 }
@@ -1538,7 +1592,7 @@ async function loadDashboard(token) {
   });
   updateUnreadBadge();
 
-  const value = function (key) { return Object.prototype.hasOwnProperty.call(data, key) ? String(data[key].length) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â'; };
+  const value = function (key) { return Object.prototype.hasOwnProperty.call(data, key) ? String(data[key].length) : '—'; };
   const openTasks = (data.tasks || []).filter(function (t) { return t.status !== 'done'; });
   const pendingDrafts = (data.drafts || []).filter(function (d) { return d.status === 'draft'; });
   const unread = (data.notifications || []).filter(function (n) { return !n.read; }).length;
@@ -1553,13 +1607,13 @@ async function loadDashboard(token) {
     (can(P.eventRead) ? '<a class="btn" href="#/activity">' + icon('activity', 16) + ' Activity feed</a>' : '');
 
   let html = pageHead('Workspace', 'Overview', 'A live view of ' + (state.me ? state.me.workspace_name : 'your workspace') + '.', actions);
-  if (errors.length) html += errorBlock('Could not load part of the dashboard ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ' + errors.join(' Ãƒâ€šÃ‚Â· '));
+  if (errors.length) html += errorBlock('Could not load part of the dashboard — ' + errors.join(' · '));
   html += '<div class="stats">' +
     statCard('users', 'Contacts', value('contacts'), can(P.contactRead) ? 'Active records' : 'No access') +
     statCard('target', 'Leads', value('leads'), can(P.leadRead) ? 'Across all stages' : 'No access') +
-    statCard('checkSquare', 'Open tasks', data.tasks ? String(openTasks.length) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â', can(P.taskRead) ? 'Not completed' : 'No access', 'amber') +
-    statCard('bell', 'Unread notifications', data.notifications ? String(unread) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â', can(P.notificationRead) ? 'Waiting for you' : 'No access', 'blue') +
-    statCard('mail', 'Pending drafts', data.drafts ? String(pendingDrafts.length) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â', can(P.outreachRead) ? 'Awaiting approval' : 'No access', 'amber') +
+    statCard('checkSquare', 'Open tasks', data.tasks ? String(openTasks.length) : '—', can(P.taskRead) ? 'Not completed' : 'No access', 'amber') +
+    statCard('bell', 'Unread notifications', data.notifications ? String(unread) : '—', can(P.notificationRead) ? 'Waiting for you' : 'No access', 'blue') +
+    statCard('mail', 'Pending drafts', data.drafts ? String(pendingDrafts.length) : '—', can(P.outreachRead) ? 'Awaiting approval' : 'No access', 'amber') +
     '</div>';
 
   html += '<div class="detail-grid"><div class="stack">';
@@ -1605,7 +1659,7 @@ async function loadDashboard(token) {
     const ops = data.operations;
     html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
       '<div class="card-title">System health</div>' +
-      '<div class="card-sub">Computed from stored rows ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no external calls</div></div>' +
+      '<div class="card-sub">Computed from stored rows — no external calls</div></div>' +
       '<a class="btn btn--sm btn--ghost" href="#/operations">' + icon('arrowRight', 14) + '</a></div>' +
       '<div class="card-body"><dl class="kv">' +
       '<dt>Queued jobs</dt><dd>' + esc(ops.jobs_queued) + '</dd>' +
@@ -1618,8 +1672,8 @@ async function loadDashboard(token) {
   }
 
   html += '<section class="card"><div class="card-head"><div class="card-head-main"><div class="card-title">Workspace</div></div></div>' +
-    '<div class="card-body"><dl class="kv"><dt>Name</dt><dd>' + esc(state.me ? state.me.workspace_name : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</dd>' +
-    '<dt>Workspace ID</dt><dd class="mono">' + esc(String(ws()).slice(0, 12)) + 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</dd>' +
+    '<div class="card-body"><dl class="kv"><dt>Name</dt><dd>' + esc(state.me ? state.me.workspace_name : '—') + '</dd>' +
+    '<dt>Workspace ID</dt><dd class="mono">' + esc(String(ws()).slice(0, 12)) + '…</dd>' +
     '<dt>Your role</dt><dd>' + esc(cap(state.me ? state.me.role : '')) + '</dd>' +
     '<dt>Permissions</dt><dd>' + esc((state.me ? state.me.permissions : []).length) + ' granted</dd></dl>' +
     '<div class="divider"></div><a class="btn btn--sm" href="#/settings">' + icon('settings', 15) + ' Open settings</a></div></section>';
@@ -1654,7 +1708,7 @@ function renderContactsPage(token) {
     'One customer identity shared by leads, tasks, notes and events.', actions) +
     '<section class="card"><div class="toolbar">' +
     '<div class="toolbar-search">' + icon('search', 15) +
-    '<input class="input" type="search" placeholder="Search name, email, companyÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦" value="' + attr(f.search) + '" data-input="contact-search" aria-label="Search contacts"></div>' +
+    '<input class="input" type="search" placeholder="Search name, email, company…" value="' + attr(f.search) + '" data-input="contact-search" aria-label="Search contacts"></div>' +
     '<select class="select" data-change="contact-filter" data-key="lifecycle_stage" aria-label="Lifecycle stage">' +
     selectOptions([['', 'All stages'], ['lead', 'Lead'], ['qualified', 'Qualified'], ['customer', 'Customer']], f.lifecycle_stage) + '</select>' +
     '<input class="input" type="search" style="max-width:150px" placeholder="Filter by tag" value="' + attr(f.tag) + '" data-input="contact-tag" aria-label="Filter by tag">' +
@@ -1662,7 +1716,7 @@ function renderContactsPage(token) {
     selectOptions([['false', 'Active'], ['true', 'Archived']], f.archived) + '</select>' +
     '<select class="select" data-change="contact-filter" data-key="sort" aria-label="Sort order">' +
     selectOptions([['created_at:desc', 'Newest first'], ['created_at:asc', 'Oldest first'], ['updated_at:desc', 'Recently updated'],
-      ['full_name:asc', 'Name AÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“Z'], ['full_name:desc', 'Name ZÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“A'], ['email:asc', 'Email AÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“Z']], f.sort) + '</select>' +
+      ['full_name:asc', 'Name A–Z'], ['full_name:desc', 'Name Z–A'], ['email:asc', 'Email A–Z']], f.sort) + '</select>' +
     '</div><div id="contacts-results"><div class="card-body"><div class="skeleton skeleton-line" style="width:80%"></div>' +
     '<div class="skeleton skeleton-line" style="width:65%"></div></div></div></section>');
   return refreshContactsTable(token);
@@ -1692,8 +1746,8 @@ async function refreshContactsTable(token) {
           return '<tr class="clickable" data-action="open-contact" data-id="' + attr(c.id) + '">' +
             '<td><div class="cell-primary">' + avatar(c.full_name || c.email, 'sm') + '<div><div class="cell-title">' +
             esc(c.full_name || c.email) + '</div><div class="cell-sub">' + esc(c.email) + '</div></div></div></td>' +
-            '<td class="muted small">' + esc(c.company_name || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td><td>' + statusBadge(c.lifecycle_stage) + '</td>' +
-            '<td><div class="chips">' + (tags + more || '<span class="faint tiny">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</div></td>' +
+            '<td class="muted small">' + esc(c.company_name || '—') + '</td><td>' + statusBadge(c.lifecycle_stage) + '</td>' +
+            '<td><div class="chips">' + (tags + more || '<span class="faint tiny">—</span>') + '</div></td>' +
             '<td class="muted small">' + esc(relTime(c.updated_at)) + '</td>' +
             '<td><div class="cell-actions"><a class="btn btn--sm btn--ghost" href="#/contacts/' + encodeURIComponent(c.id) + '" aria-label="Open contact">' + icon('chevronRight', 15) + '</a></div></td></tr>';
         }).join('') + '</tbody></table></div>';
@@ -1718,7 +1772,7 @@ async function loadContactsPage(token) {
 }
 
 /* ------------------------------------------------------------------ *
- * Contact detail ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â record, notes, unified timeline
+ * Contact detail — record, notes, unified timeline
  * ------------------------------------------------------------------ */
 
 async function consentTokens(contactId) {
@@ -1765,8 +1819,8 @@ async function loadContactDetail(id, token) {
     statusBadge(c.archived ? 'archived' : c.lifecycle_stage) + '</div><div class="card-body">' +
     '<div class="ident-head" style="margin-bottom:24px">' + avatar(c.full_name || c.email, 'lg') + '<div>' +
     '<div class="ident-name">' + esc(c.full_name || c.email) + '</div><div class="ident-mail">' + esc(c.email) + '</div></div></div>' +
-    '<dl class="kv"><dt>Company</dt><dd>' + esc(c.company_name || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</dd>' +
-    '<dt>Phone</dt><dd>' + esc(c.phone || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</dd>' +
+    '<dl class="kv"><dt>Company</dt><dd>' + esc(c.company_name || '—') + '</dd>' +
+    '<dt>Phone</dt><dd>' + esc(c.phone || '—') + '</dd>' +
     '<dt>Source</dt><dd>' + esc(cap(c.source)) + '</dd>' +
     '<dt>Lifecycle</dt><dd>' + esc(cap(c.lifecycle_stage)) + '</dd>' +
     '<dt>Added</dt><dd>' + esc(fmtDateTime(c.created_at)) + '</dd>' +
@@ -1781,8 +1835,8 @@ async function loadContactDetail(id, token) {
       : (conversations.length ? conversations.map(function (t) {
         return '<a class="list-row" href="#/inbox/' + attr(t.id) + '">' + icon('mail', 15) +
           '<div class="list-row-main"><div class="list-row-title">' + esc(t.subject) + '</div>' +
-          '<div class="list-row-sub">' + esc(cap(t.status)) + ' Ãƒâ€šÃ‚Â· ' + esc(cap(t.priority)) +
-          ' Ãƒâ€šÃ‚Â· opened ' + esc(relTime(t.created_at)) + '</div></div>' + icon('chevronRight', 15) + '</a>';
+          '<div class="list-row-sub">' + esc(cap(t.status)) + ' · ' + esc(cap(t.priority)) +
+          ' · opened ' + esc(relTime(t.created_at)) + '</div></div>' + icon('chevronRight', 15) + '</a>';
       }).join('')
         : emptyState('mail', 'No conversations yet',
           'Support requests from this contact will appear here without a duplicate identity.'))) +
@@ -1809,7 +1863,7 @@ async function loadContactDetail(id, token) {
     (notes === null ? errorBlock('Notes could not be loaded.')
       : (notes.length ? notes.map(function (n) {
         return '<div class="note-item"><div class="row-between"><div class="row">' + avatar(n.author_id, 'sm') +
-          '<span class="tiny muted">Recorded by ' + esc(String(n.author_id).slice(0, 8)) + ' Ãƒâ€šÃ‚Â· ' + esc(relTime(n.created_at)) + '</span></div></div>' +
+          '<span class="tiny muted">Recorded by ' + esc(String(n.author_id).slice(0, 8)) + ' · ' + esc(relTime(n.created_at)) + '</span></div></div>' +
           '<div class="note-body" style="margin-top:8px">' + esc(n.body) + '</div></div>';
       }).join('') : emptyState('note', 'No notes yet', 'Add the first note to keep context with this contact.'))) +
     (can(P.noteWrite) ? '<form class="card-body" data-form="add-note" data-contact-id="' + attr(c.id) + '" style="border-top:1px solid var(--line-soft)">' +
@@ -1827,7 +1881,7 @@ async function loadContactDetail(id, token) {
   html += '<section class="card"><div class="card-head"><div class="card-head-main"><div class="card-title">Record details</div></div></div>' +
     '<div class="card-body"><dl class="kv"><dt>Contact ID</dt><dd class="mono">' + esc(c.id) + '</dd>' +
     '<dt>Archived</dt><dd>' + (c.archived ? 'Yes' : 'No') + '</dd>' +
-    '<dt>Owner</dt><dd class="mono">' + esc(c.owner_id ? String(c.owner_id).slice(0, 12) + 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦' : 'Unassigned') + '</dd></dl>' +
+    '<dt>Owner</dt><dd class="mono">' + esc(c.owner_id ? String(c.owner_id).slice(0, 12) + '…' : 'Unassigned') + '</dd></dl>' +
     (Object.keys(c.custom_fields || {}).length ? '<div class="divider"></div><div class="field"><label>Custom fields</label>' +
       '<div class="mono small">' + esc(JSON.stringify(c.custom_fields)) + '</div></div>' : '') +
     '</div></section>';
@@ -1872,9 +1926,9 @@ async function loadCompanies(token) {
         state.caches.companies.map(function (c) {
           const url = safeUrl(c.website);
           return '<tr><td><div class="cell-primary">' + avatar(c.name, 'sm') + '<div><div class="cell-title">' + esc(c.name) +
-            '</div></div></div></td><td class="muted small">' + esc(c.industry || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td><td class="small">' +
-            (url ? '<a href="' + attr(url) + '" target="_blank" rel="noopener noreferrer">' + esc(url.replace(/^https?:\/\//, '')) + '</a>' : (c.website ? '<span class="muted small">' + esc(c.website) + '</span>' : '<span class="faint">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>')) +
-            '</td><td class="muted small">' + esc(c.location || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td><td class="muted small">' + esc(fmtDate(c.created_at)) + '</td></tr>';
+            '</div></div></div></td><td class="muted small">' + esc(c.industry || '—') + '</td><td class="small">' +
+            (url ? '<a href="' + attr(url) + '" target="_blank" rel="noopener noreferrer">' + esc(url.replace(/^https?:\/\//, '')) + '</a>' : (c.website ? '<span class="muted small">' + esc(c.website) + '</span>' : '<span class="faint">—</span>')) +
+            '</td><td class="muted small">' + esc(c.location || '—') + '</td><td class="muted small">' + esc(fmtDate(c.created_at)) + '</td></tr>';
         }).join('') + '</tbody></table></div></section>';
     }
     renderViewHtml(html);
@@ -1890,7 +1944,7 @@ async function loadCompanies(token) {
 
 function contactLabel(map, id) {
   const c = map[id];
-  return c ? (c.full_name || c.email) : (id ? 'Contact ' + String(id).slice(0, 8) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â');
+  return c ? (c.full_name || c.email) : (id ? 'Contact ' + String(id).slice(0, 8) : '—');
 }
 
 async function loadLeads(token) {
@@ -2062,8 +2116,8 @@ async function loadTasks(token) {
         if (can(P.taskWrite) && t.status === 'done') buttons.push('<button class="btn btn--sm btn--ghost" data-action="reopen-task" data-id="' + attr(t.id) + '">' + icon('restore', 14) + ' Reopen</button>');
         return '<tr><td><div class="cell-primary"><span class="stat-icon">' + icon('checkSquare', 15) + '</span><div>' +
           '<div class="cell-title">' + esc(t.title) + '</div><div class="cell-sub">' + esc(t.description || '') + '</div></div></div></td>' +
-          '<td class="small">' + (t.contact_id ? esc(contactLabel(map, t.contact_id)) : '<span class="faint">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span>') + '</td>' +
-          '<td class="small">' + esc(cap(t.priority)) + '</td><td class="muted small">' + esc(t.due_at ? fmtDate(t.due_at) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td>' +
+          '<td class="small">' + (t.contact_id ? esc(contactLabel(map, t.contact_id)) : '<span class="faint">—</span>') + '</td>' +
+          '<td class="small">' + esc(cap(t.priority)) + '</td><td class="muted small">' + esc(t.due_at ? fmtDate(t.due_at) : '—') + '</td>' +
           '<td>' + statusBadge(t.status) + '</td><td><div class="cell-actions">' + buttons.join('') + '</div></td></tr>';
       }).join('') + '</tbody></table></div>';
   }
@@ -2101,8 +2155,8 @@ async function loadProjects(token) {
       all.map(function (p) {
         return '<tr><td><div class="cell-title">' + esc(p.name) + '</div><div class="cell-sub">' + esc(p.description || '') + '</div></td>' +
           '<td>' + statusBadge(p.status) + '</td>' +
-          '<td class="small">' + esc(p.owner_id || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td>' +
-          '<td class="muted small">' + esc(p.due_at ? fmtDate(p.due_at) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td>' +
+          '<td class="small">' + esc(p.owner_id || '—') + '</td>' +
+          '<td class="muted small">' + esc(p.due_at ? fmtDate(p.due_at) : '—') + '</td>' +
           '<td><button class="btn btn--sm btn--ghost" data-action="view-project" data-id="' + attr(p.id) + '">' + icon('eye', 14) + ' View</button></td></tr>';
       }).join('') + '</tbody></table></div>';
   }
@@ -2154,7 +2208,7 @@ async function loadProjectDetail(projectId, token) {
   const modules = results[9].status === 'fulfilled' ? (results[9].value || []) : [];
   const activeStates = states.filter(function (s) { return s.is_active; });
   const statusOptions = activeStates.length
-    ? activeStates.map(function (s) { return [s.name, cap(s.name) + ' Ãƒâ€šÃ‚Â· ' + cap(s.group)]; })
+    ? activeStates.map(function (s) { return [s.name, cap(s.name) + ' · ' + cap(s.group)]; })
     : builtinItemStates();
   const assigneeOptions = [['', 'Unassigned']].concat(assignees.map(function (a) {
     return [a.id, a.display_name || a.email];
@@ -2164,9 +2218,9 @@ async function loadProjectDetail(projectId, token) {
     (can(P.taskWrite) ? '<button class="btn btn--primary" data-action="create-work-item" data-id="' +
       attr(project.id) + '">' + icon('plus', 15) + ' New work item</button>' : '');
   let html = pageHead('Operations', project.name,
-    cap(project.status) + (project.restricted ? ' Ãƒâ€šÃ‚Â· Private project' : '') +
-    ' Ãƒâ€šÃ‚Â· Due ' + fmtDate(project.due_at) +
-    ' Ãƒâ€šÃ‚Â· ' + String(progress.total_items || 0) + ' work items', actions);
+    cap(project.status) + (project.restricted ? ' · Private project' : '') +
+    ' · Due ' + fmtDate(project.due_at) +
+    ' · ' + String(progress.total_items || 0) + ' work items', actions);
 
   // PL-042: compact cards/bar chart from the real /projects/{id}/progress fields.
   const progressBuckets = [['total_items', 'Total items'], ['todo_items', 'To do'], ['in_progress_items', 'In progress'], ['done_items', 'Done']];
@@ -2275,7 +2329,7 @@ async function loadProjectDetail(projectId, token) {
             ? '<select class="select" data-change="item-assignee" data-id="' + attr(item.id) +
               '" aria-label="Assignee for ' + attr(item.title) + '">' +
               selectOptions(assigneeOptions, item.assignee_id || '') + '</select>'
-            : '<span class="small">' + esc(String(item.assignee_id || '').slice(0, 8) || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</span>') + '</td>' +
+            : '<span class="small">' + esc(String(item.assignee_id || '').slice(0, 8) || '—') + '</span>') + '</td>' +
           '<td class="small">' + esc(fmtDate(item.due_at)) +
           (overdue ? ' <span class="badge badge--red">Overdue</span>' : '') + '</td>' +
           '<td class="muted small">' + esc(relTime(item.updated_at)) + '</td></tr>';
@@ -2316,7 +2370,7 @@ async function loadProjectDetail(projectId, token) {
 }
 
 /* ------------------------------------------------------------------ *
- * Documents ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â metadata, enforced share controls and tracked engagement
+ * Documents — metadata, enforced share controls and tracked engagement
  * ------------------------------------------------------------------ */
 
 function docRoomName(rooms, roomId) {
@@ -2327,7 +2381,7 @@ function docRoomName(rooms, roomId) {
 
 function docSize(value) {
   const bytes = Number(value || 0);
-  if (!bytes) return 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+  if (!bytes) return '—';
   if (bytes < 1024) return bytes + ' B';
   if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
   return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
@@ -2357,7 +2411,7 @@ async function loadDocuments(token) {
     : '';
 
   let html = pageHead('Revenue', 'Documents',
-    docs.length + ' document record' + (docs.length === 1 ? '' : 's') + ' Ãƒâ€šÃ‚Â· ' +
+    docs.length + ' document record' + (docs.length === 1 ? '' : 's') + ' · ' +
     rooms.length + ' data room' + (rooms.length === 1 ? '' : 's'), actions);
   html += governanceNote('Document records carry metadata and share policy. Encrypted file blobs uploaded through the document security API are protected at rest with a versioned local key. No external message is sent.');
 
@@ -2370,7 +2424,7 @@ async function loadDocuments(token) {
       '<th>Description</th><th>Created</th></tr></thead><tbody>' +
       rooms.map(function (r) {
         return '<tr><td class="cell-title">' + esc(r.name) + '</td>' +
-          '<td class="small">' + esc(r.description || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td>' +
+          '<td class="small">' + esc(r.description || '—') + '</td>' +
           '<td class="muted small">' + esc(fmtDate(r.created_at)) + '</td></tr>';
       }).join('') + '</tbody></table></div>';
   }
@@ -2427,7 +2481,7 @@ async function loadDocumentDetail(documentId, token) {
       : '');
 
   let html = pageHead('Revenue', doc.title,
-    cap(doc.doc_type) + ' Ãƒâ€šÃ‚Â· ' + docSize(doc.size_bytes) + ' Ãƒâ€šÃ‚Â· ' + links.length + ' share links', actions);
+    cap(doc.doc_type) + ' · ' + docSize(doc.size_bytes) + ' · ' + links.length + ' share links', actions);
   html += '<section class="card"><div class="list-row"><span class="stat-icon">' + icon('archive', 15) +
     '</span><div class="list-row-main"><div class="list-row-title">' + esc(doc.title) + '</div>' +
     '<div class="list-row-sub mono">' + esc(doc.storage_path) + '</div>' +
@@ -2447,7 +2501,7 @@ async function loadDocumentDetail(documentId, token) {
           l.has_password ? 'Password' : 'Open',
           l.view_only ? 'View only' : 'Editable',
           l.download_allowed ? 'Download on' : 'No download',
-        ].join(' Ãƒâ€šÃ‚Â· ');
+        ].join(' · ');
         return '<tr><td><div class="cell-title mono">' + esc(String(l.id).slice(0, 8)) + '</div>' +
           '<div class="cell-sub">' + esc(fmtDate(l.created_at)) + '</div></td>' +
           '<td class="small">' + esc(controls) + '</td>' +
@@ -2490,7 +2544,7 @@ async function copyDocumentToken(token) {
       toast('Select and copy the share token manually.', 'error');
     }
   } catch (e) {
-    toast('Copy is unavailable here ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â select the share token manually.', 'error');
+    toast('Copy is unavailable here — select the share token manually.', 'error');
   }
 }
 
@@ -2529,8 +2583,8 @@ async function loadNotifications(token) {
           '<div class="list-row-main"><div class="list-row-title">' + heading + '</div>' +
           '<div class="list-row-sub">' + esc(relTime(n.created_at)) +
           ' <span class="badge badge--plain">' + esc(n.category || 'general') + '</span>' +
-          (!n.seen ? ' Ãƒâ€šÃ‚Â· New' : '') +
-          (n.contact_id ? ' Ãƒâ€šÃ‚Â· Contact ' + esc(String(n.contact_id).slice(0, 8)) : '') +
+          (!n.seen ? ' · New' : '') +
+          (n.contact_id ? ' · Contact ' + esc(String(n.contact_id).slice(0, 8)) : '') +
           '</div>' +
           (n.title ? '<div class="list-row-sub">' + esc(n.message) + '</div>' : '') +
           '</div>' +
@@ -2548,7 +2602,7 @@ async function loadNotifications(token) {
 }
 
 /* ------------------------------------------------------------------ *
- * Agent activity ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the real append-only audit feed
+ * Agent activity — the real append-only audit feed
  * ------------------------------------------------------------------ */
 
 async function loadActivity(token) {
@@ -2614,19 +2668,19 @@ async function loadDrafts(token) {
     html += '<div class="stack">' + drafts.map(function (d) {
       return '<section class="card"><div class="card-head"><div class="card-head-main">' +
         '<div class="card-title">' + esc(d.subject) + '</div><div class="card-sub">' +
-        esc(contactLabel(map, d.contact_id)) + (d.approved_at ? ' Ãƒâ€šÃ‚Â· Approved ' + esc(fmtDateTime(d.approved_at)) : '') +
+        esc(contactLabel(map, d.contact_id)) + (d.approved_at ? ' · Approved ' + esc(fmtDateTime(d.approved_at)) : '') +
         '</div></div>' + statusBadge(d.status) +
         (can(P.outreachApprove) && d.status === 'draft' ? '<button class="btn btn--sm btn--primary" data-action="approve-draft" data-id="' + attr(d.id) + '">' + icon('check', 14) + ' Approve</button>' : '') +
         '</div><div class="card-body"><p class="small" style="white-space:pre-wrap">' + esc(d.body) + '</p>' +
         '<div class="divider"></div><div class="row tiny muted"><span class="mono">' + esc(d.id) + '</span>' +
-        (d.approved_by ? '<span>Ãƒâ€šÃ‚Â· Approved by ' + esc(String(d.approved_by).slice(0, 8)) + '</span>' : '') + '</div></div></section>';
+        (d.approved_by ? '<span>· Approved by ' + esc(String(d.approved_by).slice(0, 8)) + '</span>' : '') + '</div></div></section>';
     }).join('') + '</div>';
   }
   renderViewHtml(html);
 }
 
 /* ------------------------------------------------------------------ *
- * Workspaces ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â onboarding, switcher, membership
+ * Workspaces — onboarding, switcher, membership
  * ------------------------------------------------------------------ */
 
 async function loadWorkspacesPage(token) {
@@ -2658,7 +2712,7 @@ async function loadWorkspacesPage(token) {
   const actions = (can(P.workspaceManage) ? '<button class="btn btn--primary" data-action="create-workspace">' + icon('plus', 16) + ' New workspace</button>' : '') +
     '<button class="btn" data-action="accept-invite">' + icon('link', 16) + ' Accept invitation</button>';
   let html = pageHead('Account', 'Workspaces', 'A workspace is the boundary for every record and event.', actions);
-  if (state.workspaceError) html += errorBlock('Workspaces could not be loaded ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ' + state.workspaceError);
+  if (state.workspaceError) html += errorBlock('Workspaces could not be loaded — ' + state.workspaceError);
   if (!state.workspaces.length) {
     html += '<section class="card">' + emptyState('grid', 'No workspaces', 'Your account has no active workspace membership.') + '</section>';
   } else {
@@ -2667,7 +2721,7 @@ async function loadWorkspacesPage(token) {
       return '<div class="card ws-card' + (current ? ' current' : '') + '">' +
         '<div class="row-between"><div class="stat-icon">' + icon('grid', 17) + '</div>' +
         (current ? '<span class="badge badge--green">Current</span>' : '<span class="badge badge--plain">' + esc(cap(w.role)) + '</span>') + '</div>' +
-        '<div><div class="ws-card-name">' + esc(w.name) + '</div><div class="tiny muted mono">' + esc(String(w.id).slice(0, 12)) + 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</div></div>' +
+        '<div><div class="ws-card-name">' + esc(w.name) + '</div><div class="tiny muted mono">' + esc(String(w.id).slice(0, 12)) + '…</div></div>' +
         (current ? '<div class="tiny faint">You are working in this workspace.</div>'
           : '<button class="btn btn--sm" data-action="switch-workspace" data-id="' + attr(w.id) + '" data-name="' + attr(w.name) + '">' +
             icon('arrowRight', 14) + ' Switch to workspace</button>') + '</div>';
@@ -2693,7 +2747,7 @@ async function loadWorkspacesPage(token) {
     html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
       '<div class="card-title">Workspace administration</div>' +
       '<div class="card-sub">Live counts and settings from this workspace only</div></div></div>' +
-      (adminError ? errorBlock('Administration data could not be loaded ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ' + adminError) : '') +
+      (adminError ? errorBlock('Administration data could not be loaded — ' + adminError) : '') +
       (summary ? '<div class="stats">' +
         statCard('users', 'Active members', String(summary.active_members), 'Persistent membership') +
         statCard('zap', 'Enabled flags', String(summary.enabled_flags), 'Workspace-scoped') +
@@ -3195,7 +3249,7 @@ async function processForm(name, fd, form) {
     closeModal();
     openModal({
       title: 'SDK key created',
-      sub: 'Copy it now ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the secret is shown once and is not stored in plain text.',
+      sub: 'Copy it now — the secret is shown once and is not stored in plain text.',
       body: '<div class="card-body"><div class="field"><label class="field-label">SDK key</label>' +
         '<textarea class="input mono" readonly rows="3">' + esc(created.sdk_key || '') + '</textarea></div>' +
         '<div class="tiny muted">Scope: ' + esc(state.flagEnvironment) + '. Revoke it any time from this workspace.</div></div>',
@@ -3250,7 +3304,7 @@ async function processForm(name, fd, form) {
     closeModal();
     openModal({
       title: 'Invitation created',
-      sub: result.email + ' Ãƒâ€šÃ‚Â· ' + cap(result.role),
+      sub: result.email + ' · ' + cap(result.role),
       body: '<p class="small muted">The API does not send email. Copy this single-use token and give it to the invitee; ' +
         'they accept it while signed in.</p><div class="field"><label>Invitation token</label>' +
         '<input class="input mono" id="invite-token" readonly value="' + attr(result.invite_token) + '"></div>' +
@@ -3398,13 +3452,13 @@ async function processForm(name, fd, form) {
     const pages = [1, 2, 3].map(function (pageNumber) {
       return '<div style="position:relative;height:180px;margin:10px 0;overflow:hidden;' +
         'border:1px solid var(--line-soft);background:#fff">' +
-        '<div style="padding:24px;color:var(--muted)">Page ' + pageNumber + ' of 3 Ã‚Â· preview</div>' +
+        '<div style="padding:24px;color:var(--muted)">Page ' + pageNumber + ' of 3 · preview</div>' +
         '<img src="' + attr(overlayUrl) + '" alt="Attributed watermark for ' + attr(view.viewer_email) +
         '" style="position:absolute;inset:0;width:100%;height:100%;opacity:.62;pointer-events:none"></div>';
     }).join('');
     showFormResult(form,
       '<div class="info-banner">' + icon('info', 16) + '<div>Watermark generated for ' +
-      esc(view.viewer_email) + ' Ã‚Â· view ' + esc(view.id) + '. This attribution identifies a leak to this view.</div></div>' +
+      esc(view.viewer_email) + ' · view ' + esc(view.id) + '. This attribution identifies a leak to this view.</div></div>' +
       pages +
       '<div class="field span-2"><label>Attribution text</label>' +
       '<input class="input mono" readonly value="' + attr(view.watermark_text) + '"></div>');
@@ -3425,7 +3479,7 @@ async function processForm(name, fd, form) {
     });
     await loadView();
     showFormResult(form,
-      '<div class="info-banner">' + icon('info', 16) + '<div>Share link created. Copy the token now ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it is shown once and is not stored in the browser.</div></div>' +
+      '<div class="info-banner">' + icon('info', 16) + '<div>Share link created. Copy the token now — it is shown once and is not stored in the browser.</div></div>' +
       '<div class="field span-2"><label for="document-token">Share token</label>' +
       '<input class="input mono" id="document-token" readonly value="' + attr(created.token) + '"></div>' +
       '<div class="form-actions"><button class="btn btn--primary" data-action="copy-document-token" data-token="' +
@@ -3635,6 +3689,26 @@ async function processForm(name, fd, form) {
     });
     await loadView();
     toast('Contact enrolled in the local journey.', 'success');
+    return;
+  }
+
+  if (name === 'marketing-local-run-create') {
+    const contactIds = text('contacts').split(/[\s,]+/).map(function (value) {
+      return value.trim();
+    }).filter(Boolean);
+    if (!contactIds.length) {
+      setFormError(form, 'Add at least one contact id.');
+      return;
+    }
+    await api(apiW('/marketing-delivery/runs'), {
+      method: 'POST',
+      body: {
+        name: text('name'), subject: text('subject'), body: text('body'),
+        channel: text('channel') || 'email', contact_ids: contactIds,
+      },
+    });
+    await loadView();
+    toast('Local run created. Approval is required before delivery records are written.', 'success');
     return;
   }
 
@@ -3933,7 +4007,7 @@ async function processForm(name, fd, form) {
     closeModal();
     openModal({ title: 'Dashboard created',
       sub: 'Computed live from stored feedback records.',
-      body: '<p class="small">' + esc(created.name) + ' Ã‚Â· 3 widgets</p>' });
+      body: '<p class="small">' + esc(created.name) + ' · 3 widgets</p>' });
     await loadView();
     return;
   }
@@ -3997,7 +4071,7 @@ async function processForm(name, fd, form) {
       },
     });
     closeModal();
-    toast('Observation stored: ' + result.variant + ' Ã‚Â· ' + result.sessions + ' sessions.', 'success');
+    toast('Observation stored: ' + result.variant + ' · ' + result.sessions + ' sessions.', 'success');
     await loadView();
     return;
   }
@@ -4190,7 +4264,7 @@ async function processForm(name, fd, form) {
       '?role=' + encodeURIComponent(text('role')) +
       '&permission=' + encodeURIComponent(text('permission')));
     openModal({ title: result.allowed ? 'Permission allowed' : 'Permission denied',
-      sub: result.role + ' Ã‚Â· ' + result.permission,
+      sub: result.role + ' · ' + result.permission,
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -4265,7 +4339,7 @@ async function processForm(name, fd, form) {
       },
     });
     openModal({ title: result.show ? 'Creative would show' : 'Creative hidden',
-      sub: 'Local evaluation Ã‚Â· ' + (result.reasons || []).join(', '),
+      sub: 'Local evaluation · ' + (result.reasons || []).join(', '),
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -4336,7 +4410,7 @@ async function processForm(name, fd, form) {
       method: 'POST', body: { payload: payload },
     });
     openModal({ title: 'Sandboxed code step result',
-      sub: 'sandboxed: ' + !!result.sandboxed + ' Ã‚Â· external_calls: ' + !!result.external_calls,
+      sub: 'sandboxed: ' + !!result.sandboxed + ' · external_calls: ' + !!result.external_calls,
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -4385,7 +4459,7 @@ async function processForm(name, fd, form) {
     if (text('subscriber_key')) body.subscriber_key = text('subscriber_key');
     const result = await api(apiW('/notification-automation/routing/evaluate'), { method: 'POST', body: body });
     openModal({ title: 'Provider routing result',
-      sub: 'primary: ' + result.primary + ' Ã‚Â· fallbacks: ' + (result.fallbacks || []).join(', '),
+      sub: 'primary: ' + result.primary + ' · fallbacks: ' + (result.fallbacks || []).join(', '),
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -4780,7 +4854,7 @@ async function processForm(name, fd, form) {
     const result = await api(apiW('/flag-governance/sticky'), { method: 'POST',
       body: { flag_key: text('flag_key'), user_key: text('user_key'),
         percent: Number(text('percent') || 0) } });
-    openModal({ title: 'Sticky assignment', sub: result.flag_key + ' Â· ' + result.user_key,
+    openModal({ title: 'Sticky assignment', sub: result.flag_key + ' · ' + result.user_key,
       body: '<p class="small">Variant <strong>' + esc(result.variant) +
         '</strong> is stored locally and will not change when the rollout changes.</p>' });
     return;
@@ -4844,7 +4918,7 @@ async function processForm(name, fd, form) {
   if (name === 'fg-env-resolve') {
     const result = await api(apiW('/flag-governance/environments/resolve'), { method: 'POST',
       body: { attrs: { environment: text('environment') } } });
-    openModal({ title: 'Effective environment', sub: result.chain.join(' â†’ '),
+    openModal({ title: 'Effective environment', sub: result.chain.join(' → '),
       body: '<pre class="small">' + esc(JSON.stringify(result.effective, null, 2)) + '</pre>' });
     return;
   }
@@ -4883,7 +4957,7 @@ async function processForm(name, fd, form) {
         baseline_rate: Number(text('baseline_rate') || 0) } });
     openModal({ title: 'Guardrail decision', sub: result.guardrail_metric,
       body: '<p class="small">Decision: <strong>' + esc(result.action) +
-        '</strong> Â· next traffic ' + result.next_percent + '% Â· delta ' +
+        '</strong> · next traffic ' + result.next_percent + '% · delta ' +
         Number(result.delta).toFixed(4) + '</p>' });
     return;
   }
@@ -4955,6 +5029,60 @@ async function processForm(name, fd, form) {
     return;
   }
 
+  if (name === 'final-select-kind') {
+    state.finalKind = text('kind');
+    await loadView();
+    return;
+  }
+  if (name === 'final-create') {
+    let payload;
+    try { payload = JSON.parse(text('payload_json')); }
+    catch (e) { toast('Payload must be a valid JSON object.', 'error'); return; }
+    await api(apiW('/final-capabilities') + '?kind=' + encodeURIComponent(state.finalKind || ''), {
+      method: 'POST', body: { name: text('name'), payload: payload },
+    });
+    await loadView();
+    toast('Local final capability record saved.', 'success');
+    return;
+  }
+  if (name === 'final-evaluate') {
+    let input;
+    try { input = JSON.parse(text('input_json')); }
+    catch (e) { toast('Input must be a valid JSON object.', 'error'); return; }
+    const result = await api(apiW('/final-capabilities') + '/' + encodeURIComponent(text('record_id')) +
+      '/evaluate?kind=' + encodeURIComponent(state.finalKind || ''), { method: 'POST', body: { input: input } });
+    openModal({ title: 'Local evaluation result', sub: 'external_action ' + String(result.external_action),
+      body: '<pre class="small">' + esc(JSON.stringify(result.result, null, 2)) + '</pre>' });
+    return;
+  }
+
+  if (name === 'parity-select-kind') {
+    state.parityKind = text('kind');
+    await loadView();
+    return;
+  }
+  if (name === 'parity-create') {
+    let payload;
+    try { payload = JSON.parse(text('payload_json')); }
+    catch (e) { toast('Payload must be a valid JSON object.', 'error'); return; }
+    await api(apiW('/parity-capabilities') + '?kind=' + encodeURIComponent(state.parityKind || ''), {
+      method: 'POST', body: { name: text('name'), payload: payload },
+    });
+    await loadView();
+    toast('Local capability record saved.', 'success');
+    return;
+  }
+  if (name === 'parity-evaluate') {
+    let input;
+    try { input = JSON.parse(text('input_json')); }
+    catch (e) { toast('Input must be a valid JSON object.', 'error'); return; }
+    const result = await api(apiW('/parity-capabilities') + '/' + encodeURIComponent(text('record_id')) +
+      '/evaluate?kind=' + encodeURIComponent(state.parityKind || ''), { method: 'POST', body: { input: input } });
+    openModal({ title: 'Local evaluation result', sub: 'external_action ' + String(result.external_action),
+      body: '<pre class="small">' + esc(JSON.stringify(result.result, null, 2)) + '</pre>' });
+    return;
+  }
+
   if (name === 'adv-analysis-create') {
     let inputs;
     try { inputs = JSON.parse(text('inputs_json')); }
@@ -4995,7 +5123,7 @@ async function processForm(name, fd, form) {
       encodeURIComponent(state.advBanditKey || 'onboarding') + '/recommend'), {
       method: 'POST', body: { policy: text('policy'), seed: Number(text('seed') || 11) },
     });
-    openModal({ title: 'Recommended arm', sub: result.policy + ' Ã‚Â· local computation',
+    openModal({ title: 'Recommended arm', sub: result.policy + ' · local computation',
       body: '<p class="small">Choose <strong>' + esc(result.arm) + '</strong> for this bandit.</p>' });
     return;
   }
@@ -5061,7 +5189,7 @@ async function processForm(name, fd, form) {
     });
     navigate('wiki-pages');
     openModal({ title: 'Local ' + esc(result.format) + ' export',
-      sub: 'generated locally Ã‚Â· sha256 ' + esc(result.content_hash),
+      sub: 'generated locally · sha256 ' + esc(result.content_hash),
       body: '<pre class="small">' + esc(result.content) + '</pre>' });
     return;
   }
@@ -5214,7 +5342,7 @@ async function processForm(name, fd, form) {
   if (name === 'conversation-collision') {
     const result = await api(apiW('/conversation-ops/tickets/' + encodeURIComponent(text('ticket_id')) + '/collision'));
     openModal({ title: 'Collision check',
-      sub: 'warning: ' + !!result.warning + ' Ã‚Â· polling-only transport',
+      sub: 'warning: ' + !!result.warning + ' · polling-only transport',
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -5509,7 +5637,7 @@ async function processForm(name, fd, form) {
       },
     });
     openModal({ title: 'Hybrid search results',
-      sub: 'Local semantic + lexical blend Ã‚Â· ' + (result.results || []).length + ' hits',
+      sub: 'Local semantic + lexical blend · ' + (result.results || []).length + ' hits',
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -5550,7 +5678,7 @@ async function processForm(name, fd, form) {
       method: 'POST', body: { q: text('q') },
     });
     openModal({ title: 'Federated search results',
-      sub: 'Weighted merge Ã‚Â· ' + (result.results || []).length + ' hits',
+      sub: 'Weighted merge · ' + (result.results || []).length + ' hits',
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -5616,7 +5744,7 @@ async function processForm(name, fd, form) {
       method: 'POST',
     });
     openModal({ title: 'Local search preview',
-      sub: 'local_only: ' + !!result.local_only + ' Ã‚Â· ' + (result.results || []).length + ' hits',
+      sub: 'local_only: ' + !!result.local_only + ' · ' + (result.results || []).length + ' hits',
       body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
     return;
   }
@@ -5953,7 +6081,7 @@ async function processForm(name, fd, form) {
 async function handleFormSubmit(form) {
   const button = form.querySelector('[type="submit"]');
   const original = button ? button.innerHTML : null;
-  if (button) { button.disabled = true; button.innerHTML = icon('refresh', 15) + ' WorkingÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦'; }
+  if (button) { button.disabled = true; button.innerHTML = icon('refresh', 15) + ' Working…'; }
   clearFormError(form);
   try {
     await processForm(form.dataset.form, new FormData(form), form);
@@ -6035,7 +6163,7 @@ async function openCreateLead() {
     return;
   }
   const options = selectOptions(contacts.map(function (c) {
-    return [c.id, (c.full_name || c.email) + ' ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ' + c.email];
+    return [c.id, (c.full_name || c.email) + ' — ' + c.email];
   }), '');
   openModal({
     title: 'Add lead',
@@ -6094,7 +6222,7 @@ function openIntake() {
       field('full_name', 'Full name', { placeholder: 'Alex Morgan' }) +
       field('company', 'Company', { placeholder: 'Acme Inc.' }) +
       field('source', 'Source', { value: 'website_form', placeholder: 'website_form' }) +
-      field('submission_id', 'Submission ID', { placeholder: 'Optional ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â repeated IDs are idempotent' }) +
+      field('submission_id', 'Submission ID', { placeholder: 'Optional — repeated IDs are idempotent' }) +
       field('message', 'Message', { type: 'textarea', placeholder: 'What did they ask for?', span: true }) +
       '</div><div class="form-actions"><button type="button" class="btn" data-action="close-modal">Cancel</button>' +
       '<button type="submit" class="btn btn--primary">' + icon('inbox', 15) + ' Run intake</button></div></form>',
@@ -6137,7 +6265,7 @@ function agentFields(agent) {
 function openCreateAgent() {
   openModal({
     title: 'New agent',
-    sub: 'Configuration only ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no external AI provider is called.',
+    sub: 'Configuration only — no external AI provider is called.',
     body: '<form data-form="create-agent">' + agentFields(null) +
       governanceNote('This records a governed configuration. No AI output is generated.') +
       '<div class="form-actions"><button type="button" class="btn" data-action="close-modal">Cancel</button>' +
@@ -6148,7 +6276,7 @@ function openCreateAgent() {
 function openEditAgent(agent) {
   openModal({
     title: 'Edit agent',
-    sub: agent.name + ' Ãƒâ€šÃ‚Â· changes are recorded as events.',
+    sub: agent.name + ' · changes are recorded as events.',
     body: '<form data-form="edit-agent">' + agentFields(agent) +
       '<div class="form-actions"><button type="button" class="btn" data-action="close-modal">Cancel</button>' +
       '<button type="submit" class="btn btn--primary">' + icon('check', 15) + ' Save agent</button></div></form>',
@@ -6158,7 +6286,7 @@ function openEditAgent(agent) {
 function openAgentRun(agent) {
   openModal({
     title: 'Request agent run',
-    sub: agent.name + ' Ãƒâ€šÃ‚Â· ' + cap(agent.model_provider) + ' Ãƒâ€šÃ‚Â· up to ' + agent.max_steps + ' steps',
+    sub: agent.name + ' · ' + cap(agent.model_provider) + ' · up to ' + agent.max_steps + ' steps',
     body: '<form data-form="request-agent-run"><input type="hidden" name="agent_id" value="' + attr(agent.id) + '">' +
       '<div class="form-grid">' +
       field('task', 'Task', { type: 'textarea', required: true, span: true, placeholder: 'Describe the work to record' }) +
@@ -6191,7 +6319,7 @@ function openAgentProgress(agent, run) {
           ['failed', 'Failed'], ['awaiting_approval', 'Awaiting approval'],
         ], run.status),
       }) +
-      field('error', 'Error detail', { type: 'textarea', span: true, placeholder: 'Optional ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â only when a run fails' }) +
+      field('error', 'Error detail', { type: 'textarea', span: true, placeholder: 'Optional — only when a run fails' }) +
       '</div>' + governanceNote(agent.requires_approval
         ? 'This agent requires approval: marking work completed moves the run to awaiting approval.'
         : 'Progress is recorded locally. Steps are a governance record, not executed AI work.') +
@@ -6279,7 +6407,7 @@ async function openWorkItemModules() {
   const body = (modules || []).map(function (m) {
     return '<div class="list-row"><div class="list-row-main"><div class="list-row-title">' +
       esc(m.name) + '</div><div class="list-row-sub">' + esc(m.state || 'planned') +
-      ' Ãƒâ€šÃ‚Â· ' + String(m.progress_percent || 0) + '% complete</div></div></div>';
+      ' · ' + String(m.progress_percent || 0) + '% complete</div></div></div>';
   }).join('');
   openModal({ title: 'Project modules', sub: 'Modules group work with a lead, dates and progress.',
     body: '<div class="card-body">' + (body || emptyState('layers', 'No modules', 'Create a module to group delivery work.')) + '</div>' });
@@ -6292,7 +6420,7 @@ async function openWorkItemActivity(itemId) {
   const body = (rows || []).map(function (a) {
     return '<div class="list-row"><div class="list-row-main"><div class="list-row-title small">' +
       esc(a.field || a.event_type) + '</div><div class="list-row-sub">' +
-      esc(String(a.old_value || '')) + ' ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ ' + esc(String(a.new_value || '')) + '</div></div></div>';
+      esc(String(a.old_value || '')) + ' → ' + esc(String(a.new_value || '')) + '</div></div></div>';
   }).join('');
   openModal({ title: 'Item activity', sub: 'Immutable field-change history from the shared event spine.',
     body: '<div class="card-body">' + (body || emptyState('activity', 'No activity', 'Changes to this item appear here.')) + '</div>' });
@@ -6314,12 +6442,12 @@ async function openFlagRules(key) {
   const rules = await api(apiW('/flags/' + encodeURIComponent(key) + '/rules'));
   const rows = (rules || []).map(function (r) {
     return '<div class="list-row"><div class="list-row-main">' +
-      '<div class="list-row-title mono">#' + String(r.position) + ' ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ ' + esc(String(r.value || 'on')) + '</div>' +
+      '<div class="list-row-title mono">#' + String(r.position) + ' → ' + esc(String(r.value || 'on')) + '</div>' +
       '<div class="list-row-sub">' + esc(JSON.stringify(r.conditions || [])) + '</div></div>' +
       '<div class="list-row-side">' + statusBadge(r.enabled ? 'enabled' : 'disabled') + '</div></div>';
   }).join('');
   openModal({
-    title: 'Flag rules ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ' + key,
+    title: 'Flag rules — ' + key,
     sub: 'Ordered first-match-wins targeting rules from the real API.',
     body: '<div class="card-body">' + (rows || emptyState('layers', 'No rules', 'This flag always uses its default value.')) +
       '<form data-form="flag-rule-create" class="form-grid" style="margin-top:16px">' +
@@ -6340,7 +6468,7 @@ async function openFlagExposures(key) {
       '<div class="list-row-side tiny muted">' + esc(fmtDate(e.created_at)) + '</div></div>';
   }).join('');
   openModal({
-    title: 'Exposures ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ' + key,
+    title: 'Exposures — ' + key,
     sub: 'First assignment recorded per user, workspace-scoped and append-only.',
     body: '<div class="card-body">' + (body || emptyState('activity', 'No exposures', 'No evaluations have been recorded yet.')) + '</div>',
   });
@@ -6349,7 +6477,7 @@ async function openFlagExposures(key) {
 async function openSdkPayload() {
   const payload = await api(apiW('/flags/sdk/payload?environment=' + encodeURIComponent(state.flagEnvironment)));
   openModal({
-    title: 'SDK payload ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ' + state.flagEnvironment,
+    title: 'SDK payload — ' + state.flagEnvironment,
     sub: 'The same configuration an embedded local SDK evaluates without an HTTP round trip.',
     body: '<div class="card-body"><textarea class="input mono" readonly rows="12">' +
       esc(JSON.stringify(payload, null, 2)) + '</textarea></div>',
@@ -6420,7 +6548,7 @@ async function openExperimentResults(id) {
       '<th>Conversions</th><th>Rate</th></tr></thead><tbody>' +
       rows.map(function (r) {
         const rate = Number(r.impressions)
-          ? (Number(r.conversions) / Number(r.impressions) * 100).toFixed(1) + '%' : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+          ? (Number(r.conversions) / Number(r.impressions) * 100).toFixed(1) + '%' : '—';
         return '<tr><td class="mono">' + esc(r.variant) + '</td><td>' + Number(r.impressions) + '</td>' +
           '<td>' + Number(r.conversions) + '</td><td>' + rate + '</td></tr>';
       }).join('') + '</tbody></table></div>'
@@ -6466,7 +6594,7 @@ function openAcceptInvite() {
 function openSwitchWorkspace(id, name) {
   openModal({
     title: 'Switch workspace',
-    sub: name + ' Ãƒâ€šÃ‚Â· confirm with your password',
+    sub: name + ' · confirm with your password',
     body: '<form data-form="switch-workspace"><input type="hidden" name="workspace_id" value="' + attr(id) + '">' +
       field('password', 'Password', { type: 'password', required: true, autocomplete: 'current-password', span: true }) +
       '<div class="form-actions"><button type="button" class="btn" data-action="close-modal">Cancel</button>' +
@@ -6520,7 +6648,7 @@ async function copyInvite(token) {
       toast('Select and copy the token manually.', 'error');
     }
   } catch (e) {
-    toast('Copy is unavailable here ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â select the token manually.', 'error');
+    toast('Copy is unavailable here — select the token manually.', 'error');
   }
 }
 
@@ -6581,7 +6709,7 @@ async function processAction(action, el) {
       };
       openModal({
         title: 'Email preferences',
-        sub: prefs.email + (prefs.do_not_contact ? ' Ãƒâ€šÃ‚Â· global do-not-contact active' : ''),
+        sub: prefs.email + (prefs.do_not_contact ? ' · global do-not-contact active' : ''),
         body: (prefs.do_not_contact
           ? governanceNote('Global do-not-contact is active. Resubscribe before changing channels.')
           : '<form data-form="consent-preferences"><div class="form-grid">' +
@@ -6971,7 +7099,7 @@ async function processAction(action, el) {
       } catch (e) { /* forms fall back to built-in states */ }
       const active = states.filter(function (s) { return s.is_active; });
       const statusOptions = active.length
-        ? active.map(function (s) { return [s.name, cap(s.name) + ' Ãƒâ€šÃ‚Â· ' + cap(s.group)]; })
+        ? active.map(function (s) { return [s.name, cap(s.name) + ' · ' + cap(s.group)]; })
         : builtinItemStates();
       openModal({
         title: 'New work item',
@@ -7109,6 +7237,24 @@ async function processAction(action, el) {
       await api(apiW('/campaigns/' + encodeURIComponent(id) + '/run'), { method: 'POST' });
       await loadView();
       toast('Journey advanced one local step. Nothing was sent.', 'success');
+      return;
+    }
+    case 'marketing-local-run-approve': {
+      await api(apiW('/marketing-delivery/runs/' + encodeURIComponent(id) + '/approve'), {
+        method: 'POST',
+      });
+      await loadView();
+      toast('Approved. Local delivery and analytics records written; nothing was sent externally.', 'success');
+      return;
+    }
+    case 'marketing-local-run-trace': {
+      const trace = await api(apiW('/marketing-delivery/runs/' + encodeURIComponent(id)));
+      openModal({
+        title: 'Local run trace',
+        sub: 'Audience, campaign, approval, local delivery and analytics records.',
+        wide: true,
+        body: '<pre class="mono small">' + esc(JSON.stringify(trace, null, 2)) + '</pre>',
+      });
       return;
     }
     case 'campaign-record-engagement': {
@@ -7734,7 +7880,7 @@ async function processAction(action, el) {
     }
     case 'preview-query-fact-table': {
       const result = await api(apiW('/experiment-queries/fact-tables/' + encodeURIComponent(id) + '/preview'));
-      openModal({ title: 'Fact table preview', sub: result.source + ' Ã‚Â· ' + result.rows.length + ' rows',
+      openModal({ title: 'Fact table preview', sub: result.source + ' · ' + result.rows.length + ' rows',
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -7989,7 +8135,7 @@ async function processAction(action, el) {
       const hook = (hooks || []).find(function (w) { return w.id === id; }) || {};
       openModal({
         title: 'Emit local delivery',
-        sub: 'Scope ' + (hook.scope || '') + ' Ã‚Â· recorded only, never sent.',
+        sub: 'Scope ' + (hook.scope || '') + ' · recorded only, never sent.',
         body: '<form data-form="emit-delivery-webhook" data-id="' + attr(id) + '"><div class="form-grid">' +
           field('event_type', 'Event type', { required: true,
             value: (hook.event_types || [])[0] || 'payload.changed' }) +
@@ -8040,7 +8186,7 @@ async function processAction(action, el) {
       const result = await api(apiW('/notification-automation/api-contract'));
       openModal({ title: 'Local notification automation contract',
         sub: 'external_calls: ' + !!result.external_calls +
-          ' Ã‚Â· external_delivery: ' + !!result.external_delivery,
+          ' · external_delivery: ' + !!result.external_delivery,
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8062,7 +8208,7 @@ async function processAction(action, el) {
     case 'view-email-contract': {
       const result = await api(apiW('/email-engagement/api-contract'));
       openModal({ title: 'Local email contract',
-        sub: 'version ' + esc(result.version) + ' Ã‚Â· email_sent: ' + !!result.email_sent,
+        sub: 'version ' + esc(result.version) + ' · email_sent: ' + !!result.email_sent,
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8083,7 +8229,7 @@ async function processAction(action, el) {
     case 'view-planning-contract': {
       const result = await api(apiW('/work-item-planning/api-contract'));
       openModal({ title: 'Local work-item planning contract',
-        sub: 'version ' + esc(result.version) + ' Ã‚Â· ' + esc(result.scheduler || ''),
+        sub: 'version ' + esc(result.version) + ' · ' + esc(result.scheduler || ''),
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8127,10 +8273,18 @@ async function processAction(action, el) {
       break;
     }
 
+    case 'parity-refresh': {
+      await loadView();
+      return;
+    }
+    case 'final-refresh': {
+      await loadView();
+      return;
+    }
     case 'view-adv-contract': {
       const result = await api(apiW('/advanced-experiments/api-contract'));
       openModal({ title: 'Local advanced experimentation contract',
-        sub: 'external_calls ' + String(result.external_calls) + ' Ã‚Â· ' +
+        sub: 'external_calls ' + String(result.external_calls) + ' · ' +
           (result.capabilities || []).length + ' capabilities',
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
@@ -8144,7 +8298,7 @@ async function processAction(action, el) {
     case 'view-collab-contract': {
       const result = await api(apiW('/work-collab/api-contract'));
       openModal({ title: 'Local work collaboration contract',
-        sub: 'generated from ' + esc(result.generated_from) + ' Ã‚Â· ' + result.route_count + ' routes',
+        sub: 'generated from ' + esc(result.generated_from) + ' · ' + result.route_count + ' routes',
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8171,7 +8325,7 @@ async function processAction(action, el) {
     case 'view-wiki-contract': {
       const result = await api(apiW('/wiki-pages/api-contract'));
       openModal({ title: 'Local wiki contract',
-        sub: 'version ' + esc(result.version) + ' Ã‚Â· ' + esc(result.realtime_transport || ''),
+        sub: 'version ' + esc(result.version) + ' · ' + esc(result.realtime_transport || ''),
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8208,7 +8362,7 @@ async function processAction(action, el) {
       const result = await api(apiW('/experiment-exposure/api-contract'));
       openModal({ title: 'Local exposure contract',
         sub: 'external_calls: ' + !!result.external_calls +
-          ' Ã‚Â· vendor_sdk_used: ' + !!result.vendor_sdk_used,
+          ' · vendor_sdk_used: ' + !!result.vendor_sdk_used,
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8242,7 +8396,7 @@ async function processAction(action, el) {
       const result = await api(apiW('/conversation-ops/api-contract'));
       openModal({ title: 'Local conversation operations contract',
         sub: 'external_calls: ' + !!result.external_calls +
-          ' Ã‚Â· external_delivery: ' + !!result.external_delivery,
+          ' · external_delivery: ' + !!result.external_delivery,
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8278,7 +8432,7 @@ async function processAction(action, el) {
       const result = await api(apiW('/sales-engagement/api-contract'));
       openModal({ title: 'Local sales engagement contract',
         sub: 'external_calls: ' + !!result.external_calls +
-          ' Ã‚Â· external_delivery: ' + !!result.external_delivery,
+          ' · external_delivery: ' + !!result.external_delivery,
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8336,14 +8490,14 @@ async function processAction(action, el) {
       const result = await api(apiW('/document-engagement/api-contract'));
       openModal({ title: 'Local document engagement contract',
         sub: 'external_calls: ' + !!result.external_calls +
-          ' Ã‚Â· external_geolocation: ' + !!result.external_geolocation,
+          ' · external_geolocation: ' + !!result.external_geolocation,
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
     case 'view-document-analytics': {
       const result = await api(apiW('/document-engagement/documents/' + encodeURIComponent(id) + '/analytics'));
       openModal({ title: 'Document engagement analytics',
-        sub: result.views + ' views Ã‚Â· ' + result.clicks + ' clicks Ã‚Â· ' +
+        sub: result.views + ' views · ' + result.clicks + ' clicks · ' +
           result.excluded_internal + ' internal excluded',
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
@@ -8358,7 +8512,7 @@ async function processAction(action, el) {
       const result = await api(apiW('/search-advanced/api-contract'));
       openModal({ title: 'Local advanced search contract',
         sub: 'external_model_calls: ' + !!result.external_model_calls +
-          ' Ã‚Â· external_sdk: ' + !!result.external_sdk,
+          ' · external_sdk: ' + !!result.external_sdk,
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8398,7 +8552,7 @@ async function processAction(action, el) {
       const creative = (creatives || []).find(function (c) { return c.id === id; }) || {};
       openModal({
         title: 'Evaluate creative locally',
-        sub: creative.key + ' Ã‚Â· ' + creative.type + ' Ã‚Â· no external call',
+        sub: creative.key + ' · ' + creative.type + ' · no external call',
         body: '<form data-form="evaluate-survey-creative" data-id="' + attr(id) + '"><div class="form-grid">' +
           field('page', 'Page', { value: '/', required: true }) +
           field('device', 'Device', { type: 'select', options: selectOptions([
@@ -8459,7 +8613,7 @@ async function processAction(action, el) {
     case 'view-marketing-content-contract': {
       const result = await api(apiW('/marketing-content/api-contract'));
       openModal({ title: 'Local marketing content contract',
-        sub: 'version ' + esc(String(result.version || '')) + ' Ã‚Â· ' + esc(String(result.delivery || '')),
+        sub: 'version ' + esc(String(result.version || '')) + ' · ' + esc(String(result.delivery || '')),
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8486,7 +8640,7 @@ async function processAction(action, el) {
     case 'view-support-reporting-contract': {
       const result = await api(apiW('/support-reporting/api-contract'));
       openModal({ title: 'Local support reporting contract',
-        sub: 'openapi ' + esc(String(result.openapi || '')) + ' Ã‚Â· ' + esc(String(result.route_count || 0)) + ' support routes',
+        sub: 'openapi ' + esc(String(result.openapi || '')) + ' · ' + esc(String(result.route_count || 0)) + ' support routes',
         body: '<pre class="small">' + esc(JSON.stringify(result, null, 2)) + '</pre>' });
       return;
     }
@@ -8621,7 +8775,7 @@ function supportRows(items, fields) {
       '<div class="list-row-sub">' + fields.slice(1).map(function (f) {
         const v = item[f];
         return f + ': ' + esc(typeof v === 'object' ? JSON.stringify(v) : String(v === undefined || v === null ? '-' : v));
-      }).join(' Ãƒâ€šÃ‚Â· ') + '</div></div></div>';
+      }).join(' · ') + '</div></div></div>';
   }).join('');
 }
 
@@ -8722,7 +8876,7 @@ async function openSupportReports() {
     body: '<div class="card-body"><div class="row" style="gap:16px;flex-wrap:wrap">' +
       (pairs || block('No data', '-')) + '</div>' +
       '<div class="tiny muted" style="margin-top:12px">Conversation series: ' +
-      esc(String((conversations || []).length)) + ' points Ãƒâ€šÃ‚Â· CSAT series: ' +
+      esc(String((conversations || []).length)) + ' points · CSAT series: ' +
       esc(String((csat || []).length)) + ' points</div></div>',
   });
 }
@@ -8812,7 +8966,7 @@ async function loadInbox(token) {
         return '<tr><td><div class="cell-primary"><span class="stat-icon">' + icon('mail', 15) +
           '</span><div><div class="cell-title">' + esc(t.subject) + '</div><div class="cell-sub">' +
           esc((t.body || '').slice(0, 90)) + '</div><div class="cell-sub">' +
-          esc(cap(t.origin_channel || 'local')) + ' Ãƒâ€šÃ‚Â· ' + esc(cap(t.conversation_type || 'question')) + '</div></div></div></td>' +
+          esc(cap(t.origin_channel || 'local')) + ' · ' + esc(cap(t.conversation_type || 'question')) + '</div></div></div></td>' +
           '<td class="small">' + (contact ? esc(contact.full_name || contact.email) : '<span class="faint">-</span>') + '</td>' +
           '<td class="small">' + (t.assignee_id ? esc(String(t.assignee_id).slice(0, 8)) : '<span class="faint">Unassigned</span>') + '</td>' +
           '<td class="small">' + esc(cap(t.priority)) + '</td><td>' + statusBadge(t.status) + '</td>' +
@@ -8879,8 +9033,8 @@ async function loadTicketDetail(ticketId, token) {
     '<div class="list-row-main"><div class="list-row-title">' + statusBadge(ticket.status) + ' ' + esc(ticket.subject) +
     '</div><div class="list-row-sub">' + (contact ? 'Linked contact: ' + esc(contact.full_name || contact.email)
       : 'No contact linked') + ' - ticket ' + esc(ticket.id.slice(0, 8)) + '</div>' +
-    '<div class="list-row-sub">' + esc(cap(ticket.origin_channel || 'local')) + ' Ãƒâ€šÃ‚Â· ' +
-    esc(cap(ticket.conversation_type || 'question')) + ' Ãƒâ€šÃ‚Â· Assignee: ' +
+    '<div class="list-row-sub">' + esc(cap(ticket.origin_channel || 'local')) + ' · ' +
+    esc(cap(ticket.conversation_type || 'question')) + ' · Assignee: ' +
     (currentAssignee ? esc(currentAssignee.display_name || currentAssignee.email) : 'Unassigned') + '</div>' +
     '</div></div>';
   if (can(P.noteWrite)) {
@@ -8975,13 +9129,19 @@ async function loadCampaigns(token) {
     ? '?status=' + encodeURIComponent(state.campaignStatus) : '';
   let campaigns = [];
   let performance = [];
+  let contacts = [];
+  let localRuns = [];
   try {
-    const [listResult, perfResult] = await Promise.all([
+    const [listResult, perfResult, contactResult, runResult] = await Promise.all([
       api(apiW('/campaigns') + suffix),
       api(apiW('/campaigns/performance')),
+      api(apiW('/contacts') + '?limit=100'),
+      api(apiW('/marketing-delivery/runs')),
     ]);
     campaigns = listResult || [];
     performance = perfResult || [];
+    contacts = contactResult || [];
+    localRuns = runResult || [];
   } catch (err) {
     if (token !== state.viewToken) return;
     renderViewHtml(pageHead('Operations', 'Campaign Studio', '') + errorBlock(errMessage(err)));
@@ -9028,6 +9188,57 @@ async function loadCampaigns(token) {
       }).join('') + '</tbody></table></div>';
   }
   html += '</section>';
+
+  const contactOptions = contacts.map(function (p) {
+    return [p.id, (p.full_name || p.email || '').slice(0, 80) + ' - ' + String(p.id).slice(0, 8)];
+  });
+  html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
+    '<div class="card-title">Local delivery workflow</div><div class="card-sub">' +
+    'Audience to campaign to approval to local adapter to analytics. Nothing is sent externally.</div></div></div>' +
+    '<div class="card-body">';
+  if (can(P.contactWrite)) {
+    html += '<form data-form="marketing-local-run-create"><div class="form-grid">' +
+      field('name', 'Run name', { required: true, placeholder: 'Product update' }) +
+      field('channel', 'Channel', {
+        type: 'select', options: selectOptions(
+          [['email', 'Email'], ['sms', 'SMS'], ['whatsapp', 'WhatsApp']], 'email'),
+      }) +
+      field('subject', 'Subject', { required: true, placeholder: 'A note from NOVARA' }) +
+      field('contacts', 'Audience', {
+        type: 'textarea', required: true, span: true,
+        placeholder: 'Paste one contact id per line or separate ids with commas',
+        hint: 'Available contacts: ' + (contactOptions.length ?
+          contactOptions.slice(0, 5).map(function (o) { return o[1]; }).join(', ') : 'none yet'),
+      }) +
+      field('body', 'Local message body', {
+        type: 'textarea', required: true, span: true,
+        placeholder: 'This is a local simulation. Nothing is sent externally.',
+      }) +
+      '</div><div class="form-actions"><button type="submit" class="btn">' +
+      icon('plus', 15) + ' Create run for approval</button></div></form>';
+  }
+  if (!localRuns.length) {
+    html += emptyState('layers', 'No local runs yet',
+      'Create a run to record the five-step local workflow.');
+  } else {
+    html += '<div class="table-wrap"><table class="data"><thead><tr><th>Run</th><th>Status</th>' +
+      '<th>Audience</th><th>Delivered</th><th>Blocked</th><th>Events</th><th></th></tr></thead><tbody>' +
+      localRuns.map(function (r) {
+        return '<tr><td><div class="cell-title">' + esc(r.name) + '</div><div class="cell-sub mono">' +
+          esc(String(r.correlation_id || r.id).slice(0, 16)) + '</div></td>' +
+          '<td>' + statusBadge(r.status) + '</td>' +
+          '<td class="small">' + esc(String(r.counts.audience)) + '</td>' +
+          '<td class="small">' + esc(String(r.counts.delivered)) + '</td>' +
+          '<td class="small">' + esc(String(r.counts.blocked)) + '</td>' +
+          '<td class="small">' + esc(String(r.counts.events)) + '</td>' +
+          '<td><button class="btn btn--sm" data-action="marketing-local-run-trace" data-id="' +
+          attr(r.id) + '">Trace</button>' +
+          (can(P.outreachApprove) && r.status === 'awaiting_approval' ?
+            ' <button class="btn btn--sm btn--primary" data-action="marketing-local-run-approve" data-id="' +
+            attr(r.id) + '">Approve &amp; run locally</button>' : '') + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+  html += '</div></section>';
   renderViewHtml(html);
 }
 
@@ -9090,7 +9301,7 @@ async function loadCampaignDetail(campaignId, token) {
 
   html += '<section class="card"><div class="card-head"><div class="card-head-main">' +
     '<div class="card-title">Journey and schedule</div><div class="card-sub">' +
-    'Steps record local analytics events only ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no email or message is delivered.</div></div></div>' +
+    'Steps record local analytics events only — no email or message is delivered.</div></div></div>' +
     '<div class="card-body"><div class="table-wrap"><table class="data"><thead><tr>' +
     '<th>#</th><th>Step</th><th>Kind</th><th>Channel</th><th>Action</th></tr></thead><tbody>' +
     (steps.length ? steps.map(function (s) {
@@ -9177,7 +9388,7 @@ async function loadCampaignDetail(campaignId, token) {
       lifecycle.map(function (e) {
         return '<tr><td class="mono small">' + esc(e.event_type) + '</td>' +
           '<td class="muted small">' + esc(relTime(e.occurred_at)) + '</td>' +
-          '<td class="small">' + esc(e.entity_id ? String(e.entity_id).slice(0, 8) : 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + '</td></tr>';
+          '<td class="small">' + esc(e.entity_id ? String(e.entity_id).slice(0, 8) : '—') + '</td></tr>';
       }).join('') + '</tbody></table></div>';
   }
   html += '</section>';
@@ -9490,7 +9701,7 @@ async function loadSurveyDetail(surveyId, token) {
       '</div><div class="form-actions"><button type="submit" class="btn btn--primary">' +
       icon('plus', 15) + ' Record response</button></div></form></section>';
   }
-  // Survey configuration (FB-008..FB-044) Ã¢â‚¬â€ persisted through the local API only.
+  // Survey configuration (FB-008..FB-044) — persisted through the local API only.
   const cfg = config || {};
   const displayOpts = ['displayOnce', 'displayMultiple', 'displaySome', 'respondMultiple'];
   const themes = ['default', 'forest', 'gold', 'minimal'];
@@ -9679,7 +9890,7 @@ async function loadSearchIndexes(token) {
   if (token !== state.viewToken) return;
   let html = pageHead('Operations', 'Search indexes',
     indexes.length + ' local index' + (indexes.length === 1 ? '' : 'es') +
-    ' Ã‚Â· ' + esc(version.version || ''),
+    ' · ' + esc(version.version || ''),
     can(P.noteWrite) ? '<button class="btn btn--primary" data-action="create-search-index">' +
       icon('plus', 15) + ' New index</button>' : '');
   html += governanceNote('Search runs entirely in this workspace. No external search service is contacted.');
@@ -9755,7 +9966,7 @@ async function loadDocumentEngagement(token) {
   const write = can(P.documentWrite);
   const docOptions = selectOptions(data.documents.map(function (d) { return [d.id, d.title]; }));
   let html = pageHead('Operations', 'Document engagement',
-    data.documents.length + ' documents Ã‚Â· ' + data.internal.length + ' internal visitors',
+    data.documents.length + ' documents · ' + data.internal.length + ' internal visitors',
     '<button class="btn" data-action="view-engagement-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Collaboration and analytics are local records. No Papermark server, hosted viewer, outbound email, geolocation service or external analytics provider is contacted; location and client fields are caller-supplied.');
@@ -9884,7 +10095,7 @@ async function loadSearchAdvanced(token) {
   const indexOptions = selectOptions(data.indexes.map(function (i) { return [i.name, i.name]; }));
   const federationOptions = selectOptions(data.federations.map(function (f) { return [f.id, f.key]; }));
   let html = pageHead('Operations', 'Advanced search',
-    data.indexes.length + ' indexes Ã‚Â· ' + data.federations.length + ' federations',
+    data.indexes.length + ' indexes · ' + data.federations.length + ' federations',
     '<button class="btn" data-action="view-advanced-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Hybrid, vector and federated search run locally with deterministic embeddings. No Meilisearch server, embedding model, external SDK or hosted demo is contacted.');
@@ -9894,7 +10105,7 @@ async function loadSearchAdvanced(token) {
       '<th>Members</th></tr></thead><tbody>' +
       data.federations.map(function (f) {
         return '<tr><td class="mono">' + esc(f.key) + '</td><td class="small">' +
-          esc((f.members || []).map(function (m) { return m.index + 'Ãƒâ€”' + m.weight; }).join(', ')) +
+          esc((f.members || []).map(function (m) { return m.index + '×' + m.weight; }).join(', ')) +
           '</td></tr>';
       }).join('') + '</tbody></table></div>'
       : '<p class="muted small">No federations yet. Create one below to merge indexes.</p>') + '</section>';
@@ -10043,7 +10254,7 @@ async function loadEmailEngagement(token) {
 
   const write = can(P.contactWrite);
   let html = pageHead('Operations', 'Email engagement',
-    data.templates.length + ' templates' + (data.selected ? ' Ã‚Â· 9 local features' : ''),
+    data.templates.length + ' templates' + (data.selected ? ' · 9 local features' : ''),
     '<button class="btn" data-action="view-email-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Nine email features are backed by additive local tables: HTML/text formats, translations and A/B variants, open pixels, click tokens, bounce and reply monitoring, mailer signatures, base64 inline images and an online render. Tracking tokens are opaque local identifiers; no email is sent, no request leaves the workspace, and no mail provider or hosted service is contacted.');
@@ -10068,7 +10279,7 @@ async function loadEmailEngagement(token) {
     const d = data.detail;
     html += '<section class="card"><h2 class="page-title">Content, translations &amp; variants</h2>' +
       '<p class="muted small">Selected variant: ' + esc(d.variant.selected || 'none') +
-      ' Ã‚Â· translations: ' + d.translations.length + ' Ã‚Â· images: ' + d.images.length + '</p>' +
+      ' · translations: ' + d.translations.length + ' · images: ' + d.images.length + '</p>' +
       '<pre class="small">' + esc(d.formats.html || d.formats.text || '') + '</pre>' +
       (write ? '<form data-form="email-translation-create"><div class="form-grid">' +
         field('locale', 'Locale', { required: true, placeholder: 'fr-FR' }) +
@@ -10085,7 +10296,7 @@ async function loadEmailEngagement(token) {
         icon('layers', 15) + ' Add A/B variant</button></div></form>' : '') + '</section>';
 
     html += '<section class="card"><h2 class="page-title">Local tracking tokens</h2>' +
-      '<p class="muted small">Recorded events: ' + (d.engagement.events || 0) + ' Ã‚Â· ' +
+      '<p class="muted small">Recorded events: ' + (d.engagement.events || 0) + ' · ' +
       esc(JSON.stringify(d.engagement.by_kind || {})) + '</p>' +
       (write ? '<form data-form="email-token-create"><div class="form-grid">' +
         field('recipient_id', 'Recipient id', { required: true, placeholder: 'contact-1' }) +
@@ -10177,7 +10388,7 @@ async function loadWikiPages(token) {
   const labelOptions = selectOptions(data.detail ?
     data.detail.labels.map(function (l) { return [l.name, l.name]; }) : []);
   let html = pageHead('Operations', 'Wiki pages',
-    data.pages.length + ' pages' + (data.selected ? ' Ã‚Â· 8 collaboration features' : ''),
+    data.pages.length + ' pages' + (data.selected ? ' · 8 collaboration features' : ''),
     '<button class="btn" data-action="view-wiki-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Eight wiki features are backed by additive, workspace-scoped tables: version history, local view analytics, publish/export, labels, nested pages, collections, typed editor blocks and polling-based co-editing with inline comments. No Django, Channels/WebSocket, React editor package, hosted service or outbound traffic is used. Exports are deterministic local renders.');
@@ -10198,8 +10409,8 @@ async function loadWikiPages(token) {
   if (data.detail) {
     const d = data.detail;
     html += '<section class="card"><h2 class="page-title">Version history &amp; analytics</h2>' +
-      '<p class="muted small">Views: ' + (d.analytics.views || 0) + ' Ã‚Â· Unique visitors: ' +
-      (d.analytics.unique_visitors || 0) + ' Ã‚Â· external_calls: ' +
+      '<p class="muted small">Views: ' + (d.analytics.views || 0) + ' · Unique visitors: ' +
+      (d.analytics.unique_visitors || 0) + ' · external_calls: ' +
       (!!d.analytics.external_calls) + '</p>' +
       (d.revisions.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Version</th>' +
         '<th>Title</th><th>Reason</th><th>Author</th><th></th></tr></thead><tbody>' +
@@ -10223,7 +10434,7 @@ async function loadWikiPages(token) {
 
     html += '<section class="card"><h2 class="page-title">Publication &amp; export</h2>' +
       '<p class="muted small">State: ' + (d.publication.published ? 'published' : 'draft') +
-      ' Ã‚Â· ' + esc(d.publication.public_url || 'no local URL') + '</p>' +
+      ' · ' + esc(d.publication.public_url || 'no local URL') + '</p>' +
       (write ? '<form data-form="wiki-publication"><div class="form-grid">' +
         field('published', 'Published', { type: 'select', options: selectOptions([['true', 'yes'], ['false', 'no']]) }) +
         field('slug', 'Local slug', { required: true, placeholder: 'runbook-2026' }) +
@@ -10242,7 +10453,7 @@ async function loadWikiPages(token) {
 
     html += '<section class="card"><h2 class="page-title">Labels, hierarchy &amp; collections</h2>' +
       '<p class="muted small">Labels: ' + esc(d.labels.map(function (l) { return l.name; }).join(', ') || '-') +
-      ' Ã‚Â· Tree nodes: ' + d.tree.length + '</p>' +
+      ' · Tree nodes: ' + d.tree.length + '</p>' +
       (write ? '<form data-form="wiki-label"><div class="form-grid">' +
         field('name', 'Label name', { required: true, placeholder: 'runbook' }) +
         '</div><div class="form-actions"><button type="submit" class="btn">' +
@@ -10259,8 +10470,8 @@ async function loadWikiPages(token) {
         icon('plus', 15) + ' Create collection</button></div></form>' : '') + '</section>';
 
     html += '<section class="card"><h2 class="page-title">Editor blocks &amp; inline comments</h2>' +
-      '<p class="muted small">Blocks: ' + d.blocks.length + ' Ã‚Â· Comments: ' + d.comments.length +
-      ' Ã‚Â· Active external editors: ' + d.editing.length + '</p>' +
+      '<p class="muted small">Blocks: ' + d.blocks.length + ' · Comments: ' + d.comments.length +
+      ' · Active external editors: ' + d.editing.length + '</p>' +
       (d.blocks.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Position</th>' +
         '<th>Type</th><th>Content</th><th></th></tr></thead><tbody>' +
         d.blocks.map(function (b) {
@@ -10359,7 +10570,7 @@ async function loadWorkItemPlanning(token) {
     return [t.id, t.name + ' (' + t.target_kind + ')'];
   }));
   let html = pageHead('Operations', 'Work-item planning',
-    data.items.length + ' work items' + (data.selected ? ' Ã‚Â· 12 planning features' : ''),
+    data.items.length + ' work items' + (data.selected ? ' · 12 planning features' : ''),
     '<button class="btn" data-action="view-planning-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Twelve Plane P2 planning features are backed by additive, workspace-scoped tables and local derived views: inverse relations, typed dependencies with conflict markers, estimate schemes with project/cycle aggregates, roadmap, calendar and timeline layouts, an editable table, status updates, templates, on-demand recurrence, worklogs and subscriber-driven recipients. There is no Plane source, Django/React dependency, scheduler daemon, websocket transport or outbound traffic.');
@@ -10384,8 +10595,8 @@ async function loadWorkItemPlanning(token) {
   }
 
   html += '<section class="card"><h2 class="page-title">Relations &amp; dependencies</h2>' +
-    '<p class="muted small">Relations: ' + d.relations.length + ' Ã‚Â· dependencies: ' +
-    d.dependencies.length + ' Ã‚Â· timeline conflicts: ' + (d.timeline.dependency_markers || 0) + '</p>' +
+    '<p class="muted small">Relations: ' + d.relations.length + ' · dependencies: ' +
+    d.dependencies.length + ' · timeline conflicts: ' + (d.timeline.dependency_markers || 0) + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Kind</th><th>Other item</th>' +
     '<th>Violation</th></tr></thead><tbody>' +
     d.relations.map(function (r) {
@@ -10414,7 +10625,7 @@ async function loadWorkItemPlanning(token) {
 
   html += '<section class="card"><h2 class="page-title">Estimates</h2>' +
     '<p class="muted small">Project total points: ' + (d.aggregate.total_points || 0) +
-      ' Ã‚Â· hours: ' + (d.aggregate.total_hours || 0) + ' Ã‚Â· categories: ' +
+      ' · hours: ' + (d.aggregate.total_hours || 0) + ' · categories: ' +
       esc(JSON.stringify(d.aggregate.by_category || {})) + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Scheme</th><th>Value</th>' +
     '<th>Category</th></tr></thead><tbody>' +
@@ -10438,7 +10649,7 @@ async function loadWorkItemPlanning(token) {
 
   html += '<section class="card"><h2 class="page-title">Roadmap, calendar &amp; timeline</h2>' +
     '<p class="muted small">Roadmap groups: ' + (d.roadmap.groups || []).length +
-      ' Ã‚Â· calendar entries: ' + (d.calendar.total || 0) + ' Ã‚Â· timeline rows: ' +
+      ' · calendar entries: ' + (d.calendar.total || 0) + ' · timeline rows: ' +
       (d.timeline.rows || []).length + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>View</th><th>Local grouping</th>' +
     '<th>Items</th></tr></thead><tbody>' +
@@ -10466,22 +10677,22 @@ async function loadWorkItemPlanning(token) {
       icon('edit', 15) + ' Apply inline edit</button></div></form>' : '') + '</section>';
 
   html += '<section class="card"><h2 class="page-title">Updates, recurrence, worklogs &amp; subscribers</h2>' +
-    '<p class="muted small">Updates: ' + d.updates.length + ' Ã‚Â· worklog total: ' +
-      (d.logs.total_minutes || 0) + ' minutes Ã‚Â· recipients: ' +
+    '<p class="muted small">Updates: ' + d.updates.length + ' · worklog total: ' +
+      (d.logs.total_minutes || 0) + ' minutes · recipients: ' +
       (d.recipients.recipients || []).length + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Record</th><th>Detail</th>' +
     '<th></th></tr></thead><tbody>' +
     d.updates.map(function (u) {
-      return '<tr><td>update</td><td>' + esc(u.body) + ' Ã‚Â· sub-items ' + u.sub_items_done + '/' +
+      return '<tr><td>update</td><td>' + esc(u.body) + ' · sub-items ' + u.sub_items_done + '/' +
         u.sub_items_total + '</td><td></td></tr>';
     }).join('') +
     d.recurrences.map(function (r) {
-      return '<tr><td>recurrence</td><td>' + esc(r.frequency) + ' Ã‚Â· next ' + esc(r.next_at) +
+      return '<tr><td>recurrence</td><td>' + esc(r.frequency) + ' · next ' + esc(r.next_at) +
         '</td><td>' + (write ? '<button class="btn btn--sm" data-action="planning-materialize" data-id="' +
         attr(r.id) + '">Materialize</button>' : '') + '</td></tr>';
     }).join('') +
     (d.logs.entries || []).map(function (l) {
-      return '<tr><td>worklog</td><td>' + l.minutes + ' min Ã‚Â· ' + esc(l.note) + '</td><td></td></tr>';
+      return '<tr><td>worklog</td><td>' + l.minutes + ' min · ' + esc(l.note) + '</td><td></td></tr>';
     }).join('') +
     (d.subscribers.subscribers || []).map(function (uid) {
       return '<tr><td>subscriber</td><td class="mono small">' + esc(uid) + '</td><td>' +
@@ -10612,7 +10823,7 @@ async function loadWorkCollaboration(token) {
     return [f.id, f.original_name || f.name || f.id];
   }));
   let html = pageHead('Operations', 'Work collaboration',
-    data.items.length + ' work items Ã‚Â· ' + data.files.length + ' stored files',
+    data.items.length + ' work items · ' + data.files.length + ' stored files',
     '<button class="btn" data-action="view-collab-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Eight Plane capabilities are backed by additive, workspace-scoped records: work-item attachments, mentions, team collaboration, opaque cursor pages, field projection and expansion, a generated local contract, item restrictions and provider-neutral CSV import. No Plane source, Django transport, hosted endpoint, outbound HTTP or external import provider is claimed.');
@@ -10638,9 +10849,9 @@ async function loadWorkCollaboration(token) {
 
   if (data.projectId && data.cursor) {
     html += '<section class="card"><h2 class="page-title">Cursor pages &amp; CSV import</h2>' +
-      '<p class="muted small">Offset ' + data.cursor.offset + ' Ã‚Â· ' + data.cursor.count +
-      ' rows on this page Ã‚Â· more: ' + (data.cursor.has_more ? 'yes' : 'no') +
-      ' Ã‚Â· cursors are opaque local records.</p>' +
+      '<p class="muted small">Offset ' + data.cursor.offset + ' · ' + data.cursor.count +
+      ' rows on this page · more: ' + (data.cursor.has_more ? 'yes' : 'no') +
+      ' · cursors are opaque local records.</p>' +
       '<div class="table-wrap"><table class="data"><thead><tr><th>Title</th><th>Status</th>' +
       '</tr></thead><tbody>' + data.cursor.rows.map(function (r) {
         return '<tr><td>' + esc(r.title) + '</td><td>' + esc(r.status) + '</td></tr>';
@@ -10670,16 +10881,16 @@ async function loadWorkCollaboration(token) {
 
   html += '<section class="card"><h2 class="page-title">Attachments &amp; mentions</h2>' +
     '<p class="muted small">Attachments: ' + (d.attachments.attachments || []).length +
-    ' Ã‚Â· mentions: ' + (d.mentions.mentions || []).length +
-    ' Ã‚Â· item visible: ' + (d.guarded.guarded ? 'yes' : 'no') + '</p>' +
+    ' · mentions: ' + (d.mentions.mentions || []).length +
+    ' · item visible: ' + (d.guarded.guarded ? 'yes' : 'no') + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Kind</th><th>Detail</th>' +
     '</tr></thead><tbody>' +
     (d.attachments.attachments || []).map(function (a) {
-      return '<tr><td>attachment</td><td>' + esc(a.file_name) + ' Ã‚Â· ' + a.size_bytes +
-        ' bytes Ã‚Â· ' + esc(a.label || '') + '</td></tr>';
+      return '<tr><td>attachment</td><td>' + esc(a.file_name) + ' · ' + a.size_bytes +
+        ' bytes · ' + esc(a.label || '') + '</td></tr>';
     }).join('') +
     (d.mentions.mentions || []).map(function (m) {
-      return '<tr><td>mention</td><td class="mono small">' + esc(m.user_id) + ' Ã‚Â· ' +
+      return '<tr><td>mention</td><td class="mono small">' + esc(m.user_id) + ' · ' +
         esc(m.source) + '</td></tr>';
     }).join('') + '</tbody></table></div>' +
     (write ? '<form data-form="collab-attachment-add"><div class="form-grid">' +
@@ -10698,13 +10909,13 @@ async function loadWorkCollaboration(token) {
 
   html += '<section class="card"><h2 class="page-title">Team collaboration, shaping &amp; restrictions</h2>' +
     '<p class="muted small">Activity: ' + (collaboration.activity || []).length +
-    ' Ã‚Â· comments: ' + (collaboration.comments || []).length +
-    ' Ã‚Â· shaped fields: ' + ((d.shaped.fields || []).length) +
-    ' Ã‚Â· allowed users: ' + ((d.restriction.allowed_user_ids || []).length) + '</p>' +
+    ' · comments: ' + (collaboration.comments || []).length +
+    ' · shaped fields: ' + ((d.shaped.fields || []).length) +
+    ' · allowed users: ' + ((d.restriction.allowed_user_ids || []).length) + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Kind</th><th>Detail</th>' +
     '</tr></thead><tbody>' +
     (collaboration.activity || []).map(function (a) {
-      return '<tr><td>activity</td><td>' + esc(a.kind) + ' Ã‚Â· ' + esc(JSON.stringify(a.detail)) +
+      return '<tr><td>activity</td><td>' + esc(a.kind) + ' · ' + esc(JSON.stringify(a.detail)) +
         '</td></tr>';
     }).join('') +
     (collaboration.comments || []).map(function (c) {
@@ -10744,7 +10955,7 @@ async function loadAccessGovernance(token) {
     const roleRows = Array.isArray(roles) ? roles : (roles.items || []);
     const schemeRows = Array.isArray(schemes) ? schemes : (schemes.items || []);
     const auditRows = (audit && audit.items) ? audit.items : [];
-    el.content.innerHTML = `
+    renderViewHtml(`
       <div class="page-header"><div><h1 class="page-title">Access governance</h1><p class="page-subtitle">Clean-room custom roles, permission schemes, fine-grained NV-070 permissions and immutable audit. No upstream source is copied. No external service, licence server or hosted control plane is contacted. IP data is never invented.</p></div>
       <div class="page-actions"><button class="btn btn-secondary btn-sm" data-action="view-access-governance-contract">Contract</button></div></div>
       <div class="card-grid">
@@ -10801,9 +11012,9 @@ async function loadAccessGovernance(token) {
       </div>
       <div class="section-panel" style="margin-top:16px"><div class="section-title">Custom roles</div><pre class="code-block">${esc(JSON.stringify(roleRows, null, 2))}</pre></div>
       <div class="section-panel" style="margin-top:16px"><div class="section-title">Schemes</div><pre class="code-block">${esc(JSON.stringify(schemeRows, null, 2))}</pre></div>
-    `;
+    `);
   } catch (err) {
-    el.content.innerHTML = `<div class="error-state"><p>${esc(err.message)}</p></div>`;
+    renderViewHtml(`<div class="error-state"><p>${esc(err.message)}</p></div>`);
   }
 }
 
@@ -10839,7 +11050,7 @@ async function loadFlagGovernance(token) {
 
   html += '<section class="card"><h2 class="page-title">Workspace settings</h2>' +
     '<p class="muted small">Projects required for features: ' +
-    String(!!data.settings.require_project_for_features) + ' Â· projects required for SDK keys: ' +
+    String(!!data.settings.require_project_for_features) + ' · projects required for SDK keys: ' +
     String(!!data.settings.require_project_for_sdk) + '</p>' +
     (write ? '<form data-form="fg-settings-save"><div class="form-grid">' +
       field('require_project_for_features', 'Require project for features', { type: 'select', options: selectOptions([['false', 'No'], ['true', 'Yes']], String(!!data.settings.require_project_for_features)) }) +
@@ -11017,7 +11228,7 @@ async function loadSupportReporting(token) {
   html += '<section class="card"><h2 class="page-title">' + esc(cap(dimension)) + '</h2>' +
     '<p class="muted small">Average first response: ' +
     esc(String(report.avg_first_response_minutes === null || report.avg_first_response_minutes === undefined
-      ? '-' : report.avg_first_response_minutes)) + ' minutes Ã‚Â· source: ' +
+      ? '-' : report.avg_first_response_minutes)) + ' minutes · source: ' +
     esc(String(report.source || 'persisted_local_support_rows')) + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Key</th><th>Name</th>' +
     '<th>Tickets</th><th>Resolved</th><th>Avg first response</th></tr></thead><tbody>' +
@@ -11058,8 +11269,8 @@ async function loadSupportReporting(token) {
     '</section>';
 
   html += '<section class="card"><h2 class="page-title">Recorded responses and saved runs</h2>' +
-    '<p class="muted small">Responses: ' + data.responses.length + ' Ã‚Â· saved report runs: ' +
-    data.runs.length + ' Ã‚Â· contract routes: ' + esc(String(data.contract.route_count || 0)) + '</p>' +
+    '<p class="muted small">Responses: ' + data.responses.length + ' · saved report runs: ' +
+    data.runs.length + ' · contract routes: ' + esc(String(data.contract.route_count || 0)) + '</p>' +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Type</th><th>Id</th>' +
     '<th>Detail</th></tr></thead><tbody>' +
     data.responses.map(function (row) {
@@ -11068,7 +11279,7 @@ async function loadSupportReporting(token) {
     }).join('') +
     data.runs.map(function (row) {
       return '<tr><td>Report run</td><td class="mono small">' + esc(row.id) + '</td><td>' +
-        esc(row.dimension) + ' Ã‚Â· ' + esc(String(row.summary && row.summary.tickets_count || 0)) +
+        esc(row.dimension) + ' · ' + esc(String(row.summary && row.summary.tickets_count || 0)) +
         ' tickets</td></tr>';
     }).join('') + '</tbody></table></div></section>';
 
@@ -11100,7 +11311,7 @@ async function loadMarketingContent(token) {
 
   const write = can(P.contactWrite);
   let html = pageHead('Operations', 'Marketing content',
-    data.pages.length + ' local landing pages Ã‚Â· ' + data.assets.length + ' local assets',
+    data.pages.length + ' local landing pages · ' + data.assets.length + ' local assets',
     '<button class="btn" data-action="view-marketing-content-contract">' + icon('info', 15) +
       ' Local contract</button>' +
       '<button class="btn" data-action="marketing-dashboard-view">' + icon('insights', 15) +
@@ -11198,7 +11409,7 @@ async function loadMarketingContent(token) {
       '</div><div class="form-actions"><button type="submit" class="btn">' +
       icon('plus', 15) + ' Store widget</button></div></form>' : '') +
     '<p class="muted small">Dashboard source: ' + esc(String(data.dashboard.source || '-')) +
-    ' Ã‚Â· widgets: ' + esc(String((data.dashboard.widgets || []).length)) + '</p></section>';
+    ' · widgets: ' + esc(String((data.dashboard.widgets || []).length)) + '</p></section>';
 
   renderViewHtml(html);
 }
@@ -11238,7 +11449,7 @@ async function loadExperimentExposure(token) {
     return [t.id, t.provider_key];
   }));
   let html = pageHead('Operations', 'Experiment exposure',
-    data.providers.length + ' local adapters Ã‚Â· ' + data.trackers.length + ' configured Ã‚Â· ' +
+    data.providers.length + ' local adapters · ' + data.trackers.length + ' configured · ' +
       (data.stats.total || 0) + ' exposures',
     '<button class="btn" data-action="view-exposure-contract">' + icon('info', 15) +
       ' Local contract</button>');
@@ -11303,7 +11514,7 @@ async function loadExperimentExposure(token) {
       icon('layers', 15) + ' Ingest batch locally</button></div></form>' : '') + '</section>';
 
   html += '<section class="card"><h2 class="page-title">Audit trail</h2>' +
-    '<p class="muted small">Rejections: ' + data.rejections.length + ' Ã‚Â· Batches: ' +
+    '<p class="muted small">Rejections: ' + data.rejections.length + ' · Batches: ' +
     data.batches.length + '</p>' +
     (data.rejections.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Provider</th>' +
       '<th>Reason</th><th>When</th></tr></thead><tbody>' +
@@ -11362,7 +11573,7 @@ async function loadConversationOps(token) {
     ['open', 'open'], ['pending', 'pending'], ['resolved', 'resolved'], ['closed', 'closed'],
   ], 'open');
   let html = pageHead('Operations', 'Conversation ops',
-    data.presence.length + ' agents Ã‚Â· ' + data.tickets.length + ' conversations Ã‚Â· ' +
+    data.presence.length + ' agents · ' + data.tickets.length + ' conversations · ' +
       data.hours.length + ' inbox schedules',
     '<button class="btn" data-action="view-conversation-contract">' + icon('info', 15) +
       ' Local contract</button>');
@@ -11531,15 +11742,15 @@ async function loadSalesEngagement(token) {
   const cohortOptions = selectOptions(data.cohorts.map(function (c) { return [c.id, c.name]; }));
   const draftOptions = selectOptions(data.drafts.map(function (d) { return [d.id, d.campaign_key + ' #' + d.sequence_step]; }));
   let html = pageHead('Operations', 'Sales engagement',
-    data.signals.total + ' signals Ã‚Â· ' + data.cohorts.length + ' cohorts Ã‚Â· ' +
+    data.signals.total + ' signals · ' + data.cohorts.length + ' cohorts · ' +
       data.outbox.length + ' outbox messages',
     '<button class="btn" data-action="view-sales-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Everything here is local: signals are a governed catalog, drafts and offers come from deterministic local templates, and the outbox is a durable queue whose only send state is a labelled simulated dry run. No Sellbird source, broker, outbound email or external AI provider is used.');
 
   html += '<section class="card"><h2 class="page-title">Signal catalog</h2>' +
-    '<p class="muted small">' + data.signals.total + ' governed signals Ã‚Â· ' + data.signals.free +
-    ' free Ã‚Â· ' + data.signals.paid + ' paid (explicit confirmation required)</p>' +
+    '<p class="muted small">' + data.signals.total + ' governed signals · ' + data.signals.free +
+    ' free · ' + data.signals.paid + ' paid (explicit confirmation required)</p>' +
     (write ? '<div class="form-actions"><button class="btn" data-action="activate-free-signals">' +
       icon('plus', 15) + ' Activate free signals</button></div>' : '') +
     '<div class="table-wrap"><table class="data"><thead><tr><th>Code</th><th>Label</th>' +
@@ -11588,9 +11799,9 @@ async function loadSalesEngagement(token) {
 
     html += '<section class="card"><h2 class="page-title">Sending governance</h2>' +
       '<p class="muted small">Mode: ' + statusBadge(data.sending.mode || 'approval') +
-      ' Ã‚Â· autopilot opt-in: ' + (data.sending.autopilot_opt_in ? 'yes' : 'no') +
-      ' Ã‚Â· global pause: ' + (data.sending.global_paused ? 'yes' : 'no') +
-      ' Ã‚Â· paused inboxes: ' + esc((data.sending.paused_inboxes || []).join(', ') || 'none') + '</p>' +
+      ' · autopilot opt-in: ' + (data.sending.autopilot_opt_in ? 'yes' : 'no') +
+      ' · global pause: ' + (data.sending.global_paused ? 'yes' : 'no') +
+      ' · paused inboxes: ' + esc((data.sending.paused_inboxes || []).join(', ') || 'none') + '</p>' +
       '<form data-form="sales-sending-mode"><div class="form-grid">' +
       field('mode', 'Sending mode', { type: 'select', options: selectOptions([
         ['approval', 'approval (default)'], ['autopilot', 'autopilot (opt-in required)'],
@@ -11697,7 +11908,7 @@ async function loadNotificationAutomation(token) {
   const subIdOptions = selectOptions(data.subscribers.map(function (s) { return [s.id, s.subscriber_key]; }));
   const stepOptions = selectOptions(data.codeSteps.map(function (s) { return [s.id, s.workflow_key + '/' + s.step_key]; }));
   let html = pageHead('Operations', 'Notification automation',
-    data.subscribers.length + ' subscribers Ã‚Â· ' + data.codeSteps.length + ' code steps Ã‚Â· ' +
+    data.subscribers.length + ' subscribers · ' + data.codeSteps.length + ' code steps · ' +
       data.routing.length + ' routing rules',
     '<button class="btn" data-action="view-automation-contract">' + icon('info', 15) +
       ' Local contract</button>');
@@ -11888,7 +12099,7 @@ async function loadNotificationWorkflows(token) {
 
   let html = pageHead('Operations', 'Notification workflows',
     data.workflows.length + ' workflow' + (data.workflows.length === 1 ? '' : 's') +
-    ' Ã‚Â· stable API v' + esc(String(data.contract.version || '1')),
+    ' · stable API v' + esc(String(data.contract.version || '1')),
     can(P.noteWrite)
       ? '<button class="btn btn--primary" data-action="create-notification-workflow">' +
         icon('plus', 15) + ' New workflow</button>' +
@@ -11946,8 +12157,8 @@ async function loadNotificationWorkflows(token) {
   html += '</section>';
 
   html += '<section class="card"><h2 class="page-title">Routing building blocks</h2>' +
-    '<p class="muted small">' + data.feeds.length + ' feeds Ã‚Â· ' + data.contexts.length +
-    ' contexts Ã‚Â· ' + data.layouts.length + ' layouts Ã‚Â· ' + data.endpoints.length +
+    '<p class="muted small">' + data.feeds.length + ' feeds · ' + data.contexts.length +
+    ' contexts · ' + data.layouts.length + ' layouts · ' + data.endpoints.length +
     ' webhook endpoints</p>' +
     (can(P.noteWrite)
       ? '<div class="form-actions">' +
@@ -11987,7 +12198,7 @@ async function loadFeedbackIntelligence(token) {
   if (token !== state.viewToken) return;
 
   let html = pageHead('Operations', 'Feedback intelligence',
-    data.insights.total_records + ' records Ã‚Â· ' + data.datasets.length + ' datasets Ã‚Â· ' +
+    data.insights.total_records + ' records · ' + data.datasets.length + ' datasets · ' +
     data.fields.length + ' library fields',
     can(P.noteWrite)
       ? '<button class="btn btn--primary" data-action="create-feedback-dataset">' +
@@ -12009,7 +12220,7 @@ async function loadFeedbackIntelligence(token) {
     return esc(k) + ': ' + esc(String(bySentiment[k]));
   });
   html += '<p class="muted small">' +
-    (sentimentParts.length ? sentimentParts.join(' Ã‚Â· ') : 'No records ingested yet') + '</p>';
+    (sentimentParts.length ? sentimentParts.join(' · ') : 'No records ingested yet') + '</p>';
   html += '</section>';
 
   html += '<section class="card"><h2 class="page-title">Datasets and sources</h2>';
@@ -12034,8 +12245,8 @@ async function loadFeedbackIntelligence(token) {
   html += '</section>';
 
   html += '<section class="card"><h2 class="page-title">Field library, segments and dashboards</h2>' +
-    '<p class="muted small">' + data.fields.length + ' reusable fields Ã‚Â· ' +
-    data.segments.length + ' audience segments Ã‚Â· ' + data.dashboards.length + ' dashboards</p>';
+    '<p class="muted small">' + data.fields.length + ' reusable fields · ' +
+    data.segments.length + ' audience segments · ' + data.dashboards.length + ' dashboards</p>';
   if (data.dashboards.length) {
     html += '<div class="form-actions">' + data.dashboards.map(function (d) {
       return '<button class="btn btn--sm" data-action="view-feedback-dashboard" data-id="' +
@@ -12070,7 +12281,7 @@ async function loadExperimentStats(token) {
   if (token !== state.viewToken) return;
 
   let html = pageHead('Operations', 'Experiment statistics',
-    data.experiments.length + ' experiments Ã‚Â· ' + data.metrics.length + ' metrics',
+    data.experiments.length + ' experiments · ' + data.metrics.length + ' metrics',
     can(P.noteWrite)
       ? '<button class="btn btn--primary" data-action="create-experiment-definition">' +
         icon('plus', 15) + ' New experiment</button>' +
@@ -12083,7 +12294,7 @@ async function loadExperimentStats(token) {
     '<button class="btn btn--sm" data-action="run-power-analysis">' + icon('activity', 14) + ' Power analysis</button>' +
     '<button class="btn btn--sm" data-action="run-correction">Multiple-testing correction</button>' +
     '</div><p class="muted small">Engines: ' + esc((data.contract.engines || []).join(', ')) +
-    ' Ã‚Â· Metric types: ' + esc((data.contract.metric_types || []).join(', ')) + '</p></section>';
+    ' · Metric types: ' + esc((data.contract.metric_types || []).join(', ')) + '</p></section>';
 
   html += '<section class="card"><h2 class="page-title">Metric definitions</h2>';
   if (!data.metrics.length) {
@@ -12146,7 +12357,7 @@ async function loadExperimentOps(token) {
   if (token !== state.viewToken) return;
 
   let html = pageHead('Operations', 'Experiment operations',
-    data.projects.length + ' projects Ã‚Â· ' + data.flags.length + ' flags Ã‚Â· ' +
+    data.projects.length + ' projects · ' + data.flags.length + ' flags · ' +
     data.stale.count + ' stale candidates',
     can(P.noteWrite)
       ? '<button class="btn btn--primary" data-action="create-experiment-project">' +
@@ -12200,8 +12411,8 @@ async function loadExperimentOps(token) {
   html += '</section>';
 
   html += '<section class="card"><h2 class="page-title">Segments, A/A tests and time series</h2>' +
-    '<p class="muted small">' + data.segments.length + ' segments Ã‚Â· ' + data.tests.length +
-    ' A/A tests Ã‚Â· ' + esc((data.contract.resources || []).join(', ')) + '</p>';
+    '<p class="muted small">' + data.segments.length + ' segments · ' + data.tests.length +
+    ' A/A tests · ' + esc((data.contract.resources || []).join(', ')) + '</p>';
   if (!data.tests.length) {
     html += emptyState('activity', 'No A/A tests', 'A/A tests validate assignment and metric plumbing.');
   } else {
@@ -12248,7 +12459,7 @@ async function loadExperimentQueries(token) {
 
   const create = can(P.noteWrite);
   let html = pageHead('Operations', 'Experiment queries',
-    data.facts.length + ' fact tables Ã‚Â· ' + data.discovery.length + ' queries Ã‚Â· ' +
+    data.facts.length + ' fact tables · ' + data.discovery.length + ' queries · ' +
     data.reports.length + ' reports',
     create
       ? '<button class="btn btn--primary" data-action="create-query-fact-table">' +
@@ -12379,7 +12590,7 @@ async function loadExperimentPlatform(token) {
 
   const manage = can(P.workspaceManage);
   let html = pageHead('Operations', 'Experiment platform',
-    data.openapi.operation_count + ' live operations Ã‚Â· ' + data.roles.length + ' default roles',
+    data.openapi.operation_count + ' live operations · ' + data.roles.length + ' default roles',
     '<button class="btn" data-action="view-experiment-openapi">' + icon('info', 15) +
       ' API contract</button>' +
       (manage ? '<button class="btn btn--primary" data-action="bind-experiment-role">' +
@@ -12388,13 +12599,13 @@ async function loadExperimentPlatform(token) {
   html += governanceNote('The OpenAPI status is computed from the live NOVARA app. Credentials are the existing scoped API-key layer; no secret is shown after creation and no external provider is contacted.');
 
   html += '<section class="card"><h2 class="page-title">API contract and REST surface</h2>' +
-    '<p class="muted small">Version ' + esc(data.contract.version || '1') + ' Ã‚Â· delivery ' +
+    '<p class="muted small">Version ' + esc(data.contract.version || '1') + ' · delivery ' +
     esc(data.contract.delivery || 'local-only') + '</p>' +
     '<div class="stat-grid">' +
     statCard('activity', 'Live operations', String(data.inventory.operation_count || 0), 'Generated OpenAPI') +
     statCard('layers', 'Route modules', String((data.inventory.route_modules || []).length), 'Experimentation surface') +
     statCard('check', 'Contract clean', data.openapi.clean ? 'Yes' : 'No', 'Unique operation IDs') +
-    '</div><p class="small">' + esc((data.inventory.route_modules || []).join(' Ã‚Â· ')) + '</p></section>';
+    '</div><p class="small">' + esc((data.inventory.route_modules || []).join(' · ')) + '</p></section>';
 
   html += '<section class="card"><h2 class="page-title">Credential layers</h2>';
   Object.keys(data.credentials).forEach(function (name) {
@@ -12448,7 +12659,7 @@ async function loadExperimentDelivery(token) {
 
   const write = can(P.noteWrite);
   let html = pageHead('Operations', 'Experiment delivery',
-    data.webhooks.length + ' webhooks Ã‚Â· ' + data.jobs.length + ' refresh jobs',
+    data.webhooks.length + ' webhooks · ' + data.jobs.length + ' refresh jobs',
     '<button class="btn" data-action="view-delivery-contract">' + icon('info', 15) +
       ' Local contract</button>' +
       (write ? '<button class="btn btn--primary" data-action="create-delivery-webhook">' +
@@ -12512,7 +12723,7 @@ async function loadSurveyDelivery(token) {
 
   const write = can(P.noteWrite);
   let html = pageHead('Operations', 'Survey delivery',
-    data.configs.length + ' configs Ã‚Â· ' + data.creatives.length + ' creatives',
+    data.configs.length + ' configs · ' + data.creatives.length + ' creatives',
     '<button class="btn" data-action="view-survey-contract">' + icon('info', 15) +
       ' Local contract</button>' +
       (write ? '<button class="btn btn--primary" data-action="create-survey-config">' +
@@ -12558,7 +12769,7 @@ const runGlobalSearch = debounce(async function () {
     host.innerHTML = '<div class="search-results"><div class="search-foot">Your role does not include search access.</div></div>';
     return;
   }
-  host.innerHTML = '<div class="search-results"><div class="search-group">SearchingÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</div></div>';
+  host.innerHTML = '<div class="search-results"><div class="search-group">Searching…</div></div>';
 
   let data;
   try {
@@ -12727,6 +12938,108 @@ document.addEventListener('keydown', function (e) {
  * Boot and hash routing
  * ------------------------------------------------------------------ */
 
+async function loadParityCapabilities(token) {
+  if (!can(P.contactRead)) {
+    renderViewHtml(pageHead('Operations', 'Parity capabilities', '') +
+      errorBlock('Your role does not include capability access.'));
+    return;
+  }
+  loadingView('Parity capabilities', 'Local workspace-scoped capability records. No source project code, provider, deployment or external send is claimed.');
+  const base = apiW('/parity-capabilities');
+  let kinds, records;
+  try {
+    kinds = await api(base + '/kinds') || [];
+    const kind = state.parityKind || (kinds[0] && kinds[0].kind) || '';
+    state.parityKind = kind;
+    records = kind ? (await api(base + '?kind=' + encodeURIComponent(kind)) || []) : [];
+  } catch (err) {
+    if (token !== state.viewToken) return;
+    renderViewHtml(pageHead('Operations', 'Parity capabilities', '') + errorBlock(errMessage(err)));
+    return;
+  }
+  if (token !== state.viewToken) return;
+  const write = can(P.contactWrite);
+  let html = pageHead('Operations', 'Parity capabilities', kinds.length + ' local capability kinds',
+    '<button class="btn" data-action="parity-refresh">' + icon('activity', 15) + ' Refresh</button>');
+  html += governanceNote('Local NOVARA capability records only; no source project code, provider, deployment or external send is claimed.');
+  html += '<section class="card"><h2 class="page-title">Capability kind</h2>' +
+    '<form data-form="parity-select-kind"><div class="form-grid">' +
+    field('kind', 'Kind', { type: 'select', options: selectOptions(kinds.map(function (k) {
+      return [k.kind, k.row_id + ' - ' + k.name]; }), state.parityKind), required: true }) +
+    '</div><div class="form-actions"><button class="btn" type="submit">Select</button></div></form></section>';
+  if (write) {
+    html += '<section class="card"><h2 class="page-title">Create local record</h2>' +
+      '<form data-form="parity-create"><div class="form-grid">' +
+      field('name', 'Name', { value: 'Local capability', required: true }) +
+      field('payload_json', 'Payload (JSON object)', { type: 'textarea', span: true, required: true, value: '{"value": "probe"}' }) +
+      '</div><div class="form-actions"><button class="btn btn--primary" type="submit">Save record</button></div></form></section>';
+    html += '<section class="card"><h2 class="page-title">Evaluate</h2>' +
+      '<form data-form="parity-evaluate"><div class="form-grid">' +
+      field('record_id', 'Record', { type: 'select', options: selectOptions(records.map(function (r) {
+        return [r.record_id, r.name + ' - ' + r.record_id.slice(0, 8)]; })), required: true }) +
+      field('input_json', 'Input (JSON object)', { type: 'textarea', span: true, required: true, value: '{"value": "probe"}' }) +
+      '</div><div class="form-actions"><button class="btn btn--primary" type="submit">Evaluate locally</button></div></form></section>';
+  }
+  html += '<section class="card"><h2 class="page-title">Stored records</h2>' +
+    (records.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Row</th><th>Kind</th><th>Name</th><th>Payload</th></tr></thead><tbody>' +
+      records.map(function (r) { return '<tr><td>' + esc(r.row_id) + '</td><td>' + esc(r.kind) + '</td><td>' +
+        esc(r.name) + '</td><td class="small">' + esc(JSON.stringify(r.payload)) + '</td></tr>'; }).join('') +
+      '</tbody></table></div>' : '<p class="muted small">No local records for this kind yet.</p>') + '</section>';
+  renderViewHtml(html);
+}
+
+async function loadFinalCapabilities(token) {
+  if (!can(P.contactRead)) {
+    renderViewHtml(pageHead('Operations', 'Final capabilities', '') +
+      errorBlock('Your role does not include capability access.'));
+    return;
+  }
+  loadingView('Final capabilities', 'Workspace-scoped local capabilities for the final 148 parity rows.');
+  const base = apiW('/final-capabilities');
+  let kinds, records;
+  try {
+    kinds = await api(base + '/kinds') || [];
+    const kind = state.finalKind || (kinds[0] && kinds[0].kind) || '';
+    state.finalKind = kind;
+    records = kind ? (await api(base + '?kind=' + encodeURIComponent(kind)) || []) : [];
+  } catch (err) {
+    if (token !== state.viewToken) return;
+    renderViewHtml(pageHead('Operations', 'Final capabilities', '') + errorBlock(errMessage(err)));
+    return;
+  }
+  if (token !== state.viewToken) return;
+  const write = can(P.contactWrite);
+  let html = pageHead('Operations', 'Final capabilities', kinds.length + ' local capability kinds',
+    '<button class="btn" data-action="final-refresh">' + icon('activity', 15) + ' Refresh</button>');
+  html += governanceNote('Final NOVARA local capabilities only; no source project code, provider, deployment or external send is claimed.');
+  html += '<section class="card"><h2 class="page-title">Capability kind</h2>' +
+    '<form data-form="final-select-kind"><div class="form-grid">' +
+    field('kind', 'Kind', { type: 'select', options: selectOptions(kinds.map(function (k) {
+      return [k.kind, k.row_id + ' - ' + k.name]; }), state.finalKind), required: true }) +
+    '</div><div class="form-actions"><button class="btn" type="submit">Select</button></div></form></section>';
+  if (write) {
+    html += '<section class="card"><h2 class="page-title">Create local record</h2>' +
+      '<form data-form="final-create"><div class="form-grid">' +
+      field('name', 'Name', { value: 'Local capability', required: true }) +
+      field('payload_json', 'Payload (JSON object)', { type: 'textarea', span: true, required: true,
+        value: '{"value": "probe"}' }) +
+      '</div><div class="form-actions"><button class="btn btn--primary" type="submit">Save record</button></div></form></section>';
+    html += '<section class="card"><h2 class="page-title">Evaluate</h2>' +
+      '<form data-form="final-evaluate"><div class="form-grid">' +
+      field('record_id', 'Record', { type: 'select', options: selectOptions(records.map(function (r) {
+        return [r.record_id, r.name + ' - ' + r.record_id.slice(0, 8)]; })), required: true }) +
+      field('input_json', 'Input (JSON object)', { type: 'textarea', span: true, required: true,
+        value: '{"value": "probe"}' }) +
+      '</div><div class="form-actions"><button class="btn btn--primary" type="submit">Evaluate locally</button></div></form></section>';
+  }
+  html += '<section class="card"><h2 class="page-title">Stored records</h2>' +
+    (records.length ? '<div class="table-wrap"><table class="data"><thead><tr><th>Row</th><th>Kind</th><th>Name</th><th>Payload</th></tr></thead><tbody>' +
+      records.map(function (r) { return '<tr><td>' + esc(r.row_id) + '</td><td>' + esc(r.kind) + '</td><td>' +
+        esc(r.name) + '</td><td class="small">' + esc(JSON.stringify(r.payload)) + '</td></tr>'; }).join('') +
+      '</tbody></table></div>' : '<p class="muted small">No local records for this kind yet.</p>') + '</section>';
+  renderViewHtml(html);
+}
+
 async function loadAdvancedExperiments(token) {
   if (!can(P.contactRead)) {
     renderViewHtml(pageHead('Operations', 'Advanced experimentation', '') +
@@ -12757,16 +13070,16 @@ async function loadAdvancedExperiments(token) {
   const contract = data.contract || {};
   const bandit = data.bandit || {};
   let html = pageHead('Operations', 'Advanced experimentation',
-    data.analyses.length + ' saved analyses Ã‚Â· ' + data.holdouts.length + ' holdouts',
+    data.analyses.length + ' saved analyses · ' + data.holdouts.length + ' holdouts',
     '<button class="btn" data-action="view-adv-contract">' + icon('info', 15) +
       ' Local contract</button>');
   html += governanceNote('Eight GrowthBook commercial capabilities are implemented locally from the documented public method: CUPED variance reduction, size-weighted post-stratification, mSPRT and O\'Brien-Fleming sequential boundaries, quantile metrics with deterministic bootstrap intervals, retention curves, weighted compound scores, Thompson/UCB bandits and Pearson correlation. No GrowthBook source, stats package, hosted platform, warehouse, SDK or external statistics service is claimed.');
 
   html += '<section class="card"><h2 class="page-title">Local contract</h2>' +
     '<p class="muted small">external_calls: ' + String(contract.external_calls) +
-    ' Ã‚Â· analysis kinds: ' + (contract.analysis_kinds || []).length +
-    ' Ã‚Â· bandit policies: ' + (contract.bandit_policies || []).join(', ') +
-    ' Ã‚Â· capabilities: ' + (contract.capabilities || []).join(', ') + '</p>' +
+    ' · analysis kinds: ' + (contract.analysis_kinds || []).length +
+    ' · bandit policies: ' + (contract.bandit_policies || []).join(', ') +
+    ' · capabilities: ' + (contract.capabilities || []).join(', ') + '</p>' +
     '<p class="muted small">Algorithms are computed locally with the Python standard library and persisted in workspace-scoped records. No paid dependency is required.</p></section>';
 
   if (write) {
@@ -12796,17 +13109,17 @@ async function loadAdvancedExperiments(token) {
           : ('effect ' + Number(r.effect || 0).toFixed(3));
         return '<tr><td><button class="btn btn--sm btn--ghost" data-action="adv-open-analysis" data-id="' +
           attr(a.id) + '">' + esc(a.name) + '</button></td><td>' + esc(a.kind) + '</td><td>' +
-          esc(a.experiment_key || 'Ã¢â‚¬â€') + '</td><td>' + esc(summary) + '</td></tr>';
+          esc(a.experiment_key || '—') + '</td><td>' + esc(summary) + '</td></tr>';
       }).join('') + '</tbody></table></div>' : '<p class="muted small">No analyses saved yet.</p>') +
     (data.analysis ? '<div class="callout"><strong>' + esc(data.analysis.name) + '</strong><pre class="small">' +
       esc(JSON.stringify(data.analysis.result, null, 2)) + '</pre></div>' : '') + '</section>';
 
-  html += '<section class="card"><h2 class="page-title">Multi-armed bandit Ã‚Â· ' +
+  html += '<section class="card"><h2 class="page-title">Multi-armed bandit · ' +
     esc(data.banditKey) + '</h2>' +
     '<p class="muted small">Arms: ' + (bandit.arms || []).map(function (a) {
-      return esc(a.arm) + ' (ÃŽÂ±' + Number(a.alpha).toFixed(1) + ' ÃŽÂ²' + Number(a.beta).toFixed(1) +
+      return esc(a.arm) + ' (α' + Number(a.alpha).toFixed(1) + ' β' + Number(a.beta).toFixed(1) +
         ' pulls ' + a.pulls + ')';
-    }).join(' Ã‚Â· ') + '</p>' + (write ? '<div class="form-grid">' +
+    }).join(' · ') + '</p>' + (write ? '<div class="form-grid">' +
       '<form data-form="adv-bandit-arm">' + field('arm', 'Arm', { required: true }) +
       field('alpha', 'Alpha', { type: 'number', value: '1' }) +
       field('beta', 'Beta', { type: 'number', value: '1' }) +
@@ -12877,10 +13190,6 @@ function onHashChange() {
 }
 
 window.addEventListener('hashchange', onHashChange);
-boot();
-
-
-ener('hashchange', onHashChange);
 boot();
 
 

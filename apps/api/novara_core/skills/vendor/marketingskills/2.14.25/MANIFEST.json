@@ -1,0 +1,3067 @@
+{
+  "schema_version": 1,
+  "upstream": {
+    "repository": "https://github.com/coreyhaines31/marketingskills",
+    "pinned_commit": "5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1",
+    "plugin_version": "2.14.25",
+    "fetched_on": "2026-11-23",
+    "license_spdx": "MIT",
+    "raw_url_pattern": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1/{path}"
+  },
+  "license": {
+    "path": "LICENSE",
+    "spdx": "MIT",
+    "copyright": "Copyright (c) 2025 Corey Haines",
+    "sha256": "b70d71e24e40fce5da8f4b6f9cd862096a048e433db7f3c8cac5e348e6d34591",
+    "upstream_blob_sha": "7c48dd638a9ebed49a8ef0c0c4eea90105381cdf",
+    "bytes": 1069
+  },
+  "bundle": {
+    "root": "apps/api/novara_core/skills/vendor/marketingskills/2.14.25",
+    "file_count": 401,
+    "vendored_bytes": 4202279
+  },
+  "skills": [
+    {
+      "row_id": "MK-001",
+      "skill": "ab-testing",
+      "frontmatter": {
+        "name": "ab-testing",
+        "version": "2.0.7",
+        "description": "When the user wants to plan, run, or read A/B tests, or asks a judgement call on one: is the result real, can we stop, which version won, is this worth testing at all: sample size, duration, significance, hypotheses, and experiment backlogs. For tracking setup, see analytics. For page-level conversion fixes, see cro."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/ab-testing/SKILL.md",
+          "sha256": "938a9a9246c6b05657f509e7ab181f1c961dc14f9dcb5d452c574d3e44a39be2",
+          "upstream_blob_sha": "ca458508b02ae91f6dd2f724ac0095eafa0e2996",
+          "bytes": 12881
+        },
+        {
+          "path": "skills/ab-testing/evals/evals.json",
+          "sha256": "fb32e1f75fc70e339e71f88b1cf10bd9f3d1835178a62d1156ed7dddc278f061",
+          "upstream_blob_sha": "d3c8371460bf0925d318724062a07f32e94ae40c",
+          "bytes": 9025
+        },
+        {
+          "path": "skills/ab-testing/references/sample-size-guide.md",
+          "sha256": "53525ddf0e904477262dc3dbc89d4bd4205f2e07d655616de91e22a310f768c4",
+          "upstream_blob_sha": "a39b5bda9445fe557a76947242ad6564b90363f7",
+          "bytes": 9183
+        },
+        {
+          "path": "skills/ab-testing/references/test-templates.md",
+          "sha256": "761a40b9de8d16f18fa7f60b59e77aa749607ac8014af43e0b022f47fa87c812",
+          "upstream_blob_sha": "1c517d889a30dff6d21c71f2ee765e97ed4c56da",
+          "bytes": 6473
+        }
+      ]
+    },
+    {
+      "row_id": "MK-002",
+      "skill": "ad-creative",
+      "frontmatter": {
+        "name": "ad-creative",
+        "version": "2.13.5",
+        "description": "When the user wants to write or judge ad creative, or asks which ad, hook, or angle to run or kill: headlines, primary text, and variations for Google, Meta, LinkedIn, and TikTok, fresh angles when creative fatigues. Test hypotheses name the metric, comparison, and expected direction. No AI tells like 'it's not X, it's Y'. For campaign strategy, see ads. For landing pages, see copywriting."
+      },
+      "file_count": 14,
+      "files": [
+        {
+          "path": "skills/ad-creative/SKILL.md",
+          "sha256": "3bbdaafe85e7be03eb8501919eafbc804dbf6052c1597d3afff7756c1d72667f",
+          "upstream_blob_sha": "eda0dc15f00051b07b9cfc0dd2e5ad330a212961",
+          "bytes": 27152
+        },
+        {
+          "path": "skills/ad-creative/assets/creative-review-template.html",
+          "sha256": "0ca7cce4fa809235aee776606205925d8dc01bde8a8325e2af7197d86394d3b7",
+          "upstream_blob_sha": "a27497739e298975942ebb3cb20da9205152cc5d",
+          "bytes": 26092
+        },
+        {
+          "path": "skills/ad-creative/evals/evals.json",
+          "sha256": "a688328a32f7ff3ffd975a2e4a31b5bc2a2c5dae86af0656f8b0ec61e9f8c916",
+          "upstream_blob_sha": "887ba8c5c68cab99d8df22c8d2d1c23f2408367a",
+          "bytes": 29078
+        },
+        {
+          "path": "skills/ad-creative/references/awareness-headlines.md",
+          "sha256": "0f9b2408e402ad03956ff84bf31e5c594371dd3e2974c5390c42af4e3c60ed4d",
+          "upstream_blob_sha": "5a804c029c40efb59238492e986363da44f124f0",
+          "bytes": 6765
+        },
+        {
+          "path": "skills/ad-creative/references/creative-review-page.md",
+          "sha256": "03518911b1648bce12a3d579c5979b97442af50de24ff74809a43ba3395dcb3a",
+          "upstream_blob_sha": "5b604fc7c91c9e6cff56f8c2e0e04ab00ad86770",
+          "bytes": 9602
+        },
+        {
+          "path": "skills/ad-creative/references/creative-roadmap.md",
+          "sha256": "a0be737841d8a73f0cf02094c9ed1e3f7c050e1c6f867794b1fa8b64dbf3b50e",
+          "upstream_blob_sha": "f5d0322e642f77210d4b7be991682248580b9572",
+          "bytes": 9010
+        },
+        {
+          "path": "skills/ad-creative/references/generative-tools.md",
+          "sha256": "4b9de6f12d1dec258711a979431b979902d6d0076173e7a27d70754d8c5c7dca",
+          "upstream_blob_sha": "fc7a03f7c9f2a26c9a4ea15480304843afbe9bf9",
+          "bytes": 26886
+        },
+        {
+          "path": "skills/ad-creative/references/hook-system.md",
+          "sha256": "2967ecbf32423bbb70ca9587b0af8d257466c852106fe909f6447bbab9a18002",
+          "upstream_blob_sha": "d1f01ae99cfc814d7f94ba82ecb0bb08047008fd",
+          "bytes": 10030
+        },
+        {
+          "path": "skills/ad-creative/references/imessage-video-ads.md",
+          "sha256": "99627f4a43f9ee8394be49c95bb865496037cf9901dfcdc1d1b0af9d86396aec",
+          "upstream_blob_sha": "a25d336098303c7ee8aba67ced67dbc3dcd2ae56",
+          "bytes": 19922
+        },
+        {
+          "path": "skills/ad-creative/references/meta-creative-formats.md",
+          "sha256": "46f6261b368f720f960367f7c164bf9ac23520504331d3b325215d100edccbdf",
+          "upstream_blob_sha": "73267a9173440f89fbaa1e6af750f52e2836d45f",
+          "bytes": 10938
+        },
+        {
+          "path": "skills/ad-creative/references/motion-video-ads.md",
+          "sha256": "05908657e1c587a19382f50901666acc722d8f48425fc59c2b8cd777d83ed139",
+          "upstream_blob_sha": "172a62df59681b1a1d4c919da591c9a457eb071e",
+          "bytes": 11790
+        },
+        {
+          "path": "skills/ad-creative/references/platform-specs.md",
+          "sha256": "de69753161071a8d3e4d244280562810a6c4d6ae2696c5a21940f983abd0aa8e",
+          "upstream_blob_sha": "c9a3c4a53465b5b182ded365a47d3103443da6d3",
+          "bytes": 6525
+        },
+        {
+          "path": "skills/ad-creative/references/short-form-video-specs.md",
+          "sha256": "1aa1cc498e350ed00ec4783b60d2eddee5bc98f25750761f6086742d0758f953",
+          "upstream_blob_sha": "5bde8b97a72b14148d34077694792751c672f890",
+          "bytes": 19389
+        },
+        {
+          "path": "skills/ad-creative/references/static-ad-templates.md",
+          "sha256": "0f09a356486c906a0d7f1ea87473e1c782b5f6c50ec44dc6756cd719d4de0217",
+          "upstream_blob_sha": "e4e8d85aa450df4c1279b662d6fcbbff885cd8e9",
+          "bytes": 37143
+        }
+      ]
+    },
+    {
+      "row_id": "MK-003",
+      "skill": "ads",
+      "frontmatter": {
+        "name": "ads",
+        "version": "2.7.9",
+        "description": "When the user wants to plan, run, or fix paid ads on Google, Meta, and LinkedIn, or asks a judgement call on them: are ads worth it, which channel or budget split, why CPA rose, kill or keep a campaign. End with facts, hypotheses, and missing data; label unavailable inputs MISSING instead of estimating. For ad copy, see ad-creative. For pixels and CAPI, see conversion-tracking. For landing pages, see cro."
+      },
+      "file_count": 18,
+      "files": [
+        {
+          "path": "skills/ads/SKILL.md",
+          "sha256": "abed4d7d69b8dad1de41927d36ae249c63fe86aa302cbda5113c0c4ab4263f79",
+          "upstream_blob_sha": "d41bee6cc3694fffd2bb0dc786f3f19d923a10e1",
+          "bytes": 31076
+        },
+        {
+          "path": "skills/ads/evals/evals.json",
+          "sha256": "664a2229af8c8e86a61ff77045be3b55e639be7756941db64877c3bbbbe05365",
+          "upstream_blob_sha": "9150256a768b93841b7e7fbff7f4446792f1f452",
+          "bytes": 27082
+        },
+        {
+          "path": "skills/ads/references/abm-playbook.md",
+          "sha256": "acb5c89ced4497674d012d015504a5c8e17c619bd2fc1f0191d833a9957eb44a",
+          "upstream_blob_sha": "9e516051783a81b118574e5bd17864a96347a86e",
+          "bytes": 8100
+        },
+        {
+          "path": "skills/ads/references/ad-copy-templates.md",
+          "sha256": "853ab37e23b75aa3355bdbed9a1357948e635dbdf737be5a1a7aa0126d701206",
+          "upstream_blob_sha": "048184066833f76ea00a272e913203281fb17988",
+          "bytes": 4821
+        },
+        {
+          "path": "skills/ads/references/audience-targeting.md",
+          "sha256": "21ed7c99fb1124ca38635d6f313cc2f3ca49a192f390cd55293b7bd5a028e1b1",
+          "upstream_blob_sha": "00dc42bb38c0b1de5b1be00e2bb4ee8d6adf7c19",
+          "bytes": 6067
+        },
+        {
+          "path": "skills/ads/references/audit-guardrails.md",
+          "sha256": "5373841bb69dc8fa16bd3c4effff2a259712a4beaa32d7b9b745f46f1e83daa0",
+          "upstream_blob_sha": "953629ffc4441543ab98efe9818303a9df9cfeef",
+          "bytes": 8158
+        },
+        {
+          "path": "skills/ads/references/b2b-paid-playbook.md",
+          "sha256": "21dc1125905f8d985763996afb24a2bf54539330535b7b2b45c052901c5b2006",
+          "upstream_blob_sha": "d65badde0b1a0a4a5c9ad7052a7a13c8eeaa7e27",
+          "bytes": 7951
+        },
+        {
+          "path": "skills/ads/references/creative-research-automation.md",
+          "sha256": "1dd23921401b5efe2c844e17dee30d6e460da37ef0e42870f9438227d3858a19",
+          "upstream_blob_sha": "44211921d55d3e47270d7238f8d277dfee0ed4bc",
+          "bytes": 10459
+        },
+        {
+          "path": "skills/ads/references/google-ads-audit-checklist.md",
+          "sha256": "81fca20e69acd0ad2a2a639f95d48412d405ef67afecaa713933ca77ba914e11",
+          "upstream_blob_sha": "15a5866cd8fe8bdb10fc7d686dbf47290d35b019",
+          "bytes": 12830
+        },
+        {
+          "path": "skills/ads/references/google-search-playbook.md",
+          "sha256": "8055f63b09e4869f3a936debd403ebae6459d8089c9a48a6380a6f750900f07e",
+          "upstream_blob_sha": "c850208737188688eefaad9a16df1ae85a563820",
+          "bytes": 10873
+        },
+        {
+          "path": "skills/ads/references/linkedin-b2b-playbook.md",
+          "sha256": "8f38aadbf24c1a554fbaa47bf2f24bac0c4773fa16f65d34c1c600e5e3d8a6ee",
+          "upstream_blob_sha": "9e94d04404d0454506cc60355c179bc71d4a9df2",
+          "bytes": 9222
+        },
+        {
+          "path": "skills/ads/references/meta-andromeda-playbook.md",
+          "sha256": "803653f4096a3ff0b28b40d776bed777036f2cb7126575233b7574f9d3c35717",
+          "upstream_blob_sha": "736f0a8e72e8db6c50c6593b0e66105cfb5c2370",
+          "bytes": 8201
+        },
+        {
+          "path": "skills/ads/references/meta-decision-system.md",
+          "sha256": "130382166cb1caab91cde47824e599cf0e03326be38755798df84e04c7626201",
+          "upstream_blob_sha": "c966e41031a89fca5bad71ad55269e1d05fb2c08",
+          "bytes": 15625
+        },
+        {
+          "path": "skills/ads/references/operating-check.md",
+          "sha256": "14420af7a732cefc02873a129b6d738b82bf766b9e6154cb5873510fe55a6fe6",
+          "upstream_blob_sha": "f66160f9194667973b86782004e90d135b38c614",
+          "bytes": 7210
+        },
+        {
+          "path": "skills/ads/references/payback-period.md",
+          "sha256": "77b0f35b65b35cdee53881105a16498e3e4538b657923a176b99a19b807daba1",
+          "upstream_blob_sha": "df10d99150e59556058a1cfe785f1f667093fc84",
+          "bytes": 6920
+        },
+        {
+          "path": "skills/ads/references/platform-setup-checklists.md",
+          "sha256": "de264906dcecb812f8ff57ad71fc05986bf5667708acb42f2769e845403969a5",
+          "upstream_blob_sha": "11374639556b863627f8a1368f91a537f37ac2f6",
+          "bytes": 7774
+        },
+        {
+          "path": "skills/ads/references/reading-google-ads-data.md",
+          "sha256": "e5bb10f5bd81eabaae63c005a9be8c3f70d63df60e192dcd37faf3718ff0fd09",
+          "upstream_blob_sha": "924bc0289b84e543dfb05636bb4525dc7d718110",
+          "bytes": 8750
+        },
+        {
+          "path": "skills/ads/references/rsa-output-spec.md",
+          "sha256": "285fec5c1671c9cc1a4cdfbcf06d8a54a022cbad52693941457d90e1f2c5f503",
+          "upstream_blob_sha": "44b0f1dc7aabc2f9d0b4cc0f50b98517da73b021",
+          "bytes": 3689
+        }
+      ]
+    },
+    {
+      "row_id": "MK-004",
+      "skill": "ai-seo",
+      "frontmatter": {
+        "name": "ai-seo",
+        "version": "2.12.7",
+        "description": "When the user wants to get cited and recommended in AI answers (ChatGPT, Perplexity, AI Overviews), or asks why AI cites a competitor, which content gets cited, or whether llms.txt or a page format is worth it: AEO, GEO, AI visibility, agent-readable sites. For technical and on-page SEO, see seo-audit. For structured data, see schema."
+      },
+      "file_count": 17,
+      "files": [
+        {
+          "path": "skills/ai-seo/SKILL.md",
+          "sha256": "1eb9e2c4d35adc3b98e10703c03909a92d2e45244095287f88e023ce7c307024",
+          "upstream_blob_sha": "2869ca89116540ad34437c90888a9322553dc69d",
+          "bytes": 37764
+        },
+        {
+          "path": "skills/ai-seo/evals/evals.json",
+          "sha256": "3824a16a8a8179ac69d40df5148560ad57421b05433b2c78fd191c7ea0a013b6",
+          "upstream_blob_sha": "9b5bc04783892d41ae41c9c348aec3ac4735274e",
+          "bytes": 20713
+        },
+        {
+          "path": "skills/ai-seo/references/agent-defaults.md",
+          "sha256": "4f009f323b381553961914bf7d67755ee3c178dd10f1570f61fe306cd0054b21",
+          "upstream_blob_sha": "c2c3294a2d7ecc1f4b4d97bdc78c8d40ac9bd25e",
+          "bytes": 9344
+        },
+        {
+          "path": "skills/ai-seo/references/agent-readiness.md",
+          "sha256": "2d2d3b47c4efa6151bd463f8bdbd346101d7e9606946d7479f97aeb694cc7561",
+          "upstream_blob_sha": "a2c16ce9c1afc89bd120674a5fd3d6a7527fe69e",
+          "bytes": 19036
+        },
+        {
+          "path": "skills/ai-seo/references/ai-attribution.md",
+          "sha256": "accaf004e50fd92d16e5e1b57ce0aa5f5c0f88d1ba7bb2ce6939de29fe3e1728",
+          "upstream_blob_sha": "bb66efa357638f9daf8841e7347202fea322ea38",
+          "bytes": 4302
+        },
+        {
+          "path": "skills/ai-seo/references/answer-accuracy.md",
+          "sha256": "9c9115a720c6891fc7e0122d465ed38643170b026fa461de5971feb642f0da57",
+          "upstream_blob_sha": "2db36301fdf802eaad59e31bcaf400088cbab1c9",
+          "bytes": 5705
+        },
+        {
+          "path": "skills/ai-seo/references/citations-vs-recommendations.md",
+          "sha256": "90adc950592b24d8ebd46460ef7ada6a2c4df0f4e4752903c93341cbe182b919",
+          "upstream_blob_sha": "3bb23b55c68e565849c2e7cd4c0ffa4a8b571c2b",
+          "bytes": 12839
+        },
+        {
+          "path": "skills/ai-seo/references/content-patterns.md",
+          "sha256": "07ac95563bf96fdefc2dc0513908c8cf0241dfbf4d90ce61f9b4fbe8ed628d65",
+          "upstream_blob_sha": "602f00e758645ab3bd62c65463f57eec99e7ece6",
+          "bytes": 13220
+        },
+        {
+          "path": "skills/ai-seo/references/content-types.md",
+          "sha256": "2323104990cb3057f3ce135c2b7bac71e5369992d5aeb24cec009c8f6d841d0b",
+          "upstream_blob_sha": "114f58e3cfad8643764c0d86b0122316b2ca3d91",
+          "bytes": 3558
+        },
+        {
+          "path": "skills/ai-seo/references/format-volatility.md",
+          "sha256": "235858ee4d820dd0b89d3c7ffc65f4f59c7904f63feef7d2fff78cc6818caddf",
+          "upstream_blob_sha": "389428e4391a5265ceb63cde9ba59e63e91778bd",
+          "bytes": 7269
+        },
+        {
+          "path": "skills/ai-seo/references/linkedin-ai-citations.md",
+          "sha256": "2bd191703b543fc5f3ae36f5e367ed6d5504ad38e7446797cd3c5fe23ababd4b",
+          "upstream_blob_sha": "b4309ac54ebb364a9738ced971385aaf2147d145",
+          "bytes": 8747
+        },
+        {
+          "path": "skills/ai-seo/references/multilingual-and-commerce.md",
+          "sha256": "5d65db4b85c9c257f4d052a9b3b65bb2f72af140076e2b2dc4cf7dd34d111057",
+          "upstream_blob_sha": "d82a7ce5422bafd24b7073aa006e7239d8f2f974",
+          "bytes": 4880
+        },
+        {
+          "path": "skills/ai-seo/references/okf.md",
+          "sha256": "4abcab5b8ee90b63c5d09c98387a8ec3cdb8f5df33e75d3b4b91eb817283bfd8",
+          "upstream_blob_sha": "e99bc7ca1b1417fd0643c9e772b75b227a9af1da",
+          "bytes": 5952
+        },
+        {
+          "path": "skills/ai-seo/references/platform-ranking-factors.md",
+          "sha256": "82951391c75008b01d6025e591d8141f222cbb578054727f685cfb8178e5e49a",
+          "upstream_blob_sha": "9209d1484f65205ba414add1a7a548bdd3099126",
+          "bytes": 16927
+        },
+        {
+          "path": "skills/ai-seo/references/positioning-and-consensus.md",
+          "sha256": "b7618247e57a4560c3785155c34de77adc232784b7dd91b2c44a77a73617b9b4",
+          "upstream_blob_sha": "cb8916e78f5fd664dae3c097effff0f60b82ef74",
+          "bytes": 7283
+        },
+        {
+          "path": "skills/ai-seo/references/prompt-portfolio.md",
+          "sha256": "8891f4e747d4eb17a4a2f1d075a081d4261a6084eaa1e9fdb862ed09ebb505c0",
+          "upstream_blob_sha": "2d5d67c16bbc2ba12fcd6d4e2916c63e54fdb9a7",
+          "bytes": 7712
+        },
+        {
+          "path": "skills/ai-seo/references/youtube-ai-citations.md",
+          "sha256": "eee24cd9f377db5f59933c775a740f5ff7ece9f238b051157ba72531d9507a99",
+          "upstream_blob_sha": "d8c526ff1426cdbe307f5deb43e138c65ccbc748",
+          "bytes": 4478
+        }
+      ]
+    },
+    {
+      "row_id": "MK-005",
+      "skill": "analytics",
+      "frontmatter": {
+        "name": "analytics",
+        "version": "2.2.7",
+        "description": "When the user wants to set up or audit analytics, or asks whether a metric or number is calculated right, what to track, or how to name events: tracking plans, GA4, GTM, Mixpanel, PostHog, UTMs. Rate metrics divide matching closed windows, never full-period spend by partial-period results. For conversions in ad platforms, see conversion-tracking. For attribution or platforms that over-claim, see attribution. For tests, see ab-testing."
+      },
+      "file_count": 5,
+      "files": [
+        {
+          "path": "skills/analytics/SKILL.md",
+          "sha256": "45f0d00c1f8ea9ef836882a1ebbc1dadca12f96db8e921c4252e34a4126c903a",
+          "upstream_blob_sha": "5429676635189949c029bd9bfd537c1f3a5717f9",
+          "bytes": 14684
+        },
+        {
+          "path": "skills/analytics/evals/evals.json",
+          "sha256": "526f4bf20cedca26906dd0c3dfb6ae67de3f5b17977eb426820ca406c5ce0e59",
+          "upstream_blob_sha": "bf944d83ddcb2b33ee10ea6e09e06ea6a96c26d2",
+          "bytes": 8819
+        },
+        {
+          "path": "skills/analytics/references/event-library.md",
+          "sha256": "c60e3e145e6b06258570350b614913ed9150143b4494a71396abaef479502b05",
+          "upstream_blob_sha": "376f182dfc7f9be6daee5bd570af90656c3025e4",
+          "bytes": 8654
+        },
+        {
+          "path": "skills/analytics/references/ga4-implementation.md",
+          "sha256": "a5715de092984fc148b1825f1edc7730813452876f991819c219b477ef03ed6d",
+          "upstream_blob_sha": "22df98805b49bc3db77c49723a0a63620448a0de",
+          "bytes": 7189
+        },
+        {
+          "path": "skills/analytics/references/gtm-implementation.md",
+          "sha256": "0b161102de710c978cc2ac52c78c79f32e184bc028aa946eba18e777d7a60d64",
+          "upstream_blob_sha": "6012d1cf787087f81684b2ba948c35c3dbfb8ab1",
+          "bytes": 8413
+        }
+      ]
+    },
+    {
+      "row_id": "MK-006",
+      "skill": "aso",
+      "frontmatter": {
+        "name": "aso",
+        "version": "2.0.6",
+        "description": "When the user wants to audit or optimize an App Store or Google Play listing, or asks which title, keywords, or screenshots to pick or why downloads are low: subtitle, description, ratings, and comparing listings with competitors."
+      },
+      "file_count": 7,
+      "files": [
+        {
+          "path": "skills/aso/SKILL.md",
+          "sha256": "c70e259ce5b7e71399a331ac1c8a7bf5985d5c5342b3dc1d03b37fcfa6b5ff55",
+          "upstream_blob_sha": "d8ecbe780f6a1cfa846ee372544d1c96d2fccd80",
+          "bytes": 15716
+        },
+        {
+          "path": "skills/aso/evals/evals.json",
+          "sha256": "9b665d9e1eea16e46591ee42790642c396a4e20fd61306ec3171f9083a87b4d0",
+          "upstream_blob_sha": "b0e8af503ab395a7ffe4a7fb84bc40b9c7ab1f2a",
+          "bytes": 8766
+        },
+        {
+          "path": "skills/aso/references/apple-specs.md",
+          "sha256": "f7186eeff06b4ae0b24bc4360b3061b0fe98b1c20b7f6a95c6492437b827bfe9",
+          "upstream_blob_sha": "8ecc835b67ebf5c867dfba411ed5f621de17630a",
+          "bytes": 6194
+        },
+        {
+          "path": "skills/aso/references/benchmarks.md",
+          "sha256": "64b33412338388f8d6b4cafc12a8547afff9d64ca37646a996cf1baecf54043c",
+          "upstream_blob_sha": "9e11a85557f0a8d5f15c717121176f704b986e1c",
+          "bytes": 5444
+        },
+        {
+          "path": "skills/aso/references/google-play-specs.md",
+          "sha256": "8a47707817aa40684f51ccc16e8b718ca6acaa27e3b1a00d2fdc21dd63b6ad9e",
+          "upstream_blob_sha": "f733ef652ee238c12963b33eeab641f1675d04e5",
+          "bytes": 6599
+        },
+        {
+          "path": "skills/aso/references/report-template.md",
+          "sha256": "f67c8827c4600cb1e392c8cad05ed5740f9cd01321fd715a9e851e37ec0047b2",
+          "upstream_blob_sha": "68ad477162051a586607921935b65d123455a99e",
+          "bytes": 5124
+        },
+        {
+          "path": "skills/aso/references/scoring-criteria.md",
+          "sha256": "9792e3c9a93dc6e2dffda0a87e0ed6e592dd778c29f614d52b883df7f9956340",
+          "upstream_blob_sha": "bfe23c262fec86e129180bf8714ee2c16a2abc40",
+          "bytes": 13756
+        }
+      ]
+    },
+    {
+      "row_id": "MK-007",
+      "skill": "attribution",
+      "frontmatter": {
+        "name": "attribution",
+        "version": "1.1.10",
+        "description": "When the user wants to work out which marketing drives revenue, or asks whether a channel is really working, which numbers to trust, or how to credit podcasts and dark social: attribution models, platforms that over-claim, MMM, incrementality and holdout tests, self-reported attribution. For tracking and UTMs, see analytics. For pixels and CAPI, see conversion-tracking. For CRM revenue, see revops. For AI search blind spots, see ai-seo."
+      },
+      "file_count": 6,
+      "files": [
+        {
+          "path": "skills/attribution/SKILL.md",
+          "sha256": "b8db5580db926f92b64a6d4d3ae5f17eb375249bf238a11c7a0809c84c58795e",
+          "upstream_blob_sha": "620b0076a343392c910a5601579c4f373459b90f",
+          "bytes": 22845
+        },
+        {
+          "path": "skills/attribution/evals/evals.json",
+          "sha256": "795a908eacac5cd2213d03d635fd92d94a6d7d66544b68273a0dbdcc2609607b",
+          "upstream_blob_sha": "51e7f7392eb36ac639aa70ddefea39ea3d68e609",
+          "bytes": 13186
+        },
+        {
+          "path": "skills/attribution/references/attribution-models.md",
+          "sha256": "503c61bf2f38d54755398fc5b1bb0d190e989c59494b097407652ae65bf474af",
+          "upstream_blob_sha": "b2a8f6e216a13b75ecb6bfbf73526a97d7da8f2d",
+          "bytes": 6783
+        },
+        {
+          "path": "skills/attribution/references/by-business-type.md",
+          "sha256": "224a937e09842dbd7a8e00fb67f060cd1ac50f58f9f576be8d015a7c800c9de4",
+          "upstream_blob_sha": "2c6cb036747a8968a3ceaaae91463dc399478835",
+          "bytes": 7857
+        },
+        {
+          "path": "skills/attribution/references/first-party-tracking.md",
+          "sha256": "a8e12b00d3d049d4b32e3a2785e504936ee7ae33a523a2a1717c338bd4140b6c",
+          "upstream_blob_sha": "84d9dd9293689bec71423b4f762e208e762cc2b5",
+          "bytes": 19867
+        },
+        {
+          "path": "skills/attribution/references/measurement-paradigms.md",
+          "sha256": "5efca610abaa3a80a31cd6be5e835e4449d54462c5314e97b055b86413dee5b2",
+          "upstream_blob_sha": "29377a1da6dde22cd6f6051b8c3cc4e634855d01",
+          "bytes": 10598
+        }
+      ]
+    },
+    {
+      "row_id": "MK-008",
+      "skill": "churn-prevention",
+      "frontmatter": {
+        "name": "churn-prevention",
+        "version": "2.0.7",
+        "description": "When the user wants to reduce churn, or asks why customers cancel, whether to offer a discount or pause: cancellation flows, exit surveys, save offers, dunning and failed-payment recovery. For win-back emails, see emails. For in-app upgrade screens, see paywalls."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/churn-prevention/SKILL.md",
+          "sha256": "ddfa4dda517edade4e5b49254fff037a037ed83d66cf7f4e84a676495823eea6",
+          "upstream_blob_sha": "7ba340c10a5301fb544dbc8d163afba569e7ef50",
+          "bytes": 19641
+        },
+        {
+          "path": "skills/churn-prevention/evals/evals.json",
+          "sha256": "ee85b927a1bea665b0c080034c76dcc1a81c57be1f4e974a664c7f62c4329dfd",
+          "upstream_blob_sha": "f2e311020a2369d0ead7b9bc9dd1b21ba8fb026e",
+          "bytes": 8144
+        },
+        {
+          "path": "skills/churn-prevention/references/cancel-flow-patterns.md",
+          "sha256": "d64b9282b956da6831ec97a1fffda5841c5c43a71721b512b66b04bde104c139",
+          "upstream_blob_sha": "dcceeec677363734ed5557cc0933d919ad70fdbc",
+          "bytes": 10650
+        },
+        {
+          "path": "skills/churn-prevention/references/dunning-playbook.md",
+          "sha256": "24b96a01cfba174c9f3adde66d417e7282c0cf31789c2719e6bd37b8ad2ecf8c",
+          "upstream_blob_sha": "413a4c8a4a819d9f5994c105db356996676aad0b",
+          "bytes": 14061
+        }
+      ]
+    },
+    {
+      "row_id": "MK-009",
+      "skill": "co-marketing",
+      "frontmatter": {
+        "name": "co-marketing",
+        "version": "2.0.7",
+        "description": "When the user wants co-marketing partners or joint campaigns, or asks whether a partner fits, a size mismatch matters, or how to split work and leads: integration partners, cross-promotion, co-branded content, joint webinars. For referral programs, see referrals. For launch partnerships, see launch. For running the event, see events."
+      },
+      "file_count": 3,
+      "files": [
+        {
+          "path": "skills/co-marketing/SKILL.md",
+          "sha256": "906c48e61f49c7c94e4e0c3bfdad9556c31b8c9312b55bb762df393dfa205adc",
+          "upstream_blob_sha": "9697a3aa43fca633d789774b76baad6018e2ac7f",
+          "bytes": 11935
+        },
+        {
+          "path": "skills/co-marketing/evals/evals.json",
+          "sha256": "4d6693bf2d8490435814090ba204cee5c10648998f5b5699815476736b391d78",
+          "upstream_blob_sha": "1d539e84b6f09847ae0449bf22e6ee8b1bdb7514",
+          "bytes": 8934
+        },
+        {
+          "path": "skills/co-marketing/references/partnership-types.md",
+          "sha256": "1f9d48e29097149530bdfe7b1c553f4b35f64486be86a2c72ca9165c6c2298c4",
+          "upstream_blob_sha": "e8a4b0d40e88ccf4b1d17ccc1cf0b500df2a33b6",
+          "bytes": 8111
+        }
+      ]
+    },
+    {
+      "row_id": "MK-010",
+      "skill": "cold-email",
+      "frontmatter": {
+        "name": "cold-email",
+        "version": "2.2.7",
+        "description": "When the user wants to write or run B2B cold outbound, or asks whether an opener, reason to reach out, or email works or why nobody replies: cold emails, follow-ups, sending domains, deliverability, LinkedIn, cadences. Send from secondary domains, verify lists first, turn off open tracking, stop every channel when a prospect replies. No AI tells like 'it's not X, it's Y'. For the list, see prospecting. For lifecycle email, see emails. For call scripts, see sales-enablement."
+      },
+      "file_count": 12,
+      "files": [
+        {
+          "path": "skills/cold-email/SKILL.md",
+          "sha256": "329849d503883f364dbc94c5ce9d46683b335d4c3599d8cffa89be2d5dad594a",
+          "upstream_blob_sha": "d664c0038a9e9012d7e313efcb65fa1f228af4be",
+          "bytes": 12574
+        },
+        {
+          "path": "skills/cold-email/evals/evals.json",
+          "sha256": "f6c28969b333377b2ee24aa122ed91455d52df893ee17e0f203fd0cb72b165d0",
+          "upstream_blob_sha": "42bc5007230da423254c455c35a7e66250e4b9cc",
+          "bytes": 10441
+        },
+        {
+          "path": "skills/cold-email/references/benchmarks.md",
+          "sha256": "97591ba8256dd0486f494ef22c580f08445dda3d9deb58395d89c1b6435ae95d",
+          "upstream_blob_sha": "a67bf129e2bf501fd21f178d453b7e5bff5ad6c6",
+          "bytes": 6578
+        },
+        {
+          "path": "skills/cold-email/references/deliverability.md",
+          "sha256": "539d55150c8be7b9cc893701d4f8c91837a471ab4d21fc3bd721f77bc2fc5edc",
+          "upstream_blob_sha": "f5fd611f7aa0b7a7d9c4c66cae6c4d1810fbeb5d",
+          "bytes": 8286
+        },
+        {
+          "path": "skills/cold-email/references/follow-up-sequences.md",
+          "sha256": "a72408232976f7af74a3ea4bc03f93bf34e7dc44fb7dabd2f1f56a24b8a3f664",
+          "upstream_blob_sha": "6b71dac0ba7c7ab726cc01faee3ff9f29d248e93",
+          "bytes": 3947
+        },
+        {
+          "path": "skills/cold-email/references/frameworks.md",
+          "sha256": "15f24de52a2be96fc051fa867ce2a626e79a4433a111a894e68e9f4cf1e9fb3b",
+          "upstream_blob_sha": "1cddb6b377af6a5978b30f7136c6e07b9aeb1c52",
+          "bytes": 5778
+        },
+        {
+          "path": "skills/cold-email/references/linkedin-outreach.md",
+          "sha256": "c95ba4c785bafccfffd98c6d850c20ea674cac1b18fa817d3f4dce23ed159ba5",
+          "upstream_blob_sha": "e084dae8a50654132d355e3b6c7e918cee0f21fe",
+          "bytes": 5750
+        },
+        {
+          "path": "skills/cold-email/references/multichannel-cadence.md",
+          "sha256": "3189071b3afb7dfbd480d2e5c9835867e757fa1cad783b2e7c3f63da3ffe1e76",
+          "upstream_blob_sha": "390f93191eb18a5ba5caea78eab9aa80a86acfd8",
+          "bytes": 5481
+        },
+        {
+          "path": "skills/cold-email/references/outbound-plays.md",
+          "sha256": "d48f43c90b811b1124f2cd23447854a62196c9fce45248662eaede722542f44f",
+          "upstream_blob_sha": "362a7a0c41b365725e6a69a7266f12b799861927",
+          "bytes": 6113
+        },
+        {
+          "path": "skills/cold-email/references/personalization.md",
+          "sha256": "9d5368645025aa632316b3c7de999762e2f8743fb54aae0b59adfa011b212c5a",
+          "upstream_blob_sha": "37c65d39ebfefead03c0c9b0aa06bee86eafe6ee",
+          "bytes": 5238
+        },
+        {
+          "path": "skills/cold-email/references/reply-handling.md",
+          "sha256": "fa2a5e020a0206ffba29093b54bd7977ebe6d3e34a6ae323b34ce86ce1604da4",
+          "upstream_blob_sha": "ccbbe415ff9a7583694184b42408a9411bcbe86b",
+          "bytes": 4648
+        },
+        {
+          "path": "skills/cold-email/references/subject-lines.md",
+          "sha256": "f71f31b1151d972bb19ff03791ffb9d24941a8ccea8b913e5a5c7aca439b45ce",
+          "upstream_blob_sha": "3a2cc592d32e00b1bd368446979539853be87066",
+          "bytes": 3015
+        }
+      ]
+    },
+    {
+      "row_id": "MK-011",
+      "skill": "community-marketing",
+      "frontmatter": {
+        "name": "community-marketing",
+        "version": "2.0.5",
+        "description": "When the user wants to build or grow an online community, or asks whether a community is worth it, where to host it, or why members stay quiet: Discord, Slack, forums, participation, community-led growth, advocates. For referral programs, see referrals. For creator partnerships, see influencer-marketing."
+      },
+      "file_count": 3,
+      "files": [
+        {
+          "path": "skills/community-marketing/SKILL.md",
+          "sha256": "d5b84b418c3010bee36a19bb4ad45b8b39aebcc96d98c65ae8bd68e3b13333c5",
+          "upstream_blob_sha": "336b9fb9af2d27e54c82f06ab47299c626cc9f1c",
+          "bytes": 9525
+        },
+        {
+          "path": "skills/community-marketing/evals/evals.json",
+          "sha256": "fa15fb195c71bd91099919f5a736007362a2b7c0574ffb4692eb300f213bd22f",
+          "upstream_blob_sha": "878b686c15e74a041ed50559b0d994605f572c28",
+          "bytes": 9451
+        },
+        {
+          "path": "skills/community-marketing/references/community-models.md",
+          "sha256": "6da82069b761bc557803d497b091c60c0798f921fe9c81c45c45bc4d7d7240cd",
+          "upstream_blob_sha": "3933c61b416447fc77696889c43de78bebc519ac",
+          "bytes": 4046
+        }
+      ]
+    },
+    {
+      "row_id": "MK-012",
+      "skill": "competitor-profiling",
+      "frontmatter": {
+        "name": "competitor-profiling",
+        "version": "2.1.9",
+        "description": "When the user wants to research competitors into dated profiles, or asks what a rival charges, claims, or is doing, or whether a conclusion about them is fair: positioning, pricing, features, reviews, SEO, observed facts kept apart from inference. For comparison pages, see competitors. For battle cards, see sales-enablement. For accounts you sell to, see prospecting. For how a competitor grew, see reverse-engineer-marketing."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/competitor-profiling/SKILL.md",
+          "sha256": "ebe96d2a92094b6da24b7b1be489302dcd547f4aabf5b820778605cbb4ef741d",
+          "upstream_blob_sha": "c3bd80ad7cb4773820ffcec48009fe1c6607329c",
+          "bytes": 17396
+        },
+        {
+          "path": "skills/competitor-profiling/evals/evals.json",
+          "sha256": "89e7a8dee7c688adde18f2885ee4b52011faab29255f182c401b19fe78caf264",
+          "upstream_blob_sha": "e5c2307dc0f293ecb15ddb4b2adad628a6dab807",
+          "bytes": 8565
+        },
+        {
+          "path": "skills/competitor-profiling/references/templates.md",
+          "sha256": "710d78cb519012eb7e39f63643e22d7b9026c91c569262b44c45535c10717a91",
+          "upstream_blob_sha": "0a5ad331fa8393bd97de4e8f3144bf59cd76ecbb",
+          "bytes": 4668
+        },
+        {
+          "path": "skills/competitor-profiling/references/tool-reference.md",
+          "sha256": "fda64910bc1b3a2bc7df21c15701220849b4b79a58a51f9d3ccae1b7311dbd79",
+          "upstream_blob_sha": "bf75822e8a1a86b6664c35de4ebaa9411907bb11",
+          "bytes": 13132
+        }
+      ]
+    },
+    {
+      "row_id": "MK-013",
+      "skill": "competitors",
+      "frontmatter": {
+        "name": "competitors",
+        "version": "2.3.3",
+        "description": "When the user wants to create or audit comparison and alternative pages ('X vs Y', 'X alternative', 'best X alternatives'), or asks what a public page may say about a competitor: page formats, fair claims, and outdated pages. For researching competitors, see competitor-profiling. For internal battle cards, see sales-enablement."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/competitors/SKILL.md",
+          "sha256": "36d3f23aeb8358caff28ecff0cccf436d93afc88a0e2a05aff4353a77efee11b",
+          "upstream_blob_sha": "899b033eca617338856ed15b819986376325f51e",
+          "bytes": 11511
+        },
+        {
+          "path": "skills/competitors/evals/evals.json",
+          "sha256": "da6c92781fdd077dbac1ea9c35cd1fb4f0ec542075ee00966c058d3287a2d2e7",
+          "upstream_blob_sha": "04903d13fa29de45184371620b0bb9a445e8a2ca",
+          "bytes": 9137
+        },
+        {
+          "path": "skills/competitors/references/content-architecture.md",
+          "sha256": "893b0bf30a630753bff02345029a96959ac359a5221467132d553d8e09a2d433",
+          "upstream_blob_sha": "aedd6c14fda984a4eb75c64b7fe9497351683ad3",
+          "bytes": 7745
+        },
+        {
+          "path": "skills/competitors/references/templates.md",
+          "sha256": "138f4367a45fc9cc775f9fd67324f8a6f1e1f5c3c1a90bd952db4731f080844f",
+          "upstream_blob_sha": "360c5ee846333802b45c587213844b16384bf662",
+          "bytes": 5649
+        }
+      ]
+    },
+    {
+      "row_id": "MK-014",
+      "skill": "content-strategy",
+      "frontmatter": {
+        "name": "content-strategy",
+        "version": "2.1.8",
+        "description": "When the user wants to plan content, or asks which topic or piece to prioritize, what to write about, or why posts bring no customers: topic clusters, editorial calendars, roadmaps tied to customers and search. For writing pieces, see copywriting. For SEO audits, see seo-audit. For social content, see social."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/content-strategy/SKILL.md",
+          "sha256": "6bc1c8df711a6c9466e312dca9c99a895bd76989b7a52d0f39dca340db3bc5f5",
+          "upstream_blob_sha": "61a9c7ad6dd9ec215d28f8bfe72820ab3f6a1023",
+          "bytes": 19040
+        },
+        {
+          "path": "skills/content-strategy/evals/evals.json",
+          "sha256": "10167e7125ee77cbabe4f03953750dd99ea147f7461027fdbb0cf8e089e5506d",
+          "upstream_blob_sha": "23310228166d5b0bf579299c40e9a5e4b33d5779",
+          "bytes": 10190
+        },
+        {
+          "path": "skills/content-strategy/references/content-distribution.md",
+          "sha256": "1861a1aab0627ab29c279000879a9889242da1ba85e677acdc759c66a6241778",
+          "upstream_blob_sha": "6f4a3c38a15e9949727ebcf621f0054710a02a83",
+          "bytes": 5576
+        },
+        {
+          "path": "skills/content-strategy/references/headless-cms.md",
+          "sha256": "efc796ae9596d1efcb876683db2d9b7c10c83e76e1cb69e527097907d5b4fc3f",
+          "upstream_blob_sha": "fa01433bf3b29a33fef40c3a580a6087495d3fcc",
+          "bytes": 8583
+        }
+      ]
+    },
+    {
+      "row_id": "MK-015",
+      "skill": "conversion-tracking",
+      "frontmatter": {
+        "name": "conversion-tracking",
+        "version": "1.0.6",
+        "description": "When the user wants to set up, audit, or fix conversion tracking to Google Ads, Meta, GA4, LinkedIn, and TikTok, or asks why conversions are missing or doubled: GTM, pixels, CAPI, Enhanced Conversions, offline imports. Fire on confirmed success, not the submit click; verify a test conversion arrives; diagnose before changing; offer free paths and disclose partner tools. For tracking plans, see analytics. For attribution, see attribution. For bidding, see ads."
+      },
+      "file_count": 13,
+      "files": [
+        {
+          "path": "skills/conversion-tracking/SKILL.md",
+          "sha256": "84a702f8583d468e039c6b53201b4189e895dde30a40883bffdee37f65d704b9",
+          "upstream_blob_sha": "89c5e0573f631011a38ef0d77f73499dbd420163",
+          "bytes": 30472
+        },
+        {
+          "path": "skills/conversion-tracking/evals/evals.json",
+          "sha256": "965e53f80ab80ccba7c807c5bd519a364f90d2e279aae0af6f265fa18acf59e1",
+          "upstream_blob_sha": "93d426c0a1a3cd3a98638734ea257d352b423311",
+          "bytes": 21506
+        },
+        {
+          "path": "skills/conversion-tracking/references/audit-playbook.md",
+          "sha256": "d55c2b781e84973bccb1e6f75860de0df8cd5ef1db6ab69a036ddb99d698c0cb",
+          "upstream_blob_sha": "2015a7db81df40b4a17cd036055e99a8aa0147e8",
+          "bytes": 12862
+        },
+        {
+          "path": "skills/conversion-tracking/references/browser-side.md",
+          "sha256": "d31b92606479c5b40340c137f25ff56d427b25dcb952a2be9ea219f71f2a55f3",
+          "upstream_blob_sha": "09ee1c63686289b4bb79c29e3eb78ee9d57f566d",
+          "bytes": 23029
+        },
+        {
+          "path": "skills/conversion-tracking/references/conversion-moments.md",
+          "sha256": "827baa68c0fd7f5658db959ab0349012a8012c75d0ab3b2da85ea74ec75f13e6",
+          "upstream_blob_sha": "1e4248d492e220c7b267f80adb4b49b994ab861b",
+          "bytes": 32010
+        },
+        {
+          "path": "skills/conversion-tracking/references/discrepancies.md",
+          "sha256": "ad85f70371f2aebf2ab7624969a93a759b0dccc6b4ae046f8c7451e81dca2078",
+          "upstream_blob_sha": "048a3595941714d8a666858ba747a1f8d98cf237",
+          "bytes": 13767
+        },
+        {
+          "path": "skills/conversion-tracking/references/ecommerce-platforms.md",
+          "sha256": "b7dca043096fa4c9b502c42e1a74ca00231c6c7948d4b8b925c130998f72d36e",
+          "upstream_blob_sha": "3bc1aabf67e4aa5d981f1822a8ac00f8658db2e0",
+          "bytes": 10127
+        },
+        {
+          "path": "skills/conversion-tracking/references/google-ads.md",
+          "sha256": "64b1687bc8bd4993abedf82572be472caee83b43b350f08f7cf061d35fbbb46a",
+          "upstream_blob_sha": "05a7e6c8af90a13e64fa61c44aff8e8c74e1af2f",
+          "bytes": 30294
+        },
+        {
+          "path": "skills/conversion-tracking/references/meta.md",
+          "sha256": "984e85c0c043c56297cc3b0649d0dcd37232f05b75a5ce8127a6b3fe03353741",
+          "upstream_blob_sha": "07a617fdd556fb75787a0775680a9030076f0347",
+          "bytes": 18249
+        },
+        {
+          "path": "skills/conversion-tracking/references/other-platforms.md",
+          "sha256": "158f37efe6b569a0d09ae808705182a5718f8dafce90bebffbf406176d90698a",
+          "upstream_blob_sha": "343b5f9114b0416626ca579ac0eab26283014d5d",
+          "bytes": 20004
+        },
+        {
+          "path": "skills/conversion-tracking/references/server-side.md",
+          "sha256": "d47f28a68fa677c9899a771334318989c313d41e1a29fd1d6682fb0195cc851b",
+          "upstream_blob_sha": "de61ad504e66b9b8362ee847a22fb306787574cc",
+          "bytes": 31914
+        },
+        {
+          "path": "skills/conversion-tracking/scripts/build_recipe.py",
+          "sha256": "5024e952becb54eaa1f12e086473aaa93c624cf8c63debf07f83bc802d580bf2",
+          "upstream_blob_sha": "f58580f8fb0bf6d76ca959a3b43f4874de48f817",
+          "bytes": 11107
+        },
+        {
+          "path": "skills/conversion-tracking/scripts/check_recipes.py",
+          "sha256": "47fbf50c39c906e9fe60e25cbef582137fe935fa2808dadfa7bcfd19c7774fa9",
+          "upstream_blob_sha": "886220947b586add192f9e2fb28c6edef6979125",
+          "bytes": 3246
+        }
+      ]
+    },
+    {
+      "row_id": "MK-016",
+      "skill": "copy-editing",
+      "frontmatter": {
+        "name": "copy-editing",
+        "version": "2.2.4",
+        "description": "When the user wants to edit, tighten, proofread, or refresh existing copy, or asks whether to keep, cut, or change a line in it, without rewriting from scratch. Every edit removes AI tells: 'it's not X, it's Y' reveals, 'no X, no Y, no Z' lists, and sentences that trail into extra comma clauses. A request to fix one line gets a point edit to that line only. For new copy, see copywriting."
+      },
+      "file_count": 5,
+      "files": [
+        {
+          "path": "skills/copy-editing/SKILL.md",
+          "sha256": "ef6bf9e792edac9ff524576a7eea6980fd13e605e5561736b045136341cde63e",
+          "upstream_blob_sha": "2065709be9c2571fc34ad79a0f453fb040d8c1c0",
+          "bytes": 17963
+        },
+        {
+          "path": "skills/copy-editing/evals/evals.json",
+          "sha256": "cc18c9f51094058759267d465cfcc50da65f248f66b923326781aa642d622ca7",
+          "upstream_blob_sha": "583b3289c20d1f3f581192192210a0b4f4a8b0e6",
+          "bytes": 11880
+        },
+        {
+          "path": "skills/copy-editing/references/checklist.md",
+          "sha256": "4cf94c922286223681fc53721fcc65ae7299f1e36e797e7397d369d674580c60",
+          "upstream_blob_sha": "1f33b2100a1d49db4858987e4b6bcbbd783d5b79",
+          "bytes": 4505
+        },
+        {
+          "path": "skills/copy-editing/references/content-refresh.md",
+          "sha256": "ba73cdf278fe6b552eee27eb1452494f11f9d17ef67d720657e0982f76fb961b",
+          "upstream_blob_sha": "5def44f806c36e66b1d69400c33ec63a4e0d024d",
+          "bytes": 4662
+        },
+        {
+          "path": "skills/copy-editing/references/plain-english-alternatives.md",
+          "sha256": "df4f820d4c63ae8a517c64a243c101658352cd07d002355bf3c97de0a00f3775",
+          "upstream_blob_sha": "2fc323557dabdee6ee9f0a52e2a4c24f473fc775",
+          "bytes": 8258
+        }
+      ]
+    },
+    {
+      "row_id": "MK-017",
+      "skill": "copywriting",
+      "frontmatter": {
+        "name": "copywriting",
+        "version": "2.3.6",
+        "description": "When the user wants to write or rewrite page copy (homepage, landing, pricing, feature), or asks which headline, promise, or message to lead with. Diagnoses the input first (blank brief, real voice, or point edit) and changes only what it calls for. Claims must be supportable; a declined claim names the evidence that would unlock it. No AI tells like 'it's not X, it's Y' or 'no X, no Y, no Z'. For editing, see copy-editing. For emails, see emails. For the offer, see offers."
+      },
+      "file_count": 5,
+      "files": [
+        {
+          "path": "skills/copywriting/SKILL.md",
+          "sha256": "86dc0466493e8ac59ab17a8f28fd1403e2a322921ed2a8f96b2d0c442ad99d01",
+          "upstream_blob_sha": "d70d0b8855f2dc1ed06b9d72a373cdc448ed4e8e",
+          "bytes": 15238
+        },
+        {
+          "path": "skills/copywriting/evals/evals.json",
+          "sha256": "ccec86052a0edd8646d0e50e63c08e0e971f443d8f6e9178843a1629f79efdb0",
+          "upstream_blob_sha": "f903d8b9db5b201c71589278aff29bf3293043fa",
+          "bytes": 12995
+        },
+        {
+          "path": "skills/copywriting/references/ai-tells.md",
+          "sha256": "b98c3a19b3a75c714d69e80a0076e4c07244b0e833c2ce81ff2631224fb7f7b2",
+          "upstream_blob_sha": "0a93ab3b88fc2c683ff6280db187644a7aa04612",
+          "bytes": 20804
+        },
+        {
+          "path": "skills/copywriting/references/copy-frameworks.md",
+          "sha256": "4db06c481a904be3e4571ad8f671532c97ec186ddf0fb8aee3e3a56ef8e3d441",
+          "upstream_blob_sha": "c19bc984e6f64e89d7c234ee110a368e60284ab4",
+          "bytes": 14409
+        },
+        {
+          "path": "skills/copywriting/references/natural-transitions.md",
+          "sha256": "9bd61b0de5be2c4de4ce130c68236b4f290b12737823827a458bb2b4c8584683",
+          "upstream_blob_sha": "5fba31a5d3bf0f35a9cc62605af5ceaa454a6186",
+          "bytes": 5561
+        }
+      ]
+    },
+    {
+      "row_id": "MK-018",
+      "skill": "cro",
+      "frontmatter": {
+        "name": "cro",
+        "version": "2.0.6",
+        "description": "When the user wants more conversions from a page or form, or asks why a page isn't converting, what to change first, or whether to add or remove a field or element: landing and pricing pages, lead forms, or a URL shared for feedback. For signup flows, see signup. For activation, see onboarding. For popups, see popups. For running the test, see ab-testing."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/cro/SKILL.md",
+          "sha256": "0f8588aba125de102498ca3bbaa0151c8ebffa0a7ad85c14d992ef16db02fb2d",
+          "upstream_blob_sha": "194df7e3b26a7ce523739053c06605cc22622a14",
+          "bytes": 6815
+        },
+        {
+          "path": "skills/cro/evals/evals.json",
+          "sha256": "62f3003602836e2b49d797ca582e7703629a6b07b131eb77b51b2bb39fe65775",
+          "upstream_blob_sha": "a7393125c1cc757e111cd0d2e29ff7f5a071de31",
+          "bytes": 7656
+        },
+        {
+          "path": "skills/cro/references/experiments.md",
+          "sha256": "bbcc356c0af36cfaa4556bf9e929deac30c65cafb37f909d7c51d4777fe254ca",
+          "upstream_blob_sha": "abc31c716ec966c9c6c9a12ca3e8b076ce3ea320",
+          "bytes": 7850
+        },
+        {
+          "path": "skills/cro/references/form.md",
+          "sha256": "49b8f29b3da1ae6510572288cad3eb1f3d43a969373443be98b38639746587e6",
+          "upstream_blob_sha": "56f6e03e28f3d6193316552ca840d26b66a89c79",
+          "bytes": 10332
+        }
+      ]
+    },
+    {
+      "row_id": "MK-019",
+      "skill": "customer-research",
+      "frontmatter": {
+        "name": "customer-research",
+        "version": "2.0.8",
+        "description": "When the user wants to run or synthesize customer research, or asks what customer quotes, reviews, or feedback really mean, what is safe to conclude, and what to ask next: interviews, surveys, voice of customer, personas, JTBD, mining Reddit and reviews. For copy from research, see copywriting. For acting on it in pages, see cro."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/customer-research/SKILL.md",
+          "sha256": "d12b522641884acb385f7a919138b5bfbe4ad9b070bd13a470923eebaa682a4f",
+          "upstream_blob_sha": "bc9f4aadd0431da8a718bc3b69c619950949a94b",
+          "bytes": 14570
+        },
+        {
+          "path": "skills/customer-research/evals/evals.json",
+          "sha256": "fc8a15d12e582b55fa52ad27925594ab796ebd6a8ea13fed13722f97e4c51f01",
+          "upstream_blob_sha": "a084bb359c75d9c243e43d726a7bc2bfce39eaeb",
+          "bytes": 12547
+        },
+        {
+          "path": "skills/customer-research/references/interviews-and-surveys.md",
+          "sha256": "56adecdc40af1242464937100349fc1a161627394909551720494bc5ee537076",
+          "upstream_blob_sha": "aade5bc6ed6c3f97c50bc03c1b00de8057021f9e",
+          "bytes": 8640
+        },
+        {
+          "path": "skills/customer-research/references/source-guides.md",
+          "sha256": "7490a8d04f209d4c8c987530e79d0883a6b42027b86a920fc751cf8ea9904892",
+          "upstream_blob_sha": "be6fb691d16b6cbdf9d474c9cf52c42104e7e542",
+          "bytes": 16240
+        }
+      ]
+    },
+    {
+      "row_id": "MK-020",
+      "skill": "directory-submissions",
+      "frontmatter": {
+        "name": "directory-submissions",
+        "version": "2.2.1",
+        "description": "When the user wants to list a product in startup, SaaS, AI, MCP, and review directories, or asks which directories are worth it or whether listings are working: Product Hunt, G2, Capterra, AlternativeTo, MCP registries, awesome lists, and a submission tracker. For the broader launch, see launch. For other link building, see link-building."
+      },
+      "file_count": 7,
+      "files": [
+        {
+          "path": "skills/directory-submissions/SKILL.md",
+          "sha256": "34d53866e6faffa704e6bff42093eebb80c40258cacf06db285eb3e801ed4a73",
+          "upstream_blob_sha": "f9b1b90fd8bc77a562ec621ed142208d67658572",
+          "bytes": 32147
+        },
+        {
+          "path": "skills/directory-submissions/evals/evals.json",
+          "sha256": "a8ea17c0d823f945438ab70d9d5c2522b8a4eae77ddc80b4086ba371301325cb",
+          "upstream_blob_sha": "2e003efaa2ed1eddf632099dd44e2a7e674c5407",
+          "bytes": 12454
+        },
+        {
+          "path": "skills/directory-submissions/references/agent-registry-files.md",
+          "sha256": "e39cf2bc6aa917df72bf0d5a2e7b79e158da328e5e54ec00024afb14ae4f58d9",
+          "upstream_blob_sha": "355a5dee306ca5cf27fd8636f3a1cb2051697627",
+          "bytes": 4177
+        },
+        {
+          "path": "skills/directory-submissions/references/directory-list.md",
+          "sha256": "cab0649cd6aea5e204403be415c4ac06a87fd1a9e26aad7ea70fbbbbfa975d50",
+          "upstream_blob_sha": "67574d92dd9f0d6f77cd3827ee609aa4ceeeb77d",
+          "bytes": 33601
+        },
+        {
+          "path": "skills/directory-submissions/references/listing-kit.md",
+          "sha256": "55484a21f59ff71ee9f889b478b82fa8412066cbb39e4f250b29937e54f7fa24",
+          "upstream_blob_sha": "7d19750e221db3fa6ca010392d0ce9b069db69c6",
+          "bytes": 6316
+        },
+        {
+          "path": "skills/directory-submissions/references/positioning-variations.md",
+          "sha256": "6c1bad13b03dbde87e24e3751d56c7259297cecbd1d022d8199168abb6ebead8",
+          "upstream_blob_sha": "327b6dcf5b445e04e33e75f7adfc3efec0a5c0df",
+          "bytes": 9409
+        },
+        {
+          "path": "skills/directory-submissions/references/submission-tracker-template.csv",
+          "sha256": "150812bd6f4f299684fa84d613a7942ba21db8ebddf8605bea6b5854048a1bc4",
+          "upstream_blob_sha": "ad287de31e4ef26c8504d4add39871aa1ceed5d5",
+          "bytes": 20821
+        }
+      ]
+    },
+    {
+      "row_id": "MK-021",
+      "skill": "emails",
+      "frontmatter": {
+        "name": "emails",
+        "version": "2.1.9",
+        "description": "When the user wants to create or improve automated email sequences, or asks what to send, when, or whether an email or flow is working: welcome, onboarding, nurture, and win-back flows. No AI tells like 'it's not X, it's Y', 'no X, no Y, no Z' lists, or fake 'Re:' subject lines. For cold outreach, see cold-email. For in-app onboarding, see onboarding. For texts, see sms."
+      },
+      "file_count": 5,
+      "files": [
+        {
+          "path": "skills/emails/SKILL.md",
+          "sha256": "5687682141748000282747e85ef6501c0ad4c78731e138afc9b712ebb91ae750",
+          "upstream_blob_sha": "ad95c6a0aa6d386b58c9f9787903db9ebcc2de9a",
+          "bytes": 11226
+        },
+        {
+          "path": "skills/emails/evals/evals.json",
+          "sha256": "b90182c8b6edbb866ef82ad022db3d2fe8598e7329469117fb39edd9ab069f67",
+          "upstream_blob_sha": "b1e421878e51108bf1f26598c5be58a222d7b8c3",
+          "bytes": 7471
+        },
+        {
+          "path": "skills/emails/references/copy-guidelines.md",
+          "sha256": "c0295eead3210e7ffb214f545a960ffcc126b211732f1b468776fbb84cf720e5",
+          "upstream_blob_sha": "499bec28384a3817620f18963dd85f01379ecd2f",
+          "bytes": 2429
+        },
+        {
+          "path": "skills/emails/references/email-types.md",
+          "sha256": "a5dd4f0555a7b21d2ff426948d15657825b9d16265652563f5e272d2e1879bfd",
+          "upstream_blob_sha": "dd6124051517e98d0550f7e35477b428ef5b81f6",
+          "bytes": 14250
+        },
+        {
+          "path": "skills/emails/references/sequence-templates.md",
+          "sha256": "f8f318f10e29abcd009cbee29e2bd178981d96c973099b508d30af6c10ab8d79",
+          "upstream_blob_sha": "6146dd36af0200ee35213091fc51dbc9bbf5750e",
+          "bytes": 3909
+        }
+      ]
+    },
+    {
+      "row_id": "MK-022",
+      "skill": "events",
+      "frontmatter": {
+        "name": "events",
+        "version": "1.0.3",
+        "description": "When the user wants to plan, run, sponsor, or speak at events, or asks whether an event or booth is worth the money: webinars, conferences, booths, meetups, show-up rates, and follow-up into pipeline. For launches, see launch. For joint webinars, see co-marketing. For community programs, see community-marketing. For podcasts, see public-relations. For event emails, see emails."
+      },
+      "file_count": 6,
+      "files": [
+        {
+          "path": "skills/events/SKILL.md",
+          "sha256": "c563896eb4479cd13bea43fe89920e965400b6f994f81bc3703ea1a813ac3247",
+          "upstream_blob_sha": "7399c0f70682c0a9be42f396602f212aa34d4dc2",
+          "bytes": 11647
+        },
+        {
+          "path": "skills/events/evals/evals.json",
+          "sha256": "f1177b2d7ab68d09805b69d37ae7294b9ba789b6a2915f9eb50187d6d1a8447b",
+          "upstream_blob_sha": "4591a1fcf0c281d338c26fb44f13588c04dfd29e",
+          "bytes": 11178
+        },
+        {
+          "path": "skills/events/references/event-portfolio-strategy.md",
+          "sha256": "460429f1d0cfa50ccab66593306e68e11a73f2238f5719502f833b88a35fd4f1",
+          "upstream_blob_sha": "995e29e50764c325d433936b84f5c867a20ce49c",
+          "bytes": 7981
+        },
+        {
+          "path": "skills/events/references/speaking.md",
+          "sha256": "c5b04daf23d1e884132877e0d0b3ea9d036bc7b3e002f4c78c8f0f38c99cf1e9",
+          "upstream_blob_sha": "83ec5c253b5c0d47612a44f23627cfee412e1f84",
+          "bytes": 5348
+        },
+        {
+          "path": "skills/events/references/sponsorship-roi.md",
+          "sha256": "fbf4d70b0224c4dd0b6af7c8e2ec5b15b01d80768fa251e0ff4d5e03e8be4636",
+          "upstream_blob_sha": "2c6e36612b56b81bd897d4c1e364a212feb02020",
+          "bytes": 6243
+        },
+        {
+          "path": "skills/events/references/webinar-funnel.md",
+          "sha256": "cc66ed229d890d19dc3b212d24ee45f9b2a3b5afa0c7a69da10c70c81255bcd8",
+          "upstream_blob_sha": "2f78b85e82068c1a2361e82aac6de69c346f673b",
+          "bytes": 8191
+        }
+      ]
+    },
+    {
+      "row_id": "MK-023",
+      "skill": "free-tools",
+      "frontmatter": {
+        "name": "free-tools",
+        "version": "2.0.6",
+        "description": "When the user wants to plan or build a free tool as marketing, or asks whether a tool idea is worth building or which one to pick: calculators, graders, generators, and other interactive tools for leads, SEO, and links. For downloadable lead magnets, see lead-magnets."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/free-tools/SKILL.md",
+          "sha256": "cf89ce128533b0029bcb99270b2e7c9ed13746e11dfd7abb572f9667b2818040",
+          "upstream_blob_sha": "cfef9eaf83f07b1ace96f9e8726399703ad24e56",
+          "bytes": 7044
+        },
+        {
+          "path": "skills/free-tools/evals/evals.json",
+          "sha256": "240282a81d7a91c335da86d184e3a1ac2dddd5e286505c4177bcd88c96e67990",
+          "upstream_blob_sha": "1b5144921673da7b5cf46b75d1059547f8822cb9",
+          "bytes": 7602
+        },
+        {
+          "path": "skills/free-tools/references/tool-benchmarks.md",
+          "sha256": "7416869dba463a40341e62d3dff70374c0ce6aafee9948ea6d10d44ed4ea82f1",
+          "upstream_blob_sha": "c47ac3e380d481840ce6f1296e82f99cbdd3c8dd",
+          "bytes": 4814
+        },
+        {
+          "path": "skills/free-tools/references/tool-types.md",
+          "sha256": "3869418a784ec94e95528dbe3f39cd2571cff6f7649e5e0be28d675be61d5a3f",
+          "upstream_blob_sha": "65104ffb77fea458030fb113fc125a8c5021e150",
+          "bytes": 4012
+        }
+      ]
+    },
+    {
+      "row_id": "MK-024",
+      "skill": "image",
+      "frontmatter": {
+        "name": "image",
+        "version": "2.0.8",
+        "description": "When the user wants to create, generate, edit, or optimize marketing images, or asks which approach to take (generate, design, or photograph): blog heroes, social graphics, product mockups, banners, OG images. For ad images, see ad-creative. For video, see video."
+      },
+      "file_count": 3,
+      "files": [
+        {
+          "path": "skills/image/SKILL.md",
+          "sha256": "6150a2c22b84b04903dabe1fa87d308936e41621a101fc33b4240e5181371ac0",
+          "upstream_blob_sha": "18c9006d071202364fa94c0765335c67b3a173d4",
+          "bytes": 17019
+        },
+        {
+          "path": "skills/image/evals/evals.json",
+          "sha256": "61f38e67d5fa11016e97391e360402fa696e059015c754f422d061a361a3cead",
+          "upstream_blob_sha": "b3922b29be3b60335221a30e2074ffa95ccc4eb7",
+          "bytes": 6932
+        },
+        {
+          "path": "skills/image/references/ai-image-prompting.md",
+          "sha256": "52ffe76370f4757577aa59f509707d05b911036e8bb28f4fc289054c2f5ec85b",
+          "upstream_blob_sha": "a5111a4f40be6daab39e1e1e96a3fd9b552d98ef",
+          "bytes": 8442
+        }
+      ]
+    },
+    {
+      "row_id": "MK-025",
+      "skill": "influencer-marketing",
+      "frontmatter": {
+        "name": "influencer-marketing",
+        "version": "1.4.4",
+        "description": "When the user wants creator, influencer, or ambassador partnerships, or asks which creators fit, what to pay, which rights to buy, or whether a sponsorship worked: vetting, contracts, briefs, UGC, newsletter and podcast sponsorships, FTC disclosure. For affiliate payouts, see referrals. For community advocacy, see community-marketing. For creator content as ads, see ad-creative."
+      },
+      "file_count": 6,
+      "files": [
+        {
+          "path": "skills/influencer-marketing/SKILL.md",
+          "sha256": "367e9ee7a88ca9280206858e76d795dc89eaea2a2ddaa6786ece8a089c11e4e5",
+          "upstream_blob_sha": "aa129f4f20c31430b3e5b523d9494dc6a3053bb0",
+          "bytes": 19786
+        },
+        {
+          "path": "skills/influencer-marketing/evals/evals.json",
+          "sha256": "b3cbbf95002a892cd311a99977ace2c6ca550c342d7a8f80994ba103f88d0a2a",
+          "upstream_blob_sha": "6f69507b7aebd910a5ca0e9c51bbc2ba6c5dd183",
+          "bytes": 10840
+        },
+        {
+          "path": "skills/influencer-marketing/references/newsletter-sponsorships.md",
+          "sha256": "57b9dc26204957bf9bd53ea3e4f739bafe949b1336c3e227ce3a0b563776e46d",
+          "upstream_blob_sha": "bee9e2af6bdedc951484ce66ce314fed64f6f9ea",
+          "bytes": 6166
+        },
+        {
+          "path": "skills/influencer-marketing/references/paid-ads-creator-program.md",
+          "sha256": "85b6fde260cd1e0950dc6c54982577ed90a0262a62a7753626c0f888d0cc0a2e",
+          "upstream_blob_sha": "aabbec3502c5a972358653b64f6dbc15f75151f4",
+          "bytes": 7150
+        },
+        {
+          "path": "skills/influencer-marketing/references/telegram-channels.md",
+          "sha256": "3a820b156847fe748ae47c1c783e39d6436493c2b55f428cfa19f69d78b5d8d5",
+          "upstream_blob_sha": "64b1dee0e63ecf42be0fb5584d2e04716c198aa1",
+          "bytes": 8229
+        },
+        {
+          "path": "skills/influencer-marketing/references/ugc-creator-program.md",
+          "sha256": "8bb429d14c0e6a7f631a79652152de67a19e071c82d9a7b55543fd0cc7ad038b",
+          "upstream_blob_sha": "370f48901ce7aa7afc7d68ac081d6fa0e670ea05",
+          "bytes": 8908
+        }
+      ]
+    },
+    {
+      "row_id": "MK-026",
+      "skill": "launch",
+      "frontmatter": {
+        "name": "launch",
+        "version": "2.2.4",
+        "description": "When the user wants to plan a product or feature launch, or asks whether it's ready, when to announce, or how to get noticed: Product Hunt, beta and early access, waitlists, release go-to-market, launch checklists, release notes. For marketing after launch, see marketing-ideas. For the offer, see offers."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/launch/SKILL.md",
+          "sha256": "9d93f17367df59103fd932462cb170d1cfa5561d44e00423a52f7dadbce1bc3d",
+          "upstream_blob_sha": "77c661a25360b620475c538c1a63102891bf3b42",
+          "bytes": 15250
+        },
+        {
+          "path": "skills/launch/evals/evals.json",
+          "sha256": "f2ceb01d664e24ea253789a9a686997f5cc33a0fc99f57bf215acdada787322c",
+          "upstream_blob_sha": "71547a21c972e52d2f26badca45931d54f8a5142",
+          "bytes": 10567
+        },
+        {
+          "path": "skills/launch/references/shipped-changes.md",
+          "sha256": "873c79d17d3f428147348a9cc2a5e3d6bb8282cf13fc8a143d539840e8abaa96",
+          "upstream_blob_sha": "321e5715b16c48194e05991cbf4e35833756e0fa",
+          "bytes": 4703
+        },
+        {
+          "path": "skills/launch/references/site-launch-qa.md",
+          "sha256": "aac0447d0d518468e86e971f4e781b61ee05e81dada402e2edcef709cc6418ab",
+          "upstream_blob_sha": "07e7f3e28ba3afa2fa96976db8568190090be3da",
+          "bytes": 3793
+        }
+      ]
+    },
+    {
+      "row_id": "MK-027",
+      "skill": "lead-magnets",
+      "frontmatter": {
+        "name": "lead-magnets",
+        "version": "2.1.5",
+        "description": "When the user wants to plan or improve a lead magnet, or asks what to give away for emails or how much to ask in return (gating, form fields): checklists, templates, ebooks, gated guides, content upgrades. For interactive tools, see free-tools. For the follow-up sequence, see emails. For popups that capture emails, see popups."
+      },
+      "file_count": 7,
+      "files": [
+        {
+          "path": "skills/lead-magnets/SKILL.md",
+          "sha256": "858b6c0735e7c79b191416344eb3bb57cfdc2743ddc9d50b4bcbef820a9e98e1",
+          "upstream_blob_sha": "29f0c9921534fb37d79422b7bd79173979adedb7",
+          "bytes": 10863
+        },
+        {
+          "path": "skills/lead-magnets/evals/evals.json",
+          "sha256": "a6930404b17407d918dffac89fab225b7b07d8bdd116e8a45f6f6709348e8915",
+          "upstream_blob_sha": "5826f8e3db67a0e93ea78189482a9b11ab4c9c1c",
+          "bytes": 9645
+        },
+        {
+          "path": "skills/lead-magnets/references/benchmarks.md",
+          "sha256": "becdf4bcde17e788ead10794c797294548c712ea1074e042336da93433a61187",
+          "upstream_blob_sha": "e54e94852b349b448ba8199308081c99a7a597ca",
+          "bytes": 4234
+        },
+        {
+          "path": "skills/lead-magnets/references/content-to-skill-corpus-design.md",
+          "sha256": "63ecb58aaa18ebcacfbc4cdefdc8075a3f33793a59c79fa73b784ad0dfa93881",
+          "upstream_blob_sha": "75384cbcf7c62e0f1f0e447e6aebbc0238e46cff",
+          "bytes": 5008
+        },
+        {
+          "path": "skills/lead-magnets/references/content-to-skill-release.md",
+          "sha256": "87bcc9218232b73b824e8cebac1e64deacffa755779ce2cc0db799c92873c891",
+          "upstream_blob_sha": "a36736f01980b5e1ccbaa473e283de1cbacb3183",
+          "bytes": 4792
+        },
+        {
+          "path": "skills/lead-magnets/references/content-to-skill.md",
+          "sha256": "dacbfff6d538ee37167f20034165dbf3a273d8bd1607def6450c649e40ebafa9",
+          "upstream_blob_sha": "111581036ced9ea3b0ce660d5b2fd69f23870234",
+          "bytes": 8406
+        },
+        {
+          "path": "skills/lead-magnets/references/format-guide.md",
+          "sha256": "401f65d709cefbd7ee2df11273e0b616ec50e37e71d914556c800067fdcdef8e",
+          "upstream_blob_sha": "e2ecab99526a9d9ef0f9c41c4dc25b251f40933d",
+          "bytes": 5826
+        }
+      ]
+    },
+    {
+      "row_id": "MK-028",
+      "skill": "link-building",
+      "frontmatter": {
+        "name": "link-building",
+        "version": "1.1.0",
+        "description": "When the user wants backlinks and mentions that lift rankings and AI citations, or asks how to get sites to link, whether a link tactic is safe, or where to buy placements: link gaps, unlinked mentions, broken links, guest posts, link marketplaces. On paid links, state Google's rule (rel=sponsored or nofollow) and the risk, then let the user decide. For press, see public-relations. For directories, see directory-submissions. For reviews, see referrals. For communities, see community-marketing."
+      },
+      "file_count": 5,
+      "files": [
+        {
+          "path": "skills/link-building/SKILL.md",
+          "sha256": "8db0bc64b35611cfc5de60cdf27cc4441044dcfe4646059758c1109e664d389b",
+          "upstream_blob_sha": "7fe2954615edd599f1455c02978cb94433b98cb4",
+          "bytes": 16037
+        },
+        {
+          "path": "skills/link-building/evals/evals.json",
+          "sha256": "8b45575790135f0aebac00d2f296b92f46c5b66b5ba5c7cb1365d1f4598ad8a8",
+          "upstream_blob_sha": "f802aa2d69ef9e67a615f1155544beac7f3343a9",
+          "bytes": 7376
+        },
+        {
+          "path": "skills/link-building/references/prospecting-and-outreach.md",
+          "sha256": "604a7863938144e496405bc5e92e1622b698a5f1b652f2f3eea816dbfce9813b",
+          "upstream_blob_sha": "073defab38c96602534366bff21e5dd457ad1878",
+          "bytes": 4722
+        },
+        {
+          "path": "skills/link-building/references/risk-policy.md",
+          "sha256": "1633e29dceca29669b462d0cf01952eb303d8eb70622c8f4c487c996209fc67f",
+          "upstream_blob_sha": "24dccae8b34927090b0634f8d2dafd3bd37039cb",
+          "bytes": 6590
+        },
+        {
+          "path": "skills/link-building/references/tactics.md",
+          "sha256": "a03af97971dbfcf92000fd4c9c874e9a2af6e035ef135390b0dedfbc620487fc",
+          "upstream_blob_sha": "4c145ca053c4805cfd0809397eb8daab06b0df6c",
+          "bytes": 7212
+        }
+      ]
+    },
+    {
+      "row_id": "MK-029",
+      "skill": "marketing-council",
+      "frontmatter": {
+        "name": "marketing-council",
+        "version": "1.0.3",
+        "description": "When the user wants several expert takes on a marketing decision, or asks what a famous marketer would say about it: a simulated board (Seth Godin, David Ogilvy, April Dunford, Byron Sharp, and more), each grounded in their documented frameworks, where they disagree, and a recommendation. To execute, hand off to the relevant skill."
+      },
+      "file_count": 15,
+      "files": [
+        {
+          "path": "skills/marketing-council/SKILL.md",
+          "sha256": "527ae7ff801abc03b7dec7ab70132a1a70909988271f6deb3938b27d113484e1",
+          "upstream_blob_sha": "7ea1381a44e8fc68acc06fd3b5dc37b9f71d4f4e",
+          "bytes": 11993
+        },
+        {
+          "path": "skills/marketing-council/evals/evals.json",
+          "sha256": "c95d3d8cdaafb6ad178d5a72ee87f2ba655f41c1c7046c83705c93b2b9afa291",
+          "upstream_blob_sha": "8d691f315a3465288a619b90f2f3531df7a7dc34",
+          "bytes": 5709
+        },
+        {
+          "path": "skills/marketing-council/references/advisor-template.md",
+          "sha256": "e748d9f91d5b663c3cc0165c83a117833b0392fbf6c77b5a2107c49b0edd3c51",
+          "upstream_blob_sha": "77c2ccb2cb38b118c50417cc76ee6ead12253a72",
+          "bytes": 2112
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/alex-hormozi.md",
+          "sha256": "18975ae41e73d1a95779f0bcffde5bd42f91bbb96a208d55a3fa4c0095a421da",
+          "upstream_blob_sha": "7276cc0bc35774dfa05de061ad2e98ac97b977f0",
+          "bytes": 3987
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/ann-handley.md",
+          "sha256": "b0ad24ef9ee2965a1ee35a2208ea65897ef684baafb65557e2cc3b0aa9e5ca4e",
+          "upstream_blob_sha": "b6832c83157fbe950e1ff6d1f9ce51c7719098a3",
+          "bytes": 4064
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/april-dunford.md",
+          "sha256": "7abc28f3d3043f72bf8ca710c0390de4014486cffb1e6e82029581aa7ef5212f",
+          "upstream_blob_sha": "1c6026b31a2a93858777c5c7638769e8ac7d2015",
+          "bytes": 4410
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/byron-sharp.md",
+          "sha256": "fe99260a03ca0123ae1075108cb6466b0bd60ccac1b0b8d64d7b7bf1a78e17af",
+          "upstream_blob_sha": "8d0da499f95703a718df75b300ead445d5717a83",
+          "bytes": 4790
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/claude-hopkins.md",
+          "sha256": "93366c6d6b51407fdf33308537f31e7e8667a89fecd9fa1b8ea9ac398fb80942",
+          "upstream_blob_sha": "d49ab23e85bfdb68ac31d847fded03e4f390c823",
+          "bytes": 3789
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/david-ogilvy.md",
+          "sha256": "868d96f850eff22a923224bf7f3b5344abdb5d4c130b77e46e4142c630c6edba",
+          "upstream_blob_sha": "aa0546176331381d88a14b67d60cf7c619876493",
+          "bytes": 4096
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/eugene-schwartz.md",
+          "sha256": "fef9cc5ece0ad84d5542721f9346b18e5aa44e9f1a10e62f1ed5b7e05f6ba5a5",
+          "upstream_blob_sha": "d328d6af5842bbde3e63a142471436b481608133",
+          "bytes": 4184
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/gary-halbert.md",
+          "sha256": "0db92e69da50a6372a5dc1feae2a6824fff9f1b53df92094745810c3d8375d8b",
+          "upstream_blob_sha": "a0af045666744c6733beb0ce2fcce9095a7c389e",
+          "bytes": 3968
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/gary-vaynerchuk.md",
+          "sha256": "256f5425b602375c83d4a6e677c7ecc97e60f3dead83f8192802b6c0c65e57e4",
+          "upstream_blob_sha": "52149c67eb125672513ad86f94c2935245f14581",
+          "bytes": 4399
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/rory-sutherland.md",
+          "sha256": "07a726d3f66def9722b5b3c52acc37173edc50ac880f8d1cb072424bd9b5f235",
+          "upstream_blob_sha": "a395406f52c050df54eda12ea55b81c3b2933a1c",
+          "bytes": 4732
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/russell-brunson.md",
+          "sha256": "ae0cb018f48a734ec64fd087fd469a7e8170f5d2a2fea7623dfd58f35cfe739e",
+          "upstream_blob_sha": "1f5c34ec68afb6afe9ce997504cf4200921a469e",
+          "bytes": 4331
+        },
+        {
+          "path": "skills/marketing-council/references/advisors/seth-godin.md",
+          "sha256": "02cb1b64b1fff7eecc6ff9769b60c23ef68b03017fd3d82b1a5b544009dd79c0",
+          "upstream_blob_sha": "9d6814723ab2ade256ffa3859c3da2a62937a98e",
+          "bytes": 4026
+        }
+      ]
+    },
+    {
+      "row_id": "MK-030",
+      "skill": "marketing-ideas",
+      "frontmatter": {
+        "name": "marketing-ideas",
+        "version": "2.0.5",
+        "description": "When the user wants marketing ideas or growth tactics for a software product, or asks what to try to get attention or the next customers with little time or budget, or after the obvious channels. Draws on a library of 139 ideas. For a specific channel, see that skill (ads, social, emails, and others). For a full plan, see marketing-plan."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/marketing-ideas/SKILL.md",
+          "sha256": "b64d0d8125d272cc87ac25f5df4f0ea3c5dd5a58c3496007cb1ce3924f14cc7d",
+          "upstream_blob_sha": "9a92873fa727672af794eb268a28a401ac3f79fb",
+          "bytes": 5670
+        },
+        {
+          "path": "skills/marketing-ideas/evals/evals.json",
+          "sha256": "f97f2bd1c755e6ca85ab75c500db681bd19559fb070ac249bba135ed7d8ecf60",
+          "upstream_blob_sha": "82177fcc1a8449b6e91c6cbcc5553ec0f3bd5399",
+          "bytes": 7490
+        },
+        {
+          "path": "skills/marketing-ideas/references/guerrilla-marketing.md",
+          "sha256": "07b0534b579ce1916a60e79ab426cd936e78b4b261802d6486ad145f7bf552ae",
+          "upstream_blob_sha": "3a47883e8f7a55c1542762e4c4429e44053ee058",
+          "bytes": 5033
+        },
+        {
+          "path": "skills/marketing-ideas/references/ideas-by-category.md",
+          "sha256": "8b6aa55b3255616ea80c0ea45eca8f2bb70e528510ed76f6392e71475dd0c09b",
+          "upstream_blob_sha": "ab57dccde498eda91eb7999cebbebc6f5d2449a6",
+          "bytes": 15400
+        }
+      ]
+    },
+    {
+      "row_id": "MK-031",
+      "skill": "marketing-loops",
+      "frontmatter": {
+        "name": "marketing-loops",
+        "version": "1.9.0",
+        "description": "When the user wants a recurring marketing job an AI agent runs on a cadence or trigger, or asks what a weekly or daily automated check should do, remember, and when it should stop: SEO and ads checks, churn watches, outbound triage. For one-off ideas, see marketing-ideas. For the test loop, see ab-testing."
+      },
+      "file_count": 9,
+      "files": [
+        {
+          "path": "skills/marketing-loops/SKILL.md",
+          "sha256": "d1ad5fcd33d422b096b349f8b3a4e06764b02934d23af877fa0d7009050dab24",
+          "upstream_blob_sha": "5f1ddce99e9060247962e51ce30a8b1ecd7983e6",
+          "bytes": 9589
+        },
+        {
+          "path": "skills/marketing-loops/evals/evals.json",
+          "sha256": "b077b28ec346b614dfe6fd828a4cd8df10134f221e49743fece6765da0fe99a4",
+          "upstream_blob_sha": "36e7d1a04da57470a8a65cf60c4f6bfecdea5b35",
+          "bytes": 13639
+        },
+        {
+          "path": "skills/marketing-loops/references/loop-catalog.md",
+          "sha256": "5143f86548443ff1ddb0fc21bf2d68ab34e50e7a7667e924e019969ed60cc11d",
+          "upstream_blob_sha": "df057472c4839ceccf8fffceaee865d121b7ed0a",
+          "bytes": 71017
+        },
+        {
+          "path": "skills/marketing-loops/references/loop-guardrails.md",
+          "sha256": "a93cdb67d28773d72e789c937a26f3062129c8a0076018ac24269d52e7a31e46",
+          "upstream_blob_sha": "9c26ebc920ad9cafe2ae6160799a4ff9c0dddb61",
+          "bytes": 4998
+        },
+        {
+          "path": "skills/marketing-loops/references/loop-orchestration.md",
+          "sha256": "8ef60ebde4fec8ef4f94fb6d087ddac5e311c0c3c298015f681382fe735ca1d6",
+          "upstream_blob_sha": "c1170e965c5c1cbfa8623948fce73321066c9026",
+          "bytes": 5333
+        },
+        {
+          "path": "skills/marketing-loops/references/loop-state.md",
+          "sha256": "4ffe822756019407babc4a3cb337be160362ad88b41919cb70d1d039a76e2c15",
+          "upstream_blob_sha": "d41876f6e9a766d34fade5853086666769597d8a",
+          "bytes": 5868
+        },
+        {
+          "path": "skills/marketing-loops/references/loop-template.md",
+          "sha256": "695fde57b9b0735e49b5fc718b0e8eb726808c08b19bea89056f8913cf1bff26",
+          "upstream_blob_sha": "757e22db0f776dde3e611692b8597ed9261561b2",
+          "bytes": 5122
+        },
+        {
+          "path": "skills/marketing-loops/references/outbound-operator.md",
+          "sha256": "f2a455ad0d493c01b1c4cc3fca83aa85762529c32f6fdd8dcd8a64b08bccd593",
+          "upstream_blob_sha": "64483f4e041d99488fce202ebaa6c82d127a0690",
+          "bytes": 5180
+        },
+        {
+          "path": "skills/marketing-loops/references/seo-operator.md",
+          "sha256": "5b3b6c3bbc2af2f07d31bc23eefe2558a0b3aca23c8f88f156a4cff14d2f5a45",
+          "upstream_blob_sha": "442c17e2da5bf0a79460a04dd6daabd710a3e5ee",
+          "bytes": 8377
+        }
+      ]
+    },
+    {
+      "row_id": "MK-032",
+      "skill": "marketing-plan",
+      "frontmatter": {
+        "name": "marketing-plan",
+        "version": "1.2.6",
+        "description": "When the user wants a full marketing or go-to-market plan for a client, an advised company, or their own product, or asks how to sequence or prioritize several initiatives with a fixed team and budget: channels, budget, team, goals across AARRR, market sizing. For positioning first, see product-marketing. For ideas only, see marketing-ideas."
+      },
+      "file_count": 16,
+      "files": [
+        {
+          "path": "skills/marketing-plan/SKILL.md",
+          "sha256": "9f4b07b78d58ea5c5da23e91e05304047df60685485c16c28352c0fb99a80ac0",
+          "upstream_blob_sha": "89736b6e966f506007c887dc47e52b98c54d05b5",
+          "bytes": 25123
+        },
+        {
+          "path": "skills/marketing-plan/evals/evals.json",
+          "sha256": "db82d68909edc79a44e17b40e8b1ca9c6346455d0a5ebe27b6b588229f746dfa",
+          "upstream_blob_sha": "f93804724b2a81dd60db5ead7ae1829ba917daf5",
+          "bytes": 18181
+        },
+        {
+          "path": "skills/marketing-plan/references/aarrr-framework.md",
+          "sha256": "5c7bf583c2aa62e193789b6b1a88a978bf3ba9dc0c8c6653b53f7f62c0c1a0e3",
+          "upstream_blob_sha": "4f9f5e94d6cbdf1f039f7540a60a3b0dcf11a8b4",
+          "bytes": 10766
+        },
+        {
+          "path": "skills/marketing-plan/references/budget-planning.md",
+          "sha256": "4351fa1712b66e3e527b71ec9a2e01a68edb43e77b6d310bb424756c6d1a17f7",
+          "upstream_blob_sha": "0ffae8306870442dc1ea963635df92749818f031",
+          "bytes": 10265
+        },
+        {
+          "path": "skills/marketing-plan/references/client-types.md",
+          "sha256": "06e3d0a6f3e9b7195a8c0b43d5186769d1554d1dfd8b1212aca220f9ce09fc01",
+          "upstream_blob_sha": "e00d631614aeb675f1f7693aaa143acd14038215",
+          "bytes": 11386
+        },
+        {
+          "path": "skills/marketing-plan/references/current-state-rubric.md",
+          "sha256": "8ab1d4a4d16ec01c2bf61d83807c0abd857aadd82f3eeaf4e4842b4bbeff1f03",
+          "upstream_blob_sha": "a8dc4aa5b20c17e60f54ce9f130282b9e1d243e7",
+          "bytes": 11656
+        },
+        {
+          "path": "skills/marketing-plan/references/example-quietude.md",
+          "sha256": "51c1df0675d01dbcd8ebabd5e10b5228f1e7453f6ddea3d3a6cbb91d2286ce50",
+          "upstream_blob_sha": "f35eb05abb446f6414ab937c50501f65d7d37e40",
+          "bytes": 69158
+        },
+        {
+          "path": "skills/marketing-plan/references/funding-stage-unlocks.md",
+          "sha256": "49f073653ac32dd42b7e5e10c3deabd7adae8120c41baf0cf813ec20164c6488",
+          "upstream_blob_sha": "18a591e24629cff2faf23483dc38cde63d4a4713",
+          "bytes": 9797
+        },
+        {
+          "path": "skills/marketing-plan/references/growth-patterns.md",
+          "sha256": "fafa84b8c3a62ed9c33c30fc25c7422e0d87b935de990d0acbf91889e1a053de",
+          "upstream_blob_sha": "b4fd0288be857b6cba93c844816bd34630ac2d06",
+          "bytes": 13419
+        },
+        {
+          "path": "skills/marketing-plan/references/idea-cross-reference.md",
+          "sha256": "350fa9c6f4cb4cd8f23698adb8479ae94cd6564a06b2b7cfcdf1430448e68d2f",
+          "upstream_blob_sha": "640b32327d92f738a061e786ba3b92fcd8176325",
+          "bytes": 13418
+        },
+        {
+          "path": "skills/marketing-plan/references/market-sizing.md",
+          "sha256": "e991bf2f38948ea4e829c74fea83f367fbcacb4d6c2ca0f4ca89fc8b9fb2bc0e",
+          "upstream_blob_sha": "bdcecd0bb37705cb70dc64c9abff6dabc6dd307d",
+          "bytes": 9820
+        },
+        {
+          "path": "skills/marketing-plan/references/measurement-framework.md",
+          "sha256": "93d9bf9d9e624a6031a27ce61cf1617e3aa5a8fff57e1c6f80194f847234b745",
+          "upstream_blob_sha": "a0fe2c947a0467da537960faca694dc1a45c7270",
+          "bytes": 10845
+        },
+        {
+          "path": "skills/marketing-plan/references/methodology.md",
+          "sha256": "f9f546fcb7de9b7ba435efbface60761813e2356820d68b44e07308da279aa80",
+          "upstream_blob_sha": "0542df9f8151d4d41f74758f8496b15580dbd366",
+          "bytes": 17702
+        },
+        {
+          "path": "skills/marketing-plan/references/ops-stack-mapping.md",
+          "sha256": "9a506816d87ed176c0578d13bbf25c5f8398872d9002b3589e2dfa42ad17c907",
+          "upstream_blob_sha": "82172ff4ff321015b7c36742d5eb55c21f490949",
+          "bytes": 12221
+        },
+        {
+          "path": "skills/marketing-plan/references/plan-template.md",
+          "sha256": "9180e9bb08588af6c9b982629662185f37e85fc1f6c923dacdbd79063707544f",
+          "upstream_blob_sha": "38b62f5534a67f4d0a7f24e63246b2e82d2f3af0",
+          "bytes": 18913
+        },
+        {
+          "path": "skills/marketing-plan/references/team-and-agency-model.md",
+          "sha256": "0c5e55c0992de4d5d24cd299eb46765a8986cb204ebd7c65bce32c868ae0d5f7",
+          "upstream_blob_sha": "9db127d6c54fedeb4433cbc719549e5310784195",
+          "bytes": 14537
+        }
+      ]
+    },
+    {
+      "row_id": "MK-033",
+      "skill": "marketing-psychology",
+      "frontmatter": {
+        "name": "marketing-psychology",
+        "version": "2.0.3",
+        "description": "When the user wants to apply psychology to marketing, or asks why buyers behave or value things as they do, or whether a persuasion tactic is honest: biases, mental models, anchoring, social proof, scarcity, loss aversion, framing. For a page, see cro. For pricing tactics, see pricing. For copy, see copywriting."
+      },
+      "file_count": 2,
+      "files": [
+        {
+          "path": "skills/marketing-psychology/SKILL.md",
+          "sha256": "755efd52954ecbbddc6fd0fe07cfa4999b63544bf716f2b5587a50c6f26228c0",
+          "upstream_blob_sha": "2eef4a749a132bcfea440e2d7693c435abf08ab9",
+          "bytes": 21597
+        },
+        {
+          "path": "skills/marketing-psychology/evals/evals.json",
+          "sha256": "c3b7d15b3008eeb493796e21affd6a0c6e7ce312f9cfeffcdef467857903c733",
+          "upstream_blob_sha": "09bda2f99b77dc9953e61b9b2368392334b5e7e2",
+          "bytes": 6036
+        }
+      ]
+    },
+    {
+      "row_id": "MK-034",
+      "skill": "offers",
+      "frontmatter": {
+        "name": "offers",
+        "version": "1.0.6",
+        "description": "When the user wants to design or improve the offer itself, or asks why it isn't selling or how to add urgency honestly: value stacking, bonuses, guarantees, scarcity, payment plans, upsells. Best for services, courses, coaching, and high-ticket B2B; for self-serve SaaS, read pricing first. For price and tiers, see pricing. For the page, see copywriting. For the launch, see launch. For sales collateral, see sales-enablement."
+      },
+      "file_count": 10,
+      "files": [
+        {
+          "path": "skills/offers/SKILL.md",
+          "sha256": "d5de835c90e65c9fc117508760ca6df5d8d0ab546ffe6933beab089c944ba71c",
+          "upstream_blob_sha": "4733063b1b44e15f3ac32dde2a8103ed0e5058a6",
+          "bytes": 9593
+        },
+        {
+          "path": "skills/offers/evals/evals.json",
+          "sha256": "abfd1e7a6040a7bd09440d2cda7410a20e20a67a40cb562953d62a0f1c467ece",
+          "upstream_blob_sha": "445e012a1007dc3a22af5e794cdc95e105f43b74",
+          "bytes": 3190
+        },
+        {
+          "path": "skills/offers/references/bonus-stacking.md",
+          "sha256": "872abbfd14501fd0b097f5ae62b9931571152d43b6690b57df5e65ab48aedfbd",
+          "upstream_blob_sha": "17431d82fb9fef34eaa77ef51166450ce9aa777a",
+          "bytes": 7758
+        },
+        {
+          "path": "skills/offers/references/examples.md",
+          "sha256": "f1033e181845effe8c659800aaf68523686be6bdcb1c5e256c87008e8ea638af",
+          "upstream_blob_sha": "3039a346bdeb7af9a75a62ce3129a30263db4959",
+          "bytes": 10203
+        },
+        {
+          "path": "skills/offers/references/guarantee-design.md",
+          "sha256": "daa421558b664fe5a335c6cb764d47755799662c79606551a848bba864255c29",
+          "upstream_blob_sha": "8fdc95d75d659b85f01f566cc63f0a160c2317a3",
+          "bytes": 8173
+        },
+        {
+          "path": "skills/offers/references/offer-anatomy.md",
+          "sha256": "0810080788bedc9b40dc0aba53109991aa816397f4b45e813289985eb8a64cad",
+          "upstream_blob_sha": "cd06682ea995a44f704fb728412289c9ec5ef4d2",
+          "bytes": 8857
+        },
+        {
+          "path": "skills/offers/references/offer-formats.md",
+          "sha256": "32988e0b187e5ef6cf6a8fa86105612852cbc8edc91eebab098d4da50464aadf",
+          "upstream_blob_sha": "2a8d25e212146f4235d6aa3e6455f2bbb9263124",
+          "bytes": 10690
+        },
+        {
+          "path": "skills/offers/references/saas-offers.md",
+          "sha256": "1b21638f0fd2e623f638c13f4b82e2d8c8ecb79d1324f0183f8322db5f5ceea3",
+          "upstream_blob_sha": "78ea55c07469d2491051d00ebcaf8fbb93a7b707",
+          "bytes": 7869
+        },
+        {
+          "path": "skills/offers/references/scarcity-urgency.md",
+          "sha256": "4abe51a54188e6c93feb6cface92abc5c8e03212b8ade5bd9366ed159ad3f8f8",
+          "upstream_blob_sha": "a9dfb2dd89849f1901ad00cbb38140eb58ea0e27",
+          "bytes": 7106
+        },
+        {
+          "path": "skills/offers/references/value-equation.md",
+          "sha256": "4610ff358be2be643e7783884e628f01e1e0c56915a7924e5ccb92c096121eff",
+          "upstream_blob_sha": "7795bb8f77bff7a639f5795e06c911c74defa749",
+          "bytes": 7883
+        }
+      ]
+    },
+    {
+      "row_id": "MK-035",
+      "skill": "onboarding",
+      "frontmatter": {
+        "name": "onboarding",
+        "version": "2.0.5",
+        "description": "When the user wants better onboarding and activation, or asks why new users don't stick or what the first session should do: first-run experience, aha moments, checklists, empty states, time to value. For the signup flow itself, see signup. For onboarding emails, see emails."
+      },
+      "file_count": 5,
+      "files": [
+        {
+          "path": "skills/onboarding/SKILL.md",
+          "sha256": "3118533cd06066715b6fa3c000e5d2994ad1c36b73cbf82501a9711381514880",
+          "upstream_blob_sha": "519090b30db8bae9bdfcc83012a71f08fb3649fd",
+          "bytes": 11249
+        },
+        {
+          "path": "skills/onboarding/evals/evals.json",
+          "sha256": "296b62f2dadbeee44108b68ab7f8509e5e7d72f5bc7b89759dc869b623badf97",
+          "upstream_blob_sha": "bcd8c506cd8494b2aca6409e0d747fc935f17593",
+          "bytes": 8239
+        },
+        {
+          "path": "skills/onboarding/references/activation-models.md",
+          "sha256": "e4d396e2dacfc19bfa33b8bfaaf8639e5a2c0b8a252bf52115ecd2561a2f35e4",
+          "upstream_blob_sha": "cd3dcad8646b55a4f828d37f3831dd7759dbd23b",
+          "bytes": 4089
+        },
+        {
+          "path": "skills/onboarding/references/experiments.md",
+          "sha256": "b4caad0b50ca9483a6a79846d0b24a7bab62850b45a3f2232d73f78629468932",
+          "upstream_blob_sha": "5878ae71df61e44056419370b74e4f9b7b897546",
+          "bytes": 7796
+        },
+        {
+          "path": "skills/onboarding/references/minimum-path-to-value.md",
+          "sha256": "c2b7c71b8436a1456888a26b9c8892c33cd9e1b1bf758f6fd7282c00f87dcdc3",
+          "upstream_blob_sha": "1af868cc7bb9463909ad95ffae2211c0462979b3",
+          "bytes": 3152
+        }
+      ]
+    },
+    {
+      "row_id": "MK-036",
+      "skill": "paywalls",
+      "frontmatter": {
+        "name": "paywalls",
+        "version": "2.1.5",
+        "description": "When the user wants to create or improve in-app paywalls and upgrade moments, or asks when or how hard to ask free users to pay (after they've seen value): upgrade screens, upsell modals, feature gates, limit-reached and trial-expired screens, mobile subscription paywalls. For public pricing pages, see cro. For pricing decisions, see pricing."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/paywalls/SKILL.md",
+          "sha256": "46edbabdf67b663e59d8fa283b4aeb0f3cbff99b0216ae52aa6fd607477faadf",
+          "upstream_blob_sha": "8657cf7629334c4da577771aaf8ec858030a54b5",
+          "bytes": 5855
+        },
+        {
+          "path": "skills/paywalls/evals/evals.json",
+          "sha256": "6c3a8745af66398075f66e3c18d14438ed7ee01f84497875193f1a6c2d34e3cd",
+          "upstream_blob_sha": "4045364c601dc41c1a3fe4c462e7258f4d2bc498",
+          "bytes": 8160
+        },
+        {
+          "path": "skills/paywalls/references/experiments.md",
+          "sha256": "76ebb35ba55ce0785d8bf5d99edb7d36a289b35a22bb92f0247c1311f8b00a14",
+          "upstream_blob_sha": "b1bb49759de3d7b88116c10464f574c40db43782",
+          "bytes": 5801
+        },
+        {
+          "path": "skills/paywalls/references/mobile-subscription-paywalls.md",
+          "sha256": "cd18bc26bba4defc3e66360b330553f81e764443790b2b74ebba152a8b717a13",
+          "upstream_blob_sha": "70325ec92bb98d0f9aeec0e31090d9ce2b734899",
+          "bytes": 5387
+        }
+      ]
+    },
+    {
+      "row_id": "MK-037",
+      "skill": "popups",
+      "frontmatter": {
+        "name": "popups",
+        "version": "2.0.4",
+        "description": "When the user wants to create or improve popups, modals, slide-ins, sticky bars, and banners, or asks whether one will help or annoy and when to show it: exit intent, email capture, scroll and time triggers, announcements. For forms and pages outside popups, see cro."
+      },
+      "file_count": 2,
+      "files": [
+        {
+          "path": "skills/popups/SKILL.md",
+          "sha256": "fbbe47118ac0b9a18b3b07cc72bc6610c6a4f1c4c4817739c1e798bd8710ff64",
+          "upstream_blob_sha": "700a3c5d3862ae234abfb7817bb58158a363a7ca",
+          "bytes": 11523
+        },
+        {
+          "path": "skills/popups/evals/evals.json",
+          "sha256": "dca07b13560aea57cb0739235390c420f82c45d4e6ce01c6f7fb59fc225d2c00",
+          "upstream_blob_sha": "f214da9d9ce23c99d29e7888e7a201aeb92e390b",
+          "bytes": 6585
+        }
+      ]
+    },
+    {
+      "row_id": "MK-038",
+      "skill": "pricing",
+      "frontmatter": {
+        "name": "pricing",
+        "version": "2.1.7",
+        "description": "When the user wants to set pricing and packaging, or asks what to charge, whether to raise prices, or how to move existing customers: tiers, value metrics, per-seat vs usage, freemium and trials, willingness to pay, pricing pages. For in-app upgrade screens, see paywalls. For offers on services, courses, and high-ticket B2B, see offers."
+      },
+      "file_count": 6,
+      "files": [
+        {
+          "path": "skills/pricing/SKILL.md",
+          "sha256": "4f0a939631eca1b4bbee22bf6bc88b35ac06c33bfa8e4e837c8767a4bf6f5b54",
+          "upstream_blob_sha": "88fd2c3dd2cc4aafa0828920dc540ad04b184aab",
+          "bytes": 12949
+        },
+        {
+          "path": "skills/pricing/evals/evals.json",
+          "sha256": "ea2ec5a51826311225c806c9ff3f7fc8c4716b154f7b91aba67ab8639bdb8984",
+          "upstream_blob_sha": "7686d800a57bde99344f3470fb2d2c763dd64768",
+          "bytes": 11295
+        },
+        {
+          "path": "skills/pricing/references/pricing-models.md",
+          "sha256": "2cdb900b74f56a796c0331725e73eff4ecd84f8021b42efbb0a5b4903d1d9b16",
+          "upstream_blob_sha": "807165db008f2ad3bcb1528a27c1e8b748d379f3",
+          "bytes": 4681
+        },
+        {
+          "path": "skills/pricing/references/pricing-page-teardown.md",
+          "sha256": "b58a3bffa58ae7c3a475aba33887daaa98e0dc0de57ea948314256b08aa306ad",
+          "upstream_blob_sha": "0535348f4a94b645e717ede0d3e547bba53a7b75",
+          "bytes": 7283
+        },
+        {
+          "path": "skills/pricing/references/research-methods.md",
+          "sha256": "90337058da40c2fcf858bfee9ee8905ad1dc3a5f90d1878f9a8e9ab79193631b",
+          "upstream_blob_sha": "dfcf8ce5c74665383084329aced539d5a1b13211",
+          "bytes": 6677
+        },
+        {
+          "path": "skills/pricing/references/tier-structure.md",
+          "sha256": "b59910d37cceb74484f28b065963daa60f5c4fb1ffc36a0584d0f3cad11f3e30",
+          "upstream_blob_sha": "35a6d5375b408b8bfe46586380a88dda1c6fdfbf",
+          "bytes": 7199
+        }
+      ]
+    },
+    {
+      "row_id": "MK-039",
+      "skill": "product-marketing",
+      "frontmatter": {
+        "name": "product-marketing",
+        "version": "2.2.3",
+        "description": "When the user wants to create or update the product marketing context doc (.agents/product-marketing.md), or asks what belongs in it or whether positioning or ICP is clear enough: product, ICP, positioning, competitors, customer language, brand voice. Use it before other marketing skills on a new project, when the audience or positioning changes, and to log learnings."
+      },
+      "file_count": 3,
+      "files": [
+        {
+          "path": "skills/product-marketing/SKILL.md",
+          "sha256": "8dbccc22998b3cac194c3509fa93d119163b82c9b0a1ce573e6737e5a5ccf555",
+          "upstream_blob_sha": "a8197bddb8739b62c0e35504207d2565396d3915",
+          "bytes": 13569
+        },
+        {
+          "path": "skills/product-marketing/evals/evals.json",
+          "sha256": "0c6599b88f50ec1be91096a36ba6c5a15cf8312151394e3469e5ddb991b19afb",
+          "upstream_blob_sha": "a2739e5fe6fb881c130b2e8fbf96090c5e215117",
+          "bytes": 7214
+        },
+        {
+          "path": "skills/product-marketing/references/brand-voice.md",
+          "sha256": "932f3453db2761f03050792e39800150495dab449750b40913a4314ea97e7672",
+          "upstream_blob_sha": "697bc73db156319753d16e4eecfc8aadb469ef92",
+          "bytes": 8361
+        }
+      ]
+    },
+    {
+      "row_id": "MK-040",
+      "skill": "programmatic-seo",
+      "frontmatter": {
+        "name": "programmatic-seo",
+        "version": "2.1.3",
+        "description": "When the user wants SEO pages at scale from templates and data, or asks whether a page set will rank or look thin: location, integration, comparison, directory, and '[X] for [Y]' pages, each useful rather than thin. For SEO audits, see seo-audit. For content planning, see content-strategy."
+      },
+      "file_count": 4,
+      "files": [
+        {
+          "path": "skills/programmatic-seo/SKILL.md",
+          "sha256": "f59dcb0892fc615d6df8f6debedd6b08de910ad220d5ec4a18e62f076a934c00",
+          "upstream_blob_sha": "09a87f78a6f86e30a4333a7f7623425588b13961",
+          "bytes": 7354
+        },
+        {
+          "path": "skills/programmatic-seo/evals/evals.json",
+          "sha256": "d336e380eee0217b0be6e472703434b9e6ac4a424957c6b4a080440646c8e285",
+          "upstream_blob_sha": "ef32db6ff0328818554183e5c0c6db2917dadf99",
+          "bytes": 8227
+        },
+        {
+          "path": "skills/programmatic-seo/references/implementation-platforms.md",
+          "sha256": "27d86221387e0880768164d4d03513c85a594d11d12c7a6dd93ac17881c131e2",
+          "upstream_blob_sha": "5a53d73a8c0d535d2add11e08520086ac031155a",
+          "bytes": 5617
+        },
+        {
+          "path": "skills/programmatic-seo/references/playbooks.md",
+          "sha256": "2b2acd3a0c0e5d60b1fb5b71a173aee7ca28de659a7e8ede3effe8525564eb0e",
+          "upstream_blob_sha": "d47d261e8ac07d38c167bd8fa7ac1149929c94b4",
+          "bytes": 8305
+        }
+      ]
+    },
+    {
+      "row_id": "MK-041",
+      "skill": "prospecting",
+      "frontmatter": {
+        "name": "prospecting",
+        "version": "1.6.3",
+        "description": "When the user wants to find and qualify prospects for outbound, or asks who to target first, which signal to prioritize, or where to spot buyers with the problem: buying signals, enrichment, verification, account research. Verify emails before a sequence, never scrape LinkedIn: define audiences in Sales Navigator and pull contacts from licensed data. For outreach, see cold-email. For competitor research, see competitor-profiling."
+      },
+      "file_count": 12,
+      "files": [
+        {
+          "path": "skills/prospecting/SKILL.md",
+          "sha256": "dd9343bdcc3dadd059c4155e818778377bd62f3e704322d1073d9f06656d4315",
+          "upstream_blob_sha": "e7b5ea756c520b2e8fe015a2d76edefa62b8e824",
+          "bytes": 19962
+        },
+        {
+          "path": "skills/prospecting/evals/evals.json",
+          "sha256": "c9e5a095574f57c96e2bd643cba7e404594dc036b020b18521712b4c38675167",
+          "upstream_blob_sha": "73abf0482f00e727f8dd58c3f5a65e2d34c270d6",
+          "bytes": 19938
+        },
+        {
+          "path": "skills/prospecting/references/account-research.md",
+          "sha256": "cf09a7f41b4963d919dcdf96d659fe898a1ade5328ab481864419f6dd1d4bba9",
+          "upstream_blob_sha": "b91594be86394ff2c94b09335603e44f2f9b0166",
+          "bytes": 3771
+        },
+        {
+          "path": "skills/prospecting/references/b2b-prospecting.md",
+          "sha256": "b7a05da9d1584cc8d21432a43fe1ba802c4f9a6c601e3885d4117cc9d4d52f37",
+          "upstream_blob_sha": "2875625fc235de94a1b8569362722d6a768b4673",
+          "bytes": 4978
+        },
+        {
+          "path": "skills/prospecting/references/compliance.md",
+          "sha256": "ef2f869b4f1d43c0f1eb6cd63b069f7a975b732cfe607ad68378fb5353239556",
+          "upstream_blob_sha": "78d76086b5caf46b9e808b526a6bbeb8e379784c",
+          "bytes": 11906
+        },
+        {
+          "path": "skills/prospecting/references/data-sources.md",
+          "sha256": "2262f2172c285b98b1df73974d4cb441c8f835645b4d7ee21a340ff5df2a1182",
+          "upstream_blob_sha": "e5bdb581135c6f7f15fdc74f653cb8307dc0e52e",
+          "bytes": 13456
+        },
+        {
+          "path": "skills/prospecting/references/demand-signals.md",
+          "sha256": "489b8fb96a828578b6812bfabfbba8ce86d07545b21716a873501ba4d464f4ee",
+          "upstream_blob_sha": "7f2f668a880b00e21a2c949ea4e041408150d0a2",
+          "bytes": 10185
+        },
+        {
+          "path": "skills/prospecting/references/enrichment-playbook.md",
+          "sha256": "dcdb131d83e0a010fdbb572c828b621e9db10f96b6fafd891499683ed9a4a63c",
+          "upstream_blob_sha": "f1a52e35b8d7149c92f622baac6ad557da02e8af",
+          "bytes": 5290
+        },
+        {
+          "path": "skills/prospecting/references/local-prospecting.md",
+          "sha256": "1dd71471a3413d5b0a9d230b1e42ca95469c617285bf7e2abdfa463428367fc3",
+          "upstream_blob_sha": "a1bae4174d3f05bc7d1a0d80bcc08bd847647dbb",
+          "bytes": 8150
+        },
+        {
+          "path": "skills/prospecting/references/saas-prospecting.md",
+          "sha256": "18be53f055f3f8a2ca647dccc8d8d8d177a0df5820193463542f87fa4eeafcf8",
+          "upstream_blob_sha": "0a545f17f261a9a5da58b42046b5ccaddf5ee1f8",
+          "bytes": 6045
+        },
+        {
+          "path": "skills/prospecting/references/signal-plays.md",
+          "sha256": "e5a3a32ab129bb6330eb8fb22a685b4e5d607f1d3c89a49fb83f4c31914be3d6",
+          "upstream_blob_sha": "c406baee2c434a29b0ec12f58f118ae3e6c60be6",
+          "bytes": 19362
+        },
+        {
+          "path": "skills/prospecting/references/sourcing-and-enrichment.md",
+          "sha256": "d7f47cf69ee1e78bb21c50f2b0050460899f8e9e001c40261e08e38dd6fa9fbc",
+          "upstream_blob_sha": "508145265385b2769bab990dae55458933deabe3",
+          "bytes": 6740
+        }
+      ]
+    },
+    {
+      "row_id": "MK-042",
+      "skill": "public-relations",
+      "frontmatter": {
+        "name": "public-relations",
+        "version": "1.3.1",
+        "description": "When the user wants press and media coverage, or asks what to say to a reporter, whether a story is newsworthy, or how to handle a crisis: pitches, press releases, media lists, HARO, op-eds, podcast guest prep, newsjacking (public relations, not pull requests). For directories, see directory-submissions. For launches, see launch. For cold outreach to prospects, see cold-email."
+      },
+      "file_count": 11,
+      "files": [
+        {
+          "path": "skills/public-relations/SKILL.md",
+          "sha256": "72bfaf639021d84635c60495931b8872fd25925ea407e3b398ff7d00dd5ee3ae",
+          "upstream_blob_sha": "e3d2e5f480f90213916ae74c7d1fddf5d10ec609",
+          "bytes": 9809
+        },
+        {
+          "path": "skills/public-relations/evals/evals.json",
+          "sha256": "b7bcdf7ba878fb088276bd06263dfcf35fdb857d5e2b6bbdff434a709e7dadaa",
+          "upstream_blob_sha": "fd200dfb53b4db60baddd6ad0f2dcd62c72beeae",
+          "bytes": 5322
+        },
+        {
+          "path": "skills/public-relations/references/crisis-communications.md",
+          "sha256": "55a00b7d23af710a4fe23b695707c1cc361ac94673bcd93ca76a2be0c0834aea",
+          "upstream_blob_sha": "f99b4cb87b4ea87bed478b970ba6aadeb20d34fd",
+          "bytes": 8599
+        },
+        {
+          "path": "skills/public-relations/references/journalist-pitching.md",
+          "sha256": "ba0b853771cbf6eb29540694b0dee72a393cd79b46d7fd2d9b70c8bbcf85c663",
+          "upstream_blob_sha": "eb27b02f68f3652e645530347c5dca97af4162f4",
+          "bytes": 11065
+        },
+        {
+          "path": "skills/public-relations/references/media-outlets.md",
+          "sha256": "49c727db10a86d0d227275b970a131d677961ef7cf16e0fc8ced588688133899",
+          "upstream_blob_sha": "6bc8f801b246aaff3461c2f5a014d297cc6c3afb",
+          "bytes": 9307
+        },
+        {
+          "path": "skills/public-relations/references/newsjacking.md",
+          "sha256": "73930fd20a8fcf73f6d47c28d9a1574f241006434267b9043e8ab0461f0f2d42",
+          "upstream_blob_sha": "abd2315996a1b58ffd93a11ae7a9c70829a7e3b4",
+          "bytes": 8650
+        },
+        {
+          "path": "skills/public-relations/references/podcast-guest-prep.md",
+          "sha256": "cd6dba9a9961a74777a0c7e7df1e7132264aa7e04f93375f092fb826ec720b19",
+          "upstream_blob_sha": "33b7d30de6e0d54b9da0092b773e58a8a03ad0c3",
+          "bytes": 5593
+        },
+        {
+          "path": "skills/public-relations/references/press-platforms.md",
+          "sha256": "e999335222a30df0954e324e6d35ea269c5d9228c609c0f33bc1d2bb528fb244",
+          "upstream_blob_sha": "4ef510f8e56135ce295c3cb463137b9b50dff736",
+          "bytes": 6909
+        },
+        {
+          "path": "skills/public-relations/references/press-releases.md",
+          "sha256": "fdca688c73ea346d35773af56c1a569061f97354e1530b401ae0785f1a33a0bb",
+          "upstream_blob_sha": "6061400e282eec682f943dcdd5d0971cfd4d7d28",
+          "bytes": 7669
+        },
+        {
+          "path": "skills/public-relations/references/statement-templates.md",
+          "sha256": "65bfd1995ddcacd9dadaaa9174b586c831e857ac163b0f53ec35ff9e4f81fc52",
+          "upstream_blob_sha": "8d1fe844ae1db1c8dead0a31fdab3ca5d630064b",
+          "bytes": 5637
+        },
+        {
+          "path": "skills/public-relations/references/story-angles.md",
+          "sha256": "2fc3597707d8eab35dc021e2e0e79af82b56283cb8bc024011e78b995e56db07",
+          "upstream_blob_sha": "13f0b3bef1478eb7728c192c0eaeeb566b0686ed",
+          "bytes": 6509
+        }
+      ]
+    },
+    {
+      "row_id": "MK-043",
+      "skill": "referrals",
+      "frontmatter": {
+        "name": "referrals",
+        "version": "2.2.7",
+        "description": "When the user wants referral and affiliate programs or word of mouth, or asks what to reward, how much to pay, or which loop to start with: refer-a-friend incentives, commissions and payouts, partner programs, 'made with' badges, review campaigns. For launch virality, see launch. For creator deals, see influencer-marketing."
+      },
+      "file_count": 9,
+      "files": [
+        {
+          "path": "skills/referrals/SKILL.md",
+          "sha256": "788d7a6f70142e069afe00bfc345cce6965e3e91d7aca0192b080552891aa523",
+          "upstream_blob_sha": "eef4b57f69213999ebe75018efabe8f5e5fb5194",
+          "bytes": 10063
+        },
+        {
+          "path": "skills/referrals/evals/evals.json",
+          "sha256": "5148d0e25787ed7b2305b3f356ebf4c329181933696d1085a3f53f3b32b0e766",
+          "upstream_blob_sha": "bc1166831dda453c3f38b8649dc80966ea5332d1",
+          "bytes": 14925
+        },
+        {
+          "path": "skills/referrals/references/affiliate-operations.md",
+          "sha256": "fc045ff9c7eba29b13219d56d28fb15c8240439acf2df7e7a6205836948513a0",
+          "upstream_blob_sha": "b443fe4a7d01773849adb52f6a6dab6023361006",
+          "bytes": 7098
+        },
+        {
+          "path": "skills/referrals/references/affiliate-programs.md",
+          "sha256": "b6fe63ca69462d28b7be74f4f5f4f237d2c9f72179dc5d3ef80f8fab37fccce7",
+          "upstream_blob_sha": "e7e7b1d84d875146ac3942c6222193f96158ac68",
+          "bytes": 4484
+        },
+        {
+          "path": "skills/referrals/references/program-examples.md",
+          "sha256": "3ba131b1d6f77c115134a6d56bbf10709fe4822f65b6a3446605cadeebc6b107",
+          "upstream_blob_sha": "2edfcd3fd9910c98b35529e0751731750391d3af",
+          "bytes": 5935
+        },
+        {
+          "path": "skills/referrals/references/review-platform-rules.md",
+          "sha256": "9c537eaf4be1799d58f1c563fc660f1b4303c89feded6b2eda304c4ff2c0cb01",
+          "upstream_blob_sha": "4fa0266733815e40de15994716a2b7fad1db4114",
+          "bytes": 4533
+        },
+        {
+          "path": "skills/referrals/references/review-program-operations.md",
+          "sha256": "9ca87ad31a59da14f525c273f2c3df90d47fedec7e38d7689529f6ea8e445192",
+          "upstream_blob_sha": "5c9be56021a6c17a9d951d2f07f34b86f9634eaf",
+          "bytes": 4383
+        },
+        {
+          "path": "skills/referrals/references/review-programs.md",
+          "sha256": "b5e3783f12da945bafd88c135e1ccebbf1cfb578715b02c0cf73b50af00aa645",
+          "upstream_blob_sha": "891b52dc2107675b30f971aa1ebfd87b2e750afc",
+          "bytes": 9618
+        },
+        {
+          "path": "skills/referrals/references/viral-mechanisms.md",
+          "sha256": "04224240fae94bcf9bc64c7d8cac507bdd570049144e4df33946ac4ae8a483e4",
+          "upstream_blob_sha": "f8947a70a6fec34b6e4f0c16dce3b40ca9233878",
+          "bytes": 6057
+        }
+      ]
+    },
+    {
+      "row_id": "MK-044",
+      "skill": "reverse-engineer-marketing",
+      "frontmatter": {
+        "name": "reverse-engineer-marketing",
+        "version": "1.2.0",
+        "description": "When the user wants to know how another company grew and what to copy, or asks what a competitor did and when: a dated log of their moves against their traffic from public data, archives, job posts, reviews, and their funnel, compared with the user's data, ending in plays routed to other skills. Also finds where competitors are weak. For a snapshot profile, see competitor-profiling. For comparison pages, see competitors."
+      },
+      "file_count": 45,
+      "files": [
+        {
+          "path": "skills/reverse-engineer-marketing/SKILL.md",
+          "sha256": "ed083ee846eec35c76113fb1de0fc83a868154c9237a72d7038d91b99dc59397",
+          "upstream_blob_sha": "05688a7844ed86c1e3408ed0b94e8501dbeb6251",
+          "bytes": 29102
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/evals/evals.json",
+          "sha256": "09545f788ed41ee810b2b2aa21210c4c52a6952cbd92f147bea1c5f048089cbc",
+          "upstream_blob_sha": "b49d969df9c11ba0351b01340f2fbdd4ed889039",
+          "bytes": 20632
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/content-teardown.md",
+          "sha256": "a705be8ec5f7bc76e5e44bf85e556f8d25f10df7061b56fc5316c4af726892b2",
+          "upstream_blob_sha": "aee8f5cb0a41c2ac34d9602fdddd9740295935a5",
+          "bytes": 4815
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/data-sources.md",
+          "sha256": "597c3e2cc8198a5e197b5e2a37051d4bd32dab917ac2a9c48dc4fff3dbdfb45a",
+          "upstream_blob_sha": "3e4b1e9fcd9d2d17948a3ccf04e980b0093d2de3",
+          "bytes": 11194
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/funnel-hack.md",
+          "sha256": "cbe34ae00c38985e38553744695bd2b6b77a5519c957dabc7189bbacda95ac7d",
+          "upstream_blob_sha": "d71e9a03bad4d05aaac9f08d5ce070ff74126276",
+          "bytes": 6007
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/go-inside.md",
+          "sha256": "39cf68e3347b099ac0fb4881e1000e9f3b9c8dbae61d3fae1e2b92699396489e",
+          "upstream_blob_sha": "54d96035f5b8990c19c504018413fb098b4e5532",
+          "bytes": 6432
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/hidden-signals.md",
+          "sha256": "1b0c355019fcdf4ae319211a983b2c926f1094a47cd286604fc3879539a8ec57",
+          "upstream_blob_sha": "3dfbe75417e484a102fb20c30c2ebdd71da7a168",
+          "bytes": 6288
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/agencies-b2b-services.md",
+          "sha256": "8b5f039cba98feb7fd35e9ea8afcb4c20fbb90f0f9f240e54ff8b483b62bb8b0",
+          "upstream_blob_sha": "be76bd64dfdf7f637fb5f62cf5cb082bea21af78",
+          "bytes": 6111
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/automotive.md",
+          "sha256": "5303a22ffcd9f8852c20a34326076ec4ca96c0bb011a87a4c583dfe3698cb13d",
+          "upstream_blob_sha": "a827b9d40987d1199c9148ec891a01b07951c7c4",
+          "bytes": 6346
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/care-services.md",
+          "sha256": "b6a4fb49bfd24fa97e13e49be4c1e5c2845263e0a5329a13fb2afda472c942be",
+          "upstream_blob_sha": "0112c432bb0721644173bf4c5b8fd4cdecb845b6",
+          "bytes": 7528
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/consumer-hardware.md",
+          "sha256": "ea6fa12cba187ce3992ddbdf38bc0fb477d64d0e94e88091c1da49810e3cb59d",
+          "upstream_blob_sha": "bfa22744d131388fe5dedb437987e01f3d704ba7",
+          "bytes": 7203
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/cpg-food-beverage.md",
+          "sha256": "5ad61847a94da6a4cc5fffca54c4ac5f0c6602af55ac9f6a2936dab1f5fbece9",
+          "upstream_blob_sha": "2b0906c4b1cffd2bc933e27dcb6e4ee94896c3c9",
+          "bytes": 6578
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/crypto-web3.md",
+          "sha256": "906b746d4f6f2db048ebb3113085c1532a1bdeea21d554130e1dd461343cdf71",
+          "upstream_blob_sha": "bd4f6ff40cbc42b8bcd698fbb5a4aa2f26b3f8a3",
+          "bytes": 6975
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/ecommerce-dtc.md",
+          "sha256": "3574daaf5bb0320296a20cd6729d0b30ccbba9c3c611a8e9da3b4da47542aab6",
+          "upstream_blob_sha": "13e434260937f61a15d1cb7430d2350c68dcffb0",
+          "bytes": 8075
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/education.md",
+          "sha256": "b75e3816f2c1d6efb0982f847648d0554e030c78b266a90b3ba6aca81f7b6572",
+          "upstream_blob_sha": "c890dfa657ee3df8cbede459f1b387917f824524",
+          "bytes": 7345
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/events-entertainment.md",
+          "sha256": "9d117dc45252da6f22a114cc3084ecb774ef82821984afa67e436a67bea76831",
+          "upstream_blob_sha": "a6ec752f0baaa4cf4d949ae3de1597f5e4ecb204",
+          "bytes": 7449
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/finance.md",
+          "sha256": "4ec7a16add5c887a7d80817b9f37d0f33de8f1d1858e0a372711d96a2f8f4125",
+          "upstream_blob_sha": "b29f831137ffdbb322cbe68e69b7324ddf521b23",
+          "bytes": 8714
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/fitness-wellness.md",
+          "sha256": "7b132a90f00338ffa11285730d7ad011e2cc040f2342976fe39bf17b1abf9824",
+          "upstream_blob_sha": "708d218fb126f42ff39d39d96011faa8be3536f8",
+          "bytes": 7294
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/franchising.md",
+          "sha256": "f941bcd345d1bf22e5ff2b042f652248904b3855f19866a272d517cc173a19b3",
+          "upstream_blob_sha": "ae3b1a1151018403453e2011d5a738f00e44f285",
+          "bytes": 7481
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/gambling-betting.md",
+          "sha256": "aa3aeb26a0e956ff579de7c1985982b820e73b0362a485ae88b5252cfece1e98",
+          "upstream_blob_sha": "25b999e0ef8ef74b9e4815e4ba43d6494e745f64",
+          "bytes": 7737
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/games-pc-console.md",
+          "sha256": "c6ce6f45073ae82eb60c5c70194f47bd5b240c767473637049827dbb2a30ab05",
+          "upstream_blob_sha": "69254c614b4838351cba0b910897c5835574f278",
+          "bytes": 7445
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/govtech-public-sector.md",
+          "sha256": "d2875eb29684f8bf903c3d641caa533cdb5ec429391fae7ce51cf0793148935a",
+          "upstream_blob_sha": "ae6a7a4e4dc2a2839e63ec773eb083ccba40c77e",
+          "bytes": 6672
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/healthcare.md",
+          "sha256": "374398807716417f6d401796e44c0c678fbb6117b5db38c4b40a9ad1c7891801",
+          "upstream_blob_sha": "abf9170e3c8ad9510dd551c1b595d78e2df0d0e7",
+          "bytes": 8479
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/hospitality-travel.md",
+          "sha256": "41ea6ee1bcc6931c7aaf1a46f66737e57f8ccac758f0419a1a63341476380151",
+          "upstream_blob_sha": "449567a257a6c1c410bbc7d477c2b2f2c5a88fe7",
+          "bytes": 7690
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/insurance.md",
+          "sha256": "738afc056f5c0596c1fd59ced0bc70666b092d76f0f767d430c1af0ad1fd1329",
+          "upstream_blob_sha": "47bc7bf727b1de8420a3595fbc90c42ec2da37f0",
+          "bytes": 7936
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/legal-professional-services.md",
+          "sha256": "3a9188149daec7560341d45e099d2e904785bdcdd060e6eadfbb313fc5099aa8",
+          "upstream_blob_sha": "ecd6cbe5f0cfc40f86d3999a288ef73873e3706c",
+          "bytes": 7761
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/local-services.md",
+          "sha256": "13c5240e02d092635a83db4bf0622dd6af3404b7613ad9945da6fd0265d10621",
+          "upstream_blob_sha": "d49723c57006f399a56c917eed54e3d43e5dd1ab",
+          "bytes": 8431
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/logistics-transportation.md",
+          "sha256": "47bc9d6c0e6fc54eab22dc79b63d7b6e1517727d4d458e7a773595c2468a2d9f",
+          "upstream_blob_sha": "09d795a5e384cb943745aa48359e7dec62a24d0e",
+          "bytes": 6967
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/manufacturing-industrial.md",
+          "sha256": "c558d8d2990868393310d00ea935df2789d6fc742ee25190b9b42a66913dedc5",
+          "upstream_blob_sha": "2699ab9678fac8719eab568d6cb5cb4be81c4cb7",
+          "bytes": 6460
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/marketplaces.md",
+          "sha256": "17c3d83fbee885e2c8a3a680d0bb26d66cc471ee8b586ec71b153f6eb3ca4331",
+          "upstream_blob_sha": "569367825d5f21a1b59c4223efd31b6951b971a5",
+          "bytes": 7444
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/media-creators.md",
+          "sha256": "e95b550ad8502b33cc13c2e77082395c6d845ef916ea49e29fd6dc9d5fd47668",
+          "upstream_blob_sha": "7c94d0c8e7ef456008cb0af3e56b659193c4faa8",
+          "bytes": 6877
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/mobile-apps-games.md",
+          "sha256": "e77674e56c1b342670c85666558a80c5df4ab19104c593de84e2c63ecf38f548",
+          "upstream_blob_sha": "bfc36b6679713051c3d22e264771f0e2bdf5df56",
+          "bytes": 9356
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/nonprofit.md",
+          "sha256": "b73c2f9ac1c15bd0673b22de134007d5d4bc9de1ccbe61c42d24ca7ce91f5bb9",
+          "upstream_blob_sha": "52841a950304349b74796c2e9b77cd2c6e9f560a",
+          "bytes": 6413
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/real-estate.md",
+          "sha256": "3f761cc0f71614d7653c7777111c511b935179d7b6be24873e039daaa0b6cf6f",
+          "upstream_blob_sha": "596ab05c5315ed5d147b62328b751644a3043666",
+          "bytes": 7777
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/regulated-goods.md",
+          "sha256": "b7edafe8f76abcba9c654d5dbe2afa8420d92da702e3466b8cdbda13a84abe2e",
+          "upstream_blob_sha": "69cc1dfc3ad252e6989344061f0103b2d83794e2",
+          "bytes": 8575
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/retail.md",
+          "sha256": "d67a92630ead8ef74a220f2b85b0f414e8dc9f380a34646b22c19b9e2d3928ec",
+          "upstream_blob_sha": "e5a18156700c1c28d92e9dbf6cd52a3cf61db888",
+          "bytes": 6340
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/saas.md",
+          "sha256": "043318e01e00d38cb50d49b47e7279592fd60e5d9663731d1ed9be639de9a6f7",
+          "upstream_blob_sha": "a3ff7959bdbbcd14a0538964b5fcfa3642c78b15",
+          "bytes": 7855
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/industries/solar-home-energy.md",
+          "sha256": "73fce2199acbb479f1b6b6440de1292a76cf881701268b7ae43d9b697cc7e81c",
+          "upstream_blob_sha": "b4bdb88207d81526e9510a61b3b32019f46bf68c",
+          "bytes": 7768
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/landscape.md",
+          "sha256": "e5c0e781b043874a4362dafe0451047cab14804d4ea86837d8e5bbb323f98afb",
+          "upstream_blob_sha": "d9ed08373dcc4b4a5208e1d59aa86905c15437dc",
+          "bytes": 4961
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/play-routing.md",
+          "sha256": "652253ff738feba6bfdb6b7cb6a61a806e7377329decd0ca2c228410ecb572cd",
+          "upstream_blob_sha": "cdc85d492b182cc5ea2de55dce9882af1f34c93c",
+          "bytes": 6039
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/playbook-template.md",
+          "sha256": "ca7209f49a98f90bbd35d1275414a7b1f57a0c989284ac8e212ba72f230b7627",
+          "upstream_blob_sha": "77029b51cb2885b9f6158084db361d814271ea88",
+          "bytes": 6180
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/team-voices.md",
+          "sha256": "6d189b2938fa06e5d5f71bf58a9186a0df4dbac8dbf92756baf7d211470a9334",
+          "upstream_blob_sha": "f36efb0a6dec8f2c92d037f893c8d060d70e3f8c",
+          "bytes": 4564
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/timeline-analysis.md",
+          "sha256": "dc2202e63d0f5e42de749c013f521f9ad2d84e0a04343bbb22a40951f512f0ba",
+          "upstream_blob_sha": "a0ec3732315ca5f8bdde2cc701032c985d68d061",
+          "bytes": 3818
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/references/weak-spots.md",
+          "sha256": "72435d8ee94fbe4ecd4405acba1f4f0442a0028fdfcf2c93dfaadf3acf1a066f",
+          "upstream_blob_sha": "ca3845f376cd04c3e42029e2bfac30ca5b263a01",
+          "bytes": 6313
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/scripts/teardown.mjs",
+          "sha256": "16b89a7efbafc7f75c3025d43e4c9396bf9e4165ea665f4a6a9755e7dcab382d",
+          "upstream_blob_sha": "7032119358e2ed4e37098430feb238e1a2eaa231",
+          "bytes": 101209
+        }
+      ]
+    },
+    {
+      "row_id": "MK-045",
+      "skill": "revops",
+      "frontmatter": {
+        "name": "revops",
+        "version": "2.2.4",
+        "description": "When the user wants to design revenue operations, or asks when a lead is ready for sales or why sales and marketing disagree on lead quality: lifecycle stages, MQL and SQL, scoring, routing, handoff, pipeline stages, CRM automation. For outbound copy, see cold-email. For email flows, see emails."
+      },
+      "file_count": 7,
+      "files": [
+        {
+          "path": "skills/revops/SKILL.md",
+          "sha256": "443e7028b2cdff93e60d051fe528003e4b3569130a120ac649eaac2fd8013ac6",
+          "upstream_blob_sha": "1db7ae2cf5340d0f09d8ef3dc17b865c31887612",
+          "bytes": 16325
+        },
+        {
+          "path": "skills/revops/evals/evals.json",
+          "sha256": "fa11d55563f5178a42309f9704c38df716ade44918197578d3c4fc06ff62e344",
+          "upstream_blob_sha": "4c5bb40953bbbdbc245255344b3f764ae3d0945a",
+          "bytes": 7169
+        },
+        {
+          "path": "skills/revops/references/automation-playbooks.md",
+          "sha256": "57ab12a9d111cc557fda52fde1f861ccb44667b3449c71cff9059a391a447adf",
+          "upstream_blob_sha": "0cc51ffec58147ab0eb2e80a37ce7892a16ef6cb",
+          "bytes": 11165
+        },
+        {
+          "path": "skills/revops/references/inbound-routing.md",
+          "sha256": "d177d982745142231b9ad1df715817d91cd5198dac52826902843079403105ff",
+          "upstream_blob_sha": "e97d1cb6e3a3fdbdc3f13a49b65de08c38fff8ee",
+          "bytes": 4642
+        },
+        {
+          "path": "skills/revops/references/lifecycle-definitions.md",
+          "sha256": "bf67eff377248f3d2239e25ec357e4f2e0b978fab7e8a85e818032a396fc7e6f",
+          "upstream_blob_sha": "c3071ca589b313ee3b4304c71f1a07587100bf24",
+          "bytes": 9445
+        },
+        {
+          "path": "skills/revops/references/routing-rules.md",
+          "sha256": "9057c207550ff289e84d6b25ca9d38b436c98a517e0aa4f30c2ff8f09f5d8370",
+          "upstream_blob_sha": "75bbf2d2402c4bf7c2e48b202a82a62d78334730",
+          "bytes": 6792
+        },
+        {
+          "path": "skills/revops/references/scoring-models.md",
+          "sha256": "683653208039ffceef2c72b3c070c86744fe1407ac2c27483e8e3ccdbd4262a9",
+          "upstream_blob_sha": "fd4e920562c65b3038a11b677e241a309d12c2f3",
+          "bytes": 10678
+        }
+      ]
+    },
+    {
+      "row_id": "MK-046",
+      "skill": "sales-enablement",
+      "frontmatter": {
+        "name": "sales-enablement",
+        "version": "2.4.4",
+        "description": "When the user wants sales collateral, or asks what to give a champion or rep, or how to answer an objection or make the case: decks, one-pagers, objection handling, demo scripts, talk tracks, battle cards, proposals, win-loss. For public comparison pages, see competitors. For buyer research, see customer-research. For website copy, see copywriting. For cold emails, see cold-email. For the offer, see offers."
+      },
+      "file_count": 8,
+      "files": [
+        {
+          "path": "skills/sales-enablement/SKILL.md",
+          "sha256": "6869bac9c9f5e404bc01de85800f8d90ccfb2c06d25fb2bafe1d3d4f2e61fc36",
+          "upstream_blob_sha": "9bd5c6e78c8656cf900f69d302035cb5f8f0ef97",
+          "bytes": 20947
+        },
+        {
+          "path": "skills/sales-enablement/evals/evals.json",
+          "sha256": "5a051cfa1225515da3176a93ddb907b8efd091f9c4a485ebcdb867eea1cb7bf0",
+          "upstream_blob_sha": "897fbd6d8269e22bed221f28873ceb78a691e428",
+          "bytes": 11688
+        },
+        {
+          "path": "skills/sales-enablement/references/cold-call-scripts.md",
+          "sha256": "cc4e3248070804539f8c1de01fd63918d8e40a6ad858dea2a519d50a060e268f",
+          "upstream_blob_sha": "ada3a76cc31ab0bc48a187e15264ceaf3d8aa83b",
+          "bytes": 4133
+        },
+        {
+          "path": "skills/sales-enablement/references/deck-frameworks.md",
+          "sha256": "265eea6c1b358d10f2dd22fd987789a9d115c14d30bf77a9086734ac60659336",
+          "upstream_blob_sha": "218c0fe188d949c3f3b5cc49ac9112351d4da04e",
+          "bytes": 7730
+        },
+        {
+          "path": "skills/sales-enablement/references/demo-scripts.md",
+          "sha256": "505616ebf73d30fe84a844540727ab8f3aeae29ebcda8c8ace28a18ada003da3",
+          "upstream_blob_sha": "e9dd0691b430bd7dbef30b18f6fb32afe39c1342",
+          "bytes": 11769
+        },
+        {
+          "path": "skills/sales-enablement/references/objection-library.md",
+          "sha256": "e0cdfeffc41afbdbe2c014bcd9b3c024318eac9bd23159e871ec796aba29e0b2",
+          "upstream_blob_sha": "22bcbc6939e5510e4ac76841e30e00f777b10b60",
+          "bytes": 13393
+        },
+        {
+          "path": "skills/sales-enablement/references/one-pager-templates.md",
+          "sha256": "2197326faff4ede03fb40e332e9c80a4e084d8efd48c74df8720d70817ac5ded",
+          "upstream_blob_sha": "4902cdc9f806c5d4d4ebcc85b85fdc990fd5600f",
+          "bytes": 5823
+        },
+        {
+          "path": "skills/sales-enablement/references/win-loss-analysis.md",
+          "sha256": "f6f34c503f4cc506a8f24bfea6e75b260e3eff661da206399e162960141f090a",
+          "upstream_blob_sha": "7c5e92225828e025dcf5cd7518eadcbc64a0fcbf",
+          "bytes": 4299
+        }
+      ]
+    },
+    {
+      "row_id": "MK-047",
+      "skill": "schema",
+      "frontmatter": {
+        "name": "schema",
+        "version": "2.0.5",
+        "description": "When the user wants to add, fix, or validate schema markup (JSON-LD), or asks which type fits a page or whether some markup is allowed: product, review, recipe, FAQ, rich result eligibility (FAQ no longer earns Google rich results), Search Console errors. For broader SEO, see seo-audit. For AI search, see ai-seo."
+      },
+      "file_count": 3,
+      "files": [
+        {
+          "path": "skills/schema/SKILL.md",
+          "sha256": "673fa46bad2f2d4649955c473b11778bd2d258317662df670b31414e28725a84",
+          "upstream_blob_sha": "a152e5e59496740caf18ba0f0c74f4ef0e383c39",
+          "bytes": 6914
+        },
+        {
+          "path": "skills/schema/evals/evals.json",
+          "sha256": "6a194556545e53876ca8c7a53f18bf012f8db9b23e8fd2adb1c3f966c38cfbab",
+          "upstream_blob_sha": "c679cb253c26f81166b068b4e52cf04acd0cb093",
+          "bytes": 9815
+        },
+        {
+          "path": "skills/schema/references/schema-examples.md",
+          "sha256": "9b093bce816fac8494c8ccfd588eeb0c00e1308fe99bb46388ff222664ed94be",
+          "upstream_blob_sha": "014b5292ce46184a5cde223d3a528b3e48397b8f",
+          "bytes": 9298
+        }
+      ]
+    },
+    {
+      "row_id": "MK-048",
+      "skill": "seo-audit",
+      "frontmatter": {
+        "name": "seo-audit",
+        "version": "2.2.9",
+        "description": "When the user wants to audit or diagnose SEO, or asks why traffic dropped, a page won't rank, or whether a setup like canonicals, hreflang, or redirects is right: technical SEO, indexing, Google updates, on-page and titles, Core Web Vitals, local SEO. Start here when someone just says their SEO is bad. For pages at scale, see programmatic-seo. For structured data, see schema. For AI search, see ai-seo."
+      },
+      "file_count": 9,
+      "files": [
+        {
+          "path": "skills/seo-audit/SKILL.md",
+          "sha256": "edad34843d2c97a2380c4ee421efb6ce98414bf52660dbe8cec49b8b73acc393",
+          "upstream_blob_sha": "1a4fd7536e099e24f841444f621497fc8fd1d768",
+          "bytes": 19238
+        },
+        {
+          "path": "skills/seo-audit/evals/evals.json",
+          "sha256": "1524e98916ab53abb894fb80827a8d0e1815041adca2ee2023b89916d68f22b2",
+          "upstream_blob_sha": "d569ae70cf4746f7a27e7808abbaea4878c27fd7",
+          "bytes": 15717
+        },
+        {
+          "path": "skills/seo-audit/references/ai-writing-detection.md",
+          "sha256": "f1e273f56ce7e2215ff218bf903680ddcec0fd026ab90c3ebfb3439ed0edfaa4",
+          "upstream_blob_sha": "cb67ece4135f4153575bbbdfbf722364babff61d",
+          "bytes": 6528
+        },
+        {
+          "path": "skills/seo-audit/references/international-seo.md",
+          "sha256": "0603022cca968acf7889fc224221aa0e70955ba64355bc18b06f7e86b32f45e5",
+          "upstream_blob_sha": "35a7ad2aeadcbef2541563b0077d5f717e4b147d",
+          "bytes": 14898
+        },
+        {
+          "path": "skills/seo-audit/references/local-seo-pages-and-measurement.md",
+          "sha256": "20607ef91c4b8b37346f42130a6f51ed4ce64dc2731b6e1328b5b14f16917fe3",
+          "upstream_blob_sha": "d49f0443e091c70e4778a4e33030a33d18a361a4",
+          "bytes": 4036
+        },
+        {
+          "path": "skills/seo-audit/references/local-seo-profile-and-citations.md",
+          "sha256": "83b1b63eb6083e7aab1f56c4928335ea2a235e837861a9e9e8043b6af162a1f3",
+          "upstream_blob_sha": "d34b7e043cb7c4d2da114f04e986bd476a22d0c6",
+          "bytes": 3971
+        },
+        {
+          "path": "skills/seo-audit/references/local-seo.md",
+          "sha256": "d2666d9c225bc36f9737ce612894abbe7e263b5974e2db7c1efc50f6010bb376",
+          "upstream_blob_sha": "c2636ada98809d6ed8db588040817adc332add5e",
+          "bytes": 7249
+        },
+        {
+          "path": "skills/seo-audit/references/rankings-push.md",
+          "sha256": "1b131c2f93a32d2c990aa7d4e7df8f445d292bfedba3822d6abcfcfdfe203ec8",
+          "upstream_blob_sha": "3d074afe1278ffcb34407b3fa37f8082bad6efab",
+          "bytes": 4888
+        },
+        {
+          "path": "skills/seo-audit/references/title-tags.md",
+          "sha256": "c40b3c6af3600ca15670db8eb81000c7ca6fa25265a6550ccc630f53db3fcf51",
+          "upstream_blob_sha": "5d5eac8002179ac5288f3b4bbd2aa35b3a409a42",
+          "bytes": 5533
+        }
+      ]
+    },
+    {
+      "row_id": "MK-049",
+      "skill": "signup",
+      "frontmatter": {
+        "name": "signup",
+        "version": "2.0.3",
+        "description": "When the user wants better signup, registration, and trial start flows, or asks which fields or steps to cut or whether to require a card: SSO and drop-off before an account exists. For what happens after signup, see onboarding. For lead forms that don't create an account, see cro."
+      },
+      "file_count": 2,
+      "files": [
+        {
+          "path": "skills/signup/SKILL.md",
+          "sha256": "5d54fb404a0eeb04043899230ad15a72b327a1075cc2c220838caf0cdf6ec3b7",
+          "upstream_blob_sha": "1a507f48103480b344b2a31dd70a951b122d0904",
+          "bytes": 10445
+        },
+        {
+          "path": "skills/signup/evals/evals.json",
+          "sha256": "ce012fff8e559b5f622826826e7b137c650c96f8193a7e10add60f75c2417edd",
+          "upstream_blob_sha": "004c0ff0b67b9a3a878a54e81012fb044ffd5829",
+          "bytes": 6243
+        }
+      ]
+    },
+    {
+      "row_id": "MK-050",
+      "skill": "site-architecture",
+      "frontmatter": {
+        "name": "site-architecture",
+        "version": "2.1.3",
+        "description": "When the user wants to plan or restructure a website, or asks which pages they need or where something belongs: hierarchy, navigation, URL structure, internal linking, website builders and migrations. Not XML sitemaps (see seo-audit). For structured data, see schema."
+      },
+      "file_count": 6,
+      "files": [
+        {
+          "path": "skills/site-architecture/SKILL.md",
+          "sha256": "0c71871aea12689012b4d85aaaf24a4752d3f0e985603c4992d5c0bf0fce57ea",
+          "upstream_blob_sha": "870d187c42ab3c5d748fcae46284583e62ad0dfe",
+          "bytes": 13554
+        },
+        {
+          "path": "skills/site-architecture/evals/evals.json",
+          "sha256": "ed6f68ba0f8355efe26d89eae51d64c381d644cc7e942e80539a660cb52c9b02",
+          "upstream_blob_sha": "78d764c21ecfff56bef876f42f4b9ae79eda3823",
+          "bytes": 8386
+        },
+        {
+          "path": "skills/site-architecture/references/mermaid-templates.md",
+          "sha256": "362190c7d3f419d5f445170f1fb17beecc163937d2068922893b7a69eeb25f0f",
+          "upstream_blob_sha": "9f911083427ea01298569b1173ae24474c298015",
+          "bytes": 4922
+        },
+        {
+          "path": "skills/site-architecture/references/navigation-patterns.md",
+          "sha256": "2efa772709b753e33d5018c007147ca30aaa95a04b04dc0df6227ea5a053078b",
+          "upstream_blob_sha": "b8e69acc4a0f73335afc94db11e199e377d006ab",
+          "bytes": 10733
+        },
+        {
+          "path": "skills/site-architecture/references/platforms-and-migration.md",
+          "sha256": "391f12c5994e1e577db75cd6044e038a276f14eda1c2ebc7f6a92293fbc59448",
+          "upstream_blob_sha": "56f582f3142179e92f65d2d35a15dba49d1c3fca",
+          "bytes": 9915
+        },
+        {
+          "path": "skills/site-architecture/references/site-type-templates.md",
+          "sha256": "3c3cd7ce5e31c502dc071baf82bb58cb30f5edf4a2fd8ca052fbc8f3777db140",
+          "upstream_blob_sha": "6abe73efdcbb42e9d000c35d5c7e9987b06bd000",
+          "bytes": 9624
+        }
+      ]
+    },
+    {
+      "row_id": "MK-051",
+      "skill": "sms",
+      "frontmatter": {
+        "name": "sms",
+        "version": "1.1.4",
+        "description": "When the user wants SMS, MMS, or WhatsApp marketing, or asks whether texting is worth it or a message is allowed: abandoned cart, win-back, and promo texts, WhatsApp templates and windows, TCPA and A2P 10DLC compliance, SMS vs email. For email, see emails. For phone capture popups, see popups."
+      },
+      "file_count": 6,
+      "files": [
+        {
+          "path": "skills/sms/SKILL.md",
+          "sha256": "1fd7d9cb070269fee1b8d433adb64189e45267147b864dd021dab9de5fa7db1a",
+          "upstream_blob_sha": "8d934d001cce76e48055cfb398325b89694454f5",
+          "bytes": 17972
+        },
+        {
+          "path": "skills/sms/evals/evals.json",
+          "sha256": "cb0b825cb124b131792e6d7bb5f7bdd1557b39905568f356e1e3a172f197bbd1",
+          "upstream_blob_sha": "daa146918cbea7004ee882f24ff72842d2c04220",
+          "bytes": 11269
+        },
+        {
+          "path": "skills/sms/references/compliance.md",
+          "sha256": "bbfb8f7c359cad650b7b2d27108e2bb12365a6c604e464ba3e94195b3938f149",
+          "upstream_blob_sha": "d80c2251396741f3c9aa8255b10c878138911358",
+          "bytes": 7833
+        },
+        {
+          "path": "skills/sms/references/platforms.md",
+          "sha256": "3f3e54cae72bb722703be6bae76dc1f6fa2312d5541105d425bcc07cd7a3ff12",
+          "upstream_blob_sha": "2bb11357af760f244391fe7215af63dd2fdca093",
+          "bytes": 9865
+        },
+        {
+          "path": "skills/sms/references/sequence-templates.md",
+          "sha256": "c61e72b00bfbe80e87a771840164a2a487585f202bbd3f010d8c60485339b220",
+          "upstream_blob_sha": "37764a25242eae574aca2d46027f8115c39571f5",
+          "bytes": 7070
+        },
+        {
+          "path": "skills/sms/references/whatsapp.md",
+          "sha256": "359f03cd9528a5ddf19344b1ac156daed77ff3396921ffa31ede0fda4799ce63",
+          "upstream_blob_sha": "69bb434a91f9c584bab2a89fab380b8026974668",
+          "bytes": 16194
+        }
+      ]
+    },
+    {
+      "row_id": "MK-052",
+      "skill": "social",
+      "frontmatter": {
+        "name": "social",
+        "version": "2.6.0",
+        "description": "When the user wants organic social content for LinkedIn, X, Instagram, TikTok, or Facebook, or asks what to post, which format to favor, or from which account: posts, threads, carousels, short-form video scripts, calendars, build-in-public posts from commits, listening. No AI tells like 'it's not X, it's Y' or broetry. For content strategy, see content-strategy. For paid ads, see ad-creative. For press, see public-relations."
+      },
+      "file_count": 13,
+      "files": [
+        {
+          "path": "skills/social/SKILL.md",
+          "sha256": "3c367239039ca820a4b5915d6c669a155bb4d52ac303cd34fac5d0795e7517a5",
+          "upstream_blob_sha": "3738a487018cb75cfc2396c8387c25354dda5e52",
+          "bytes": 19326
+        },
+        {
+          "path": "skills/social/evals/evals.json",
+          "sha256": "4d7a21a7675efc30d24ee276a6d38f004d483d4142e2a49c944aa355ed2ba686",
+          "upstream_blob_sha": "e01bedd340988f8e52658714c806869fb7bfab87",
+          "bytes": 17109
+        },
+        {
+          "path": "skills/social/references/carousel-frameworks.md",
+          "sha256": "e703aa530ec9f68cdf5b58e8e0d4d1a5cc3f22b9e2d3e3222f16a9763d423247",
+          "upstream_blob_sha": "76c65c3d34dfb43f9fdd672a9e55e48037a670aa",
+          "bytes": 11124
+        },
+        {
+          "path": "skills/social/references/chinese-platforms.md",
+          "sha256": "71e814cd2af184350f626b547ee852774f74e07e91a68f019ad7b6567770865c",
+          "upstream_blob_sha": "91b9104edfaf11d0d1d3e9715c72a4297f090cd9",
+          "bytes": 14886
+        },
+        {
+          "path": "skills/social/references/listening-sources-template.md",
+          "sha256": "c68bc6f57b0a48c432b1ce72c9324d41a04d0e7784d0bab91afb4a6065a43e38",
+          "upstream_blob_sha": "286ca03a013ddfd23ef807cffd650ae04c6b7e02",
+          "bytes": 3479
+        },
+        {
+          "path": "skills/social/references/listening.md",
+          "sha256": "52cf68aaaa57a69b69b3587ffd9b848a6f1ca7e0d51378f566339ad7f2b730e0",
+          "upstream_blob_sha": "0b3569a5ff4fdc6d2f9ad5d8c0fb626bb6628b9b",
+          "bytes": 13474
+        },
+        {
+          "path": "skills/social/references/platform-limits.md",
+          "sha256": "6ecc6b40ff82b95c48906341f7d3c58337671d4d94f624c858764f1ed5a77c3c",
+          "upstream_blob_sha": "94e1df9f22128ffc59e826c702c8a492b0e1bb03",
+          "bytes": 2830
+        },
+        {
+          "path": "skills/social/references/platforms.md",
+          "sha256": "bb8c2f466184518a1290edbea99eef6b7dcad8e1f8091453d4dc5a21831b66b9",
+          "upstream_blob_sha": "ed4408a0e601a234bf51632b631a07f1ac83c715",
+          "bytes": 8434
+        },
+        {
+          "path": "skills/social/references/post-templates.md",
+          "sha256": "9cca4680c95801daedfd8acadf9089d0083784c2567784888807569896f71d9b",
+          "upstream_blob_sha": "10be33fe2104b3b984902deaa285d89963e18702",
+          "bytes": 4016
+        },
+        {
+          "path": "skills/social/references/reverse-engineering.md",
+          "sha256": "c27bef59d463b3b11331c1770f4a23e9e6bbce7d7c8db1e7f7f4f14ba206243f",
+          "upstream_blob_sha": "6d6b8f9d8a497fbefd9ab17f5a4d281c7035edf9",
+          "bytes": 5551
+        },
+        {
+          "path": "skills/social/references/ship-post.md",
+          "sha256": "b9c60b300bc72d2540aef367bb1588b0e955dc1423303c5265b27a3dfb75f9b6",
+          "upstream_blob_sha": "6e9818ebe4ed2d6ea4b4f1c75e5ccd51f21e4fb2",
+          "bytes": 6355
+        },
+        {
+          "path": "skills/social/references/short-form-video.md",
+          "sha256": "04b567900eaac90833f3abf370a3e1c4d650f83a0672108e07a7f01bde3a64ad",
+          "upstream_blob_sha": "5cbe710a66e18ef2a0740fbdc9366bae9016ea03",
+          "bytes": 10546
+        },
+        {
+          "path": "skills/social/references/x-algorithm.md",
+          "sha256": "943b2c5a819aad53ebf62a1652adc47956d6fdf738e18cd98eeb609819a66180",
+          "upstream_blob_sha": "af6aef741f893d644ec4d56617c1f8ace3ee82c1",
+          "bytes": 7113
+        }
+      ]
+    },
+    {
+      "row_id": "MK-053",
+      "skill": "video",
+      "frontmatter": {
+        "name": "video",
+        "version": "2.4.7",
+        "description": "When the user wants to create video with AI tools or code, or asks which approach to use (screen recording, AI avatar, generated, or templated) or how to make videos repeatably: product demos, AI generation (Veo, Sora, HeyGen), programmatic video with Remotion. For what to post, see social. For video ads, see ad-creative."
+      },
+      "file_count": 6,
+      "files": [
+        {
+          "path": "skills/video/SKILL.md",
+          "sha256": "cbc6483db9cd316dc49166c8ab03340c1a1fbac5ff0101b61bd2131f91aaebdd",
+          "upstream_blob_sha": "72c85ba93dc63082c56a846f2975012bbb50421f",
+          "bytes": 18638
+        },
+        {
+          "path": "skills/video/evals/evals.json",
+          "sha256": "9af22d18b221899d0f803dbaa87552c5bb1cf0d68385608a8ff3be0a30f9624c",
+          "upstream_blob_sha": "33100dd8d5504e5dcb222daf389596f5fc57e83d",
+          "bytes": 14569
+        },
+        {
+          "path": "skills/video/references/ai-video-prompting.md",
+          "sha256": "46b14c35b6d3950ee6f9f6ca4e71860873559663fa08008ec0e13604ccaff2bd",
+          "upstream_blob_sha": "49304d8e5e4b2a6fbcc6e9a3ebc0e2824dff189d",
+          "bytes": 5248
+        },
+        {
+          "path": "skills/video/references/code-rendered-product-films.md",
+          "sha256": "d16af2f7b651c38383cc6c4f869cb19dac3dcce91cddae295f72edac44d80e05",
+          "upstream_blob_sha": "0d4c6fc15e28f1ff1a4840efc4c2eda3c64291c9",
+          "bytes": 8825
+        },
+        {
+          "path": "skills/video/references/edit-anatomy.md",
+          "sha256": "3d59e1f01d46eb04bcdbf88e2165bbf5aa80f626beb955522432ec4aede3c9fb",
+          "upstream_blob_sha": "301212d82fd2c8d82ec00e987803cab4973e3892",
+          "bytes": 7593
+        },
+        {
+          "path": "skills/video/references/product-demo-recording.md",
+          "sha256": "4bbc44e02f963df8c36e06d96ae195d3e8af911f604cb08fd7b7ea72c974fba5",
+          "upstream_blob_sha": "ad5fb6da35a7b70f16facb37c21d0409f4a4c966",
+          "bytes": 10635
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Content vendored verbatim at the pinned commit; YAML frontmatter, MIT notice and partner/sponsor disclosure markers are preserved unchanged.",
+    "Upstream evals are bundled as reference content only. NOVARA does not execute them and spends no model requests.",
+    "Conversion-tracking scripts are preserved verbatim for provenance and are never executed by NOVARA."
+  ]
+}

@@ -1,0 +1,233 @@
+# NOVARA desktop artifact CI.
+# Builds real Windows, Linux and macOS installers plus SHA-256 checksums and a
+# build manifest. Artifacts and logs are uploaded to the workflow run only.
+# This workflow never creates a Git tag, GitHub Release, publish job or download
+# link, and it never uploads binaries anywhere external to the run.
+
+name: Build NOVARA desktop artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/api/**'
+      - 'apps/web/**'
+      - 'desktop/**'
+      - 'scripts/prepare_desktop_backend.py'
+      - 'scripts/smoke_desktop_payload.py'
+      - 'scripts/verify_desktop_artifact.py'
+      - 'scripts/write_desktop_build_manifest.py'
+      - '.github/workflows/desktop-build.yml'
+  pull_request:
+    paths:
+      - 'apps/api/**'
+      - 'apps/web/**'
+      - 'desktop/**'
+      - 'scripts/prepare_desktop_backend.py'
+      - 'scripts/smoke_desktop_payload.py'
+      - 'scripts/verify_desktop_artifact.py'
+      - 'scripts/write_desktop_build_manifest.py'
+      - '.github/workflows/desktop-build.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: desktop-build-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  backend-tests:
+    name: Backend and client checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Create log directory
+        run: mkdir -p build-logs
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install backend
+        run: |
+          set -o pipefail
+          python -m pip install --upgrade pip 2>&1 | tee build-logs/pip-upgrade.log
+          python -m pip install -e "./apps/api[dev,migrate]" 2>&1 | tee build-logs/pip-install.log
+
+      - name: Run full backend suite
+        env:
+          PYTHONPATH: ${{ github.workspace }}/apps/api
+        run: |
+          set -o pipefail
+          python -m pytest apps/api/tests -q 2>&1 | tee build-logs/backend-tests.log
+
+      - name: Check web client syntax
+        run: |
+          set -o pipefail
+          node --check apps/web/app.js 2>&1 | tee build-logs/web-syntax.log
+
+      - name: Check Alembic heads
+        working-directory: apps/api
+        run: |
+          heads="$(python -m alembic -c alembic.ini heads 2>&1)"
+          printf '%s\n' "$heads" | tee ../build-logs/alembic-heads.log
+          test "$(printf '%s\n' "$heads" | grep -c '(head)')" -eq 1
+
+      - name: Upload backend check logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: novara-backend-check-logs
+          path: build-logs/**
+          if-no-files-found: warn
+          retention-days: 30
+
+  desktop-build:
+    name: Build ${{ matrix.platform }} ${{ matrix.arch }}
+    needs: backend-tests
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            platform: windows
+            arch: x64
+            build_script: build:win
+            build_args: ''
+          - os: ubuntu-latest
+            platform: linux
+            arch: x64
+            build_script: build:linux
+            build_args: ''
+          - os: macos-15-intel
+            platform: macos
+            arch: x64
+            build_script: build:mac
+            build_args: --x64
+          - os: macos-latest
+            platform: macos
+            arch: arm64
+            build_script: build:mac
+            build_args: --arm64
+    env:
+      NOVARA_BUILD_PLATFORM: ${{ matrix.platform }}
+      NOVARA_BUILD_ARCH: ${{ matrix.arch }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Create log directory
+        run: mkdir -p desktop/build-logs
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+
+      - name: Install Linux packaging dependencies
+        if: runner.os == 'Linux'
+        run: |
+          set -o pipefail
+          sudo apt-get update 2>&1 | tee desktop/build-logs/apt-update.log
+          sudo apt-get install -y libfuse2 ruby ruby-dev build-essential 2>&1 | tee desktop/build-logs/apt-install.log
+          sudo gem install fpm --no-document 2>&1 | tee desktop/build-logs/gem-fpm.log
+
+      - name: Install Electron toolchain
+        run: |
+          set -o pipefail
+          npm --prefix desktop ci --no-audit --no-fund 2>&1 | tee desktop/build-logs/npm-ci.log
+
+      - name: Prepare bundled backend payload
+        run: |
+          set -o pipefail
+          python scripts/prepare_desktop_backend.py 2>&1 | tee desktop/build-logs/prepare-backend.log
+
+      - name: Smoke-test bundled backend payload
+        run: |
+          set -o pipefail
+          python scripts/smoke_desktop_payload.py 2>&1 | tee desktop/build-logs/payload-smoke.log
+
+      - name: Run desktop shell tests
+        run: |
+          set -o pipefail
+          (cd desktop && node --test tests/*.test.js) 2>&1 | tee desktop/build-logs/shell-tests.log
+
+      - name: Build installer
+        run: |
+          set -o pipefail
+          npm --prefix desktop run ${{ matrix.build_script }} -- ${{ matrix.build_args }} 2>&1 | tee desktop/build-logs/build.log
+
+      - name: Verify expected artifact types
+        run: |
+          set -o pipefail
+          python scripts/verify_desktop_artifact.py --platform ${{ matrix.platform }} --arch ${{ matrix.arch }} 2>&1 | tee desktop/build-logs/artifact-verify.log
+
+      - name: Write checksums and build manifest
+        run: |
+          set -o pipefail
+          python scripts/write_desktop_build_manifest.py --platform ${{ matrix.platform }} --arch ${{ matrix.arch }} 2>&1 | tee desktop/build-logs/manifest.log
+
+      - name: Checksum build logs
+        if: always()
+        run: |
+          python - <<'PY'
+          import hashlib
+          import pathlib
+
+          root = pathlib.Path("desktop/build-logs")
+          root.mkdir(parents=True, exist_ok=True)
+          lines = []
+          for path in sorted(root.glob("*.log")):
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              lines.append(f"{digest}  {path.as_posix()}")
+          (root / "SHA256SUMS.txt").write_text("\n".join(lines) + "\n", encoding="ascii")
+          print(f"wrote {root / 'SHA256SUMS.txt'} with {len(lines)} log checksums")
+          PY
+
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: novara-desktop-${{ matrix.platform }}-${{ matrix.arch }}-logs
+          path: desktop/build-logs/**
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Upload workflow artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: novara-desktop-${{ matrix.platform }}-${{ matrix.arch }}
+          path: |
+            desktop/dist/*.exe
+            desktop/dist/*.msi
+            desktop/dist/*.AppImage
+            desktop/dist/*.appimage
+            desktop/dist/*.deb
+            desktop/dist/*.rpm
+            desktop/dist/*.dmg
+            desktop/dist/*.sha256
+            desktop/dist/build-manifest.json
+            desktop/dist/build-manifest.csv
+          if-no-files-found: error
+          retention-days: 30

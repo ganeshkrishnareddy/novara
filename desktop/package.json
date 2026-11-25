@@ -1,0 +1,104 @@
+{
+  "name": "novara-desktop",
+  "productName": "NOVARA",
+  "version": "0.1.0-desktop",
+  "description": "NOVARA Desktop Client Edition — the existing NOVARA web client in a native shell",
+  "homepage": "https://ganeshkrishnareddy.github.io/novara/",
+  "author": "P. Ganesh Krishna Reddy <pganeshkrishnareddy@gmail.com>",
+  "desktopName": "NOVARA",
+  "main": "src/main.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build:win": "electron-builder --win --x64",
+    "build:linux": "electron-builder --linux --x64",
+    "build:mac": "electron-builder --mac",
+    "icon": "python build/generate_icon.py"
+  },
+  "devDependencies": {
+    "electron": "45.5.0",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "online.progvision.novara.desktop",
+    "productName": "NOVARA",
+    "copyright": "Copyright © 2026 ProgVision",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "backend-payload",
+        "to": "backend",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "NOVARA-Setup-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "NOVARA",
+      "uninstallDisplayName": "NOVARA Desktop",
+      "deleteAppDataOnUninstall": false
+    },
+    "linux": {
+      "icon": "build/icon.png",
+      "category": "Office",
+      "maintainer": "P. Ganesh Krishna Reddy <pganeshkrishnareddy@gmail.com>",
+      "syncDesktopName": true,
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "artifactName": "NOVARA-${version}-${arch}.${ext}"
+    },
+    "mac": {
+      "icon": "build/icon.png",
+      "category": "public.app-category.business",
+      "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "target": [
+        "dmg"
+      ],
+      "artifactName": "NOVARA-${version}-${arch}.${ext}"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}
