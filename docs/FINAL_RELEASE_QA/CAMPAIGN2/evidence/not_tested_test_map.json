@@ -1,0 +1,3123 @@
+{
+  "generated": "2026-11-25 IST",
+  "source": "AST scan of apps/api/tests/test_*.py",
+  "not_tested_total": 737,
+  "directly_named": {
+    "FB-002": [
+      "test_survey_delivery_p2.py::test_fb002_in_app_survey_delivery_is_a_persisted_channel",
+      "test_ui_wiring.py::test_survey_delivery_route_controls_are_rendered_and_dispatched"
+    ],
+    "FB-003": [
+      "test_survey_delivery_p2.py::test_fb003_website_survey_targets_are_recorded"
+    ],
+    "FB-004": [
+      "test_survey_delivery_p2.py::test_fb004_link_survey_is_shareable_by_survey_identifier"
+    ],
+    "FB-005": [
+      "test_survey_delivery_p2.py::test_fb005_email_survey_channel_is_recorded"
+    ],
+    "FB-006": [
+      "test_survey_delivery_p2.py::test_fb006_embedded_surveys_generate_local_iframe_and_email_snippets"
+    ],
+    "FB-007": [
+      "test_parity_capabilities_p2.py::test_fb_007_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_007_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_007_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_007_local_capability_works"
+    ],
+    "FB-008": [
+      "test_feedback_extensions_p2.py::test_fb008_display_options_validated",
+      "test_ui_wiring.py::test_survey_extension_controls_are_rendered_and_dispatched"
+    ],
+    "FB-009": [
+      "test_feedback_extensions_p2.py::test_fb009_visibility_modes"
+    ],
+    "FB-010": [
+      "test_survey_delivery_p2.py::test_fb010_no_code_survey_editor_creates_question_pages"
+    ],
+    "FB-011": [
+      "test_feedback_extensions_p2.py::test_fb011_012_013_templates_and_presets"
+    ],
+    "FB-014": [
+      "test_feedback_extensions_p2.py::test_fb014_ces_and_question_types"
+    ],
+    "FB-015": [
+      "test_survey_delivery_p2.py::test_fb015_multi_page_flow_has_rules_fallbacks_and_endings"
+    ],
+    "FB-016": [
+      "test_feedback_extensions_p2.py::test_fb016_017_018_logic_and_branching"
+    ],
+    "FB-019": [
+      "test_feedback_extensions_p2.py::test_fb019_set_value_and_fb028_variables"
+    ],
+    "FB-020": [
+      "test_parity_capabilities_p2.py::test_fb_020_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_020_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_020_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_020_local_capability_works"
+    ],
+    "FB-021": [
+      "test_feedback_extensions_p2.py::test_fb021_question_codes_unique"
+    ],
+    "FB-022": [
+      "test_feedback_extensions_p2.py::test_fb022_023_hidden_fields_and_embedded_data"
+    ],
+    "FB-024": [
+      "test_feedback_intelligence_p2.py::test_fb024_field_library_reused_across_surveys_changes_in_one_place",
+      "test_ui_wiring.py::test_feedback_intelligence_route_controls_are_rendered_and_dispatched"
+    ],
+    "FB-025": [
+      "test_feedback_intelligence_p2.py::test_fb025_reserved_fields_captured_on_every_record_and_not_spoofable"
+    ],
+    "FB-026": [
+      "test_feedback_extensions_p2.py::test_fb026_027_028_recall_and_variables",
+      "test_feedback_extensions_p2.py::test_fb026_027_028_recall_and_variables",
+      "test_feedback_extensions_p2.py::test_fb026_027_028_recall_and_variables"
+    ],
+    "FB-028": [
+      "test_feedback_extensions_p2.py::test_fb019_set_value_and_fb028_variables"
+    ],
+    "FB-029": [
+      "test_feedback_intelligence_p2.py::test_fb029_respondent_metadata_captured_and_grouped_per_dataset"
+    ],
+    "FB-030": [
+      "test_feedback_extensions_p2.py::test_fb030_partial_submissions"
+    ],
+    "FB-032": [
+      "test_feedback_extensions_p2.py::test_fb032_033_034_035_language_and_styling"
+    ],
+    "FB-036": [
+      "test_survey_delivery_p2.py::test_fb036_email_branding_is_workspace_scoped"
+    ],
+    "FB-038": [
+      "test_survey_delivery_p2.py::test_fb038_hide_back_button_is_a_configurable_flag"
+    ],
+    "FB-039": [
+      "test_feedback_extensions_p2b.py::test_extended_question_types"
+    ],
+    "FB-040": [
+      "test_feedback_extensions_p2.py::test_fb040_041_042_044_contact_and_closure"
+    ],
+    "FB-043": [
+      "test_feedback_extensions_p2b.py::test_extended_question_types"
+    ],
+    "FB-044": [
+      "test_ui_wiring.py::test_survey_extension_controls_are_rendered_and_dispatched"
+    ],
+    "FB-045": [
+      "test_feedback_extensions_p2b.py::test_extended_question_types"
+    ],
+    "FB-054": [
+      "test_feedback_extensions_p2b.py::test_extended_question_types"
+    ],
+    "FB-055": [
+      "test_feedback_targeting_p2c.py::test_fb055_inapp_targeting_without_code_changes",
+      "test_ui_wiring.py::test_feedback_targeting_controls_are_rendered_and_dispatched"
+    ],
+    "FB-056": [
+      "test_feedback_targeting_p2c.py::test_fb056_user_identification_and_attribute_merge"
+    ],
+    "FB-057": [
+      "test_feedback_targeting_p2c.py::test_fb057_fb060_attribute_based_show_conditions"
+    ],
+    "FB-058": [
+      "test_feedback_targeting_p2c.py::test_fb058_action_class_creation_and_dedup"
+    ],
+    "FB-059": [
+      "test_feedback_targeting_p2c.py::test_fb059_trigger_creation_and_lifecycle"
+    ],
+    "FB-060": [
+      "test_feedback_targeting_p2c.py::test_fb057_fb060_attribute_based_show_conditions"
+    ],
+    "FB-061": [
+      "test_feedback_targeting_p2c.py::test_fb061_display_logic_requires_attributes"
+    ],
+    "FB-062": [
+      "test_feedback_targeting_p2c.py::test_fb062_recontact_options"
+    ],
+    "FB-063": [
+      "test_feedback_targeting_p2c.py::test_fb063_cooldown_period"
+    ],
+    "FB-064": [
+      "test_feedback_targeting_p2c.py::test_fb064_percentage_rollout_is_stable"
+    ],
+    "FB-065": [
+      "test_parity_capabilities_p2.py::test_fb_065_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_065_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_065_local_capability_works"
+    ],
+    "FB-066": [
+      "test_feedback_extensions_p2b.py::test_fb066_personal_link_bound_to_contact",
+      "test_ui_wiring.py::test_feedback_extension_p2b_controls_are_rendered_and_dispatched"
+    ],
+    "FB-067": [
+      "test_feedback_extensions_p2b.py::test_fb067_single_use_link_consumed_once"
+    ],
+    "FB-068": [
+      "test_feedback_extensions_p2b.py::test_fb068_068b_069_pretty_url_and_link_settings"
+    ],
+    "FB-070": [
+      "test_feedback_extensions_p2b.py::test_fb070_071_prefill_and_source_tracking"
+    ],
+    "FB-072": [
+      "test_feedback_extensions_p2b.py::test_fb072_start_at_specific_block"
+    ],
+    "FB-073": [
+      "test_feedback_extensions_p2b.py::test_fb073_require_identified_respondent"
+    ],
+    "FB-074": [
+      "test_survey_delivery_p2.py::test_fb074_pin_protected_surveys_verify_without_exposing_the_pin"
+    ],
+    "FB-075": [
+      "test_survey_delivery_p2.py::test_fb075_custom_head_scripts_are_scoped_to_one_config"
+    ],
+    "FB-076": [
+      "test_final_parity_capabilities_p2.py::test_fb_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_fb_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_fb_076_local_capability_works"
+    ],
+    "FB-078": [
+      "test_final_parity_capabilities_p2.py::test_fb_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_fb_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_fb_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_fb_078_local_capability_works"
+    ],
+    "FB-079": [
+      "test_survey_delivery_p2.py::test_fb079_host_page_css_interaction_is_isolated_by_style_scope"
+    ],
+    "FB-080": [
+      "test_survey_delivery_p2.py::test_fb080_email_followups_are_triggered_by_answers_or_endings"
+    ],
+    "FB-081": [
+      "test_feedback_targeting_p2c.py::test_fb081_limit_submissions"
+    ],
+    "FB-082": [
+      "test_feedback_targeting_p2c.py::test_fb082_schedule_a_survey"
+    ],
+    "FB-083": [
+      "test_feedback_targeting_p2c.py::test_fb083_segment_targeting"
+    ],
+    "FB-084": [
+      "test_feedback_targeting_p2c.py::test_fb084_quota_management",
+      "test_ui_wiring.py::test_feedback_targeting_controls_are_rendered_and_dispatched"
+    ],
+    "FB-085": [
+      "test_feedback_intelligence_p2.py::test_fb085_segments_filter_real_contact_attributes"
+    ],
+    "FB-086": [
+      "test_parity_capabilities_p2.py::test_fb_086_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_086_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_086_local_capability_works"
+    ],
+    "FB-087": [
+      "test_p2_unverified_gaps.py::test_fb087_survey_score_validation_rejects_out_of_range_and_extra_fields"
+    ],
+    "FB-088": [
+      "test_p2_unverified_gaps.py::test_fb088_survey_detail_reports_real_response_count_and_average"
+    ],
+    "FB-089": [
+      "test_p2_unverified_gaps.py::test_fb089_survey_events_form_an_append_only_audit_trail"
+    ],
+    "FB-090": [
+      "test_p2_unverified_gaps.py::test_fb090_survey_routes_are_workspace_isolated"
+    ],
+    "FB-091": [
+      "test_feedback_extensions_p2b.py::test_fb091_display_tracking"
+    ],
+    "FB-092": [
+      "test_feedback_extensions_p2b.py::test_fb092_tags_and_response_tagging"
+    ],
+    "FB-093": [
+      "test_parity_capabilities_p2.py::test_fb_093_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_093_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_093_local_capability_works"
+    ],
+    "FB-094": [
+      "test_feedback_extensions_p2b.py::test_fb094_export_responses_csv"
+    ],
+    "FB-095": [
+      "test_feedback_extensions_p2b.py::test_fb095_response_update_delete_and_mark_finished",
+      "test_ui_wiring.py::test_feedback_extension_p2b_controls_are_rendered_and_dispatched"
+    ],
+    "FB-096": [
+      "test_feedback_intelligence_p2.py::test_fb096_dashboard_widgets_compute_live_from_stored_records"
+    ],
+    "FB-097": [
+      "test_feedback_intelligence_p2.py::test_fb097_unified_insights_aggregate_all_sources"
+    ],
+    "FB-098": [
+      "test_feedback_intelligence_p2.py::test_fb098_datasets_and_fb099_sources_are_workspace_scoped"
+    ],
+    "FB-099": [
+      "test_feedback_intelligence_p2.py::test_fb098_datasets_and_fb099_sources_are_workspace_scoped"
+    ],
+    "FB-100": [
+      "test_feedback_intelligence_p2.py::test_fb100_records_ingest_filter_and_sentiment_override"
+    ],
+    "FB-101": [
+      "test_feedback_intelligence_p2.py::test_fb101_unify_feedback_api_group_is_documented"
+    ],
+    "FB-104": [
+      "test_parity_capabilities_p2.py::test_fb_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_104_local_capability_works"
+    ],
+    "FB-107": [
+      "test_parity_capabilities_p2.py::test_fb_107_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_107_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_107_local_capability_works"
+    ],
+    "FB-108": [
+      "test_parity_capabilities_p2.py::test_fb_108_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_108_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_108_local_capability_works"
+    ],
+    "FB-109": [
+      "test_parity_capabilities_p2.py::test_fb_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_109_local_capability_works"
+    ],
+    "FB-110": [
+      "test_parity_capabilities_p2.py::test_fb_110_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_110_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_110_local_capability_works"
+    ],
+    "FB-124": [
+      "test_parity_capabilities_p2.py::test_fb_124_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_124_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_124_local_capability_works"
+    ],
+    "FB-125": [
+      "test_parity_capabilities_p2.py::test_fb_125_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_125_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_125_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_125_local_capability_works"
+    ],
+    "FB-126": [
+      "test_parity_capabilities_p2.py::test_fb_126_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_126_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_126_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_126_local_capability_works"
+    ],
+    "FB-127": [
+      "test_parity_capabilities_p2.py::test_fb_127_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_127_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_127_local_capability_works"
+    ],
+    "FB-129": [
+      "test_parity_capabilities_p2.py::test_fb_129_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_129_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_129_local_capability_works"
+    ],
+    "FB-130": [
+      "test_parity_capabilities_p2.py::test_fb_130_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_130_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_130_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_130_local_capability_works"
+    ],
+    "FB-131": [
+      "test_parity_capabilities_p2.py::test_fb_131_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_131_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_131_local_capability_works"
+    ],
+    "FB-145": [
+      "test_parity_capabilities_p2.py::test_fb_145_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_145_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_145_local_capability_works"
+    ],
+    "FB-147": [
+      "test_parity_capabilities_p2.py::test_fb_147_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_147_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_147_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_147_local_capability_works"
+    ],
+    "FB-148": [
+      "test_parity_capabilities_p2.py::test_fb_148_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_148_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_148_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_148_local_capability_works"
+    ],
+    "FB-149": [
+      "test_parity_capabilities_p2.py::test_fb_149_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_149_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_149_local_capability_works"
+    ],
+    "FB-152": [
+      "test_parity_capabilities_p2.py::test_fb_152_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_152_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_152_local_capability_works"
+    ],
+    "FB-153": [
+      "test_parity_capabilities_p2.py::test_fb_153_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_153_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_153_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_153_local_capability_works"
+    ],
+    "FB-157": [
+      "test_parity_capabilities_p2.py::test_fb_157_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_157_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_157_local_capability_works"
+    ],
+    "FB-158": [
+      "test_parity_capabilities_p2.py::test_fb_158_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_158_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_158_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_158_local_capability_works"
+    ],
+    "FB-160": [
+      "test_parity_capabilities_p2.py::test_fb_160_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_160_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_160_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_160_local_capability_works"
+    ],
+    "FB-161": [
+      "test_parity_capabilities_p2.py::test_fb_161_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_161_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_161_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_161_local_capability_works"
+    ],
+    "FB-162": [
+      "test_parity_capabilities_p2.py::test_fb_162_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_162_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_162_local_capability_works"
+    ],
+    "FB-167": [
+      "test_parity_capabilities_p2.py::test_fb_167_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_167_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_167_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_167_local_capability_works"
+    ],
+    "FB-168": [
+      "test_parity_capabilities_p2.py::test_fb_168_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_168_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_168_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_168_local_capability_works"
+    ],
+    "FB-177": [
+      "test_parity_capabilities_p2.py::test_fb_177_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_177_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_177_local_capability_works"
+    ],
+    "FB-179": [
+      "test_p2_unverified_gaps.py::test_fb179_backup_verify_and_restore_round_trip_is_verified"
+    ],
+    "FB-180": [
+      "test_parity_capabilities_p2.py::test_fb_180_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_180_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_180_local_capability_works"
+    ],
+    "FB-181": [
+      "test_parity_capabilities_p2.py::test_fb_181_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_181_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_181_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_181_local_capability_works"
+    ],
+    "FB-182": [
+      "test_parity_capabilities_p2.py::test_fb_182_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_182_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_182_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_182_local_capability_works"
+    ],
+    "FB-183": [
+      "test_survey_delivery_p2.py::test_fb183_accessibility_settings_are_persisted_and_validated"
+    ],
+    "FB-184": [
+      "test_survey_delivery_p2.py::test_fb184_creatives_package_registers_local_creatives"
+    ],
+    "FB-185": [
+      "test_survey_delivery_p2.py::test_fb185_feedback_button_creative_has_label_icon_colour_and_position"
+    ],
+    "FB-186": [
+      "test_survey_delivery_p2.py::test_fb186_banner_creative_stores_message_button_and_schedule"
+    ],
+    "FB-187": [
+      "test_survey_delivery_p2.py::test_fb187_creative_show_conditions_gate_page_device_views_and_share"
+    ],
+    "FB-188": [
+      "test_parity_capabilities_p2.py::test_fb_188_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_188_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_188_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_188_local_capability_works"
+    ],
+    "FB-189": [
+      "test_parity_capabilities_p2.py::test_fb_189_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_189_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_189_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_189_local_capability_works"
+    ],
+    "FB-190": [
+      "test_parity_capabilities_p2.py::test_fb_190_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_190_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_190_local_capability_works"
+    ],
+    "FB-191": [
+      "test_parity_capabilities_p2.py::test_fb_191_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_191_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_191_local_capability_works"
+    ],
+    "FB-229": [
+      "test_parity_capabilities_p2.py::test_fb_229_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_229_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_229_local_capability_works"
+    ],
+    "FB-231": [
+      "test_parity_capabilities_p2.py::test_fb_231_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_231_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_231_local_capability_works"
+    ],
+    "FB-232": [
+      "test_parity_capabilities_p2.py::test_fb_232_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_232_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_232_local_capability_works"
+    ],
+    "FB-233": [
+      "test_parity_capabilities_p2.py::test_fb_233_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_233_local_capability_works",
+      "test_parity_capabilities_p2.py::test_fb_233_local_capability_works"
+    ],
+    "MS-001": [
+      "test_search_advanced_p2.py::test_ms001_hybrid_search_combines_local_semantic_and_lexical_scores",
+      "test_ui_wiring.py::test_search_advanced_route_controls_are_rendered_and_dispatched"
+    ],
+    "MS-003": [
+      "test_parity_capabilities_p2.py::test_export_import_round_trip_is_workspace_scoped",
+      "test_parity_capabilities_p2.py::test_ms_003_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_003_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_003_local_capability_works"
+    ],
+    "MS-004": [
+      "test_search_engine_p2.py::test_ms004_typo_tolerance"
+    ],
+    "MS-006": [
+      "test_search_meilisearch_p1.py::test_ms006_search_filters_narrow_results_and_workspace_isolation_holds"
+    ],
+    "MS-007": [
+      "test_search_engine_p2.py::test_ms007_008_facets_and_facet_search"
+    ],
+    "MS-012": [
+      "test_search_engine_p2.py::test_ms012_013_ranking_rules_and_score_details"
+    ],
+    "MS-016": [
+      "test_search_engine_p2.py::test_ms016_synonyms"
+    ],
+    "MS-017": [
+      "test_search_engine_p2.py::test_ms017_stop_words"
+    ],
+    "MS-018": [
+      "test_search_engine_p2.py::test_ms018_019_separators_and_non_separators"
+    ],
+    "MS-020": [
+      "test_search_engine_p2.py::test_ms020_dictionary"
+    ],
+    "MS-021": [
+      "test_search_engine_p2.py::test_ms021_locale_and_tokenization"
+    ],
+    "MS-022": [
+      "test_search_advanced_p2.py::test_ms022_localized_attributes_and_query_locales_are_recorded"
+    ],
+    "MS-023": [
+      "test_search_engine_p2.py::test_ms023_024_geo_search_and_distance_sort"
+    ],
+    "MS-025": [
+      "test_search_engine_p2.py::test_ms025_026_027_highlight_crop_and_positions"
+    ],
+    "MS-028": [
+      "test_search_meilisearch_p1.py::test_ms028_search_limit_is_validated_and_result_count_is_exact"
+    ],
+    "MS-029": [
+      "test_search_engine_p2.py::test_ms029_phrase_search_and_term_exclusion"
+    ],
+    "MS-030": [
+      "test_search_engine_p2.py::test_ms030_matching_strategy"
+    ],
+    "MS-031": [
+      "test_search_engine_p2.py::test_ms031_placeholder_search"
+    ],
+    "MS-032": [
+      "test_search_engine_p2.py::test_ms032_distinct_attribute"
+    ],
+    "MS-033": [
+      "test_search_engine_p2.py::test_ms033_proximity_precision"
+    ],
+    "MS-034": [
+      "test_search_engine_p2.py::test_ms034_search_cutoff"
+    ],
+    "MS-035": [
+      "test_search_engine_p2.py::test_ms035_per_query_searchable_attributes"
+    ],
+    "MS-036": [
+      "test_search_advanced_p2.py::test_ms036_suggestions_return_prefix_matches_from_indexed_attributes"
+    ],
+    "MS-038": [
+      "test_search_advanced_p2.py::test_ms038_federated_weights_merge_results_from_multiple_indexes"
+    ],
+    "MS-040": [
+      "test_search_engine_p2.py::test_ms040_settings_api"
+    ],
+    "MS-041": [
+      "test_search_engine_p2.py::test_ms041_index_creation_management_and_fields",
+      "test_ui_wiring.py::test_search_engine_route_controls_are_rendered_and_dispatched"
+    ],
+    "MS-042": [
+      "test_search_advanced_p2.py::test_ms042_index_swap_moves_documents_and_settings_atomically"
+    ],
+    "MS-044": [
+      "test_search_engine_p2.py::test_ms044_047_batch_add_and_replace_documents"
+    ],
+    "MS-045": [
+      "test_search_engine_p2.py::test_ms045_046_partial_update_and_delete"
+    ],
+    "MS-048": [
+      "test_search_advanced_p2.py::test_ms048_edit_documents_by_function_transforms_selected_fields"
+    ],
+    "MS-049": [
+      "test_parity_capabilities_p2.py::test_ms_049_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_049_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_049_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_049_local_capability_works"
+    ],
+    "MS-053": [
+      "test_search_advanced_p2.py::test_ms053_index_and_task_queue_compactions_are_recorded"
+    ],
+    "MS-056": [
+      "test_parity_capabilities_p2.py::test_ms_056_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_056_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_056_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_056_local_capability_works"
+    ],
+    "MS-057": [
+      "test_search_engine_p2.py::test_ms057_061_version_and_feature_flags"
+    ],
+    "MS-062": [
+      "test_search_meilisearch_p1.py::test_ms062_no_master_key_is_required_by_novara_search"
+    ],
+    "MS-063": [
+      "test_search_meilisearch_p1.py::test_ms063_secret_like_config_is_rejected_and_no_engine_key_is_stored"
+    ],
+    "MS-065": [
+      "test_search_meilisearch_p1.py::test_ms065_search_result_fields_are_escaped_in_the_renderer"
+    ],
+    "MS-074": [
+      "test_search_advanced_p2.py::test_ms074_similar_documents_are_ranked_by_local_vector_similarity"
+    ],
+    "MS-075": [
+      "test_search_advanced_p2.py::test_ms075_embedders_store_local_vector_settings_without_external_models"
+    ],
+    "MS-076": [
+      "test_search_advanced_p2.py::test_ms076_user_provided_embeddings_accept_custom_vectors_only"
+    ],
+    "MS-077": [
+      "test_search_advanced_p2.py::test_ms077_composite_and_multiple_embedders_coexist_on_one_index"
+    ],
+    "MS-078": [
+      "test_search_advanced_p2.py::test_ms078_binary_quantization_uses_one_bit_per_dimension"
+    ],
+    "MS-080": [
+      "test_parity_capabilities_p2.py::test_ms_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_ms_080_local_capability_works"
+    ],
+    "MS-095": [
+      "test_search_advanced_p2.py::test_ms095_local_search_preview_runs_without_a_hosted_demo"
+    ],
+    "MS-103": [
+      "test_search_advanced_p2.py::test_ms103_render_templates_substitute_document_and_query_values"
+    ],
+    "GB-033": [
+      "test_parity_capabilities_p2.py::test_gb_033_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_033_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_033_local_capability_works"
+    ],
+    "GB-040": [
+      "test_parity_capabilities_p2.py::test_gb_040_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_040_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_040_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_040_local_capability_works"
+    ],
+    "GB-043": [
+      "test_parity_capabilities_p2.py::test_gb_043_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_043_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_043_local_capability_works"
+    ],
+    "GB-044": [
+      "test_parity_capabilities_p2.py::test_gb_044_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_044_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_044_local_capability_works"
+    ],
+    "GB-045": [
+      "test_parity_capabilities_p2.py::test_gb_045_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_045_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_045_local_capability_works"
+    ],
+    "GB-046": [
+      "test_parity_capabilities_p2.py::test_gb_046_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_046_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_046_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_046_local_capability_works"
+    ],
+    "GB-047": [
+      "test_parity_capabilities_p2.py::test_gb_047_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_047_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_047_local_capability_works"
+    ],
+    "GB-050": [
+      "test_parity_capabilities_p2.py::test_gb_050_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_050_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_050_local_capability_works"
+    ],
+    "GB-051": [
+      "test_parity_capabilities_p2.py::test_gb_051_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_051_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_051_local_capability_works"
+    ],
+    "GB-052": [
+      "test_parity_capabilities_p2.py::test_gb_052_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_052_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_052_local_capability_works"
+    ],
+    "GB-053": [
+      "test_parity_capabilities_p2.py::test_gb_053_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_053_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_053_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_053_local_capability_works"
+    ],
+    "GB-054": [
+      "test_parity_capabilities_p2.py::test_gb_054_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_054_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_054_local_capability_works"
+    ],
+    "GB-063": [
+      "test_growthbook_api_p1.py::test_gb063_organisations_are_workspaces_with_members_and_isolation",
+      "test_growthbook_api_p1.py::test_gb063_organisations_are_workspaces_with_members_and_isolation"
+    ],
+    "GB-068": [
+      "test_final_parity_capabilities_p2.py::test_gb_068_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_068_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_068_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_068_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_068_local_capability_works"
+    ],
+    "GB-069": [
+      "test_final_parity_capabilities_p2.py::test_gb_069_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_069_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_069_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_069_local_capability_works"
+    ],
+    "GB-070": [
+      "test_final_parity_capabilities_p2.py::test_provider_shaped_rows_never_claim_delivery",
+      "test_final_parity_capabilities_p2.py::test_gb_070_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_070_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_070_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_070_local_capability_works"
+    ],
+    "GB-077": [
+      "test_parity_capabilities_p2.py::test_gb_077_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_077_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_077_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_077_local_capability_works"
+    ],
+    "GB-078": [
+      "test_parity_capabilities_p2.py::test_gb_078_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_078_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_078_local_capability_works"
+    ],
+    "GB-079": [
+      "test_parity_capabilities_p2.py::test_gb_079_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_079_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_079_local_capability_works"
+    ],
+    "GB-080": [
+      "test_final_parity_capabilities_p2.py::test_gb_080_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_080_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_080_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_080_local_capability_works"
+    ],
+    "GB-084": [
+      "test_parity_capabilities_p2.py::test_gb_084_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_084_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_084_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_084_local_capability_works"
+    ],
+    "GB-085": [
+      "test_parity_capabilities_p2.py::test_gb_085_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_085_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_085_local_capability_works"
+    ],
+    "GB-086": [
+      "test_final_parity_capabilities_p2.py::test_gb_086_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_086_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_086_local_capability_works"
+    ],
+    "GB-088": [
+      "test_parity_capabilities_p2.py::test_gb_088_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_088_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_088_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_088_local_capability_works"
+    ],
+    "GB-089": [
+      "test_parity_capabilities_p2.py::test_gb_089_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_089_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_089_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_089_local_capability_works"
+    ],
+    "GB-090": [
+      "test_final_parity_capabilities_p2.py::test_gb_090_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_090_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_090_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_090_local_capability_works"
+    ],
+    "GB-091": [
+      "test_final_parity_capabilities_p2.py::test_gb_091_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_091_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_091_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_091_local_capability_works"
+    ],
+    "GB-092": [
+      "test_final_parity_capabilities_p2.py::test_gb_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_092_local_capability_works"
+    ],
+    "GB-093": [
+      "test_final_parity_capabilities_p2.py::test_gb_093_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_093_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_093_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_093_local_capability_works"
+    ],
+    "GB-094": [
+      "test_final_parity_capabilities_p2.py::test_gb_094_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_094_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_094_local_capability_works"
+    ],
+    "GB-095": [
+      "test_parity_capabilities_p2.py::test_gb_095_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_095_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_095_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_095_local_capability_works"
+    ],
+    "GB-096": [
+      "test_parity_capabilities_p2.py::test_gb_096_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_096_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_096_local_capability_works"
+    ],
+    "GB-097": [
+      "test_parity_capabilities_p2.py::test_gb_097_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_097_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_097_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_097_local_capability_works"
+    ],
+    "GB-098": [
+      "test_final_parity_capabilities_p2.py::test_gb_098_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_098_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_098_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_098_local_capability_works"
+    ],
+    "GB-099": [
+      "test_final_parity_capabilities_p2.py::test_gb_099_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_099_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_099_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_099_local_capability_works"
+    ],
+    "GB-100": [
+      "test_parity_capabilities_p2.py::test_gb_100_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_100_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_100_local_capability_works"
+    ],
+    "GB-102": [
+      "test_parity_capabilities_p2.py::test_gb_102_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_102_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_102_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_102_local_capability_works"
+    ],
+    "GB-103": [
+      "test_final_parity_capabilities_p2.py::test_gb_103_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_103_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_103_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_103_local_capability_works"
+    ],
+    "GB-104": [
+      "test_final_parity_capabilities_p2.py::test_gb_104_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_104_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_104_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_104_local_capability_works"
+    ],
+    "GB-105": [
+      "test_parity_capabilities_p2.py::test_gb_105_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_105_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_105_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_105_local_capability_works"
+    ],
+    "GB-106": [
+      "test_parity_capabilities_p2.py::test_gb_106_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_106_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_106_local_capability_works"
+    ],
+    "GB-107": [
+      "test_parity_capabilities_p2.py::test_gb_107_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_107_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_107_local_capability_works"
+    ],
+    "GB-110": [
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable",
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable",
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows",
+      "test_ui_wiring.py::test_experiment_management_ui_is_routed_and_wired"
+    ],
+    "GB-111": [
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable",
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable"
+    ],
+    "GB-112": [
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows",
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows"
+    ],
+    "GB-113": [
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows",
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows",
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows"
+    ],
+    "GB-114": [
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows",
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows"
+    ],
+    "GB-115": [
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable",
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable"
+    ],
+    "GB-116": [
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable",
+      "test_analytics_experiments_p1.py::test_experiment_crud_status_and_audit_are_ui_reachable",
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows",
+      "test_analytics_experiments_p1.py::test_experiment_results_and_aggregates_use_real_local_rows",
+      "test_ui_wiring.py::test_experiment_management_ui_is_routed_and_wired"
+    ],
+    "GB-118": [
+      "test_final_parity_capabilities_p2.py::test_gb_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_118_local_capability_works"
+    ],
+    "GB-282": [
+      "test_parity_capabilities_p2.py::test_gb_282_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_282_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_282_local_capability_works"
+    ],
+    "GB-283": [
+      "test_parity_capabilities_p2.py::test_gb_283_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_283_local_capability_works",
+      "test_parity_capabilities_p2.py::test_gb_283_local_capability_works"
+    ],
+    "GB-284": [
+      "test_final_parity_capabilities_p2.py::test_gb_284_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_284_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_284_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_gb_284_local_capability_works"
+    ],
+    "PM-002": [
+      "test_p0_document_gaps.py::test_pm002_presigned_upload_url_is_real_and_tamper_proof"
+    ],
+    "PM-003": [
+      "test_parity_capabilities_p2.py::test_pm_003_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_003_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_003_local_capability_works"
+    ],
+    "PM-007": [
+      "test_document_engagement_p2.py::test_pm007_document_metadata_rename_and_folder_move",
+      "test_ui_wiring.py::test_document_engagement_route_controls_are_rendered_and_dispatched"
+    ],
+    "PM-009": [
+      "test_papermark_documents_p1.py::test_pm009_pm011_pm041_versions_pages_and_link_serves_primary"
+    ],
+    "PM-010": [
+      "test_document_engagement_p2.py::test_pm010_version_promotion_and_link_repoint"
+    ],
+    "PM-011": [
+      "test_papermark_documents_p1.py::test_pm009_pm011_pm041_versions_pages_and_link_serves_primary",
+      "test_papermark_documents_p1.py::test_pm009_pm011_pm041_versions_pages_and_link_serves_primary"
+    ],
+    "PM-012": [
+      "test_p0_document_gaps.py::test_pm012_pdf_preview_returns_real_extracted_pages"
+    ],
+    "PM-013": [
+      "test_final_parity_capabilities_p2.py::test_pm_013_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_013_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_013_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_013_local_capability_works"
+    ],
+    "PM-014": [
+      "test_parity_capabilities_p2.py::test_pm_014_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_014_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_014_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_014_local_capability_works"
+    ],
+    "PM-015": [
+      "test_p0_document_gaps.py::test_pm015_blob_storage_round_trips_bytes_and_isolates_workspaces"
+    ],
+    "PM-018": [
+      "test_document_engagement_p2.py::test_pm018_document_name_search_is_case_insensitive"
+    ],
+    "PM-019": [
+      "test_papermark_documents_p1.py::test_pm019_pm022_folder_paths_and_collection_grouping"
+    ],
+    "PM-020": [
+      "test_parity_capabilities_p2.py::test_pm_020_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_020_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_020_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_020_local_capability_works"
+    ],
+    "PM-021": [
+      "test_parity_capabilities_p2.py::test_pm_021_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_021_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_021_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_021_local_capability_works"
+    ],
+    "PM-022": [
+      "test_papermark_documents_p1.py::test_pm019_pm022_folder_paths_and_collection_grouping"
+    ],
+    "PM-023": [
+      "test_share_link_presentation_p2.py::test_pm023_multi_file_share_respects_per_item_visibility",
+      "test_share_link_presentation_p2.py::test_pm023_multi_file_share_respects_per_item_visibility"
+    ],
+    "PM-024": [
+      "test_document_engagement_p2.py::test_pm024_reactions_are_deduplicated_and_removable"
+    ],
+    "PM-025": [
+      "test_document_engagement_p2.py::test_pm025_feedback_records_rating_and_author"
+    ],
+    "PM-026": [
+      "test_papermark_documents_p1.py::test_pm026_pm047_agreement_immutability_and_nda_content_gate"
+    ],
+    "PM-027": [
+      "test_document_engagement_p2.py::test_pm027_annotations_attach_to_pages_and_versions"
+    ],
+    "PM-028": [
+      "test_p0_document_gaps.py::test_pm028_shareable_link_resolves_to_document_metadata"
+    ],
+    "PM-029": [
+      "test_p0_document_gaps.py::test_pm029_link_management_list_get_patch_and_revoke"
+    ],
+    "PM-030": [
+      "test_p0_document_gaps.py::test_pm030_password_protected_link_unlock_is_enforced"
+    ],
+    "PM-031": [
+      "test_papermark_documents_p1.py::test_pm031_email_verification_gate_blocks_then_admits_verified_viewer"
+    ],
+    "PM-032": [
+      "test_p0_document_gaps.py::test_pm032_link_expiry_is_enforced_at_resolution"
+    ],
+    "PM-033": [
+      "test_p0_document_gaps.py::test_pm033_view_only_and_download_policy_is_enforced"
+    ],
+    "PM-034": [
+      "test_papermark_documents_p1.py::test_pm034_email_allowlist_domain_subdomains_and_block"
+    ],
+    "PM-035": [
+      "test_share_link_presentation_p2.py::test_pm035_verified_domain_slug_and_revocation_frees_it",
+      "test_share_link_presentation_p2.py::test_pm035_verified_domain_slug_and_revocation_frees_it"
+    ],
+    "PM-036": [
+      "test_share_link_presentation_p2.py::test_pm036_domain_verification_accepts_only_matching_token",
+      "test_share_link_presentation_p2.py::test_pm036_domain_verification_accepts_only_matching_token"
+    ],
+    "PM-037": [
+      "test_share_link_presentation_p2.py::test_pm037_og_preview_contains_only_approved_escaped_metadata",
+      "test_share_link_presentation_p2.py::test_pm037_og_preview_contains_only_approved_escaped_metadata"
+    ],
+    "PM-038": [
+      "test_parity_capabilities_p2.py::test_pm_038_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_038_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_038_local_capability_works"
+    ],
+    "PM-039": [
+      "test_p0_document_gaps.py::test_pm039_restricted_session_token_is_scoped_to_its_link"
+    ],
+    "PM-040": [
+      "test_document_security_p1.py::test_pm040_secret_vault_hides_plaintext_and_rotates_named_key",
+      "test_document_security_p1.py::test_pm040_secret_vault_hides_plaintext_and_rotates_named_key",
+      "test_document_security_p1.py::test_document_security_rows_are_workspace_isolated"
+    ],
+    "PM-041": [
+      "test_papermark_documents_p1.py::test_pm009_pm011_pm041_versions_pages_and_link_serves_primary",
+      "test_papermark_documents_p1.py::test_pm009_pm011_pm041_versions_pages_and_link_serves_primary"
+    ],
+    "PM-042": [
+      "test_p0_document_gaps.py::test_pm042_instant_revocation_kills_live_sessions"
+    ],
+    "PM-043": [
+      "test_share_link_presentation_p2.py::test_pm043_custom_password_message_renders_without_html_injection",
+      "test_share_link_presentation_p2.py::test_pm043_custom_password_message_renders_without_html_injection"
+    ],
+    "PM-044": [
+      "test_share_link_presentation_p2.py::test_pm044_screenshot_attempts_logged_with_honest_limitation",
+      "test_share_link_presentation_p2.py::test_pm044_screenshot_attempts_logged_with_honest_limitation"
+    ],
+    "PM-045": [
+      "test_document_security_p1.py::test_pm045_watermark_overlay_is_per_viewer_attributed_and_escaped",
+      "test_document_security_p1.py::test_pm045_watermark_overlay_is_per_viewer_attributed_and_escaped"
+    ],
+    "PM-046": [
+      "test_share_link_presentation_p2.py::test_pm046_watermark_variables_and_style_render_escaped",
+      "test_share_link_presentation_p2.py::test_pm046_watermark_variables_and_style_render_escaped"
+    ],
+    "PM-047": [
+      "test_papermark_documents_p1.py::test_pm026_pm047_agreement_immutability_and_nda_content_gate"
+    ],
+    "PM-048": [
+      "test_parity_capabilities_p2.py::test_pm_048_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_048_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_048_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_048_local_capability_works"
+    ],
+    "PM-049": [
+      "test_parity_capabilities_p2.py::test_pm_049_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_049_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_049_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_049_local_capability_works"
+    ],
+    "PM-050": [
+      "test_dataroom_governance_p2.py::test_pm050_room_has_documents_visitors_links_and_audit"
+    ],
+    "PM-055": [
+      "test_papermark_documents_p1.py::test_pm055_pm063_room_membership_and_permission_groups"
+    ],
+    "PM-056": [
+      "test_parity_capabilities_p2.py::test_pm_056_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_056_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_056_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_056_local_capability_works"
+    ],
+    "PM-057": [
+      "test_dataroom_governance_p2.py::test_pm057_nested_room_folders_can_be_created_listed_and_deleted"
+    ],
+    "PM-058": [
+      "test_dataroom_governance_p2.py::test_pm058_room_item_ordering_persists_across_reads"
+    ],
+    "PM-059": [
+      "test_dataroom_governance_p2.py::test_pm059_viewer_group_is_room_scoped_and_bindable_to_link"
+    ],
+    "PM-060": [
+      "test_dataroom_governance_p2.py::test_pm060_email_and_domain_rules_admit_exactly_intended_viewers"
+    ],
+    "PM-061": [
+      "test_dataroom_governance_p2.py::test_pm061_group_item_permissions_control_view_and_download"
+    ],
+    "PM-062": [
+      "test_dataroom_governance_p2.py::test_pm062_updating_link_permissions_immediately_changes_visibility"
+    ],
+    "PM-063": [
+      "test_papermark_documents_p1.py::test_pm055_pm063_room_membership_and_permission_groups"
+    ],
+    "PM-064": [
+      "test_dataroom_governance_p2.py::test_pm064_room_entitlements_deny_another_rooms_document"
+    ],
+    "PM-065": [
+      "test_dataroom_governance_p2.py::test_pm065_invitation_acceptance_grants_only_the_invited_room"
+    ],
+    "PM-066": [
+      "test_dataroom_governance_p2.py::test_pm066_frozen_room_rejects_attach_detach_and_move"
+    ],
+    "PM-068": [
+      "test_parity_capabilities_p2.py::test_pm_068_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_068_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_068_local_capability_works"
+    ],
+    "PM-069": [
+      "test_parity_capabilities_p2.py::test_pm_069_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_069_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_069_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_069_local_capability_works"
+    ],
+    "PM-070": [
+      "test_final_parity_capabilities_p2.py::test_pm_070_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_070_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_070_local_capability_works"
+    ],
+    "PM-071": [
+      "test_share_link_presentation_p2.py::test_pm071_branding_resolves_custom_then_pinned_then_default",
+      "test_share_link_presentation_p2.py::test_pm071_branding_resolves_custom_then_pinned_then_default"
+    ],
+    "PM-072": [
+      "test_p0_document_gaps.py::test_pm072_viewer_and_visit_capture"
+    ],
+    "PM-074": [
+      "test_p0_document_gaps.py::test_pm074_page_by_page_analytics"
+    ],
+    "PM-075": [
+      "test_papermark_documents_p1.py::test_pm075_pm078_pm079_pm082_pm090_analytics_from_real_views"
+    ],
+    "PM-076": [
+      "test_document_engagement_p2.py::test_pm076_scroll_depth_and_completion_are_aggregated"
+    ],
+    "PM-077": [
+      "test_document_engagement_p2.py::test_pm077_video_view_analytics_are_recorded"
+    ],
+    "PM-078": [
+      "test_papermark_documents_p1.py::test_pm075_pm078_pm079_pm082_pm090_analytics_from_real_views"
+    ],
+    "PM-079": [
+      "test_papermark_documents_p1.py::test_pm075_pm078_pm079_pm082_pm090_analytics_from_real_views"
+    ],
+    "PM-080": [
+      "test_p0_document_gaps.py::test_pm080_verified_visitor_identification_and_consent"
+    ],
+    "PM-081": [
+      "test_papermark_documents_p1.py::test_pm081_view_notifies_assigned_owner"
+    ],
+    "PM-082": [
+      "test_papermark_documents_p1.py::test_pm075_pm078_pm079_pm082_pm090_analytics_from_real_views"
+    ],
+    "PM-083": [
+      "test_document_engagement_p2.py::test_pm083_visitor_location_is_caller_supplied_metadata"
+    ],
+    "PM-084": [
+      "test_document_engagement_p2.py::test_pm084_device_os_and_platform_analytics"
+    ],
+    "PM-085": [
+      "test_document_engagement_p2.py::test_pm085_internal_visits_are_excluded_from_analytics"
+    ],
+    "PM-086": [
+      "test_parity_capabilities_p2.py::test_pm_086_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_086_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_086_local_capability_works"
+    ],
+    "PM-087": [
+      "test_papermark_documents_p1.py::test_pm087_pm089_pm142_history_room_rollup_and_documented_api"
+    ],
+    "PM-089": [
+      "test_papermark_documents_p1.py::test_pm087_pm089_pm142_history_room_rollup_and_documented_api"
+    ],
+    "PM-090": [
+      "test_papermark_documents_p1.py::test_pm075_pm078_pm079_pm082_pm090_analytics_from_real_views"
+    ],
+    "PM-091": [
+      "test_document_engagement_p2.py::test_pm091_click_route_records_target_and_counts"
+    ],
+    "PM-096": [
+      "test_parity_capabilities_p2.py::test_pm_096_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_096_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_096_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_096_local_capability_works"
+    ],
+    "PM-097": [
+      "test_parity_capabilities_p2.py::test_pm_097_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_097_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_097_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_097_local_capability_works"
+    ],
+    "PM-098": [
+      "test_parity_capabilities_p2.py::test_pm_098_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_098_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_098_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_098_local_capability_works"
+    ],
+    "PM-099": [
+      "test_parity_capabilities_p2.py::test_pm_099_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_099_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_099_local_capability_works"
+    ],
+    "PM-100": [
+      "test_parity_capabilities_p2.py::test_pm_100_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_100_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_100_local_capability_works"
+    ],
+    "PM-101": [
+      "test_parity_capabilities_p2.py::test_pm_101_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_101_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_101_local_capability_works"
+    ],
+    "PM-102": [
+      "test_parity_capabilities_p2.py::test_pm_102_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_102_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_102_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_102_local_capability_works"
+    ],
+    "PM-103": [
+      "test_parity_capabilities_p2.py::test_pm_103_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_103_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_103_local_capability_works"
+    ],
+    "PM-104": [
+      "test_parity_capabilities_p2.py::test_pm_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_104_local_capability_works"
+    ],
+    "PM-105": [
+      "test_parity_capabilities_p2.py::test_pm_105_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_105_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_105_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_105_local_capability_works"
+    ],
+    "PM-106": [
+      "test_parity_capabilities_p2.py::test_pm_106_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_106_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_106_local_capability_works"
+    ],
+    "PM-107": [
+      "test_parity_capabilities_p2.py::test_pm_107_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_107_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_107_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_107_local_capability_works"
+    ],
+    "PM-108": [
+      "test_final_parity_capabilities_p2.py::test_pm_108_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_108_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_108_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_108_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_108_local_capability_works"
+    ],
+    "PM-109": [
+      "test_parity_capabilities_p2.py::test_pm_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_109_local_capability_works"
+    ],
+    "PM-110": [
+      "test_parity_capabilities_p2.py::test_pm_110_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_110_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_110_local_capability_works"
+    ],
+    "PM-111": [
+      "test_final_parity_capabilities_p2.py::test_pm_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_111_local_capability_works"
+    ],
+    "PM-112": [
+      "test_final_parity_capabilities_p2.py::test_pm_112_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_112_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_112_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_112_local_capability_works"
+    ],
+    "PM-113": [
+      "test_final_parity_capabilities_p2.py::test_pm_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_113_local_capability_works"
+    ],
+    "PM-114": [
+      "test_final_parity_capabilities_p2.py::test_pm_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_114_local_capability_works"
+    ],
+    "PM-117": [
+      "test_document_security_p1.py::test_pm117_document_shared_webhook_reaches_loopback_subscriber_and_verifies",
+      "test_document_security_p1.py::test_pm117_document_shared_webhook_reaches_loopback_subscriber_and_verifies"
+    ],
+    "PM-118": [
+      "test_final_parity_capabilities_p2.py::test_pm_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_118_local_capability_works"
+    ],
+    "PM-119": [
+      "test_final_parity_capabilities_p2.py::test_pm_119_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_119_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_119_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_119_local_capability_works"
+    ],
+    "PM-120": [
+      "test_parity_capabilities_p2.py::test_pm_120_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_120_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_120_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_120_local_capability_works"
+    ],
+    "PM-121": [
+      "test_papermark_documents_p1.py::test_pm121_document_preferences_and_room_member_settings"
+    ],
+    "PM-122": [
+      "test_parity_capabilities_p2.py::test_pm_122_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_122_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_122_local_capability_works"
+    ],
+    "PM-125": [
+      "test_p0_document_gaps.py::test_pm125_document_conversion_job_produces_a_result_file"
+    ],
+    "PM-126": [
+      "test_parity_capabilities_p2.py::test_pm_126_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_126_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_126_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_126_local_capability_works"
+    ],
+    "PM-127": [
+      "test_parity_capabilities_p2.py::test_pm_127_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_127_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_127_local_capability_works"
+    ],
+    "PM-128": [
+      "test_parity_capabilities_p2.py::test_pm_128_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_128_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_128_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_128_local_capability_works"
+    ],
+    "PM-129": [
+      "test_parity_capabilities_p2.py::test_pm_129_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_129_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_129_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_129_local_capability_works"
+    ],
+    "PM-130": [
+      "test_parity_capabilities_p2.py::test_pm_130_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_130_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_130_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_130_local_capability_works"
+    ],
+    "PM-131": [
+      "test_parity_capabilities_p2.py::test_pm_131_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_131_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_131_local_capability_works"
+    ],
+    "PM-132": [
+      "test_final_parity_capabilities_p2.py::test_pm_132_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_132_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_132_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_132_local_capability_works"
+    ],
+    "PM-133": [
+      "test_parity_capabilities_p2.py::test_pm_133_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_133_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_133_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_133_local_capability_works"
+    ],
+    "PM-134": [
+      "test_parity_capabilities_p2.py::test_pm_134_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_134_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_134_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_134_local_capability_works"
+    ],
+    "PM-139": [
+      "test_parity_capabilities_p2.py::test_pm_139_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_139_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_139_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_139_local_capability_works"
+    ],
+    "PM-141": [
+      "test_document_api_hardening_p1.py::test_pm141_published_openapi_spec_matches_real_document_routes"
+    ],
+    "PM-143": [
+      "test_final_parity_capabilities_p2.py::test_pm_143_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_143_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_143_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_143_local_capability_works"
+    ],
+    "PM-144": [
+      "test_parity_capabilities_p2.py::test_pm_144_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_144_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_144_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_144_local_capability_works"
+    ],
+    "PM-145": [
+      "test_parity_capabilities_p2.py::test_pm_145_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_145_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_145_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_145_local_capability_works"
+    ],
+    "PM-147": [
+      "test_final_parity_capabilities_p2.py::test_pm_147_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_147_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_147_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pm_147_local_capability_works"
+    ],
+    "PM-148": [
+      "test_parity_capabilities_p2.py::test_pm_148_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_148_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pm_148_local_capability_works"
+    ],
+    "PM-150": [
+      "test_papermark_documents_p1.py::test_pm150_local_conversion_output_without_agpl_source"
+    ],
+    "PM-156": [
+      "test_document_security_p1.py::test_pm156_encrypted_file_bytes_at_rest_and_transport_headers",
+      "test_document_security_p1.py::test_pm156_encrypted_file_bytes_at_rest_and_transport_headers"
+    ],
+    "PL-004": [
+      "test_work_items.py::test_work_item_lifecycle_is_user_facing_and_workspace_isolated"
+    ],
+    "PL-005": [
+      "test_plane_projects_p1.py::test_pl005_description_history_backend",
+      "test_plane_projects_p1.py::test_pl005_description_history_backend",
+      "test_ui_wiring.py::test_project_p1_work_management_controls_are_wired"
+    ],
+    "PL-006": [
+      "test_work_items.py::test_assignee_set_changed_and_invalid_values_rejected"
+    ],
+    "PL-007": [
+      "test_plane_projects_p1.py::test_pl007_priority_filter_backend",
+      "test_plane_projects_p1.py::test_pl007_priority_filter_backend"
+    ],
+    "PL-008": [
+      "test_work_items.py::test_configurable_states_are_validated_grouped_and_drive_progress"
+    ],
+    "PL-013": [
+      "test_ui_wiring.py::test_work_item_planning_route_controls_are_rendered_and_dispatched",
+      "test_work_item_planning_p2.py::test_pl013_relations_create_inverse_and_appear_on_both_items",
+      "test_work_item_planning_p2.py::test_pl013_relations_create_inverse_and_appear_on_both_items"
+    ],
+    "PL-014": [
+      "test_work_item_planning_p2.py::test_pl014_typed_dependencies_detect_violations",
+      "test_work_item_planning_p2.py::test_pl014_typed_dependencies_detect_violations"
+    ],
+    "PL-016": [
+      "test_work_item_planning_p2.py::test_pl016_estimates_persist_and_aggregate_by_project_and_cycle",
+      "test_work_item_planning_p2.py::test_pl016_estimates_persist_and_aggregate_by_project_and_cycle"
+    ],
+    "PL-017": [
+      "test_work_items.py::test_due_dates_are_stored_validated_and_visible"
+    ],
+    "PL-018": [
+      "test_plane_projects_p1.py::test_pl018_work_item_start_date_persists_and_is_validated",
+      "test_plane_projects_p1.py::test_pl018_work_item_start_date_persists_and_is_validated"
+    ],
+    "PL-020": [
+      "test_work_item_planning_p2.py::test_pl020_roadmap_groups_future_work_by_month_and_project",
+      "test_work_item_planning_p2.py::test_pl020_roadmap_groups_future_work_by_month_and_project"
+    ],
+    "PL-021": [
+      "test_plane_support_ui_p1.py::test_pl021_grouped_work_item_list_uses_real_item_fields",
+      "test_plane_support_ui_p1.py::test_pl021_grouped_work_item_list_uses_real_item_fields",
+      "test_plane_support_ui_p1.py::test_pl021_grouped_work_item_list_uses_real_item_fields",
+      "test_plane_support_ui_p1.py::test_pl021_grouped_work_item_list_uses_real_item_fields",
+      "test_plane_support_ui_p1.py::test_pl021_grouped_work_item_list_uses_real_item_fields"
+    ],
+    "PL-023": [
+      "test_work_item_planning_p2.py::test_pl023_calendar_places_items_on_due_dates",
+      "test_work_item_planning_p2.py::test_pl023_calendar_places_items_on_due_dates"
+    ],
+    "PL-024": [
+      "test_work_item_planning_p2.py::test_pl024_timeline_persists_schedule_changes_and_marks_conflicts",
+      "test_work_item_planning_p2.py::test_pl024_timeline_persists_schedule_changes_and_marks_conflicts"
+    ],
+    "PL-025": [
+      "test_work_item_planning_p2.py::test_pl025_table_cells_persist_with_validation",
+      "test_work_item_planning_p2.py::test_pl025_table_cells_persist_with_validation"
+    ],
+    "PL-026": [
+      "test_plane_projects_p1.py::test_pl026_multiple_filters_combine_and_return_matching_items",
+      "test_plane_projects_p1.py::test_pl026_multiple_filters_combine_and_return_matching_items"
+    ],
+    "PL-029": [
+      "test_plane_projects_p1.py::test_pl029_item_activity_field_changes_backend",
+      "test_plane_projects_p1.py::test_pl029_item_activity_field_changes_backend"
+    ],
+    "PL-031": [
+      "test_plane_collaboration_api_p2.py::test_pl031_attachments_reference_real_stored_bytes",
+      "test_plane_collaboration_api_p2.py::test_pl031_attachments_reference_real_stored_bytes",
+      "test_ui_wiring.py::test_work_collaboration_route_controls_are_rendered_and_dispatched"
+    ],
+    "PL-032": [
+      "test_plane_collaboration_api_p2.py::test_pl032_mentions_notify_and_subscribe_a_real_member",
+      "test_plane_collaboration_api_p2.py::test_pl032_mentions_notify_and_subscribe_a_real_member"
+    ],
+    "PL-034": [
+      "test_project_governance_p2.py::test_pl034_project_updates_reactions_comments"
+    ],
+    "PL-035": [
+      "test_work_item_planning_p2.py::test_pl035_updates_show_subitem_progress",
+      "test_work_item_planning_p2.py::test_pl035_updates_show_subitem_progress"
+    ],
+    "PL-036": [
+      "test_work_item_planning_p2.py::test_pl036_templates_prefill_items_projects_and_pages",
+      "test_work_item_planning_p2.py::test_pl036_templates_prefill_items_projects_and_pages"
+    ],
+    "PL-037": [
+      "test_work_item_planning_p2.py::test_pl037_recurrence_materializes_on_demand_emits_event",
+      "test_work_item_planning_p2.py::test_pl037_recurrence_materializes_on_demand_emits_event"
+    ],
+    "PL-038": [
+      "test_work_items.py::test_search_returns_typed_project_results_without_cross_workspace_leak"
+    ],
+    "PL-039": [
+      "test_plane_collaboration_api_p2.py::test_pl039_team_collaboration_composes_comments_and_activity",
+      "test_plane_collaboration_api_p2.py::test_pl039_team_collaboration_composes_comments_and_activity"
+    ],
+    "PL-041": [
+      "test_plane_platform_p1.py::test_pl041_admin_can_change_workspace_settings_and_every_change_is_audited"
+    ],
+    "PL-042": [
+      "test_plane_support_ui_p1.py::test_pl042_progress_cards_match_sql_counts",
+      "test_plane_support_ui_p1.py::test_pl042_progress_cards_match_sql_counts",
+      "test_plane_support_ui_p1.py::test_pl042_progress_cards_match_sql_counts",
+      "test_plane_support_ui_p1.py::test_pl042_progress_cards_match_sql_counts",
+      "test_plane_support_ui_p1.py::test_pl042_progress_cards_match_sql_counts"
+    ],
+    "PL-046": [
+      "test_parity_capabilities_p2.py::test_pl_046_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_046_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_046_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_046_local_capability_works"
+    ],
+    "PL-047": [
+      "test_final_parity_capabilities_p2.py::test_pl_047_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_047_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_047_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_047_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_047_local_capability_works"
+    ],
+    "PL-048": [
+      "test_plane_collaboration_api_p2.py::test_pl048_cursor_pagination_has_no_duplicates_or_skips",
+      "test_plane_collaboration_api_p2.py::test_pl048_cursor_pagination_has_no_duplicates_or_skips"
+    ],
+    "PL-049": [
+      "test_plane_platform_p1.py::test_pl049_rate_limit_headers_and_429_through_real_app"
+    ],
+    "PL-050": [
+      "test_plane_collaboration_api_p2.py::test_pl050_field_projection_and_expansion_are_allow_listed",
+      "test_plane_collaboration_api_p2.py::test_pl050_field_projection_and_expansion_are_allow_listed"
+    ],
+    "PL-051": [
+      "test_plane_collaboration_api_p2.py::test_pl051_live_contract_and_documentation_routes",
+      "test_plane_collaboration_api_p2.py::test_pl051_live_contract_and_documentation_routes"
+    ],
+    "PL-052": [
+      "test_final_parity_capabilities_p2.py::test_pl_052_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_052_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_052_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_052_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_052_local_capability_works"
+    ],
+    "PL-054": [
+      "test_parity_capabilities_p2.py::test_pl_054_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_054_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_054_local_capability_works"
+    ],
+    "PL-056": [
+      "test_p2_unverified_gaps.py::test_pl056_email_check_reports_availability_without_enumeration_abuse"
+    ],
+    "PL-058": [
+      "test_final_parity_capabilities_p2.py::test_pl_058_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_058_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_058_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_058_local_capability_works"
+    ],
+    "PL-059": [
+      "test_final_parity_capabilities_p2.py::test_pl_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_059_local_capability_works"
+    ],
+    "PL-060": [
+      "test_final_parity_capabilities_p2.py::test_pl_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_060_local_capability_works"
+    ],
+    "PL-061": [
+      "test_final_parity_capabilities_p2.py::test_pl_061_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_061_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_061_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_061_local_capability_works"
+    ],
+    "PL-062": [
+      "test_parity_capabilities_p2.py::test_pl_062_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_062_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_062_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_062_local_capability_works"
+    ],
+    "PL-063": [
+      "test_parity_capabilities_p2.py::test_pl_063_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_063_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_063_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_063_local_capability_works"
+    ],
+    "PL-064": [
+      "test_parity_capabilities_p2.py::test_pl_064_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_064_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_064_local_capability_works"
+    ],
+    "PL-065": [
+      "test_parity_capabilities_p2.py::test_pl_065_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_065_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_065_local_capability_works"
+    ],
+    "PL-066": [
+      "test_parity_capabilities_p2.py::test_pl_066_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_066_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_066_local_capability_works"
+    ],
+    "PL-069": [
+      "test_final_parity_capabilities_p2.py::test_pl_069_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_069_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_069_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_069_local_capability_works"
+    ],
+    "PL-072": [
+      "test_parity_capabilities_p2.py::test_pl_072_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_072_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_072_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_072_local_capability_works"
+    ],
+    "PL-073": [
+      "test_plane_task_ledger_p2.py::test_pl073_task_result_queryable_after_worker_completion",
+      "test_plane_task_ledger_p2.py::test_pl073_task_result_queryable_after_worker_completion"
+    ],
+    "PL-074": [
+      "test_final_parity_capabilities_p2.py::test_pl_074_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_074_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_074_local_capability_works"
+    ],
+    "PL-076": [
+      "test_plane_task_ledger_p2.py::test_pl076_no_external_email_without_explicit_configuration_and_authorization",
+      "test_plane_task_ledger_p2.py::test_pl076_no_external_email_without_explicit_configuration_and_authorization"
+    ],
+    "PL-078": [
+      "test_plane_task_ledger_p2.py::test_pl078_webhook_delivery_is_signed_retried_and_auditable",
+      "test_plane_task_ledger_p2.py::test_pl078_webhook_delivery_is_signed_retried_and_auditable"
+    ],
+    "PL-079": [
+      "test_plane_projects_p1.py::test_pl079_activity_records_are_queryable_per_item_and_immutable",
+      "test_plane_projects_p1.py::test_pl079_activity_records_are_queryable_per_item_and_immutable"
+    ],
+    "PL-080": [
+      "test_parity_capabilities_p2.py::test_pl_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_080_local_capability_works"
+    ],
+    "PL-081": [
+      "test_plane_task_ledger_p2.py::test_pl081_work_item_export_downloads_workspace_scoped_data",
+      "test_plane_task_ledger_p2.py::test_pl081_work_item_export_downloads_workspace_scoped_data"
+    ],
+    "PL-082": [
+      "test_plane_task_ledger_p2.py::test_pl082_chart_export_matches_displayed_aggregate",
+      "test_plane_task_ledger_p2.py::test_pl082_chart_export_matches_displayed_aggregate"
+    ],
+    "PL-083": [
+      "test_plane_task_ledger_p2.py::test_pl083_each_page_edit_creates_a_retrievable_version",
+      "test_plane_task_ledger_p2.py::test_pl083_each_page_edit_creates_a_retrievable_version"
+    ],
+    "PL-084": [
+      "test_plane_task_ledger_p2.py::test_pl084_file_metadata_only_after_successful_storage_processing",
+      "test_plane_task_ledger_p2.py::test_pl084_file_metadata_only_after_successful_storage_processing"
+    ],
+    "PL-085": [
+      "test_parity_capabilities_p2.py::test_pl_085_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_085_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_085_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_085_local_capability_works"
+    ],
+    "PL-086": [
+      "test_plane_task_ledger_p2.py::test_pl086_workspace_seed_is_repeatable_and_exact",
+      "test_plane_task_ledger_p2.py::test_pl086_workspace_seed_is_repeatable_and_exact"
+    ],
+    "PL-087": [
+      "test_parity_capabilities_p2.py::test_pl_087_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_087_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_087_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_087_local_capability_works"
+    ],
+    "PL-088": [
+      "test_project_intake_p1.py::test_pl088_guest_submission_and_acceptance_creates_real_work_item",
+      "test_project_intake_p1.py::test_pl088_decline_snooze_revoke_and_tenant_isolation"
+    ],
+    "PL-089": [
+      "test_plane_workspace_tools_p2.py::test_pl089_intake_form_creates_one_validated_request"
+    ],
+    "PL-090": [
+      "test_final_parity_capabilities_p2.py::test_pl_090_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_090_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_090_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_090_local_capability_works"
+    ],
+    "PL-091": [
+      "test_plane_workspace_tools_p2.py::test_pl091_user_assets_are_owner_scoped"
+    ],
+    "PL-092": [
+      "test_plane_workspace_tools_p2.py::test_pl092_workspace_assets_are_admin_controlled_and_isolated"
+    ],
+    "PL-093": [
+      "test_plane_workspace_tools_p2.py::test_pl093_stickies_are_private_to_owner"
+    ],
+    "PL-095": [
+      "test_project_governance_p2.py::test_pl095_workspace_wiki_permission_checked"
+    ],
+    "PL-096": [
+      "test_ui_wiring.py::test_wiki_pages_route_controls_are_rendered_and_dispatched",
+      "test_wiki_pages_p2.py::test_pl096_page_version_history_records_and_restores",
+      "test_wiki_pages_p2.py::test_pl096_page_version_history_records_and_restores"
+    ],
+    "PL-097": [
+      "test_wiki_pages_p2.py::test_pl097_page_analytics_count_local_views_only",
+      "test_wiki_pages_p2.py::test_pl097_page_analytics_count_local_views_only"
+    ],
+    "PL-098": [
+      "test_wiki_pages_p2.py::test_pl098_page_publication_and_local_exports",
+      "test_wiki_pages_p2.py::test_pl098_page_publication_and_local_exports"
+    ],
+    "PL-099": [
+      "test_wiki_pages_p2.py::test_pl099_page_labels_are_workspace_scoped_and_attachable",
+      "test_wiki_pages_p2.py::test_pl099_page_labels_are_workspace_scoped_and_attachable"
+    ],
+    "PL-100": [
+      "test_wiki_pages_p2.py::test_pl100_nested_pages_form_a_cycle_safe_tree",
+      "test_wiki_pages_p2.py::test_pl100_nested_pages_form_a_cycle_safe_tree"
+    ],
+    "PL-101": [
+      "test_wiki_pages_p2.py::test_pl101_page_collections_group_pages",
+      "test_wiki_pages_p2.py::test_pl101_page_collections_group_pages"
+    ],
+    "PL-102": [
+      "test_wiki_pages_p2.py::test_pl102_editor_blocks_replace_and_list_in_order",
+      "test_wiki_pages_p2.py::test_pl102_editor_blocks_replace_and_list_in_order"
+    ],
+    "PL-103": [
+      "test_ui_wiring.py::test_wiki_pages_route_controls_are_rendered_and_dispatched",
+      "test_wiki_pages_p2.py::test_pl103_polling_presence_and_inline_comments",
+      "test_wiki_pages_p2.py::test_pl103_polling_presence_and_inline_comments"
+    ],
+    "PL-104": [
+      "test_parity_capabilities_p2.py::test_pl_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_104_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_104_local_capability_works"
+    ],
+    "PL-105": [
+      "test_plane_platform_p1.py::test_pl105_invite_acceptance_creates_membership_and_audited_event"
+    ],
+    "PL-106": [
+      "test_project_governance_p2.py::test_pl106_teamspaces_group_members_and_projects"
+    ],
+    "PL-107": [
+      "test_plane_workspace_tools_p2.py::test_pl107_theme_preference_persists_and_is_light_only"
+    ],
+    "PL-108": [
+      "test_parity_capabilities_p2.py::test_pl_108_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_108_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_108_local_capability_works"
+    ],
+    "PL-113": [
+      "test_final_parity_capabilities_p2.py::test_pl_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_113_local_capability_works"
+    ],
+    "PL-114": [
+      "test_final_parity_capabilities_p2.py::test_pl_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_114_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_114_local_capability_works"
+    ],
+    "PL-115": [
+      "test_final_parity_capabilities_p2.py::test_pl_115_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_115_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_115_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_pl_115_local_capability_works"
+    ],
+    "PL-118": [
+      "test_parity_capabilities_p2.py::test_pl_118_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_118_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_118_local_capability_works"
+    ],
+    "PL-119": [
+      "test_project_governance_p2.py::test_pl119_multiple_workflows_transition_rules"
+    ],
+    "PL-120": [
+      "test_project_governance_p2.py::test_pl120_approvals_require_assigned_approver"
+    ],
+    "PL-123": [
+      "test_parity_capabilities_p2.py::test_pl_123_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_123_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_123_local_capability_works"
+    ],
+    "PL-128": [
+      "test_project_governance_p2.py::test_pl128_pl129_private_and_published_dashboards"
+    ],
+    "PL-129": [
+      "test_project_governance_p2.py::test_pl128_pl129_private_and_published_dashboards"
+    ],
+    "PL-130": [
+      "test_plane_collaboration_api_p2.py::test_pl130_restricted_items_are_hidden_from_unauthorized_members",
+      "test_plane_collaboration_api_p2.py::test_pl130_restricted_items_are_hidden_from_unauthorized_members"
+    ],
+    "PL-132": [
+      "test_plane_collaboration_api_p2.py::test_pl132_csv_import_creates_mapped_items_with_validation",
+      "test_plane_collaboration_api_p2.py::test_pl132_csv_import_creates_mapped_items_with_validation"
+    ],
+    "PL-135": [
+      "test_parity_capabilities_p2.py::test_pl_135_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_135_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_135_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_135_local_capability_works"
+    ],
+    "PL-136": [
+      "test_work_item_planning_p2.py::test_pl136_worklogs_persist_and_sum_per_item",
+      "test_work_item_planning_p2.py::test_pl136_worklogs_persist_and_sum_per_item"
+    ],
+    "PL-137": [
+      "test_plane_workspace_tools_p2.py::test_pl137_pql_parses_safely_and_rejects_injection"
+    ],
+    "PL-138": [
+      "test_plane_workspace_tools_p2.py::test_pl138_customer_link_preserves_permissions"
+    ],
+    "PL-139": [
+      "test_plane_workspace_tools_p2.py::test_pl139_releases_link_items_without_data_loss"
+    ],
+    "PL-140": [
+      "test_project_governance_p2.py::test_pl140_epics_group_children"
+    ],
+    "PL-141": [
+      "test_ui_wiring.py::test_work_item_planning_route_controls_are_rendered_and_dispatched",
+      "test_work_item_planning_p2.py::test_pl141_subscribers_drive_notification_recipients",
+      "test_work_item_planning_p2.py::test_pl141_subscribers_drive_notification_recipients"
+    ],
+    "PL-142": [
+      "test_plane_workspace_tools_p2.py::test_pl142_vote_toggle_counts_are_correct"
+    ],
+    "PL-144": [
+      "test_parity_capabilities_p2.py::test_pl_144_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_144_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_144_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_144_local_capability_works"
+    ],
+    "PL-145": [
+      "test_plane_workspace_tools_p2.py::test_pl145_hidden_navigation_unreachable_by_direct_url"
+    ],
+    "PL-146": [
+      "test_parity_capabilities_p2.py::test_pl_146_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_146_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_146_local_capability_works",
+      "test_parity_capabilities_p2.py::test_pl_146_local_capability_works"
+    ],
+    "MT-003": [
+      "test_mautic_marketing_p1.py::test_mt003_extension_contract_is_documented_and_enforced"
+    ],
+    "MT-004": [
+      "test_final_parity_capabilities_p2.py::test_mt_004_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_004_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_004_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_004_local_capability_works"
+    ],
+    "MT-010": [
+      "test_parity_capabilities_p2.py::test_mt_010_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_010_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_010_local_capability_works"
+    ],
+    "MT-039": [
+      "test_final_parity_capabilities_p2.py::test_mt_039_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_039_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_039_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_039_local_capability_works"
+    ],
+    "MT-040": [
+      "test_final_parity_capabilities_p2.py::test_mt_040_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_040_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_040_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_040_local_capability_works"
+    ],
+    "MT-044": [
+      "test_final_parity_capabilities_p2.py::test_mt_044_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_044_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_044_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_044_local_capability_works"
+    ],
+    "MT-047": [
+      "test_mautic_marketing_p1.py::test_mt047_configurable_marketing_reports_run_from_local_data"
+    ],
+    "MT-051": [
+      "test_parity_capabilities_p2.py::test_mt_051_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_051_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_051_local_capability_works"
+    ],
+    "MT-052": [
+      "test_parity_capabilities_p2.py::test_mt_052_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_052_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_052_local_capability_works"
+    ],
+    "MT-053": [
+      "test_final_parity_capabilities_p2.py::test_mt_053_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_053_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_053_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_053_local_capability_works"
+    ],
+    "MT-054": [
+      "test_parity_capabilities_p2.py::test_mt_054_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_054_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_054_local_capability_works"
+    ],
+    "MT-055": [
+      "test_final_parity_capabilities_p2.py::test_mt_055_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_055_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_055_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_055_local_capability_works"
+    ],
+    "MT-057": [
+      "test_parity_capabilities_p2.py::test_mt_057_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_057_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_057_local_capability_works"
+    ],
+    "MT-058": [
+      "test_parity_capabilities_p2.py::test_mt_058_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_058_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_058_local_capability_works"
+    ],
+    "MT-059": [
+      "test_final_parity_capabilities_p2.py::test_mt_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_059_local_capability_works"
+    ],
+    "MT-060": [
+      "test_final_parity_capabilities_p2.py::test_mt_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_060_local_capability_works"
+    ],
+    "MT-062": [
+      "test_final_parity_capabilities_p2.py::test_mt_062_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_062_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_062_local_capability_works"
+    ],
+    "MT-068": [
+      "test_final_parity_capabilities_p2.py::test_mt_068_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_068_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_068_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_068_local_capability_works"
+    ],
+    "MT-070": [
+      "test_mautic_marketing_p1.py::test_mt070_marketing_event_catalogue_registers_extension_events"
+    ],
+    "MT-074": [
+      "test_parity_capabilities_p2.py::test_mt_074_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_074_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_074_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_074_local_capability_works"
+    ],
+    "MT-075": [
+      "test_final_parity_capabilities_p2.py::test_mt_075_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_075_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_075_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_075_local_capability_works"
+    ],
+    "MT-076": [
+      "test_parity_capabilities_p2.py::test_mt_076_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_076_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_076_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_076_local_capability_works"
+    ],
+    "MT-080": [
+      "test_parity_capabilities_p2.py::test_mt_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_080_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_080_local_capability_works"
+    ],
+    "MT-081": [
+      "test_final_parity_capabilities_p2.py::test_mt_081_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_081_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_081_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_081_local_capability_works"
+    ],
+    "MT-083": [
+      "test_parity_capabilities_p2.py::test_mt_083_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_083_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_083_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_083_local_capability_works"
+    ],
+    "MT-086": [
+      "test_final_parity_capabilities_p2.py::test_mt_086_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_086_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_086_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_086_local_capability_works"
+    ],
+    "MT-092": [
+      "test_final_parity_capabilities_p2.py::test_mt_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_092_local_capability_works"
+    ],
+    "MT-094": [
+      "test_parity_capabilities_p2.py::test_mt_094_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_094_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_094_local_capability_works"
+    ],
+    "MT-095": [
+      "test_final_parity_capabilities_p2.py::test_mt_095_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_095_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_095_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_095_local_capability_works"
+    ],
+    "MT-096": [
+      "test_final_parity_capabilities_p2.py::test_mt_096_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_096_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_096_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_096_local_capability_works"
+    ],
+    "MT-097": [
+      "test_final_parity_capabilities_p2.py::test_mt_097_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_097_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_097_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_097_local_capability_works"
+    ],
+    "MT-098": [
+      "test_final_parity_capabilities_p2.py::test_mt_098_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_098_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_098_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_098_local_capability_works"
+    ],
+    "MT-099": [
+      "test_final_parity_capabilities_p2.py::test_mt_099_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_099_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_099_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_099_local_capability_works"
+    ],
+    "MT-100": [
+      "test_final_parity_capabilities_p2.py::test_mt_100_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_100_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_100_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_100_local_capability_works"
+    ],
+    "MT-101": [
+      "test_final_parity_capabilities_p2.py::test_mt_101_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_101_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_101_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_101_local_capability_works"
+    ],
+    "MT-108": [
+      "test_final_parity_capabilities_p2.py::test_mt_108_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_108_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_108_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_108_local_capability_works"
+    ],
+    "MT-109": [
+      "test_parity_capabilities_p2.py::test_mt_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_109_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_109_local_capability_works"
+    ],
+    "MT-111": [
+      "test_final_parity_capabilities_p2.py::test_mt_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_111_local_capability_works"
+    ],
+    "MT-116": [
+      "test_parity_capabilities_p2.py::test_mt_116_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_116_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_116_local_capability_works"
+    ],
+    "MT-117": [
+      "test_mautic_marketing_p1.py::test_mt117_funnel_engagement_and_attribution_use_local_events"
+    ],
+    "MT-118": [
+      "test_final_parity_capabilities_p2.py::test_mt_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_118_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_mt_118_local_capability_works"
+    ],
+    "MT-129": [
+      "test_parity_capabilities_p2.py::test_mt_129_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_129_local_capability_works",
+      "test_parity_capabilities_p2.py::test_mt_129_local_capability_works"
+    ],
+    "CW-001": [
+      "test_support_inbox.py::test_shared_inbox_is_workspace_scoped_audited_and_local_only",
+      "test_support_inbox.py::test_queue_counts_and_realtime_stream_route_are_registered"
+    ],
+    "CW-002": [
+      "test_support_inbox.py::test_conversation_persists_origin_type_and_four_named_events"
+    ],
+    "CW-003": [
+      "test_support_inbox.py::test_public_reply_has_direction_channel_order_and_verified_actor"
+    ],
+    "CW-004": [
+      "test_support_inbox.py::test_assignment_requires_active_member_and_audits_reassignment"
+    ],
+    "CW-005": [
+      "test_chatwoot_support_p1.py::test_cw005_team_creation_membership_and_assignment",
+      "test_chatwoot_support_p1.py::test_cw005_team_creation_membership_and_assignment",
+      "test_chatwoot_support_p1.py::test_cw005_team_creation_membership_and_assignment",
+      "test_chatwoot_support_p1.py::test_cw005_team_creation_membership_and_assignment",
+      "test_chatwoot_support_p1.py::test_cw005_team_creation_membership_and_assignment",
+      "test_chatwoot_support_p1.py::test_cw005_team_creation_membership_and_assignment",
+      "test_ui_wiring.py::test_support_p1_operations_ui_is_routed_and_wired"
+    ],
+    "CW-006": [
+      "test_conversation_ops_p2.py::test_cw006_agent_presence_states_drive_visibility",
+      "test_ui_wiring.py::test_conversation_ops_route_controls_are_rendered_and_dispatched"
+    ],
+    "CW-007": [
+      "test_parity_capabilities_p2.py::test_cw_007_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_007_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_007_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_007_local_capability_works"
+    ],
+    "CW-008": [
+      "test_chatwoot_support_p1.py::test_cw008_routing_rule_trace_and_manual_assignment_wins",
+      "test_chatwoot_support_p1.py::test_cw008_routing_rule_trace_and_manual_assignment_wins",
+      "test_chatwoot_support_p1.py::test_cw008_routing_rule_trace_and_manual_assignment_wins",
+      "test_chatwoot_support_p1.py::test_cw008_routing_rule_trace_and_manual_assignment_wins",
+      "test_chatwoot_support_p1.py::test_cw008_routing_rule_trace_and_manual_assignment_wins",
+      "test_chatwoot_support_p1.py::test_cw008_routing_rule_trace_and_manual_assignment_wins"
+    ],
+    "CW-009": [
+      "test_support_inbox.py::test_status_transitions_and_reasons_are_validated_and_audited"
+    ],
+    "CW-010": [
+      "test_conversation_ops_p2.py::test_cw010_snoozed_conversations_leave_and_reenter_the_queue",
+      "test_conversation_ops_p2.py::test_cw010_due_snoozes_return_to_the_active_queue"
+    ],
+    "CW-011": [
+      "test_support_inbox.py::test_priority_persists_filters_and_rejects_unknown_values"
+    ],
+    "CW-012": [
+      "test_chatwoot_support_p1.py::test_cw012_labels_create_apply_filter_and_report_per_workspace",
+      "test_chatwoot_support_p1.py::test_cw012_labels_create_apply_filter_and_report_per_workspace",
+      "test_chatwoot_support_p1.py::test_cw012_labels_create_apply_filter_and_report_per_workspace",
+      "test_chatwoot_support_p1.py::test_cw012_labels_create_apply_filter_and_report_per_workspace",
+      "test_chatwoot_support_p1.py::test_cw012_labels_create_apply_filter_and_report_per_workspace"
+    ],
+    "CW-013": [
+      "test_chatwoot_support_p1.py::test_cw013_typed_attributes_on_contact_and_ticket_filter_and_export",
+      "test_chatwoot_support_p1.py::test_cw013_typed_attributes_on_contact_and_ticket_filter_and_export",
+      "test_chatwoot_support_p1.py::test_cw013_typed_attributes_on_contact_and_ticket_filter_and_export",
+      "test_chatwoot_support_p1.py::test_cw013_typed_attributes_on_contact_and_ticket_filter_and_export",
+      "test_chatwoot_support_p1.py::test_cw013_typed_attributes_on_contact_and_ticket_filter_and_export",
+      "test_chatwoot_support_p1.py::test_cw013_typed_attributes_on_contact_and_ticket_filter_and_export"
+    ],
+    "CW-015": [
+      "test_parity_capabilities_p2.py::test_cw_015_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_015_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_015_local_capability_works"
+    ],
+    "CW-018": [
+      "test_support_inbox.py::test_pre_chat_identity_reuses_single_crm_contact"
+    ],
+    "CW-019": [
+      "test_p0_marketing_support_notify_gaps.py::test_cw019_private_notes_are_internal_only"
+    ],
+    "CW-020": [
+      "test_conversation_ops_p2.py::test_cw020_mentions_notify_active_teammates_in_private_notes"
+    ],
+    "CW-021": [
+      "test_conversation_ops_p2.py::test_cw021_collision_detection_and_duplicate_reply_prevention"
+    ],
+    "CW-022": [
+      "test_conversation_ops_p2.py::test_cw022_delivery_and_read_receipts_are_per_message_and_user"
+    ],
+    "CW-023": [
+      "test_chatwoot_support_p1.py::test_cw023_saved_reply_expand_into_draft_without_sending",
+      "test_chatwoot_support_p1.py::test_cw023_saved_reply_expand_into_draft_without_sending",
+      "test_chatwoot_support_p1.py::test_cw023_saved_reply_expand_into_draft_without_sending",
+      "test_chatwoot_support_p1.py::test_cw023_saved_reply_expand_into_draft_without_sending",
+      "test_chatwoot_support_p1.py::test_cw023_saved_reply_expand_into_draft_without_sending",
+      "test_chatwoot_support_p1.py::test_cw023_saved_reply_expand_into_draft_without_sending",
+      "test_chatwoot_support_p1.py::test_cw023_saved_reply_expand_into_draft_without_sending",
+      "test_plane_support_ui_p1.py::test_cw023_saved_reply_ui_insert_expands_without_sending",
+      "test_plane_support_ui_p1.py::test_cw023_saved_reply_ui_insert_expands_without_sending",
+      "test_plane_support_ui_p1.py::test_cw023_saved_reply_ui_insert_expands_without_sending",
+      "test_plane_support_ui_p1.py::test_cw023_saved_reply_ui_insert_expands_without_sending"
+    ],
+    "CW-024": [
+      "test_chatwoot_support_p1.py::test_cw024_macro_applies_ordered_local_changes_atomically_with_audit",
+      "test_chatwoot_support_p1.py::test_cw024_macro_applies_ordered_local_changes_atomically_with_audit",
+      "test_chatwoot_support_p1.py::test_cw024_macro_applies_ordered_local_changes_atomically_with_audit",
+      "test_chatwoot_support_p1.py::test_cw024_macro_applies_ordered_local_changes_atomically_with_audit",
+      "test_chatwoot_support_p1.py::test_cw024_macro_applies_ordered_local_changes_atomically_with_audit"
+    ],
+    "CW-025": [
+      "test_conversation_ops_p2.py::test_cw025_bulk_actions_apply_status_assignee_and_labels"
+    ],
+    "CW-027": [
+      "test_parity_capabilities_p2.py::test_cw_027_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_027_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_027_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_027_local_capability_works"
+    ],
+    "CW-028": [
+      "test_chatwoot_support_p1.py::test_cw028_every_supported_filter_narrows_and_invalid_filters_return_422",
+      "test_chatwoot_support_p1.py::test_cw028_every_supported_filter_narrows_and_invalid_filters_return_422",
+      "test_chatwoot_support_p1.py::test_cw028_every_supported_filter_narrows_and_invalid_filters_return_422",
+      "test_chatwoot_support_p1.py::test_cw028_every_supported_filter_narrows_and_invalid_filters_return_422",
+      "test_chatwoot_support_p1.py::test_cw028_every_supported_filter_narrows_and_invalid_filters_return_422",
+      "test_chatwoot_support_p1.py::test_cw028_every_supported_filter_narrows_and_invalid_filters_return_422",
+      "test_chatwoot_support_p1.py::test_cw028_every_supported_filter_narrows_and_invalid_filters_return_422"
+    ],
+    "CW-029": [
+      "test_conversation_ops_p2.py::test_cw029_saved_filter_folders_show_live_counts"
+    ],
+    "CW-030": [
+      "test_p0_marketing_support_notify_gaps.py::test_cw030_conversation_search_matches_subject_body_and_messages"
+    ],
+    "CW-031": [
+      "test_final_parity_capabilities_p2.py::test_cw_031_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_031_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_031_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_031_local_capability_works"
+    ],
+    "CW-032": [
+      "test_conversation_ops_p2.py::test_cw032_mute_suppresses_notifications_for_one_conversation"
+    ],
+    "CW-035": [
+      "test_cw035_visitor_conversation_p1.py::test_cw035_visitor_conversation_appears_in_agent_inbox",
+      "test_cw035_visitor_conversation_p1.py::test_cw035_visitor_conversation_appears_in_agent_inbox",
+      "test_cw035_visitor_conversation_p1.py::test_cw035_visitor_conversation_appears_in_agent_inbox"
+    ],
+    "CW-036": [
+      "test_parity_capabilities_p2.py::test_cw_036_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_036_local_capability_works",
+      "test_parity_capabilities_p2.py::test_cw_036_local_capability_works"
+    ],
+    "CW-039": [
+      "test_final_parity_capabilities_p2.py::test_cw_039_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_039_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_039_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_039_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_039_local_capability_works"
+    ],
+    "CW-040": [
+      "test_final_parity_capabilities_p2.py::test_cw_040_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_040_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_040_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_040_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_040_local_capability_works"
+    ],
+    "CW-042": [
+      "test_final_parity_capabilities_p2.py::test_cw_042_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_042_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_042_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_042_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_042_local_capability_works"
+    ],
+    "CW-043": [
+      "test_final_parity_capabilities_p2.py::test_cw_043_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_043_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_043_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_043_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_043_local_capability_works"
+    ],
+    "CW-048": [
+      "test_cw048_multi_inbox_p1.py::test_cw048_inbox_scoped_queues_and_agent_membership",
+      "test_cw048_multi_inbox_p1.py::test_cw048_inbox_scoped_queues_and_agent_membership",
+      "test_cw048_multi_inbox_p1.py::test_cw048_inbox_scoped_queues_and_agent_membership",
+      "test_cw048_multi_inbox_p1.py::test_cw048_inbox_scoped_queues_and_agent_membership",
+      "test_cw048_multi_inbox_p1.py::test_cw048_inbox_scoped_queues_and_agent_membership"
+    ],
+    "CW-049": [
+      "test_final_parity_capabilities_p2.py::test_cw_049_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_049_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_049_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_049_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_049_local_capability_works"
+    ],
+    "CW-050": [
+      "test_final_parity_capabilities_p2.py::test_cw_050_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_050_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_050_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_050_local_capability_works"
+    ],
+    "CW-052": [
+      "test_conversation_ops_p2.py::test_cw052_business_hours_are_timezone_aware_and_per_inbox"
+    ],
+    "CW-053": [
+      "test_conversation_ops_p2.py::test_cw053_date_overrides_reduce_or_close_hours"
+    ],
+    "CW-054": [
+      "test_conversation_ops_p2.py::test_cw054_regional_holidays_close_dates_in_one_click"
+    ],
+    "CW-055": [
+      "test_conversation_ops_p2.py::test_cw055_split_shifts_allow_multiple_windows_per_day"
+    ],
+    "CW-056": [
+      "test_conversation_ops_p2.py::test_cw056_away_message_is_shown_outside_business_hours"
+    ],
+    "CW-057": [
+      "test_final_parity_capabilities_p2.py::test_cw_057_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_057_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_057_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_057_local_capability_works"
+    ],
+    "CW-059": [
+      "test_final_parity_capabilities_p2.py::test_cw_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_059_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_059_local_capability_works"
+    ],
+    "CW-060": [
+      "test_final_parity_capabilities_p2.py::test_cw_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_060_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_060_local_capability_works"
+    ],
+    "CW-065": [
+      "test_final_parity_capabilities_p2.py::test_cw_065_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_065_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_065_local_capability_works"
+    ],
+    "CW-066": [
+      "test_chatwoot_help_centre_p2.py::test_cw066_content_gaps_are_advisory_and_derived_from_local_searches",
+      "test_chatwoot_help_centre_p2.py::test_cw066_content_gaps_are_advisory_and_derived_from_local_searches"
+    ],
+    "CW-067": [
+      "test_chatwoot_help_centre_p2.py::test_cw067_faq_index_accepts_only_authorized_documents_and_retains_citations",
+      "test_chatwoot_help_centre_p2.py::test_cw067_faq_index_accepts_only_authorized_documents_and_retains_citations"
+    ],
+    "CW-074": [
+      "test_final_parity_capabilities_p2.py::test_cw_074_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_074_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_074_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_074_local_capability_works"
+    ],
+    "CW-075": [
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_chatwoot_support_p1.py::test_cw075_segment_returns_exact_stored_rule_matches_and_is_reusable",
+      "test_plane_support_ui_p1.py::test_cw075_segment_ui_reuse_filters_inbox",
+      "test_plane_support_ui_p1.py::test_cw075_segment_ui_reuse_filters_inbox",
+      "test_plane_support_ui_p1.py::test_cw075_segment_ui_reuse_filters_inbox",
+      "test_plane_support_ui_p1.py::test_cw075_segment_ui_reuse_filters_inbox",
+      "test_plane_support_ui_p1.py::test_cw075_segment_ui_reuse_filters_inbox"
+    ],
+    "CW-076": [
+      "test_final_parity_capabilities_p2.py::test_cw_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_076_local_capability_works"
+    ],
+    "CW-078": [
+      "test_final_parity_capabilities_p2.py::test_cw_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_078_local_capability_works"
+    ],
+    "CW-079": [
+      "test_final_parity_capabilities_p2.py::test_cw_079_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_079_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_079_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_079_local_capability_works"
+    ],
+    "CW-081": [
+      "test_final_parity_capabilities_p2.py::test_cw_081_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_081_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_081_local_capability_works"
+    ],
+    "CW-082": [
+      "test_final_parity_capabilities_p2.py::test_cw_082_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_082_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_082_local_capability_works"
+    ],
+    "CW-083": [
+      "test_final_parity_capabilities_p2.py::test_cw_083_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_083_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_083_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_083_local_capability_works"
+    ],
+    "CW-084": [
+      "test_final_parity_capabilities_p2.py::test_cw_084_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_084_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_084_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_084_local_capability_works"
+    ],
+    "CW-086": [
+      "test_chatwoot_support_p1.py::test_cw086_published_public_article_readable_and_draft_hidden",
+      "test_chatwoot_support_p1.py::test_cw086_published_public_article_readable_and_draft_hidden",
+      "test_chatwoot_support_p1.py::test_cw086_published_public_article_readable_and_draft_hidden",
+      "test_chatwoot_support_p1.py::test_cw086_published_public_article_readable_and_draft_hidden",
+      "test_chatwoot_support_p1.py::test_cw086_published_public_article_readable_and_draft_hidden"
+    ],
+    "CW-087": [
+      "test_chatwoot_help_centre_p2.py::test_cw087_article_metadata_embeds_and_immutable_revisions",
+      "test_chatwoot_help_centre_p2.py::test_cw087_article_metadata_embeds_and_immutable_revisions"
+    ],
+    "CW-088": [
+      "test_chatwoot_help_centre_p2.py::test_cw088_two_portals_hold_independent_branded_content",
+      "test_chatwoot_help_centre_p2.py::test_cw088_two_portals_hold_independent_branded_content"
+    ],
+    "CW-089": [
+      "test_chatwoot_help_centre_p2.py::test_cw089_view_and_search_counts_come_from_real_local_events",
+      "test_chatwoot_help_centre_p2.py::test_cw089_view_and_search_counts_come_from_real_local_events"
+    ],
+    "CW-090": [
+      "test_chatwoot_help_centre_p2.py::test_cw090_widget_surfaces_published_articles_without_creating_a_ticket",
+      "test_chatwoot_help_centre_p2.py::test_cw090_widget_surfaces_published_articles_without_creating_a_ticket"
+    ],
+    "CW-091": [
+      "test_chatwoot_help_centre_p2.py::test_cw091_private_pages_invisible_on_every_unauthenticated_surface",
+      "test_chatwoot_help_centre_p2.py::test_cw091_private_pages_invisible_on_every_unauthenticated_surface"
+    ],
+    "CW-092": [
+      "test_chatwoot_help_centre_p2.py::test_cw092_api_article_crud_honours_ui_permissions",
+      "test_chatwoot_help_centre_p2.py::test_cw092_api_article_crud_honours_ui_permissions"
+    ],
+    "CW-093": [
+      "test_chatwoot_support_p1.py::test_cw093_dashboard_counts_equal_workspace_scoped_sql_counts",
+      "test_chatwoot_support_p1.py::test_cw093_dashboard_counts_equal_workspace_scoped_sql_counts",
+      "test_chatwoot_support_p1.py::test_cw093_dashboard_counts_equal_workspace_scoped_sql_counts",
+      "test_chatwoot_support_p1.py::test_cw093_dashboard_counts_equal_workspace_scoped_sql_counts",
+      "test_chatwoot_support_p1.py::test_cw093_dashboard_counts_equal_workspace_scoped_sql_counts"
+    ],
+    "CW-094": [
+      "test_final_parity_capabilities_p2.py::test_cw_094_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_094_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_094_local_capability_works"
+    ],
+    "CW-095": [
+      "test_chatwoot_support_p1.py::test_cw095_conversation_metrics_come_from_rows_and_honour_date_filters",
+      "test_chatwoot_support_p1.py::test_cw095_conversation_metrics_come_from_rows_and_honour_date_filters",
+      "test_chatwoot_support_p1.py::test_cw095_conversation_metrics_come_from_rows_and_honour_date_filters",
+      "test_chatwoot_support_p1.py::test_cw095_conversation_metrics_come_from_rows_and_honour_date_filters",
+      "test_chatwoot_support_p1.py::test_cw095_conversation_metrics_come_from_rows_and_honour_date_filters"
+    ],
+    "CW-096": [
+      "test_support_reporting_p2.py::test_cw096_agent_report_matches_assigned_ticket_rows",
+      "test_support_reporting_p2.py::test_cw096_agent_report_matches_assigned_ticket_rows",
+      "test_ui_wiring.py::test_support_reporting_route_controls_are_rendered_and_dispatched"
+    ],
+    "CW-097": [
+      "test_support_reporting_p2.py::test_cw097_team_report_uses_only_tickets_with_that_team",
+      "test_support_reporting_p2.py::test_cw097_team_report_uses_only_tickets_with_that_team"
+    ],
+    "CW-098": [
+      "test_support_reporting_p2.py::test_cw098_inbox_report_counts_only_that_inbox",
+      "test_support_reporting_p2.py::test_cw098_inbox_report_counts_only_that_inbox"
+    ],
+    "CW-099": [
+      "test_support_reporting_p2.py::test_cw099_label_report_equals_real_label_ticket_rows",
+      "test_support_reporting_p2.py::test_cw099_label_report_equals_real_label_ticket_rows"
+    ],
+    "CW-100": [
+      "test_chatwoot_support_p1.py::test_cw100_csat_average_and_response_rate_use_stored_responses_and_filters",
+      "test_chatwoot_support_p1.py::test_cw100_csat_average_and_response_rate_use_stored_responses_and_filters",
+      "test_chatwoot_support_p1.py::test_cw100_csat_average_and_response_rate_use_stored_responses_and_filters",
+      "test_chatwoot_support_p1.py::test_cw100_csat_average_and_response_rate_use_stored_responses_and_filters",
+      "test_chatwoot_support_p1.py::test_cw100_csat_average_and_response_rate_use_stored_responses_and_filters",
+      "test_chatwoot_support_p1.py::test_cw100_csat_average_and_response_rate_use_stored_responses_and_filters"
+    ],
+    "CW-101": [
+      "test_support_reporting_p2.py::test_cw101_csv_export_matches_the_on_screen_filtered_result",
+      "test_support_reporting_p2.py::test_cw101_csv_export_matches_the_on_screen_filtered_result"
+    ],
+    "CW-102": [
+      "test_chatwoot_support_p1.py::test_cw102_resolution_creates_one_local_survey_and_no_message",
+      "test_chatwoot_support_p1.py::test_cw102_resolution_creates_one_local_survey_and_no_message",
+      "test_chatwoot_support_p1.py::test_cw102_resolution_creates_one_local_survey_and_no_message",
+      "test_chatwoot_support_p1.py::test_cw102_resolution_creates_one_local_survey_and_no_message",
+      "test_chatwoot_support_p1.py::test_cw102_resolution_creates_one_local_survey_and_no_message"
+    ],
+    "CW-104": [
+      "test_support_reporting_p2.py::test_cw104_csat_rules_gate_survey_creation_on_resolution",
+      "test_support_reporting_p2.py::test_cw104_csat_rules_gate_survey_creation_on_resolution"
+    ],
+    "CW-105": [
+      "test_final_parity_capabilities_p2.py::test_cw_105_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_105_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_105_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_105_local_capability_works"
+    ],
+    "CW-108": [
+      "test_cw108_webhook_p1.py::test_cw108_signed_webhook_retries_and_is_allow_listed",
+      "test_cw108_webhook_p1.py::test_cw108_signed_webhook_retries_and_is_allow_listed",
+      "test_cw108_webhook_p1.py::test_cw108_signed_webhook_retries_and_is_allow_listed",
+      "test_cw108_webhook_p1.py::test_cw108_signed_webhook_retries_and_is_allow_listed",
+      "test_cw108_webhook_p1.py::test_cw108_signed_webhook_retries_and_is_allow_listed",
+      "test_cw108_webhook_p1.py::test_cw108_signed_webhook_retries_and_is_allow_listed"
+    ],
+    "CW-109": [
+      "test_final_parity_capabilities_p2.py::test_cw_109_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_109_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_109_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_109_local_capability_works"
+    ],
+    "CW-113": [
+      "test_final_parity_capabilities_p2.py::test_cw_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_113_local_capability_works"
+    ],
+    "CW-114": [
+      "test_support_reporting_p2.py::test_cw114_one_time_survey_token_records_one_response",
+      "test_support_reporting_p2.py::test_cw114_one_time_survey_token_records_one_response"
+    ],
+    "CW-117": [
+      "test_support_reporting_p2.py::test_cw117_openapi_contract_is_generated_from_live_support_routes",
+      "test_support_reporting_p2.py::test_cw117_openapi_contract_is_generated_from_live_support_routes"
+    ],
+    "CW-120": [
+      "test_final_parity_capabilities_p2.py::test_cw_120_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_120_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_120_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_120_local_capability_works"
+    ],
+    "CW-121": [
+      "test_final_parity_capabilities_p2.py::test_cw_121_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_121_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_121_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_121_local_capability_works"
+    ],
+    "CW-123": [
+      "test_final_parity_capabilities_p2.py::test_cw_123_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_123_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_123_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_123_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_123_local_capability_works"
+    ],
+    "CW-132": [
+      "test_final_parity_capabilities_p2.py::test_cw_132_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_132_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_132_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_132_local_capability_works"
+    ],
+    "CW-134": [
+      "test_final_parity_capabilities_p2.py::test_cw_134_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_134_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_134_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_134_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_134_local_capability_works"
+    ],
+    "CW-135": [
+      "test_final_parity_capabilities_p2.py::test_cw_135_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_135_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_135_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_135_local_capability_works"
+    ],
+    "CW-138": [
+      "test_final_parity_capabilities_p2.py::test_cw_138_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_138_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_138_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_138_local_capability_works"
+    ],
+    "CW-140": [
+      "test_final_parity_capabilities_p2.py::test_cw_140_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_140_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_140_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_140_local_capability_works"
+    ],
+    "CW-141": [
+      "test_final_parity_capabilities_p2.py::test_cw_141_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_141_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_141_local_capability_works"
+    ],
+    "CW-143": [
+      "test_final_parity_capabilities_p2.py::test_cw_143_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_143_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_143_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_143_local_capability_works"
+    ],
+    "CW-144": [
+      "test_final_parity_capabilities_p2.py::test_cw_144_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_144_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_144_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_144_local_capability_works"
+    ],
+    "CW-146": [
+      "test_final_parity_capabilities_p2.py::test_cw_146_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_146_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_146_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_146_local_capability_works"
+    ],
+    "CW-148": [
+      "test_final_parity_capabilities_p2.py::test_cw_148_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_148_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_148_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_148_local_capability_works"
+    ],
+    "CW-149": [
+      "test_final_parity_capabilities_p2.py::test_cw_149_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_149_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_149_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_149_local_capability_works"
+    ],
+    "CW-151": [
+      "test_final_parity_capabilities_p2.py::test_cw_151_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_151_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_151_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_151_local_capability_works"
+    ],
+    "CW-152": [
+      "test_final_parity_capabilities_p2.py::test_cw_152_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_152_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_152_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_152_local_capability_works"
+    ],
+    "CW-153": [
+      "test_final_parity_capabilities_p2.py::test_cw_153_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_153_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_153_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_153_local_capability_works"
+    ],
+    "CW-159": [
+      "test_final_parity_capabilities_p2.py::test_cw_159_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_159_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_159_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_159_local_capability_works"
+    ],
+    "CW-160": [
+      "test_final_parity_capabilities_p2.py::test_cw_160_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_160_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_160_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_160_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_160_local_capability_works"
+    ],
+    "CW-162": [
+      "test_final_parity_capabilities_p2.py::test_cw_162_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_162_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_162_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_cw_162_local_capability_works"
+    ],
+    "NV-004": [
+      "test_novu_notifications_p1.py::test_nv004_topic_trigger_fans_out_only_to_matching_subscriptions_with_actor_exclusion"
+    ],
+    "NV-006": [
+      "test_notification_workflows_p2.py::test_nv006_one_stable_workflow_api"
+    ],
+    "NV-009": [
+      "test_notification_automation_p2.py::test_nv009_code_steps_are_sandboxed_versioned_and_published",
+      "test_ui_wiring.py::test_notification_automation_route_controls_are_rendered_and_dispatched"
+    ],
+    "NV-013": [
+      "test_notification_workflows_p2.py::test_nv013_digest_fires_once_per_window_even_with_many_or_zero_events"
+    ],
+    "NV-015": [
+      "test_notification_automation_p2.py::test_nv015_http_steps_resolve_only_registered_local_stubs"
+    ],
+    "NV-017": [
+      "test_notification_workflows_p2.py::test_nv017_templates_instantiate_real_workflows",
+      "test_ui_wiring.py::test_notification_workflow_route_controls_are_rendered_and_dispatched"
+    ],
+    "NV-019": [
+      "test_notification_workflows_p2.py::test_nv019_critical_flows_cannot_be_muted_by_preference"
+    ],
+    "NV-020": [
+      "test_final_parity_capabilities_p2.py::test_nv_020_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_020_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_020_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_020_local_capability_works"
+    ],
+    "NV-022": [
+      "test_final_parity_capabilities_p2.py::test_provider_shaped_rows_never_claim_delivery",
+      "test_final_parity_capabilities_p2.py::test_nv_022_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_022_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_022_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_022_local_capability_works"
+    ],
+    "NV-023": [
+      "test_notifications_advanced.py::test_notification_persists_rich_content_per_workspace_and_user",
+      "test_notifications_advanced.py::test_bulk_seen_all_and_counts_by_category",
+      "test_notifications_advanced.py::test_feed_filters_and_pagination"
+    ],
+    "NV-024": [
+      "test_final_parity_capabilities_p2.py::test_nv_024_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_024_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_024_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_024_local_capability_works"
+    ],
+    "NV-026": [
+      "test_notification_automation_p2.py::test_nv026_routing_selects_primary_and_fallback_chain"
+    ],
+    "NV-027": [
+      "test_notification_automation_p2.py::test_nv027_demo_providers_enforce_their_daily_quotas"
+    ],
+    "NV-028": [
+      "test_notification_workflows_p2.py::test_nv028_trigger_overrides_are_scoped_and_cannot_inject_secrets"
+    ],
+    "NV-029": [
+      "test_final_parity_capabilities_p2.py::test_nv_029_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_029_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_029_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_029_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_029_local_capability_works"
+    ],
+    "NV-030": [
+      "test_notifications_advanced.py::test_single_mark_read_is_user_and_workspace_scoped",
+      "test_notifications_advanced.py::test_one_identity_is_one_recipient_with_no_second_login"
+    ],
+    "NV-031": [
+      "test_notification_automation_p2.py::test_nv031_channel_endpoints_store_hashed_secrets_only"
+    ],
+    "NV-032": [
+      "test_p0_marketing_support_notify_gaps.py::test_nv032_layered_preferences_resolve_global_workflow_and_channel"
+    ],
+    "NV-033": [
+      "test_novu_notifications_p1.py::test_nv033_native_light_theme_notification_panel_uses_only_the_local_api"
+    ],
+    "NV-034": [
+      "test_novu_notifications_p1.py::test_nv034_bell_unread_counts_match_the_database_after_create_and_read"
+    ],
+    "NV-035": [
+      "test_notifications_advanced.py::test_seen_and_read_are_independent_states",
+      "test_notifications_advanced.py::test_bulk_read_all_only_touches_callers_rows"
+    ],
+    "NV-036": [
+      "test_notification_workflows_p2.py::test_nv036_inbox_tabs_and_filters_use_stored_fields"
+    ],
+    "NV-038": [
+      "test_notification_workflows_p2.py::test_nv038_quiet_hours_hold_or_skip"
+    ],
+    "NV-039": [
+      "test_p0_marketing_support_notify_gaps.py::test_nv039_inbox_preferences_view_is_routed_and_wired"
+    ],
+    "NV-040": [
+      "test_notification_workflows_p2.py::test_nv040_rich_content_is_sanitised_and_custom_fields_render"
+    ],
+    "NV-043": [
+      "test_final_parity_capabilities_p2.py::test_nv_043_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_043_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_043_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_043_local_capability_works"
+    ],
+    "NV-044": [
+      "test_notification_workflows_p2.py::test_nv044_notification_actions_only_open_authorised_local_routes"
+    ],
+    "NV-045": [
+      "test_novu_notifications_p1.py::test_nv045_topics_are_workspace_unique_with_full_lifecycle"
+    ],
+    "NV-046": [
+      "test_novu_notifications_p1.py::test_nv046_only_subscriptions_matching_payload_conditions_and_context_fan_out"
+    ],
+    "NV-047": [
+      "test_final_parity_capabilities_p2.py::test_nv_047_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_047_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_047_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_047_local_capability_works"
+    ],
+    "NV-052": [
+      "test_novu_notifications_p1.py::test_nv052_failed_messages_are_queryable_and_emit_audit_events"
+    ],
+    "NV-054": [
+      "test_notification_workflows_p2.py::test_nv054_webhook_endpoints_registry_and_ssrf_controls"
+    ],
+    "NV-056": [
+      "test_notification_workflows_p2.py::test_nv056_signature_tamper_replay_and_failed_recovery"
+    ],
+    "NV-062": [
+      "test_final_parity_capabilities_p2.py::test_nv_062_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_062_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_062_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_062_local_capability_works"
+    ],
+    "NV-065": [
+      "test_final_parity_capabilities_p2.py::test_nv_065_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_065_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_065_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_065_local_capability_works"
+    ],
+    "NV-068": [
+      "test_notifications_advanced.py::test_notification_settings_persist_and_deny_cross_workspace_access"
+    ],
+    "NV-071": [
+      "test_notification_workflows_p2.py::test_nv071_api_keys_are_hashed_rotated_and_revoked"
+    ],
+    "NV-073": [
+      "test_notification_workflows_p2.py::test_nv073_contexts_isolate_inbox_and_preference_state"
+    ],
+    "NV-076": [
+      "test_final_parity_capabilities_p2.py::test_nv_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_076_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_076_local_capability_works"
+    ],
+    "NV-085": [
+      "test_novu_notifications_p1.py::test_nv085_message_records_are_queryable_by_channel_subscriber_and_transaction"
+    ],
+    "NV-086": [
+      "test_notification_workflows_p2.py::test_nv086_feeds_isolate_stored_messages"
+    ],
+    "NV-087": [
+      "test_notification_workflows_p2.py::test_nv087_layouts_render_without_script_injection"
+    ],
+    "NV-088": [
+      "test_final_parity_capabilities_p2.py::test_nv_088_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_088_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_088_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_088_local_capability_works"
+    ],
+    "NV-092": [
+      "test_final_parity_capabilities_p2.py::test_nv_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_092_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_092_local_capability_works"
+    ],
+    "NV-097": [
+      "test_final_parity_capabilities_p2.py::test_nv_097_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_097_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_097_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_097_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_097_local_capability_works"
+    ],
+    "NV-099": [
+      "test_novu_notifications_p1.py::test_nv099_templates_resolve_allowed_variables_and_reject_scripts_or_credentials"
+    ],
+    "NV-100": [
+      "test_final_parity_capabilities_p2.py::test_nv_100_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_100_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_100_local_capability_works"
+    ],
+    "NV-101": [
+      "test_final_parity_capabilities_p2.py::test_nv_101_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_101_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_101_local_capability_works"
+    ],
+    "NV-102": [
+      "test_final_parity_capabilities_p2.py::test_nv_102_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_102_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_102_local_capability_works"
+    ],
+    "NV-103": [
+      "test_notification_automation_p2.py::test_nv103_platform_quotas_are_documented_and_enforced"
+    ],
+    "NV-104": [
+      "test_notification_automation_p2.py::test_nv104_broadcast_requires_flag_and_explicit_authorisation"
+    ],
+    "NV-105": [
+      "test_final_parity_capabilities_p2.py::test_nv_105_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_105_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_105_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_105_local_capability_works"
+    ],
+    "NV-107": [
+      "test_notification_automation_p2.py::test_nv107_subscriber_search_and_bulk_create"
+    ],
+    "NV-111": [
+      "test_final_parity_capabilities_p2.py::test_nv_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_111_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_111_local_capability_works"
+    ],
+    "NV-112": [
+      "test_final_parity_capabilities_p2.py::test_nv_112_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_112_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_112_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_112_local_capability_works"
+    ],
+    "NV-113": [
+      "test_final_parity_capabilities_p2.py::test_nv_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_113_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_113_local_capability_works"
+    ],
+    "NV-115": [
+      "test_final_parity_capabilities_p2.py::test_nv_115_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_115_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_nv_115_local_capability_works"
+    ],
+    "NV-118": [
+      "test_notification_automation_p2.py::test_nv118_feature_flags_gate_experimental_features"
+    ],
+    "SB-003": [
+      "test_final_parity_capabilities_p2.py::test_final_export_import_round_trip_is_workspace_scoped",
+      "test_final_parity_capabilities_p2.py::test_sb_003_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_003_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_003_local_capability_works"
+    ],
+    "SB-008": [
+      "test_sales_engagement_p2.py::test_sb008_sb012_governed_signal_catalog_is_seeded_once",
+      "test_ui_wiring.py::test_sales_engagement_route_controls_are_rendered_and_dispatched"
+    ],
+    "SB-009": [
+      "test_sales_engagement_p2.py::test_sb009_free_signals_activate_only_with_confirmation"
+    ],
+    "SB-010": [
+      "test_sales_engagement_p2.py::test_sb010_paid_signals_require_explicit_operator_confirmation"
+    ],
+    "SB-012": [
+      "test_sales_engagement_p2.py::test_sb008_sb012_governed_signal_catalog_is_seeded_once"
+    ],
+    "SB-015": [
+      "test_sales_engagement_p2.py::test_sb015_cohort_builder_evaluates_real_workspace_leads"
+    ],
+    "SB-016": [
+      "test_final_parity_capabilities_p2.py::test_sb_016_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_016_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_016_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_016_local_capability_works"
+    ],
+    "SB-017": [
+      "test_sales_engagement_p2.py::test_sb017_campaign_sequences_are_drafted_locally"
+    ],
+    "SB-019": [
+      "test_sales_engagement_p2.py::test_sb019_offer_suggestion_is_deterministic_and_local"
+    ],
+    "SB-022": [
+      "test_sales_engagement_p2.py::test_sb022_outbox_is_durable_with_a_status_ladder"
+    ],
+    "SB-023": [
+      "test_sales_engagement_p2.py::test_sb023_autopilot_is_opt_in_and_approval_is_default"
+    ],
+    "SB-026": [
+      "test_sales_engagement_p2.py::test_sb026_sending_status_and_pause_controls"
+    ],
+    "SB-028": [
+      "test_sales_engagement_p2.py::test_sb028_send_rules_and_header_extension_points"
+    ],
+    "SB-030": [
+      "test_sellbird_safety_p1.py::test_sb030_opt_out_blocks_approval_and_is_audited"
+    ],
+    "SB-031": [
+      "test_sellbird_safety_p1.py::test_sb031_suppression_list_reason_scope_expiry_blocks_with_recorded_reason"
+    ],
+    "SB-033": [
+      "test_final_parity_capabilities_p2.py::test_sb_033_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_033_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_033_local_capability_works"
+    ],
+    "SB-034": [
+      "test_final_parity_capabilities_p2.py::test_sb_034_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_034_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_034_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_034_local_capability_works"
+    ],
+    "SB-036": [
+      "test_final_parity_capabilities_p2.py::test_sb_036_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_036_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_036_local_capability_works"
+    ],
+    "SB-037": [
+      "test_final_parity_capabilities_p2.py::test_sb_037_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_037_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_037_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_037_local_capability_works"
+    ],
+    "SB-046": [
+      "test_final_parity_capabilities_p2.py::test_sb_046_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_046_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_046_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_046_local_capability_works"
+    ],
+    "SB-048": [
+      "test_final_parity_capabilities_p2.py::test_sb_048_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_048_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_048_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_048_local_capability_works"
+    ],
+    "SB-052": [
+      "test_final_parity_capabilities_p2.py::test_sb_052_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_052_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_052_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_052_local_capability_works"
+    ],
+    "SB-053": [
+      "test_final_parity_capabilities_p2.py::test_sb_053_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_053_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_053_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_053_local_capability_works"
+    ],
+    "SB-054": [
+      "test_final_parity_capabilities_p2.py::test_sb_054_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_054_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_054_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_054_local_capability_works"
+    ],
+    "SB-055": [
+      "test_sales_engagement_p2.py::test_sb055_sending_mode_selection_is_validated"
+    ],
+    "SB-056": [
+      "test_final_parity_capabilities_p2.py::test_sb_056_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_056_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_056_local_capability_works"
+    ],
+    "SB-057": [
+      "test_final_parity_capabilities_p2.py::test_sb_057_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_057_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_057_local_capability_works"
+    ],
+    "SB-067": [
+      "test_final_parity_capabilities_p2.py::test_sb_067_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_067_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_067_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_067_local_capability_works"
+    ],
+    "SB-070": [
+      "test_final_parity_capabilities_p2.py::test_sb_070_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_070_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_070_local_capability_works"
+    ],
+    "SB-071": [
+      "test_final_parity_capabilities_p2.py::test_sb_071_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_071_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_071_local_capability_works"
+    ],
+    "SB-072": [
+      "test_final_parity_capabilities_p2.py::test_sb_072_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_072_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_072_local_capability_works"
+    ],
+    "SB-078": [
+      "test_final_parity_capabilities_p2.py::test_provider_shaped_rows_never_claim_delivery",
+      "test_final_parity_capabilities_p2.py::test_sb_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_078_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_078_local_capability_works"
+    ],
+    "SB-079": [
+      "test_sellbird_safety_p1.py::test_sb079_drafts_carry_configured_compliance_footer_and_cannot_be_sent",
+      "test_sellbird_safety_p1.py::test_sb079_blank_footer_is_rejected"
+    ],
+    "SB-080": [
+      "test_final_parity_capabilities_p2.py::test_sb_080_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_080_local_capability_works",
+      "test_final_parity_capabilities_p2.py::test_sb_080_local_capability_works"
+    ]
+  },
+  "not_directly_named": [
+    "FB-001",
+    "FB-012",
+    "FB-013",
+    "FB-017",
+    "FB-018",
+    "FB-023",
+    "FB-027",
+    "FB-033",
+    "FB-034",
+    "FB-035",
+    "FB-037",
+    "FB-041",
+    "FB-042",
+    "FB-046",
+    "FB-047",
+    "FB-048",
+    "FB-049",
+    "FB-050",
+    "FB-051",
+    "FB-052",
+    "FB-053",
+    "FB-069",
+    "FB-071",
+    "FB-192",
+    "FB-194",
+    "FB-195",
+    "FB-196",
+    "FB-197",
+    "FB-198",
+    "FB-199",
+    "FB-200",
+    "FB-201",
+    "FB-202",
+    "FB-203",
+    "FB-204",
+    "MS-008",
+    "MS-013",
+    "MS-019",
+    "MS-024",
+    "MS-026",
+    "MS-027",
+    "MS-043",
+    "MS-046",
+    "MS-047",
+    "MS-061",
+    "PM-001",
+    "PM-004",
+    "PM-005",
+    "PM-006",
+    "PM-008",
+    "PM-017",
+    "PM-051",
+    "PM-052",
+    "PM-053",
+    "PM-054",
+    "PM-073",
+    "PM-088",
+    "PL-001",
+    "PL-002",
+    "PL-003",
+    "MT-115",
+    "CW-129"
+  ]
+}

@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- D:\NOVARA\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\NOVARA\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 10 items
+
+apps\api\tests\test_integration.py::test_module_event_appears_in_shared_audit_log PASSED [ 10%]
+apps\api\tests\test_marketing_journey_p0.py::test_all_listed_lifecycle_events_are_registered_emitted_and_queryable PASSED [ 20%]
+apps\api\tests\test_phase4_ui_contract.py::test_universal_search_contract_matches_web_app PASSED [ 30%]
+apps\api\tests\test_phase4_ui_contract.py::test_ticket_contract_matches_web_app PASSED [ 40%]
+apps\api\tests\test_phase4_ui_contract.py::test_campaign_studio_contract_matches_web_app PASSED [ 50%]
+apps\api\tests\test_phase4_ui_contract.py::test_sales_pipeline_contract_matches_web_app PASSED [ 60%]
+apps\api\tests\test_phase4_ui_contract.py::test_feedback_studio_contract_matches_web_app PASSED [ 70%]
+apps\api\tests\test_project_membership_p0.py::test_member_management_requires_project_admin_and_valid_identity PASSED [ 80%]
+apps\api\tests\test_project_membership_p0.py::test_project_membership_registry_and_roles PASSED [ 90%]
+apps\api\tests\test_projects.py::test_project_bad_payloads_and_missing_rows PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\NOVARA\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\NOVARA\docs\FINAL_RELEASE_QA\CAMPAIGN2\evidence\probe_batch_03.xml -
+======================== 10 passed, 1 warning in 9.12s ========================

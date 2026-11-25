@@ -1,0 +1,75 @@
+{
+  "steps": [
+    {
+      "step": "dashboard",
+      "ok": true,
+      "detail": "Overview\nWorkspace · Owner\n/\nQA Synthetic Workspace A\nQO\nWORKSPACE\nOverview\n\nA live view of QA Synthetic Workspace A.\n\nAdd contact\nNew task\nRecord intake\nActivity feed\n24\nContacts\nActive records\n20\nLe"
+    },
+    {
+      "step": "intake",
+      "ok": true,
+      "detail": "Intake recorded\nA new contact was identified.\n\nOne workflow run created linked records and a shared correlation id.\n\nContact\ne64bf7ca-d0d5-440a-9474-9da577abeb4b\nLead\nb8fa9d8f-7165-4d3e-a91e-4ac9221e0d48\nTask\nfe2481de-e7ad-4956-a629-abe11a68e0c5\nDraft\n7da1d8dd-5101-46f3-bc26-208970a84a0e\nCorrelation\n45dbef87-aa6d-450c-9730-93364187b12d\nOpen contact"
+    },
+    {
+      "step": "contact_timeline",
+      "ok": true,
+      "detail": "correlation mentions=5"
+    },
+    {
+      "step": "lead_qualify_convert",
+      "ok": true,
+      "detail": "{\"found\":true,\"before\":\"JR Jordan Rivera demo12.journey@novara.invalid New Normal 10 Website Form 5h ago Qualify\",\"qualifyClicked\":true} | {\"found\":true,\"convertClicked\":true,\"after\":\"JR Jordan Rivera demo12.journey@novara.invalid Qualified Normal 10 Website Form 5h ago Convert\"}"
+    },
+    {
+      "step": "audience_segment",
+      "ok": true,
+      "detail": "count 8 -> 9 | edback datasets\nCreate a dataset and a source to start ingesting feedback.\nField library, segments and dashboards\n\n0 reusable fields · 9 audience segments · 0 dashboards\n\nReserved fields captured on every record: page, campaign, device, timing, request_context"
+    },
+    {
+      "step": "campaign_draft",
+      "ok": true,
+      "detail": "Campaign Studio\nOperations · Owner\n/\nQA Synthetic Workspace A\nQO\nOPERATIONS\nCampaign Studio\n\n5 campaigns in this workspace.\n\nNew campaign\nCampaigns and metrics are recorded here only. This build sends no email, ads or messages.\n5\nCampaigns\nIn this workspace\n2\nActive\nCurrently running\n0\nLeads recorded\nFrom campaign metrics\n0.00\nSpend recor"
+    },
+    {
+      "step": "approval_gate",
+      "ok": true,
+      "detail": "{\"found\":true,\"text\":\"Following up, Jordan Rivera Jordan Rivera Draft Approve Hi Jordan, Thank you for getting in touch with QA Synthetic Workspace A. We have received your message and will follow up shortly. — The team Prepared in NOVARA. To opt out of future messages, reply STOP\"} | {\"found\":true,\"approveClicked\":true} | toast="
+    },
+    {
+      "step": "support_ticket",
+      "ok": true,
+      "detail": "Customer inbox\nRelationships · Owner\n/\nQA Synthetic Workspace A\nQO\nRELATIONSHIPS\nCustomer inbox\n\n18 open, 0 pending, 18 unassigned of 18.\n\nIdentify visitor\nNew ticket\nTickets and replies stay in this workspace. No email or message is sent by this build.\nAll statuses\nOpen\nPending\nResolved\nClosed\nEveryone\nAssigned to me\n"
+    },
+    {
+      "step": "task_complete",
+      "ok": true,
+      "detail": "{\"found\":true,\"before\":\"Qualify lead: Jordan Rivera Jordan Rivera Normal — Open Complete\",\"completeClicked\":true} | present=True"
+    },
+    {
+      "step": "insights_refresh",
+      "ok": true,
+      "detail": "Insights\nWorkspace · Owner\n/\nQA Synthetic Workspace A\nQO\nWORKSPACE\nInsights\n\nCounts are calculated by the API from current workspace rows — not cached or estimated.\n\nRefresh\nThese are descriptive counts of recorded activity. They are not a forecast, and no external analytics service receives data.\n25\nContacts\nIdentities in workspace\n21\nLe"
+    },
+    {
+      "step": "audit_trail",
+      "ok": true,
+      "detail": "Agent activity\nWorkspace · Owner\n/\nQA Synthetic Workspace A\nQO\nWORKSPACE\nAgent activity\n\n359 recorded events in sequence order.\n\nRefresh\nEvents are append-only. They are written by workflows such as intake, approvals, task changes and membership.\nAll event types\nagent.created\nagent.run_approved\nagent.run_requested\nagent.status_changed\naut"
+    }
+  ],
+  "ids": {
+    "Contact": "e64bf7ca-d0d5-440a-9474-9da577abeb4b",
+    "Lead": "b8fa9d8f-7165-4d3e-a91e-4ac9221e0d48",
+    "Task": "fe2481de-e7ad-4956-a629-abe11a68e0c5",
+    "Draft": "7da1d8dd-5101-46f3-bc26-208970a84a0e",
+    "Correlation": "45dbef87-aa6d-450c-9730-93364187b12d"
+  },
+  "started": "2026-11-24T18:49:03+00:00",
+  "finished": "2026-11-24T18:51:52+00:00",
+  "email": "demo12.journey@novara.invalid",
+  "submission_id": "DEMO2-20261125-REC21",
+  "segment_key": "northstar-welcome-final2",
+  "segment_name": "Northstar welcome audience - connected journey",
+  "hold_seconds": 13.0,
+  "synthetic": true,
+  "external_delivery": false
+}

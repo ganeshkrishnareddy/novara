@@ -1,0 +1,57 @@
+{
+  "steps": [
+    {
+      "step": "dashboard",
+      "ok": true,
+      "detail": "Overview\nWorkspace · Owner\n/\nQA Synthetic Workspace A\nQO\nWORKSPACE\nOverview\n\nA live view of QA Synthetic Workspace A.\n\nAdd contact\nNew task\nRecord intake\nActivity feed\n17\nContacts\n"
+    },
+    {
+      "step": "intake",
+      "ok": true,
+      "detail": "Intake recorded\nA new contact was identified.\n\nOne workflow run created linked records and a shared correlation id.\n\nContact\n610e706f-7ffb-4ae0-bb08-1af687fdabf5\nLead\neb39fad9-35ad-4c63-9cc8-9fe4bb17b0c5\nTask\n44fbf84d-e338-4c90-b760-ada760f04225\nDraft\ncded2dde-18bb-496c-9523-40a247f0080b\nCorrelation\n5cb6d565-bab1-4244-9e3a-c92bf95f6089\nOpen contact"
+    },
+    {
+      "step": "contact_timeline",
+      "ok": true,
+      "detail": "correlation mentions=5"
+    },
+    {
+      "step": "lead_qualify_convert",
+      "ok": true,
+      "detail": "{\"found\":true,\"before\":\"JR Jordan Rivera demo4.journey@novara.invalid New Normal 10 Website Form 5h ago Qualify\",\"qualifyClicked\":true} | {\"found\":true,\"convertClicked\":true,\"after\":\"JR Jordan Rivera demo4.journey@novara.invalid Qualified Normal 10 Website Form 5h ago Convert\"}"
+    },
+    {
+      "step": "campaign_draft",
+      "ok": true,
+      "detail": "Campaign Studio\nOperations · Owner\n/\nQA Synthetic Workspace A\nQO\nOPERATIONS\nCampaign Studio\n\n5 campaigns in this workspace.\n\nNew campaign\nCampaigns and metrics are recorded here only. This build sends no email, ads or messages.\n5\nCampaigns\nIn this workspace\n2\n"
+    },
+    {
+      "step": "support_ticket",
+      "ok": true,
+      "detail": "Customer inbox\nRelationships · Owner\n/\nQA Synthetic Workspace A\nQO\nRELATIONSHIPS\nCustomer inbox\n\n10 open, 0 pending, 10 unassigned of 10.\n\nIdentify visitor\nNew ticket\nTickets and replies stay in this workspace. No email or message is sent by this build.\nAll st"
+    },
+    {
+      "step": "task",
+      "ok": true,
+      "detail": "Tasks\nOperations · Owner\n/\nQA Synthetic Workspace A\nQO\nOPERATIONS\nTasks\n\n20 open of 20 total.\n\nNew task\nWork items by state\nThis is the work-item list, not the legacy task list below.\ndone 5\nTITLE\tSTATE\tPRIORITY\tASSIGNEE\tSTART / DUE\n\nQA Synthetic title\nQA E2E "
+    },
+    {
+      "step": "insights",
+      "ok": true,
+      "detail": "Insights\nWorkspace · Owner\n/\nQA Synthetic Workspace A\nQO\nWORKSPACE\nInsights\n\nCounts are calculated by the API from current workspace rows — not cached or estimated.\n\nRefresh\nThese are descriptive counts of recorded activity. They are not a forecast, and no external analytics service receives data.\n1"
+    }
+  ],
+  "ids": {
+    "Contact": "610e706f-7ffb-4ae0-bb08-1af687fdabf5",
+    "Lead": "eb39fad9-35ad-4c63-9cc8-9fe4bb17b0c5",
+    "Task": "44fbf84d-e338-4c90-b760-ada760f04225",
+    "Draft": "cded2dde-18bb-496c-9523-40a247f0080b",
+    "Correlation": "5cb6d565-bab1-4244-9e3a-c92bf95f6089"
+  },
+  "started": "2026-11-24T18:33:59+00:00",
+  "finished": "2026-11-24T18:34:35+00:00",
+  "email": "demo4.journey@novara.invalid",
+  "submission_id": "DEMO2-20261125-REC2",
+  "synthetic": true,
+  "external_delivery": false
+}

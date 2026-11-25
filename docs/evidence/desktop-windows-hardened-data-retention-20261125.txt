@@ -1,0 +1,12 @@
+NOVARA desktop hardened-build data retention recheck - 2026-11-25
+
+The line `user_data_kept=False` in desktop-windows-hardened-mode-qa-20261125.txt was caused by incorrect nested quoting in the PowerShell check, not by data removal.
+
+Explicit recheck:
+db_path=C:\Users\ganes\AppData\Roaming\NOVARA\data\novara.sqlite3
+db_exists=True
+db_size_bytes=7954432
+db_last_write=25-11-2026 16:55:50
+secrets_exists=True
+
+Uninstall removed the application executable but preserved the per-user SQLite database and generated secret file. Reinstall restored the executable; the checksum remained 4FEF61F2968746A664535F4280E504A044523BE640B399E50E0CC859C8574858.

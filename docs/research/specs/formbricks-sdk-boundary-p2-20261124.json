@@ -1,0 +1,28 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Formbricks / clean-room SDK replacement boundary",
+    "location": "apps/api/novara_core/modules/formbricks_sdk_boundary.py; apps/api/tests/test_formbricks_sdk_boundary_p2.py; docs/evidence/formbricks-sdk-boundary-p2-20261124.md",
+    "backend": "complete: immutable workspace-scoped catalogue records each advertised MIT SDK package path with a NOVARA-local replacement contract, public documentation reference, preserved notice, no default dependency and no external endpoint",
+    "frontend": "n/a for these rows: the acceptance criterion permits a documented clean-room replacement with a named test; no SDK import or UI route is claimed",
+    "database": "n/a: no new table or migration; the catalogue is read-only and workspace scope is enforced by the shared dependency",
+    "api": "complete: list and single-row lookup routes with 403/404 failure modes",
+    "permissions": "complete: require(EVENT_READ) and verify_workspace on every route; cross-workspace access fails closed",
+    "integration": "complete: no package dependency, hosted Formbricks call, AGPL/EE source copy or outbound HTTP is used; the notice remains in THIRD_PARTY_NOTICES.md",
+    "evidence": "docs/evidence/formbricks-sdk-boundary-p2-20261124.md; apps/api/tests/test_formbricks_sdk_boundary_p2.py; full suite docs/evidence/t117-fullsuite-20261124.txt",
+    "remaining": "None for this row. The row accepts a documented clean-room replacement; it does not claim an installed Formbricks SDK, an external service call or AGPL/EE source. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "FB-132"},
+    {"id": "FB-133"},
+    {"id": "FB-134"},
+    {"id": "FB-135"},
+    {"id": "FB-136"},
+    {"id": "FB-137"},
+    {"id": "FB-138"},
+    {"id": "FB-139"},
+    {"id": "FB-140"},
+    {"id": "FB-141"},
+    {"id": "FB-142"}
+  ]
+}

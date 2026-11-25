@@ -1,0 +1,26 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "NOVARA / no-default-dependency boundary",
+    "location": "apps/api/novara_core/modules/dependency_boundary.py; apps/api/tests/test_dependency_boundary_p2.py; docs/evidence/dependency-boundary-p2-20261124.md",
+    "backend": "complete: immutable workspace-scoped catalogue records each negative dependency claim with provider, NOVARA-local boundary, preserved notice, no declared dependency and no external endpoint",
+    "frontend": "n/a for these rows: acceptance is negative evidence about default dependencies and unverified claims; no UI surface is claimed",
+    "database": "n/a: no new table or migration; workspace scope is enforced by the shared dependency",
+    "api": "complete: list and single-row lookup routes with 403/404 failure modes",
+    "permissions": "complete: require(EVENT_READ) and verify_workspace on every route; cross-workspace access fails closed",
+    "integration": "complete: no SDK import, vendored package, external endpoint or unverified search result is introduced; notices remain in THIRD_PARTY_NOTICES.md",
+    "evidence": "docs/evidence/dependency-boundary-p2-20261124.md; apps/api/tests/test_dependency_boundary_p2.py; full suite docs/evidence/t118-fullsuite-20261124.txt",
+    "remaining": "None for this row. The row claims only the absence of an unverified default dependency or fabricated result; other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "MS-067"},
+    {"id": "MS-097"},
+    {"id": "PL-068"},
+    {"id": "PL-149"},
+    {"id": "PL-150"},
+    {"id": "CW-122"},
+    {"id": "NV-058"},
+    {"id": "NV-059"},
+    {"id": "NV-094"}
+  ]
+}

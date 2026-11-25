@@ -1,0 +1,28 @@
+{
+  "task": "T-121",
+  "title": "Clean-room Plane no-unverified-default boundary",
+  "date": "2026-11-24",
+  "rows": ["PL-067", "PL-109", "PL-133", "PL-134", "PL-151", "PL-153", "PL-154", "PL-156"],
+  "source_basis": "documented public behaviour only; no upstream Plane source, package, edition logic, build artifact or hosted instance copied",
+  "module": "apps/api/novara_core/modules/plane_claim_boundary.py",
+  "migration": null,
+  "tests": [
+    "apps/api/tests/test_plane_claim_boundary_p2.py",
+    "apps/api/tests/test_workflow.py::test_no_route_sends_external_messages"
+  ],
+  "evidence": "docs/evidence/plane-claim-boundary-p2-20261124.md",
+  "verification": {
+    "targeted": "8 passed, 1 warning in 6.78s",
+    "alembic_head": "e0f1a2b3c4d5",
+    "full_suite": "PENDING"
+  },
+  "frontend": "n/a: acceptance is negative evidence about unverified defaults; no UI surface claimed",
+  "external_calls": false,
+  "matrix_after": {
+    "verified_complete": 723,
+    "licensing_restricted": 185,
+    "not_implemented": 295,
+    "complete_like": 793,
+    "total": 1488
+  }
+}

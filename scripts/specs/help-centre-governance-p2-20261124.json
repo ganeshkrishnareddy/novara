@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Chatwoot / help-centre governance (clean-room)",
+    "location": "apps/api/novara_core/modules/help_centre_governance.py; apps/api/tests/test_chatwoot_help_centre_p2.py; docs/evidence/help-centre-governance-p2-20261124.md",
+    "backend": "complete: ten additive workspace-scoped hcg_* tables provide per-portal branding and categories, validated rich-text metadata and embeds, immutable article revisions, real local view/search events, private page visibility, widget surfaces, advisory content gaps derived from stored searches, and an authorized-document FAQ index with retained citations; create/publish/revise, independent portals, widget reads and API CRUD all work with real persistence and access checks",
+    "frontend": "n/a for these rows: every acceptance criterion is API/server-level and verified by a named test; no dedicated SPA surface or dark-mode UI is claimed",
+    "database": "complete: ten additive workspace-scoped tables created by Alembic revision b7c8d9e0f1a2 (hcg_portal_branding, hcg_categories, hcg_article_meta, hcg_article_revisions, hcg_article_views, hcg_search_events, hcg_page_visibility, hcg_widget_surfaces, hcg_content_gaps, hcg_faq_index); existing portal, article and document rows are referenced by id and never altered",
+    "api": "complete: one workspace help-centre API group with validated branding/category/metadata/revision/view/search/visibility/widget/gap/FAQ/CRUD endpoints and 401/403/404/409/422 failure modes; public surfaces never return internal, draft or cross-portal content and opening a widget article creates no ticket; all responses are local with external_calls=false and external_delivery=false",
+    "permissions": "complete: verify_workspace on every route plus require() with CONTACT_READ/CONTACT_WRITE-equivalent, NOTE_WRITE or DOCUMENT_WRITE as appropriate; read-only members can read but cannot create, revise, publish, delete, configure, refresh or index; cross-workspace references fail closed",
+    "integration": "complete: publishes help_centre_governance.changed events to NOVARA's shared event spine; reuses existing support portal/article and document records by reference; no Chatwoot source, hosted instance, Captain/LLM service, outbound HTTP, email or external delivery is contacted",
+    "evidence": "docs/evidence/help-centre-governance-p2-20261124.md; apps/api/tests/test_chatwoot_help_centre_p2.py; full suite docs/evidence/t112-fullsuite-20261124.txt",
+    "remaining": "None for this row. Each capability is a clean-room equivalent derived from the published behaviour and acceptance criteria; no upstream source, hosted service, paid tier, external dependency or real email delivery is claimed. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "CW-066"},
+    {"id": "CW-067"},
+    {"id": "CW-087"},
+    {"id": "CW-088"},
+    {"id": "CW-089"},
+    {"id": "CW-090"},
+    {"id": "CW-091"},
+    {"id": "CW-092"}
+  ]
+}

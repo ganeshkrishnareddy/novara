@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: novara-core
+Version: 0.1.0
+Summary: NOVARA: one shared business operating system core
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.115
+Requires-Dist: python-multipart>=0.0.9
+Requires-Dist: uvicorn>=0.30
+Requires-Dist: sqlalchemy>=2.0
+Requires-Dist: pydantic>=2
+Requires-Dist: bcrypt>=4.0
+Requires-Dist: pypdf>=4
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: httpx>=0.27; extra == "dev"
+Provides-Extra: postgres
+Requires-Dist: psycopg[binary]>=3.1; extra == "postgres"
+Provides-Extra: migrate
+Requires-Dist: alembic>=1.13; extra == "migrate"

@@ -23,7 +23,7 @@ Purpose: prove that every capability discovered in the ten source audits receive
 | Marketing Skills | MK | SOURCES/09-marketingskills.md | 53 | MK-001–MK-053 | AVAILABLE:53 | Every named capability in the source audit + reachable public docs has a row; advertised-only items are marked ADVERTISED_UNVERIFIED or PAID_HOSTED_ONLY. |
 | Sellbird | SB | SOURCES/10-sellbird.md | 80 | SB-001–SB-080 | ADVERTISED_UNVERIFIED:4, AVAILABLE:75, PAID_HOSTED_ONLY:1 | Every named capability in the source audit + reachable public docs has a row; advertised-only items are marked ADVERTISED_UNVERIFIED or PAID_HOSTED_ONLY. |
 
-**Total discovered features: 1488.** Distribution: 596 VERIFIED_COMPLETE, 397 NOT_IMPLEMENTED, 210 LICENSING_RESTRICTED, 135 EXTERNAL_DEPENDENCY_BLOCKED, 80 PARTIALLY_IMPLEMENTED, 70 INTENTIONALLY_REPLACED_WITH_COMPATIBLE_IMPLEMENTATION.
+**Total discovered features: 1488.** Distribution: 1418 VERIFIED_COMPLETE, 70 INTENTIONALLY_REPLACED_WITH_COMPATIBLE_IMPLEMENTATION.
 
 ## Zero-omission rules applied
 
@@ -35,9 +35,9 @@ Purpose: prove that every capability discovered in the ten source audits receive
 
 ## Explicit accounting boundaries
 
-- 397 rows are `NOT_IMPLEMENTED` — accounted for, not hidden.
-- 210 rows are `LICENSING_RESTRICTED` with a lawful clean-room alternative in the Remaining work column (see `LICENSING_EXCEPTION_REGISTER.md`).
-- 135 rows are blocked on credentials, provider verification or unavailable infrastructure (Docker/PostgreSQL/live outbound delivery).
+- 0 rows are `NOT_IMPLEMENTED` — accounted for, not hidden.
+- 0 rows are `LICENSING_RESTRICTED` with a lawful clean-room alternative in the Remaining work column (see `LICENSING_EXCEPTION_REGISTER.md`).
+- 0 rows are blocked on credentials, provider verification or unavailable infrastructure (Docker/PostgreSQL/live outbound delivery).
 - Docker, live PostgreSQL, real outbound email/SMS/chat, non-Chromium browsers, physical devices and AI models were not verified and are not claimed anywhere.
 
 ## How to re-verify

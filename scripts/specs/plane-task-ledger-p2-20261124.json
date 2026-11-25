@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Plane / local background-task ledger (clean-room)",
+    "location": "apps/api/novara_core/modules/plane_task_ledger.py; apps/api/tests/test_plane_task_ledger_p2.py; docs/evidence/plane-task-ledger-p2-20261124.md",
+    "backend": "complete: nine additive workspace-scoped plt_* tables provide durable task results, opt-in local-only email drafts, signed/retried/audited webhook records, workspace-scoped work-item and chart exports, retrievable page versions, post-processing asset metadata and idempotent workspace seeding",
+    "frontend": "n/a for these rows: every acceptance criterion is API/server-level and verified by a named test; no dedicated SPA surface or dark-mode UI is claimed",
+    "database": "complete: nine additive workspace-scoped tables created by Alembic revision d9e0f1a2b3c4 (plt_task_results, plt_email_policies, plt_email_drafts, plt_webhook_endpoints, plt_webhook_deliveries, plt_exports, plt_page_versions, plt_asset_processings, plt_seed_defaults); existing job, project, page, storage and event rows are referenced by id and never altered",
+    "api": "complete: one workspace task-ledger API group with validated enqueue/configure/query/download routes and 401/403/404/409/422 failure modes; all work happens through NOVARA's existing durable local job queue; no broker, outbound email, outbound webhook or external delivery",
+    "permissions": "complete: verify_workspace on every route plus require() with EVENT_READ/WORKSPACE_MANAGE as appropriate; the email opt-in needs an explicit authorization act, webhook secrets are stored only as hashes, and all cross-workspace reads fail closed",
+    "integration": "complete: publishes plane_task_ledger.changed events on NOVARA's shared event spine; reuses the durable jobs table and existing project/page/storage/event records by reference; no Plane source, hosted instance, Celery broker, paid plan configuration, outbound HTTP or external delivery is contacted",
+    "evidence": "docs/evidence/plane-task-ledger-p2-20261124.md; apps/api/tests/test_plane_task_ledger_p2.py; full suite docs/evidence/t114-fullsuite-20261124.txt",
+    "remaining": "None for this row. Each capability is a clean-room equivalent derived from the published behaviour and acceptance criteria; no upstream source, hosted service, broker, paid tier, external dependency or real email delivery is claimed. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "PL-073"},
+    {"id": "PL-076"},
+    {"id": "PL-078"},
+    {"id": "PL-081"},
+    {"id": "PL-082"},
+    {"id": "PL-083"},
+    {"id": "PL-084"},
+    {"id": "PL-086"}
+  ]
+}

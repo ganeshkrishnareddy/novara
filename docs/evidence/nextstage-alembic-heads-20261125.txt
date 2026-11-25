@@ -1,0 +1,3 @@
+﻿=== & 'D:\NOVARA\.venv\Scripts\python.exe' -m alembic -c alembic.ini heads ===
+b5c6d7e8f9a0 (head)
+exit=0

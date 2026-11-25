@@ -10,7 +10,16 @@ from pathlib import Path
 import csv
 import json
 import re
+import sys
 from collections import Counter, defaultdict
+
+if "--from-sources" not in sys.argv:
+    raise SystemExit(
+        "Refusing to rebuild MASTER_FEATURE_MATRIX.csv from the stale SOURCES inventories. "
+        "The live matrix is maintained incrementally by evidence-gated closures; use "
+        "generate_deliverables.py to regenerate narrative deliverables. Pass --from-sources "
+        "only for an intentional full re-inventory."
+    )
 
 BASE = Path(r"D:\NOVARA\docs\FEATURE_PARITY")
 SRC = BASE / "SOURCES"

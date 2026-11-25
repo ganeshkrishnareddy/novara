@@ -1,0 +1,14 @@
+{
+  "file": "videos\\NOVARA_Complete_QA_Walkthrough.mp4",
+  "bytes": 4048244,
+  "media_lines": [
+    "Duration: 00:03:16.00, start: 0.000000, bitrate: 165 kb/s",
+    "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 119 kb/s, 15 fps, 15 tbr, 15360 tbn (default)",
+    "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 22050 Hz, mono, fltp, 40 kb/s (default)",
+    "Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))",
+    "Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))",
+    "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1920x1080, q=2-31, 200 kb/s, 15 fps, 15 tbn (default)",
+    "Stream #0:1(und): Audio: pcm_s16le, 22050 Hz, mono, s16, 352 kb/s (default)"
+  ],
+  "decode_exit": 0
+}

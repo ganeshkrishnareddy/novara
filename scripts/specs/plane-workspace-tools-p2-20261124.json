@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Plane / workspace tools (clean-room)",
+    "location": "apps/api/novara_core/modules/plane_workspace_tools.py; apps/api/tests/test_plane_workspace_tools_p2.py; docs/evidence/plane-workspace-tools-p2-20261124.md",
+    "backend": "complete: eleven additive workspace-scoped pwt_* tables with validated CRUD and derived counts; intake forms create exactly one validated intake request; user assets are owner-scoped and workspace assets are admin-controlled; stickies are private to owner; theme preferences persist per user/workspace with light-mode enforced; the PQL filter DSL parses to a structured predicate tree and never generates SQL; contacts link to work items with contact:read preserved; releases link items idempotently; one vote/reaction per user per item toggles with correct counts; navigation visibility and roles are enforced server-side",
+    "frontend": "n/a for these rows: acceptance criteria are API/server-level, including a real direct-URL guard for hidden navigation; no dedicated SPA surface is claimed",
+    "database": "complete: eleven additive workspace-scoped tables created by Alembic revision e6f7a8b9c1d2 (pwt_intake_forms, pwt_intake_requests, pwt_user_assets, pwt_workspace_assets, pwt_stickies, pwt_theme_preferences, pwt_customer_links, pwt_releases, pwt_release_items, pwt_votes, pwt_nav_items); no existing table altered",
+    "api": "complete: one stable workspace-tools API group plus one token-scoped intake submission route, with named operation ids and 401/403/404/409/422 failure modes; every response has external_calls=false and external_delivery=false",
+    "permissions": "complete: verify_workspace on every workspace route plus require() with WORKSPACE_MANAGE, TASK_READ, TASK_WRITE, NOTE_WRITE, CONTACT_READ or CONTACT_WRITE as appropriate; owner/asset/sticky scoping and the nav role guard fail closed; every mutation is audited",
+    "integration": "complete: publishes workspace_tools.* events to NOVARA's shared event spine; the PQL parser is local and injection-safe, and no Plane source, hosted instance, Django/React package, outbound HTTP or external delivery is contacted",
+    "evidence": "docs/evidence/plane-workspace-tools-p2-20261124.md; apps/api/tests/test_plane_workspace_tools_p2.py; full suite docs/evidence/t110-fullsuite-20261124.txt (833 passed, exit 0)",
+    "remaining": "None for this row. Each capability is a clean-room equivalent derived from the published behaviour; no upstream source, hosted service or external dependency is claimed. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "PL-089"},
+    {"id": "PL-091"},
+    {"id": "PL-092"},
+    {"id": "PL-093"},
+    {"id": "PL-107"},
+    {"id": "PL-137"},
+    {"id": "PL-138"},
+    {"id": "PL-139"},
+    {"id": "PL-142"},
+    {"id": "PL-145"}
+  ]
+}

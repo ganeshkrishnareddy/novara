@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Projects / Work-item planning",
+    "location": "apps/api/novara_core/modules/work_item_planning.py; apps/web/app.js (work-item-planning Operations route); apps/api/tests/test_work_item_planning_p2.py",
+    "backend": "complete: clean-room work-item planning over existing ProjectItem/ProjectModule/ProjectPage rows with symmetric relations, typed dependencies and violation detection, estimate schemes with project/cycle aggregates, derived roadmap/calendar/timeline/table views with validated edits, status updates with sub-item progress, templates for items/projects/pages, explicit local recurrence materialisation, worklog sums and subscriber-driven recipients",
+    "frontend": "complete: dedicated work-item-planning Operations route lists work items and renders twelve panels for relations, dependencies, estimates, roadmap, calendar, timeline, table cells, updates, templates, recurrence, worklogs and subscribers; all controls wired with a static guard in test_ui_wiring.py",
+    "database": "complete: nine additive workspace-scoped tables created by Alembic revision a1b2c3d4e5f6 (planning_relations, planning_dependencies, planning_estimate_schemes, planning_estimates, planning_item_updates, planning_templates, planning_recurrences, planning_time_logs, planning_subscribers); no existing table altered",
+    "api": "complete: one stable work-item-planning API group (version 1, no legacy claim, external_calls=false, external_delivery=false, scheduler=explicit local materialisation only) with 404/409/422 failure modes and named acceptance tests",
+    "permissions": "complete: verify_workspace plus require(TASK_READ) for reads and require(TASK_WRITE) for all writes; cross-workspace item and entity ids fail closed with 404; every mutation publishes an audited event",
+    "integration": "complete: publishes planning.relation_changed, planning.dependency_changed, planning.estimate_changed, planning.item_scheduled, planning.table_cell_changed, planning.item_update_posted, planning.template_created, planning.template_instantiated, planning.item_recurred, planning.time_logged and planning.subscribers_changed to NOVARA's shared event spine; no Plane source, Django/React dependency, scheduler daemon, websocket, hosted endpoint or outbound traffic",
+    "evidence": "docs/evidence/work-item-planning-p2-20261123.md; apps/api/tests/test_work_item_planning_p2.py; apps/api/tests/test_ui_wiring.py",
+    "remaining": "None for this row. Other unimplemented, restricted or externally blocked rows keep their existing matrix status."
+  },
+  "rows": [
+    {"id": "PL-013"},
+    {"id": "PL-014"},
+    {"id": "PL-016"},
+    {"id": "PL-020"},
+    {"id": "PL-023"},
+    {"id": "PL-024"},
+    {"id": "PL-025"},
+    {"id": "PL-035"},
+    {"id": "PL-036"},
+    {"id": "PL-037"},
+    {"id": "PL-136"},
+    {"id": "PL-141"}
+  ]
+}

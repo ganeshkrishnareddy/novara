@@ -1,0 +1,42 @@
+NOVARA desktop final-artifact closure QA - 2026-11-25
+
+Artifact: desktop/dist/NOVARA-Setup-0.1.0-desktop-x64.exe
+Size: 146464169 bytes
+SHA-256: 8563435A3FE795548D3F2F93DEED06FC5D03E5D278BECE9596D30603FD5A5077
+Manifest SHA-256: 8563435a3fe795548d3f2f93deed06fc5d03e5d278bece9596d30603fd5a5077
+Checksum match: True
+
+Clean silent install:
+installer_exit=0
+web_client=True
+launched_pid=14656
+window_title=NOVARA - Everything Connected. Everything Under Control.
+backend_url=http://127.0.0.1:58847
+health={"status":"ok","product":"NOVARA"}
+index_status=200 title_match=True
+log_grew=True
+
+Built-in browser verification against that backend:
+- sign-in succeeded with the existing local workspace account
+- dashboard loaded with Overview heading and full navigation
+- Contacts navigation succeeded
+- Add contact form created a real record: closure.qa@novara.local / Closure QA Contact
+- contact detail URL: http://127.0.0.1:58847/#/contacts/6bf08ce2-8360-48f9-b8ff-511099273369
+- read-back showed "Contact created." and a persisted contact event
+
+Settings persistence:
+remote_title=NOVARA - Connecting
+remote_settings_after_start={"backendMode":"remote","remoteUrl":"http://127.0.0.1:9"}
+remote_log_grew=False
+local_title=NOVARA - Everything Connected. Everything Under Control.
+local_log_grew=True
+settings_restored=True
+
+Uninstall and reinstall:
+uninstaller_exit=0
+exe_removed=True
+user_data_kept=True
+reinstall_exit=0 exe_restored=True
+final_sha=8563435A3FE795548D3F2F93DEED06FC5D03E5D278BECE9596D30603FD5A5077
+
+Note: the first shell line that printed user_data_kept used incorrect nested quoting; the database path was rechecked explicitly and exists at C:\Users\ganes\AppData\Roaming\NOVARA\data\novara.sqlite3 (7954432 bytes).

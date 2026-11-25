@@ -1,0 +1,23 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Feature flags / Experimentation",
+    "location": "apps/api/novara_core/modules/experiment_platform.py; apps/api/novara_core/modules/api_keys.py; apps/web/app.js (experiment-platform Operations route); apps/api/tests/test_experiment_platform_p2.py",
+    "backend": "complete: clean-room platform governance slice with a live generated OpenAPI status, a REST operation inventory over the real app, credential-layer policies backed by the existing scoped API-key module and six default experimentation roles with workspace-scoped bindings",
+    "frontend": "complete: dedicated experiment-platform Operations route renders live API status, credential policies, default roles and bindings with a contract modal, role binding and permission check forms; static guard in test_ui_wiring.py",
+    "database": "complete: one additive workspace-scoped experiment_role_bindings table created by migration b1c2d3e4f5a7; credentials persist in the existing hashed api_keys table with one-time secret display",
+    "api": "complete: one stable experiment-platform API group (version 1, no legacy claim) covering openapi status, REST inventory, credential policies, role catalogue, permission checks and role bindings",
+    "permissions": "complete: verify_workspace plus require(WORKSPACE_MANAGE) for role bindings and require(CONTACT_READ) for reads; existing API keys enforce explicit scopes and bearer-only credential management; all role changes are audited",
+    "integration": "complete: reports the real NOVARA OpenAPI document, reuses existing scoped API keys and workspace identity/event contracts; no GrowthBook source, hosted platform, external identity provider or provider credential is contacted",
+    "evidence": "docs/evidence/experiment-platform-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "criteria": "Named acceptance tests prove generated OpenAPI cleanliness, 40+ real REST operations, one-time hashed credentials with enforced scopes, six default roles, persisted workspace-scoped bindings and a wired UI route.",
+    "remaining": "No remaining work for the recorded local acceptance criteria. GrowthBook-hosted API, external identity providers, third-party SDKs, MCP servers, agent tooling and AI adapters remain out of scope and are not claimed."
+  },
+  "rows": [
+    { "id": "GB-061" },
+    { "id": "GB-062" },
+    { "id": "GB-065" },
+    { "id": "GB-066" },
+    { "id": "GB-067" }
+  ]
+}

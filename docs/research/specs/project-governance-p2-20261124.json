@@ -1,0 +1,29 @@
+{
+  "task": "T-109",
+  "title": "Clean-room project governance P2 integration",
+  "date": "2026-11-24",
+  "rows": ["PL-034", "PL-095", "PL-106", "PL-119", "PL-120", "PL-128", "PL-129", "PL-140"],
+  "source_basis": "documented public behaviour only; no upstream source or paid configuration copied",
+  "module": "apps/api/novara_core/modules/project_governance.py",
+  "migration": "d5e6f7a8b9c0",
+  "tests": [
+    "apps/api/tests/test_project_governance_p2.py",
+    "apps/api/tests/test_workflow.py::test_no_route_sends_external_messages"
+  ],
+  "evidence": "docs/evidence/project-governance-p2-20261124.md",
+  "verification": {
+    "targeted": "14 passed, 1 warning in 12.43s",
+    "node_check": "exit 0",
+    "alembic_head": "d5e6f7a8b9c0",
+    "full_suite": "823 passed, 2 warnings in 507.85s, exit 0"
+  },
+  "frontend": "n/a: API-level acceptance criteria; no dedicated SPA view claimed",
+  "external_calls": false,
+  "matrix_after": {
+    "verified_complete": 609,
+    "licensing_restricted": 197,
+    "not_implemented": 397,
+    "complete_like": 679,
+    "total": 1488
+  }
+}

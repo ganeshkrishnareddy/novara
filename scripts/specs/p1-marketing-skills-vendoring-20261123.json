@@ -1,0 +1,24 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Marketing skills reference library",
+    "location": "apps/api/novara_core/modules/marketing_skills.py; apps/api/novara_core/skills/vendor/marketingskills/2.14.25; apps/api/tests/test_marketing_skills_p1.py",
+    "backend": "complete: pinned MIT bundle served verbatim with full per-file SHA-256/byte-length/upstream-blob verification on every load; invalid bundles return 503",
+    "frontend": "n/a: advisory reference content served through the permissioned API; no SPA skill-execution surface is claimed",
+    "database": "n/a: read-only vendored content with an in-code anchored manifest; no new workspace rows",
+    "api": "complete: three documented workspace-scoped routes (index, provenance, detail) on /api/v1/workspaces/{workspace_id}/skills",
+    "permissions": "complete: real bearer auth, CONTACT_READ and verify_workspace; 401 anonymous, 403 cross-workspace",
+    "integration": "complete: additive on NOVARA's single application; no upstream script or eval executed",
+    "evidence": "docs/evidence/marketing-skills-vendoring-p1-20261123.md",
+    "remaining": "None for the pinned, integrity-checked serving acceptance criteria. Upstream paid evals are not run."
+  },
+  "rows": [
+    {"id": "MK-001"},
+    {"id": "MK-005"},
+    {"id": "MK-015"},
+    {"id": "MK-017"},
+    {"id": "MK-018"},
+    {"id": "MK-039"},
+    {"id": "MK-048"}
+  ]
+}

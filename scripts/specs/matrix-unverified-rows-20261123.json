@@ -1,0 +1,36 @@
+{
+  "defaults": {
+    "backend": "implemented locally; row-specific acceptance test not yet captured",
+    "database": "implemented locally; row-specific acceptance test not yet captured",
+    "api": "implemented locally; row-specific acceptance test not yet captured",
+    "permissions": "workspace-scoped locally; row-specific acceptance test not yet captured",
+    "integration": "local implementation only; no external provider claim",
+    "frontend": "n/a: no row-specific UI acceptance evidence captured",
+    "remaining": "Add a row-specific named acceptance test that proves the full acceptance criterion, then reassess from IMPLEMENTED_UNVERIFIED.",
+    "status": "IMPLEMENTED_UNVERIFIED"
+  },
+  "rows": [
+    {"id": "PM-002", "module": "Documents / Storage", "location": "apps/api/novara_core/modules/storage.py", "evidence": "`test_batch2_smoke.py::test_storage_upload_presign_download` covers upload/download and presign; no PM-002 row-specific test found"},
+    {"id": "PM-012", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py, modules/storage.py", "evidence": "`test_cycle1_smoke.py::test_document_sharing_link_lifecycle`; PM-012 preview acceptance not asserted by a named test"},
+    {"id": "PM-015", "module": "Documents / Storage", "location": "apps/api/novara_core/modules/storage.py", "evidence": "local filesystem adapter implemented; S3-compatible backend has no row-specific named test"},
+    {"id": "PM-028", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "`test_cycle1_smoke.py::test_document_sharing_link_lifecycle`; no PM-028 row-specific test found"},
+    {"id": "PM-029", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "`test_cycle1_smoke.py::test_document_sharing_link_lifecycle`; PM-029 management acceptance not asserted by a named test"},
+    {"id": "PM-030", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "password policy present in code; no PM-030 named acceptance test found"},
+    {"id": "PM-032", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "`test_batch4_security.py::test_revoked_and_expired_style_tokens_are_not_accepted`; no PM-032 row-specific test found"},
+    {"id": "PM-033", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "`test_documents_p0.py::test_download_is_policy_controlled_and_publishes_a_shared_event`; no PM-033 row-specific test found"},
+    {"id": "PM-039", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "`test_batch4_security.py::test_revoked_and_expired_style_tokens_are_not_accepted`; no PM-039 row-specific test found"},
+    {"id": "PM-042", "module": "Documents / Sharing", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "`test_batch4_security.py::test_revoked_and_expired_style_tokens_are_not_accepted`; no PM-042 row-specific test found"},
+    {"id": "PM-072", "module": "Documents / Analytics", "location": "apps/api/novara_core/modules/document_links.py", "evidence": "`test_batch4_integration.py::test_document_link_view_to_crm_activity`; no PM-072 row-specific test found"},
+    {"id": "PM-125", "module": "Documents / Conversion", "location": "apps/api/novara_core/modules/storage.py", "evidence": "`test_papermark_documents_p1.py::test_pm150_local_conversion_output_without_agpl_source` covers local conversion output; no PM-125 row-specific test found"},
+    {"id": "MT-008", "module": "Marketing / Segments", "location": "apps/api/novara_core/modules/marketing.py", "evidence": "`test_cycle1_smoke.py::test_marketing_segments_and_templates` creates a segment; dynamic membership update not asserted by a named test"},
+    {"id": "MT-012", "module": "Marketing / Templates", "location": "apps/api/novara_core/modules/marketing.py", "evidence": "`test_cycle1_smoke.py::test_marketing_segments_and_templates` creates an email template; no MT-012 row-specific test found"},
+    {"id": "MT-013", "module": "Marketing / Broadcast", "location": "apps/api/novara_core/modules/email_campaigns.py", "evidence": "`test_batch2_smoke.py::test_email_broadcast_unsubscribe`; no MT-013 row-specific test found"},
+    {"id": "MT-026", "module": "Marketing / Campaigns", "location": "apps/api/novara_core/modules/marketing.py", "evidence": "`test_marketing_journey_p0.py::test_campaign_can_be_authored_scheduled_and_activated_locally`; no MT-026 row-specific test found"},
+    {"id": "MT-027", "module": "Marketing / Campaign builder", "location": "apps/api/novara_core/modules/marketing.py, apps/web/app.js", "evidence": "campaign editing exists; drag-and-drop builder acceptance has no named test"},
+    {"id": "MT-028", "module": "Marketing / Campaigns", "location": "apps/api/novara_core/modules/marketing.py", "evidence": "campaign contact sources exist in code; no MT-028 row-specific test found"},
+    {"id": "CW-019", "module": "Support / Customer Inbox", "location": "apps/api/novara_core/modules/support.py", "frontend": "complete: private-note toggle wired in Customer inbox (support-p1-ui evidence)", "evidence": "`test_cycle1_smoke.py::test_support_private_notes_and_search`, `test_batch4_security.py::test_internal_notes_not_in_messages`; no CW-019 row-specific test found"},
+    {"id": "CW-030", "module": "Support / Search", "location": "apps/api/novara_core/modules/support.py", "evidence": "`test_cycle1_smoke.py::test_support_private_notes_and_search` covers ticket search; no CW-030 row-specific test found"},
+    {"id": "NV-032", "module": "Notifications / Preferences", "location": "apps/api/novara_core/modules/notification_preferences.py", "evidence": "`test_cycle1_smoke.py::test_notification_preferences` covers CRUD; suppression of a workflow step and specificity order not asserted by a named test"},
+    {"id": "NV-039", "module": "Notifications / Preferences UI", "location": "apps/web/app.js, apps/api/novara_core/modules/notification_preferences.py", "frontend": "preferences view present in code; no row-specific UI acceptance evidence", "evidence": "`test_cycle1_smoke.py::test_notification_preferences` covers the API only; no NV-039 named UI test found"}
+  ]
+}

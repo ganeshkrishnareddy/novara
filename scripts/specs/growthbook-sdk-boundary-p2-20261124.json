@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "GrowthBook / clean-room SDK compatibility boundary",
+    "location": "apps/api/novara_core/modules/growthbook_sdk_boundary.py; apps/api/tests/test_growthbook_sdk_boundary_p2.py; docs/evidence/growthbook-sdk-boundary-p2-20261124.md",
+    "backend": "complete: one additive workspace-scoped table records each advertised SDK path with its public documentation reference, NOVARA-local boundary name, preserved MIT attribution, no default dependency and no external endpoint",
+    "frontend": "n/a for these rows: the acceptance criteria require a named boundary/attribution test, not a SPA surface; no SDK import is added to the static web client",
+    "database": "complete: additive gbsdk_boundaries table created by Alembic revision e0f1a2b3c4d5 with a unique (workspace_id, sdk_id) constraint; no experiment, flag or SDK row is altered",
+    "api": "complete: idempotent seed, list and single-boundary lookup routes under the workspace SDK-boundary group; cross-workspace reads fail closed",
+    "permissions": "complete: require(WORKSPACE_MANAGE) for seeding, require(EVENT_READ) for reads, verify_workspace on every route and a local event publication on seed",
+    "integration": "complete: publishes growthbook_sdk_boundary.changed on NOVARA's shared event spine; no GrowthBook SDK package, hosted endpoint, licence server, warehouse or outbound HTTP is used",
+    "evidence": "docs/evidence/growthbook-sdk-boundary-p2-20261124.md; apps/api/tests/test_growthbook_sdk_boundary_p2.py; full suite docs/evidence/t115-fullsuite-20261124.txt",
+    "remaining": "None for this row. The row claims only a clean-room compatibility boundary and preserved attribution; it does not claim an installed growthbook SDK, a provider call or enterprise code. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "GB-148"},
+    {"id": "GB-149"},
+    {"id": "GB-150"},
+    {"id": "GB-151"},
+    {"id": "GB-152"},
+    {"id": "GB-153"},
+    {"id": "GB-154"},
+    {"id": "GB-155"},
+    {"id": "GB-156"},
+    {"id": "GB-157"}
+  ]
+}

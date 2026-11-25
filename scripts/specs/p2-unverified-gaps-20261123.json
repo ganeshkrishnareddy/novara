@@ -1,0 +1,63 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "backend": "complete: real workspace-scoped implementation exercised by the named acceptance test",
+    "database": "complete: real persisted rows asserted by the named test",
+    "api": "complete: documented workspace-scoped routes driven through the live FastAPI app",
+    "permissions": "complete: real bearer auth, permission checks and verify_workspace; cross-workspace access denied",
+    "integration": "complete: additive on NOVARA's single application; no external provider claimed",
+    "remaining": "None for the local acceptance criteria; no external provider or hosted infrastructure is claimed."
+  },
+  "rows": [
+    {
+      "id": "FB-087",
+      "module": "Feedback / Survey Responses",
+      "location": "apps/api/novara_core/modules/feedback.py; apps/web/app.js; apps/api/tests/test_p2_unverified_gaps.py",
+      "frontend": "complete: the feedback SPA posts responses through the validated form; asserted by the named test against app.js",
+      "evidence": "docs/evidence/p2-unverified-gaps-20261123.md; named test: test_fb087_survey_score_validation_rejects_out_of_range_and_extra_fields"
+    },
+    {
+      "id": "FB-088",
+      "module": "Feedback / Survey Detail",
+      "location": "apps/api/novara_core/modules/feedback.py; apps/web/app.js; apps/api/tests/test_p2_unverified_gaps.py",
+      "frontend": "complete: the Feedback Studio detail route is wired; asserted by the named test against app.js",
+      "evidence": "docs/evidence/p2-unverified-gaps-20261123.md; named test: test_fb088_survey_detail_reports_real_response_count_and_average"
+    },
+    {
+      "id": "FB-089",
+      "module": "Feedback / Survey Audit Trail",
+      "location": "apps/api/novara_core/events.py; apps/api/novara_core/modules/feedback.py; apps/web/app.js; apps/api/tests/test_p2_unverified_gaps.py",
+      "frontend": "complete: the Feedback Studio route is wired; asserted by the named test against app.js",
+      "evidence": "docs/evidence/p2-unverified-gaps-20261123.md; named test: test_fb089_survey_events_form_an_append_only_audit_trail"
+    },
+    {
+      "id": "FB-090",
+      "module": "Feedback / Survey Isolation",
+      "location": "apps/api/novara_core/dependencies.py; apps/api/novara_core/modules/feedback.py; apps/web/app.js; apps/api/tests/test_p2_unverified_gaps.py",
+      "frontend": "complete: the survey detail route is wired; asserted by the named test against app.js",
+      "evidence": "docs/evidence/p2-unverified-gaps-20261123.md; named test: test_fb090_survey_routes_are_workspace_isolated"
+    },
+    {
+      "id": "FB-179",
+      "module": "Feedback / Backup & Restore",
+      "location": "scripts/backup_restore.py; apps/api/tests/test_backup_restore.py; apps/api/tests/test_p2_unverified_gaps.py",
+      "frontend": "n/a: local CLI capability with no browser surface",
+      "remaining": "None for the local acceptance criteria; SQLite only, no PostgreSQL/Docker or hosted backup claim.",
+      "evidence": "docs/evidence/p2-unverified-gaps-20261123.md; named test: test_fb179_backup_verify_and_restore_round_trip_is_verified"
+    },
+    {
+      "id": "PL-056",
+      "module": "Plane / Email Checks",
+      "location": "apps/api/novara_core/main.py; apps/api/novara_core/schemas.py; apps/web/app.js; apps/api/tests/test_p2_unverified_gaps.py",
+      "frontend": "complete: the sign-up form calls the check endpoint before registering; asserted by the named test against app.js",
+      "evidence": "docs/evidence/p2-unverified-gaps-20261123.md; named test: test_pl056_email_check_reports_availability_without_enumeration_abuse"
+    },
+    {
+      "id": "SB-013",
+      "module": "Sellbird / Company Records",
+      "location": "apps/api/novara_core/main.py; apps/api/novara_core/models.py; apps/api/novara_core/schemas.py; apps/api/migrations/versions/b9d4f7a2c615_company_archive_lifecycle.py; apps/api/tests/test_p2_unverified_gaps.py",
+      "frontend": "n/a: company list is served by the existing CRM view; lifecycle is an additive workspace-scoped API",
+      "evidence": "docs/evidence/p2-unverified-gaps-20261123.md; named test: test_sb013_company_records_create_list_update_archive_and_isolation"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Feature flags / Experimentation",
+    "location": "apps/api/novara_core/modules/experiment_queries.py; apps/web/app.js (experiment-queries Operations route); apps/api/tests/test_experiment_queries_p2.py",
+    "backend": "complete: clean-room local experiment data exploration slice with workspace-scoped fact tables, discovery queries, assignment queries, identifier types and joins, ordered funnels, custom reports and carryover-bias guidance over NOVARA's own experiment, flag, exposure and time-series rows",
+    "frontend": "complete: dedicated experiment-queries Operations route renders live fact tables, discovery/assignment queries, identifiers, joins, funnels, reports and carryover assessments; every control has one dispatcher and one form handler; static guard in test_ui_wiring.py",
+    "database": "complete: eight additive workspace-scoped tables created by migration a8b1c2d3e4f5 with strict round-trip; persisted rows asserted by named tests",
+    "api": "complete: one stable experiment-queries API group (version 1, no legacy claim) covering fact tables, discovery/assignment queries, identifier types/joins, funnels, reports and carryover assessments with local preview/run/resolve endpoints",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads/runs and require(NOTE_WRITE) for all definitions, resolutions and mutations; every mutation and run is audited on the shared event bus",
+    "integration": "complete: builds on the existing feature-flags, experiment-statistics and experimentation-operations tables and shared workspace identity, permission and event contracts; no warehouse SQL, external data source, GrowthBook source or hosted platform is contacted",
+    "evidence": "docs/evidence/experiment-queries-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "criteria": "Named acceptance tests cover every row with real persisted workspace-scoped rows, validation/duplicate handling, cross-workspace isolation and a wired UI route; no external delivery or warehouse claim.",
+    "remaining": "No remaining work for the recorded local acceptance criteria. GrowthBook-hosted features, external data sources, warehouse SQL, live experiment assignment, third-party SDKs, MCP servers, agent tooling and AI adapters remain out of scope and are not claimed."
+  },
+  "rows": [
+    { "id": "GB-024" },
+    { "id": "GB-027" },
+    { "id": "GB-028" },
+    { "id": "GB-034" },
+    { "id": "GB-035" },
+    { "id": "GB-037" },
+    { "id": "GB-101" }
+  ]
+}

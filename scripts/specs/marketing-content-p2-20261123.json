@@ -1,0 +1,24 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Mautic / marketing content",
+    "location": "apps/api/novara_core/modules/marketing_content.py; apps/web/app.js (marketing-content Operations route); apps/api/tests/test_marketing_content_p2.py",
+    "backend": "complete: clean-room contact typing, local landing pages, progressive profiling, local form-submit effects, deterministic content variants, validated asset bundles and locally aggregated dashboard widgets",
+    "frontend": "complete: dedicated marketing-content Operations route renders contact classification, landing pages, forms, dynamic content, assets and dashboard; every control has one dispatcher guarded by test_ui_wiring.py",
+    "database": "complete: seven additive workspace-scoped tables created by Alembic revision c3d4e5f6a7b8 (content_contact_types, content_landing_pages, content_forms, content_form_submissions, content_dynamic_contents, content_assets, content_dashboard_widgets); no existing table altered",
+    "api": "complete: one stable marketing-content API group (version 1, no legacy claim, external_calls=false, external_delivery=false, email_sent=false, sms_sent=false) with 404/409/422 failure modes and named acceptance tests",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads and require(CONTACT_WRITE) for writes; cross-workspace ids fail closed with 404; every mutation publishes an audited event",
+    "integration": "complete: publishes marketing.contact_typed, marketing.landing_page_changed, marketing.form_submitted, marketing.dynamic_content_resolved and marketing.asset_added to NOVARA's shared event spine; no Mautic source, Symfony bundle, hosted service, external storage, outbound HTTP, email or SMS",
+    "evidence": "docs/evidence/marketing-content-p2-20261123.md; apps/api/tests/test_marketing_content_p2.py; apps/api/tests/test_ui_wiring.py",
+    "remaining": "None for this row. Other unimplemented, restricted or externally blocked rows keep their existing matrix status."
+  },
+  "rows": [
+    {"id": "MT-009"},
+    {"id": "MT-029"},
+    {"id": "MT-031"},
+    {"id": "MT-032"},
+    {"id": "MT-036"},
+    {"id": "MT-037"},
+    {"id": "MT-048"}
+  ]
+}

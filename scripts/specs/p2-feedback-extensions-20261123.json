@@ -1,0 +1,95 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Feedback / Surveys",
+    "location": "apps/api/novara_core/modules/feedback_extensions.py; apps/web/app.js (survey configuration panel); apps/api/tests/test_feedback_extensions_p2.py",
+    "backend": "complete: clean-room local implementation exercised by a named acceptance test",
+    "frontend": "complete: survey configuration, question editor, template creation and embedded-data controls wired in apps/web/app.js with static dispatch guards",
+    "database": "complete: workspace-scoped persisted rows asserted by the named test",
+    "api": "complete: workspace-scoped REST endpoints under /api/v1/workspaces/{workspace_id}/feedback",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ)/require(NOTE_WRITE); every mutation audited",
+    "integration": "complete: uses the shared event bus and the existing Feedback Studio survey lifecycle; no external service claimed",
+    "evidence": "docs/evidence/feedback-extensions-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "remaining": "No remaining work for the recorded acceptance criteria. Presentation/webhook delivery and any Formbricks-hosted service remain out of scope for this local-first build."
+  },
+  "rows": [
+    {
+      "id": "FB-008"
+    },
+    {
+      "id": "FB-009"
+    },
+    {
+      "id": "FB-011"
+    },
+    {
+      "id": "FB-012"
+    },
+    {
+      "id": "FB-013"
+    },
+    {
+      "id": "FB-014"
+    },
+    {
+      "id": "FB-016"
+    },
+    {
+      "id": "FB-017"
+    },
+    {
+      "id": "FB-018"
+    },
+    {
+      "id": "FB-019"
+    },
+    {
+      "id": "FB-021"
+    },
+    {
+      "id": "FB-022"
+    },
+    {
+      "id": "FB-023"
+    },
+    {
+      "id": "FB-026"
+    },
+    {
+      "id": "FB-027"
+    },
+    {
+      "id": "FB-028"
+    },
+    {
+      "id": "FB-030"
+    },
+    {
+      "id": "FB-032"
+    },
+    {
+      "id": "FB-033"
+    },
+    {
+      "id": "FB-034"
+    },
+    {
+      "id": "FB-035"
+    },
+    {
+      "id": "FB-037"
+    },
+    {
+      "id": "FB-040"
+    },
+    {
+      "id": "FB-041"
+    },
+    {
+      "id": "FB-042"
+    },
+    {
+      "id": "FB-044"
+    }
+  ]
+}

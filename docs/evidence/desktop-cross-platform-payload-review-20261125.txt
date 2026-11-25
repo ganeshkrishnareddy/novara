@@ -1,0 +1,43 @@
+NOVARA cross-platform payload review - 2026-11-25
+
+Payload: desktop/backend-payload
+manifest.json: python=3.12.10, runtimeBundled=true, 40 dependency folders
+Present: deps/novara_core/main.py=True, deps/uvicorn=True, web/index.html=True
+
+Directory layout:
+- Windows: runtime/python.exe, runtime/DLLs, runtime/Lib, runtime/libs
+- POSIX script path: runtime/bin/python3, runtime/lib/python3.12, runtime/lib/libpython3.12*
+- prepare_desktop_backend.py now asserts executable bits for POSIX python* files (owner/group/other execute)
+
+Hardcoded Windows drive paths in desktop/src: none
+resourcesPath uses in main.js: read-only backend runtime/deps locations only
+Writable state uses app.getPath('userData'):
+- settings.json
+- data/novara.sqlite3 via NOVARA_DB_PATH
+- data/storage via NOVARA_STORAGE_DIR
+- backend.log
+No packaged resource is used as a write target by the shell.
+
+Startup/shutdown:
+- local backend binds 127.0.0.1 on an OS-assigned free port
+- /health is polled before loadURL
+- before-quit calls stopBackend
+- Windows stop uses taskkill /T /F; POSIX stop uses SIGTERM
+- child exit handler clears the process reference and reports an error state
+
+Credentials:
+- no shell or payload script embeds credentials
+- backend retains its inherited development NOVARA_PRESIGN_SECRET fallback; this is documented in SECURITY_REVIEW.md and must be set in deployments
+- hardening update: the desktop shell now generates a 43-character per-install secret in userData/secrets.json, passes it to the bundled backend, redacts it from new log lines, and the generated value was verified absent from app.asar
+
+Smoke tests:
+- python scripts/smoke_desktop_payload.py on this Windows host: PASS /health {"status":"ok","product":"NOVARA"}
+- Linux and macOS smoke tests are configured in .github/workflows/desktop-build.yml; they have not run locally and remain UNVERIFIED
+
+Dependency scan:
+- npm audit --omit=dev: 0 vulnerabilities (final rerun exit 0)
+- full npm audit: 6 moderate, all in the electron-builder development toolchain; no high/critical (final rerun exit 1 from findings)
+- Python packaged dependencies: pip-audit exit 0; 18 audited, 0 vulnerabilities, 1 locally built first-party package skipped
+- local WSL install has no registered distribution and GitHub CLI is unavailable, so no native POSIX build or CI-run inspection was possible from this host
+
+Platform status: Windows local build verified; Linux CI configured/unverified; macOS CI configured/unverified.

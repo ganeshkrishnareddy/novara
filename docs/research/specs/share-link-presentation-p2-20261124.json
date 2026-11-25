@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Papermark / share-link presentation and hardening (clean-room)",
+    "location": "apps/api/novara_core/modules/share_link_presentation.py; apps/api/tests/test_share_link_presentation_p2.py; docs/evidence/share-link-presentation-p2-20261124.md",
+    "backend": "complete: ten additive workspace-scoped slp_* tables provide multi-file share sets with per-item visibility, verified custom domains with reusable link slugs, exact-token domain verification, owner-approved escaped Open Graph previews, injection-safe password screens, locally logged screenshot attempts with honest limitations, configurable escaped watermark variables/style, and custom > pinned > default branding resolution",
+    "frontend": "n/a for these rows: every acceptance criterion is API/server-level and verified by a named test; no dedicated SPA surface or dark-mode UI is claimed",
+    "database": "complete: ten additive workspace-scoped tables created by Alembic revision c8d9e0f1a2b3 (slp_share_sets, slp_share_set_items, slp_domains, slp_link_slugs, slp_og_metadata, slp_password_screens, slp_screenshot_configs, slp_screenshot_attempts, slp_watermark_profiles, slp_branding_configs); existing document, link and room rows are referenced by id and never altered",
+    "api": "complete: one workspace share-link API group with validated create/configure/resolve routes and 401/403/404/409/422 failure modes; public surfaces expose only visible set items, verified-domain active links, approved OG metadata and escaped text; no outbound HTTP, email or external delivery",
+    "permissions": "complete: verify_workspace on every workspace route plus require() with DOCUMENT_READ/DOCUMENT_WRITE as appropriate; token hashes never exposed after creation, revoked links and unverified domains fail closed, and cross-workspace references return 404/403",
+    "integration": "complete: publishes share_link_presentation.changed events to NOVARA's shared event spine; reuses existing document, link and data-room records by reference; no Papermark source, hosted instance, paid plan configuration or external delivery is contacted",
+    "evidence": "docs/evidence/share-link-presentation-p2-20261124.md; apps/api/tests/test_share_link_presentation_p2.py; full suite docs/evidence/t113-fullsuite-20261124.txt",
+    "remaining": "None for this row. Each capability is a clean-room equivalent derived from the published behaviour and acceptance criteria; no upstream source, hosted service, paid tier, external dependency or real email delivery is claimed. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "PM-023"},
+    {"id": "PM-035"},
+    {"id": "PM-036"},
+    {"id": "PM-037"},
+    {"id": "PM-043"},
+    {"id": "PM-044"},
+    {"id": "PM-046"},
+    {"id": "PM-071"}
+  ]
+}

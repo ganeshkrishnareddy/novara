@@ -1,0 +1,32 @@
+NOVARA desktop final Windows QA - 2026-11-25
+
+Artifact: desktop/dist/NOVARA-Setup-0.1.0-desktop-x64.exe
+Size: 146464169 bytes
+SHA-256: 8563435A3FE795548D3F2F93DEED06FC5D03E5D278BECE9596D30603FD5A5077
+
+Clean silent install:
+installer exit=0
+web_client=True
+
+Launch verification (final artifact, isolated install folder):
+MainWindowTitle=NOVARA - Everything Connected. Everything Under Control.
+backend_url=http://127.0.0.1:58461
+health={"status":"ok","product":"NOVARA"}
+index=200 title_match=True
+log_grew=True
+
+Earlier functional QA on the same shell code and payload layout:
+- first-run setup created a workspace and owner account
+- Contacts navigation and a real contact create/write succeeded
+- restart preserved contacts=1 and users=1
+- no orphaned Python child processes remained after app close
+- saved remote-mode settings were honoured (no local backend spawned)
+- remote URL to port 9 kept the window at "NOVARA - Connecting" with no backend log growth
+- uninstaller exit=0, executable removed, user data kept
+- reinstall exit=0, executable restored
+
+Build command: npm run build:win
+Build exit: 0
+Build evidence: docs/evidence/desktop-windows-build-final-20261125.txt
+Build exit file: docs/evidence/desktop-windows-build-final-exit.txt
+Manifest evidence: docs/evidence/desktop-windows-manifest-final-20261125.txt

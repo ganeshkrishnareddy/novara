@@ -1,0 +1,15 @@
+{
+  "defaults": {
+    "backend": "partial local implementation; acceptance criterion not met",
+    "database": "partial local persistence; acceptance criterion not met",
+    "api": "partial local routes; acceptance criterion not met",
+    "permissions": "workspace-scoped where present; acceptance criterion not met",
+    "integration": "local only; no provider claim",
+    "frontend": "n/a: no UI acceptance evidence for the full criterion"
+  },
+  "rows": [
+    {"id": "PM-074", "status": "PARTIALLY_IMPLEMENTED", "module": "Documents / Analytics", "location": "apps/api/novara_core/modules/document_links.py (view recording); no per-page analytics implementation found", "evidence": "no named test for page-by-page counts/durations; earlier VERIFIED_COMPLETE status had no evidence and was incorrect", "remaining": "Build per-page event ingestion and a real analytics UI; add a named test that shows page-level counts and durations for a real document before closing."},
+    {"id": "PM-080", "status": "PARTIALLY_IMPLEMENTED", "module": "Documents / Identity", "location": "apps/api/novara_core/modules/document_links.py (visitor capture); no verified-viewer identity table found", "evidence": "no named test for verified visitor identification; earlier VERIFIED_COMPLETE status had no evidence and was incorrect", "remaining": "Add a viewer identity table separate from workspace users with consent and privacy controls, plus a named test."},
+    {"id": "NV-007", "status": "PARTIALLY_IMPLEMENTED", "module": "Automation / Workflow", "location": "apps/api/novara_core/modules/automation.py (steps) and modules/adapters.py (local channels); no channel-step binding found", "evidence": "no named test for per-channel step results; earlier VERIFIED_COMPLETE status had no evidence and was incorrect", "remaining": "Define channel steps, bind them to authorised adapters, persist each step result and add a named test that never claims delivery without an authorised provider."}
+  ]
+}

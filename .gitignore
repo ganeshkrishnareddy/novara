@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local-first data (never commit customer data)
+*.sqlite3
+*.sqlite3-journal
+*.db
+/data/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Node / web builds
+node_modules/
+dist/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local QA browser profiles (caches, cookies, history) - never publish
+artifacts/**/*profile*/
+
+# Local-first document storage and nested agent working trees
+apps/storage/
+.worktrees/
+
+# One-off scratch patch
+_tmp_patch.py

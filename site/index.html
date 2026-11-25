@@ -76,6 +76,7 @@
       <a href="#workflows">Workflows</a>
       <a href="#opensource">Self-hosting</a>
       <a href="#community">Community</a>
+      <a href="#download">Download</a>
     </nav>
     <div class="header-actions">
       <a class="btn btn-ghost header-github" href="https://github.com/ganeshkrishnareddy/novara" target="_blank" rel="noopener noreferrer">
@@ -263,9 +264,9 @@
           <p>A single submission becomes one contact with a lead, a task, an in-app notification and an audit event.</p>
         </article>
         <article class="workflow reveal">
-          <div class="workflow-head"><span class="wf-badge">02</span><h3>Marketing</h3><span class="wf-status wf-status-warn">Delivery not executed</span></div>
+          <div class="workflow-head"><span class="wf-badge">02</span><h3>Marketing</h3><span class="wf-status">Local workflow verified</span></div>
           <ol class="flow"><li>Audience</li><li>Campaign</li><li>Approval</li><li>Delivery adapter</li><li>Analytics</li></ol>
-          <p>Campaign, approval and analytics records are real. The delivery adapter is a local boundary: no email, SMS or WhatsApp message is sent.</p>
+          <p>Audience, campaign, approval, local delivery records and analytics are real. The delivery adapter is a local boundary: no email, SMS or WhatsApp message is sent.</p>
         </article>
         <article class="workflow reveal">
           <div class="workflow-head"><span class="wf-badge">03</span><h3>Customer support</h3><span class="wf-status">Observed end to end</span></div>
@@ -399,6 +400,57 @@
         </div>
       </div>
       <div class="privacy-panel reveal"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Privacy-conscious verification</h3><p>Optional GitHub OAuth may verify identity with explicit consent, minimum necessary permissions, a secure server-side session and no unnecessary token storage. No passwords are collected. Account deletion and privacy controls must be available. If OAuth is unavailable, a safe manual verification path is used. Nothing here automates a GitHub action.</p><a class="text-link" href="https://github.com/ganeshkrishnareddy/novara/blob/main/docs/COMMUNITY_CONTRIBUTION_PROGRAM.md" target="_blank" rel="noopener noreferrer">Read the contribution program <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
+    </div>
+  </section>
+
+  <!-- K. Desktop client — local Windows build verified, nothing published -->
+  <section class="section section-tint" id="download" aria-labelledby="download-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Desktop client · Preview</p>
+        <h2 id="download-title">Download NOVARA: Windows preview built locally, nothing published.</h2>
+        <p class="section-lede">A Windows x64 preview installer was built, installed and launched locally for verification at version <code>0.1.0-desktop</code>. Linux and macOS CI is configured, but no artifact for those platforms has been produced in this workspace. No signed or published installer exists today; there is no public download and no installer link to follow.</p>
+      </div>
+      <div class="module-grid reveal">
+        <article class="module-card">
+          <div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></div>
+          <h3>Windows</h3>
+          <p class="role">Windows 10 / 11 · x64</p>
+          <p><strong>Architecture:</strong> x64</p>
+          <p><strong>Package format (verified locally):</strong> NSIS .exe</p>
+          <p><strong>Version:</strong> 0.1.0-desktop (preview)</p>
+          <p><span class="wf-status">Local build verified · not published</span></p>
+          <p class="caption">Built, installed and launched in an isolated local folder. SHA-256 is recorded in the desktop release report. No public download is available.</p>
+        </article>
+        <article class="module-card">
+          <div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div>
+          <h3>Linux</h3>
+          <p class="role">Linux · x64</p>
+          <p><strong>Architecture:</strong> x64</p>
+          <p><strong>Package formats (CI targets):</strong> AppImage and .deb</p>
+          <p><strong>Version:</strong> 0.1.0-desktop (preview)</p>
+          <p><span class="wf-status wf-status-warn">CI configured · no artifact</span></p>
+          <p class="caption">The workflow builds and checksums artifacts; none has been produced or published here.</p>
+        </article>
+        <article class="module-card">
+          <div class="module-icon"><svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg></div>
+          <h3>macOS</h3>
+          <p class="role">Apple Silicon and Intel</p>
+          <p><strong>Architecture:</strong> Apple Silicon (arm64) and Intel (x64)</p>
+          <p><strong>Package format (CI target):</strong> .dmg</p>
+          <p><strong>Version:</strong> 0.1.0-desktop (preview)</p>
+          <p><span class="wf-status wf-status-warn">CI configured · no artifact</span></p>
+          <p class="caption">The workflow builds an unsigned universal .dmg and checksums it; none has been produced or published here.</p>
+        </article>
+      </div>
+      <div class="callout reveal">
+        <svg class="icon" aria-hidden="true"><use href="#i-link"/></svg>
+        <div><strong>Desktop Client Edition model.</strong> The desktop app connects to a configured NOVARA backend: a locally bundled instance or a remote URL you provide. It is a client, not a standalone copy of the service. Offline-first operation is not claimed; normal use needs a reachable backend, and no external account is required by the client itself.</div>
+      </div>
+      <div class="callout reveal">
+        <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <div><strong>Builds, checksums and honesty.</strong> The desktop CI workflow generates Windows, Linux and macOS artifacts together with SHA-256 checksums. A Windows x64 installer was also built and verified locally. No binary is published with this site, there is no GitHub Release asset, and there is no download link on this page.</div>
+      </div>
     </div>
   </section>
 

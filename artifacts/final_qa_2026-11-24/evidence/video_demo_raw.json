@@ -1,0 +1,66 @@
+{
+  "kind": "demo",
+  "recorded_at": "2026-11-24T17:50:18.962+00:00",
+  "source": "local NOVARA QA instance",
+  "synthetic_data": true,
+  "chapters": [
+    {
+      "label": "One connected workspace",
+      "route": "#/dashboard",
+      "start": 3.0,
+      "end": 12.0,
+      "duration": 9
+    },
+    {
+      "label": "Customer records",
+      "route": "#/contacts",
+      "start": 12.0,
+      "end": 21.0,
+      "duration": 9
+    },
+    {
+      "label": "Leads and conversion",
+      "route": "#/leads",
+      "start": 21.0,
+      "end": 30.0,
+      "duration": 9
+    },
+    {
+      "label": "Campaign Studio",
+      "route": "#/campaigns",
+      "start": 30.0,
+      "end": 39.0,
+      "duration": 9
+    },
+    {
+      "label": "Customer inbox",
+      "route": "#/inbox",
+      "start": 39.0,
+      "end": 48.0,
+      "duration": 9
+    },
+    {
+      "label": "Projects and work items",
+      "route": "#/projects",
+      "start": 48.0,
+      "end": 57.0,
+      "duration": 9
+    },
+    {
+      "label": "Experimentation",
+      "route": "#/advanced-experiments",
+      "start": 57.0,
+      "end": 66.0,
+      "duration": 9
+    },
+    {
+      "label": "Agent center with approval gate",
+      "route": "#/agents",
+      "start": 66.0,
+      "end": 75.0,
+      "duration": 9
+    }
+  ],
+  "raw_file": "videos\\_raw_demo.mp4",
+  "raw_bytes": 3598861
+}

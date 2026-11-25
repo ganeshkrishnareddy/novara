@@ -1,0 +1,413 @@
+{
+  "url": "http://127.0.0.1:8767/novara/",
+  "label": "subpath",
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "no_horizontal_overflow": true,
+      "toggle_display": "none",
+      "nav_display": "flex",
+      "screenshot": "D:\\NOVARA\\artifacts\\marketing_site_qa\\cdp_subpath_desktop.png"
+    },
+    "tablet": {
+      "width": 820,
+      "scrollWidth": 820,
+      "no_horizontal_overflow": true,
+      "toggle_display": "flex",
+      "nav_display": "none",
+      "screenshot": "D:\\NOVARA\\artifacts\\marketing_site_qa\\cdp_subpath_tablet.png"
+    },
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390,
+      "no_horizontal_overflow": true,
+      "toggle_display": "flex",
+      "nav_display": "none",
+      "screenshot": "D:\\NOVARA\\artifacts\\marketing_site_qa\\cdp_subpath_mobile.png",
+      "nav_opens_on_mobile": true
+    }
+  },
+  "checks": {
+    "title_has_novara": true,
+    "description_present": true,
+    "canonical_present": true,
+    "og_and_twitter_present": true,
+    "json_ld_valid": true,
+    "lang_en": true,
+    "css_loaded": true,
+    "all_images_loaded": true,
+    "all_images_have_alt": true,
+    "all_fragments_resolve": true,
+    "blank_links_safe": true,
+    "video_source_resolves": true,
+    "video_has_controls": true,
+    "sections_present": true,
+    "no_mojibake_in_render": true,
+    "no_cookies_set": true,
+    "no_external_requests": true,
+    "light_background": true,
+    "all_local_assets_http_200": true,
+    "no_console_errors": true
+  },
+  "base": {
+    "url": "http://127.0.0.1:8767/novara/",
+    "title": "NOVARA \u2014 Your Entire Business. One Connected System.",
+    "description": "NOVARA is a self-hostable business operating system connecting CRM, sales, marketing, support, projects, documents, automation and analytics.",
+    "canonical": "https://ganeshkrishnareddy.github.io/novara/",
+    "ogTitle": "NOVARA \u2014 Your Entire Business. One Connected System.",
+    "ogImage": "https://ganeshkrishnareddy.github.io/novara/assets/img/og-cover.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdType": "SoftwareApplication",
+    "lang": "en",
+    "viewport": "width=device-width, initial-scale=1",
+    "themeColor": "#176B55",
+    "sections": [
+      "(hero)",
+      "problem",
+      "why",
+      "alternatives",
+      "modules",
+      "workflows",
+      "opensource",
+      "demo",
+      "community",
+      "contribute",
+      "faq"
+    ],
+    "headings": 10,
+    "images": [
+      {
+        "src": "assets/img/novara-logo.svg",
+        "loaded": true,
+        "naturalWidth": 300,
+        "alt": "NOVARA"
+      },
+      {
+        "src": "assets/screenshots/01_dashboard.png",
+        "loaded": true,
+        "naturalWidth": 1920,
+        "alt": "NOVARA Command Center dashboard showing a light-theme workspace with connected module navigation and activity"
+      },
+      {
+        "src": "assets/screenshots/02_contacts.png",
+        "loaded": true,
+        "naturalWidth": 1920,
+        "alt": "NOVARA Contacts screen, local QA capture with synthetic data"
+      },
+      {
+        "src": "assets/screenshots/08_projects.png",
+        "loaded": true,
+        "naturalWidth": 1920,
+        "alt": "NOVARA Projects screen, local QA capture with synthetic data"
+      },
+      {
+        "src": "assets/screenshots/10_experimentation.png",
+        "loaded": true,
+        "naturalWidth": 1920,
+        "alt": "NOVARA Experimentation screen, local QA capture with synthetic data"
+      },
+      {
+        "src": "assets/img/novara-logo-light.svg",
+        "loaded": true,
+        "naturalWidth": 300,
+        "alt": "NOVARA"
+      }
+    ],
+    "anchors": [
+      {
+        "href": "#main",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#top",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#problem",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#why",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#modules",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#workflows",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#opensource",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#community",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#modules",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#workflows",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#why",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "http://localhost:8000",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/docs/INSTALL.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/docs/DEPLOYMENT_RUNBOOK.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#contribute",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/THIRD_PARTY_NOTICES.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/docs/research/LICENSE_COMPLIANCE.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "videos/NOVARA_Product_Demo_1.0.mp4",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "videos/NOVARA_QA_Evidence_Walkthrough.mp4",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/stargazers",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/fork",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/releases",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/issues/new",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/issues/new",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/discussions",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/README.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/docs/COMMUNITY_CONTRIBUTION_PROGRAM.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/discussions",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#modules",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#workflows",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#demo",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "#opensource",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/docs/INSTALL.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#contribute",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/docs/SECURITY_REPORT.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/blob/main/THIRD_PARTY_NOTICES.md",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#faq",
+        "target": "",
+        "rel": ""
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/discussions",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://github.com/ganeshkrishnareddy/novara/issues/new",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#top",
+        "target": "",
+        "rel": ""
+      }
+    ],
+    "badFragments": [],
+    "unsafeBlank": [],
+    "video": {
+      "resolvedSrc": "http://127.0.0.1:8767/novara/videos/NOVARA_Product_Demo_2.0.mp4",
+      "readyState": 4,
+      "networkState": 1,
+      "error": null,
+      "hasControls": true
+    },
+    "cssApplied": true,
+    "cookieValue": "",
+    "externalRequests": [],
+    "bodyBg": "rgb(255, 255, 255)",
+    "scrollWidth": 1418,
+    "innerWidth": 1418,
+    "navDisplay": "flex",
+    "toggleDisplay": "none",
+    "navExpanded": "false",
+    "mojibake": false
+  },
+  "media_status": [
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/img/novara-logo.svg",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/screenshots/01_dashboard.png",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/screenshots/02_contacts.png",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/screenshots/08_projects.png",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/screenshots/10_experimentation.png",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/img/novara-logo-light.svg",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/videos/NOVARA_Product_Demo_2.0.mp4",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/css/styles.css",
+      "status": 200
+    },
+    {
+      "u": "http://127.0.0.1:8767/novara/assets/js/site.js",
+      "status": 200
+    }
+  ],
+  "console_problems": []
+}

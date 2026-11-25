@@ -1,0 +1,62 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- D:\NOVARA\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\NOVARA\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 45 items
+
+apps\api\tests\test_notification_automation_p2.py::test_nv104_broadcast_requires_flag_and_explicit_authorisation PASSED [  2%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_nv_105_local_capability_works PASSED [  4%]
+apps\api\tests\test_notification_automation_p2.py::test_nv107_subscriber_search_and_bulk_create PASSED [  6%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_nv_111_local_capability_works PASSED [  8%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_nv_112_local_capability_works PASSED [ 11%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_nv_113_local_capability_works PASSED [ 13%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_nv_115_local_capability_works PASSED [ 15%]
+apps\api\tests\test_notification_automation_p2.py::test_nv118_feature_flags_gate_experimental_features PASSED [ 17%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_final_export_import_round_trip_is_workspace_scoped PASSED [ 20%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_003_local_capability_works PASSED [ 22%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb008_sb012_governed_signal_catalog_is_seeded_once PASSED [ 24%]
+apps\api\tests\test_ui_wiring.py::test_sales_engagement_route_controls_are_rendered_and_dispatched PASSED [ 26%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb009_free_signals_activate_only_with_confirmation PASSED [ 28%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb010_paid_signals_require_explicit_operator_confirmation PASSED [ 31%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb015_cohort_builder_evaluates_real_workspace_leads PASSED [ 33%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_016_local_capability_works PASSED [ 35%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb017_campaign_sequences_are_drafted_locally PASSED [ 37%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb019_offer_suggestion_is_deterministic_and_local PASSED [ 40%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb022_outbox_is_durable_with_a_status_ladder PASSED [ 42%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb023_autopilot_is_opt_in_and_approval_is_default PASSED [ 44%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb026_sending_status_and_pause_controls PASSED [ 46%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb028_send_rules_and_header_extension_points PASSED [ 48%]
+apps\api\tests\test_sellbird_safety_p1.py::test_sb030_opt_out_blocks_approval_and_is_audited PASSED [ 51%]
+apps\api\tests\test_sellbird_safety_p1.py::test_sb031_suppression_list_reason_scope_expiry_blocks_with_recorded_reason PASSED [ 53%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_033_local_capability_works PASSED [ 55%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_034_local_capability_works PASSED [ 57%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_036_local_capability_works PASSED [ 60%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_037_local_capability_works PASSED [ 62%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_046_local_capability_works PASSED [ 64%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_048_local_capability_works PASSED [ 66%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_052_local_capability_works PASSED [ 68%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_053_local_capability_works PASSED [ 71%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_054_local_capability_works PASSED [ 73%]
+apps\api\tests\test_sales_engagement_p2.py::test_sb055_sending_mode_selection_is_validated PASSED [ 75%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_056_local_capability_works PASSED [ 77%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_057_local_capability_works PASSED [ 80%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_067_local_capability_works PASSED [ 82%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_070_local_capability_works PASSED [ 84%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_071_local_capability_works PASSED [ 86%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_072_local_capability_works PASSED [ 88%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_078_local_capability_works PASSED [ 91%]
+apps\api\tests\test_sellbird_safety_p1.py::test_sb079_drafts_carry_configured_compliance_footer_and_cannot_be_sent PASSED [ 93%]
+apps\api\tests\test_sellbird_safety_p1.py::test_sb079_blank_footer_is_rejected[] PASSED [ 95%]
+apps\api\tests\test_sellbird_safety_p1.py::test_sb079_blank_footer_is_rejected[   ] PASSED [ 97%]
+apps\api\tests\test_final_parity_capabilities_p2.py::test_sb_080_local_capability_works PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\NOVARA\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\ganes\AppData\Local\Temp\opencode\campaign2\batch_09.xml -
+======================= 45 passed, 1 warning in 32.41s ========================

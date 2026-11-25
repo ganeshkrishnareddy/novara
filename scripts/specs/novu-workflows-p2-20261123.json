@@ -1,0 +1,32 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "notifications",
+    "location": "apps/api/novara_core/modules/notification_workflows.py; apps/api/novara_core/modules/api_keys.py (NV-071); apps/web/app.js (notification-workflows Operations route); apps/api/tests/test_notification_workflows_p2.py",
+    "backend": "complete: clean-room workflow engine with triggers, digests, quiet hours, sanitised messages, feeds, contexts, layouts and signed webhook records; all behaviours exercised by named acceptance tests",
+    "frontend": "complete: dedicated notification-workflows route renders live workflows, templates, feeds, contexts, layouts and messages with one dispatcher and form handler per control; static guard in test_ui_wiring.py",
+    "database": "complete: seven additive workspace-scoped tables created by migration c4d5e6f7a8b1 with strict round-trip; persisted rows asserted by named tests",
+    "api": "complete: one stable workspace-scoped workflow API (version 1, no legacy claim) plus template, trigger, digest, message, feed, context, layout and webhook routes",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ)/require(NOTE_WRITE)/require(WORKSPACE_MANAGE); webhook endpoint creation is workspace-admin only; every mutation is audited on the shared event bus",
+    "integration": "complete: uses the shared workspace identity, permission and event contracts; no external provider, SDK or network delivery is contacted",
+    "evidence": "docs/evidence/novu-workflows-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "remaining": "No remaining work for the recorded local acceptance criteria. Real provider delivery, push tokens, external webhook hosts, third-party SDKs/MCP servers, code-first bridges, agent tooling, AI adapters and Novu-hosted features remain out of scope and are not claimed."
+  },
+  "rows": [
+    { "id": "NV-006" },
+    { "id": "NV-013" },
+    { "id": "NV-017" },
+    { "id": "NV-019" },
+    { "id": "NV-028" },
+    { "id": "NV-036" },
+    { "id": "NV-038" },
+    { "id": "NV-040" },
+    { "id": "NV-044" },
+    { "id": "NV-054" },
+    { "id": "NV-056" },
+    { "id": "NV-071" },
+    { "id": "NV-073" },
+    { "id": "NV-086" },
+    { "id": "NV-087" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Documents / Storage / Sharing / Analytics",
+    "location": "apps/api/novara_core/modules/document_links.py; apps/api/novara_core/modules/storage.py; apps/api/novara_core/modules/documents.py; apps/api/tests/test_p0_document_gaps.py",
+    "backend": "complete: real workspace-scoped implementation exercised by the named acceptance test",
+    "database": "complete: persisted link/session/visit/page-view rows asserted by the named test",
+    "api": "complete: documented workspace-scoped routes driven through the live FastAPI app",
+    "permissions": "complete: real bearer auth, permission checks and verify_workspace; cross-workspace access denied",
+    "integration": "complete: additive on NOVARA's single application; no external provider claimed",
+    "frontend": "n/a: backend document/storage capability; the shared documents UI drives these routes",
+    "remaining": "None for the local acceptance criteria; no hosted S3/conversion/identity provider is claimed."
+  },
+  "rows": [
+    {"id": "PM-002", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm002_presigned_upload_url_is_real_and_tamper_proof"},
+    {"id": "PM-012", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm012_pdf_preview_returns_real_extracted_pages"},
+    {"id": "PM-015", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm015_blob_storage_round_trips_bytes_and_isolates_workspaces"},
+    {"id": "PM-028", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm028_shareable_link_resolves_to_document_metadata"},
+    {"id": "PM-029", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm029_link_management_list_get_patch_and_revoke"},
+    {"id": "PM-030", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm030_password_protected_link_unlock_is_enforced"},
+    {"id": "PM-032", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm032_link_expiry_is_enforced_at_resolution"},
+    {"id": "PM-033", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm033_view_only_and_download_policy_is_enforced"},
+    {"id": "PM-039", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm039_restricted_session_token_is_scoped_to_its_link"},
+    {"id": "PM-042", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm042_instant_revocation_kills_live_sessions"},
+    {"id": "PM-072", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm072_viewer_and_visit_capture"},
+    {"id": "PM-074", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm074_page_by_page_analytics"},
+    {"id": "PM-080", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm080_verified_visitor_identification_and_consent"},
+    {"id": "PM-125", "evidence": "docs/evidence/p0-document-gaps-20261123.md; named test: test_pm125_document_conversion_job_produces_a_result_file"}
+  ]
+}

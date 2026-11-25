@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Chatwoot / support reporting",
+    "location": "apps/api/novara_core/modules/support_reporting.py; apps/web/app.js (support-reporting Operations route); apps/api/tests/test_support_reporting_p2.py",
+    "backend": "complete: clean-room reports derived from persisted workspace tickets, messages, labels and audit events; saved report runs, label-based CSAT rules, one-use hashed response tokens and a generated OpenAPI 3.1 support-route inventory",
+    "frontend": "complete: dedicated support-reporting Operations route renders agent/team/inbox/label reports, status filters, saved runs, CSAT rules, local token issuance and recorded responses; every control has one dispatcher guarded by test_ui_wiring.py",
+    "database": "complete: four additive workspace-scoped tables created by Alembic revision b2c3d4e5f6a7 (support_report_runs, support_csat_survey_rules, support_csat_response_tokens, support_csat_responses); no existing table altered",
+    "api": "complete: one stable support-reporting API group (version 1, no legacy claim, external_calls=false, external_delivery=false) with 404/409/410/422/429 failure modes and named acceptance tests",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads and require(CONTACT_WRITE) for all writes; cross-workspace ids fail closed with 404; every mutation publishes an audited event with external_delivery=false",
+    "integration": "complete: publishes support.report_generated, support.report_exported, support.csat_rule_created, support.csat_response_token_issued and support.csat_response_recorded to NOVARA's shared event spine; no Chatwoot source, Rails bundle, hosted endpoint, outbound HTTP, webhook callback or real survey delivery",
+    "evidence": "docs/evidence/support-reporting-p2-20261123.md; apps/api/tests/test_support_reporting_p2.py; apps/api/tests/test_ui_wiring.py",
+    "remaining": "None for this row. Other unimplemented, restricted or externally blocked rows keep their existing matrix status."
+  },
+  "rows": [
+    {"id": "CW-096"},
+    {"id": "CW-097"},
+    {"id": "CW-098"},
+    {"id": "CW-099"},
+    {"id": "CW-101"},
+    {"id": "CW-104"},
+    {"id": "CW-114"},
+    {"id": "CW-117"}
+  ]
+}

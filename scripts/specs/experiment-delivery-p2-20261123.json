@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Feature flags / Experimentation",
+    "location": "apps/api/novara_core/modules/experiment_delivery.py; apps/api/novara_core/modules/experiment_stats.py; apps/api/novara_core/modules/experiment_operations.py; apps/web/app.js (experiment-delivery Operations route); apps/api/tests/test_experiment_delivery_p2.py",
+    "backend": "complete: clean-room local delivery slice with webhook registrations and recorded deliveries, notifier messages, versioned local cache entries with prefix purges, local proxy snapshots with stale-if-error and a durable local refresh queue that recomputes from NOVARA's own statistics and time-series rows",
+    "frontend": "complete: dedicated experiment-delivery Operations route renders the local contract, webhooks, notifier/cache/proxy/job counts and refresh queue with create/emit/purge/schedule/run controls; static guard in test_ui_wiring.py",
+    "database": "complete: seven additive workspace-scoped tables created by migration c2d3e4f5a7b8; all rows tenant-scoped and audited",
+    "api": "complete: one stable experiment-delivery API group (version 1, no legacy claim, external_calls=false) covering webhooks, deliveries, notifier, cache, purges, proxy, refresh jobs and a local contract",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads and require(NOTE_WRITE) for all record/schedule actions; cross-workspace entity access fails closed with 404 and all mutations are audited",
+    "integration": "complete: recomputes refresh results from the real experiment-stats and experiment-ops modules and reuses the workspace identity/event contracts; no GrowthBook source, hosted platform, outbound webhook, Slack, CDN, proxy fetch or external scheduler is contacted",
+    "evidence": "docs/evidence/experiment-delivery-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "criteria": "Named acceptance tests prove local webhook delivery recording, notifier records without sending, local cache purge, local proxy serving with stale-if-error, a validated local refresh queue, refresh recomputation from local facts, workspace isolation and a wired UI route.",
+    "remaining": "No remaining work for the recorded local acceptance criteria. Hosted webhook endpoints, Slack workspaces, CDNs, external proxies, hosted schedulers, third-party SDKs, MCP servers, agent tooling and AI adapters remain out of scope and are not claimed."
+  },
+  "rows": [
+    { "id": "GB-071" },
+    { "id": "GB-072" },
+    { "id": "GB-073" },
+    { "id": "GB-074" },
+    { "id": "GB-075" },
+    { "id": "GB-076" },
+    { "id": "GB-081" },
+    { "id": "GB-082" },
+    { "id": "GB-083" }
+  ]
+}

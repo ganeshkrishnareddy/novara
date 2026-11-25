@@ -1,0 +1,16 @@
+{"ts": "2026-11-24T17:44:42.931+00:00", "name": "01_dashboard", "route": "#/dashboard", "file": "screenshots\\01_dashboard.png", "ffmpeg_exit": 0, "bytes": 184613, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:44:46.099+00:00", "name": "02_contacts", "route": "#/contacts", "file": "screenshots\\02_contacts.png", "ffmpeg_exit": 0, "bytes": 166843, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:44:49.281+00:00", "name": "03_leads", "route": "#/leads", "file": "screenshots\\03_leads.png", "ffmpeg_exit": 0, "bytes": 179455, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:44:52.465+00:00", "name": "04_campaign_studio", "route": "#/campaigns", "file": "screenshots\\04_campaign_studio.png", "ffmpeg_exit": 0, "bytes": 162138, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:44:55.666+00:00", "name": "05_customer_inbox", "route": "#/inbox", "file": "screenshots\\05_customer_inbox.png", "ffmpeg_exit": 0, "bytes": 171693, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:44:58.830+00:00", "name": "06_documents", "route": "#/documents", "file": "screenshots\\06_documents.png", "ffmpeg_exit": 0, "bytes": 173562, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:02.015+00:00", "name": "07_document_engagement", "route": "#/document-engagement", "file": "screenshots\\07_document_engagement.png", "ffmpeg_exit": 0, "bytes": 168358, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:05.181+00:00", "name": "08_projects", "route": "#/projects", "file": "screenshots\\08_projects.png", "ffmpeg_exit": 0, "bytes": 209141, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:08.349+00:00", "name": "09_work_item_planning", "route": "#/work-item-planning", "file": "screenshots\\09_work_item_planning.png", "ffmpeg_exit": 0, "bytes": 167407, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:11.535+00:00", "name": "10_experimentation", "route": "#/advanced-experiments", "file": "screenshots\\10_experimentation.png", "ffmpeg_exit": 0, "bytes": 183281, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:14.716+00:00", "name": "11_agent_center", "route": "#/agents", "file": "screenshots\\11_agent_center.png", "ffmpeg_exit": 0, "bytes": 168360, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:17.900+00:00", "name": "12_automation", "route": "#/notification-automation", "file": "screenshots\\12_automation.png", "ffmpeg_exit": 0, "bytes": 156945, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:21.083+00:00", "name": "13_access_governance", "route": "#/access-governance", "file": "screenshots\\13_access_governance.png", "ffmpeg_exit": 0, "bytes": 204536, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:24.251+00:00", "name": "14_flag_governance", "route": "#/flag-governance", "file": "screenshots\\14_flag_governance.png", "ffmpeg_exit": 0, "bytes": 170842, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:27.415+00:00", "name": "15_feedback_studio", "route": "#/surveys", "file": "screenshots\\15_feedback_studio.png", "ffmpeg_exit": 0, "bytes": 147442, "stderr": "", "outcome": "PASS"}
+{"ts": "2026-11-24T17:45:30.584+00:00", "name": "16_settings", "route": "#/settings", "file": "screenshots\\16_settings.png", "ffmpeg_exit": 0, "bytes": 167871, "stderr": "", "outcome": "PASS"}

@@ -1,0 +1,31 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "backend": "complete: real local implementation exercised by named acceptance tests",
+    "database": "complete: workspace-scoped persisted rows asserted by the named tests",
+    "api": "complete: versioned REST v2 and document-store routes driven through the live FastAPI app",
+    "permissions": "complete: CONTACT_READ/CONTACT_WRITE checks and verify_workspace on every route; cross-workspace reads and writes are denied",
+    "integration": "complete: additive on NOVARA's single application; no external service, MongoDB server or second host",
+    "remaining": "None for the clean-room acceptance criteria. Literal MongoDB is intentionally not claimed for GB-087."
+  },
+  "rows": [
+    {
+      "id": "GB-060",
+      "module": "Feature flags / REST API v2",
+      "location": "apps/api/novara_core/modules/api_v2.py; apps/api/tests/test_growthbook_cleanroom_p1.py",
+      "frontend": "n/a: versioned API surface; no dedicated SPA screen is claimed (the shared admin Settings view already drives /api/v1 workspaces)",
+      "evidence": "docs/evidence/growthbook-cleanroom-p1-20261123.md"
+    },
+    {
+      "id": "GB-087",
+      "status": "INTENTIONALLY_REPLACED_WITH_COMPATIBLE_IMPLEMENTATION",
+      "module": "Feature flags / Document store",
+      "location": "apps/api/novara_core/modules/document_store.py; apps/api/tests/test_growthbook_cleanroom_p1.py",
+      "frontend": "n/a: versioned API surface; no dedicated SPA screen is claimed (the shared admin Settings view already drives /api/v1 workspaces)",
+      "backend": "complete: clean-room document-store slice with collections, indexes, JSON documents, operator queries, optimistic concurrency and named events; no MongoDB server or driver",
+      "integration": "n/a by design: a compatible local document-store interface replaces a MongoDB primary store; no external database is claimed",
+      "remaining": "Literal MongoDB primary store is intentionally not claimed; NOVARA remains on its local SQL store.",
+      "evidence": "docs/evidence/growthbook-cleanroom-p1-20261123.md"
+    }
+  ]
+}

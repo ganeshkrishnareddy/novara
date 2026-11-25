@@ -1,0 +1,91 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "backend": "complete: real workspace-scoped implementation exercised by the named acceptance test",
+    "database": "complete: real persisted rows asserted by the named test",
+    "api": "complete: documented workspace-scoped routes driven through the live FastAPI app",
+    "permissions": "complete: real bearer auth, permission checks and verify_workspace",
+    "integration": "complete: additive on NOVARA's single application; no external provider claimed",
+    "remaining": "None for the local acceptance criteria; no external provider delivery is claimed."
+  },
+  "rows": [
+    {
+      "id": "MT-008",
+      "module": "Marketing / Segments",
+      "location": "apps/api/novara_core/modules/marketing.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend segment capability; the campaigns UI drives these routes",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_mt008_segments_are_static_or_dynamic_and_membership_is_real"
+    },
+    {
+      "id": "MT-012",
+      "module": "Marketing / Email Templates",
+      "location": "apps/api/novara_core/modules/marketing.py; apps/api/novara_core/modules/email_campaigns.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend template capability",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_mt012_template_emails_are_stored_and_render_safely"
+    },
+    {
+      "id": "MT-013",
+      "module": "Marketing / Broadcast Email",
+      "location": "apps/api/novara_core/modules/email_campaigns.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend broadcast capability; local queue/dispatch only",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_mt013_segment_broadcast_sends_once_per_consented_recipient"
+    },
+    {
+      "id": "MT-026",
+      "module": "Marketing / Campaign Types & Scheduling",
+      "location": "apps/api/novara_core/modules/marketing.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend campaign scheduling capability",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_mt026_campaign_types_and_scheduling_are_validated_and_due"
+    },
+    {
+      "id": "MT-027",
+      "module": "Marketing / Campaign Builder",
+      "location": "apps/api/novara_core/modules/marketing.py; apps/web/app.js; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "complete: SPA exposes action/condition/decision steps, rule config and a wired add handler; asserted by the named test against app.js",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_mt027_campaign_builder_canvas_wires_conditions_decisions_and_actions"
+    },
+    {
+      "id": "MT-028",
+      "module": "Marketing / Campaign Sources",
+      "location": "apps/api/novara_core/modules/marketing.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend enrollment capability",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_mt028_campaign_contact_sources_enroll_once_from_segment_and_form"
+    },
+    {
+      "id": "CW-019",
+      "module": "Customer Support / Private Notes",
+      "location": "apps/api/novara_core/modules/support.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend private-note capability",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_cw019_private_notes_are_internal_only"
+    },
+    {
+      "id": "CW-030",
+      "module": "Customer Support / Conversation Search",
+      "location": "apps/api/novara_core/modules/support.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend search capability",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_cw030_conversation_search_matches_subject_body_and_messages"
+    },
+    {
+      "id": "NV-007",
+      "module": "Notifications / Workflow Channel Steps",
+      "location": "apps/api/novara_core/modules/automation.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend workflow automation capability; local intents only",
+      "remaining": "None for the local acceptance criteria; channel steps record local queued intents, not provider delivery.",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_nv007_workflow_channel_steps_persist_results_without_delivery"
+    },
+    {
+      "id": "NV-032",
+      "module": "Notifications / Layered Preferences",
+      "location": "apps/api/novara_core/modules/notification_preferences.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "n/a: backend resolver capability; preferences are surfaced in the NV-039 dialog",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_nv032_layered_preferences_resolve_global_workflow_and_channel"
+    },
+    {
+      "id": "NV-039",
+      "module": "Notifications / Inbox Preferences UI",
+      "location": "apps/web/app.js; apps/api/novara_core/modules/notification_preferences.py; apps/api/tests/test_p0_marketing_support_notify_gaps.py",
+      "frontend": "complete: notification inbox exposes a preferences dialog driven by the real API with a wired save form; asserted by the named test against app.js",
+      "evidence": "docs/evidence/p0-marketing-support-notify-gaps-20261123.md; named test: test_nv039_inbox_preferences_view_is_routed_and_wired"
+    }
+  ]
+}

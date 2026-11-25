@@ -1,0 +1,76 @@
+NOVARA runtime smoke evidence — 2026-11-22
+Command: python scripts/runtime_smoke.py
+Method: real uvicorn server on a free localhost port, throwaway SQLite database,
+        driven over HTTP by httpx. No external services, emails or messages.
+Note: no response bodies are logged, because auth responses carry bearer tokens.
+
+  PASS server becomes healthy (GET /health)
+[1] Static single-page client
+  PASS index.html served (HTTP 200)
+  PASS app.js served (208464 bytes)
+  PASS styles.css served (31541 bytes)
+[2] API catalogue
+  PASS openapi has endpoints (160 paths)
+  PASS route /health
+  PASS route /api/v1/auth/login
+  PASS route /api/v1/workspaces/{workspace_id}/contacts
+[3] First-run bootstrap and auth
+  PASS bootstrap 200 (HTTP 200)
+  PASS authenticated /me (HTTP 200)
+  PASS owner role
+[4] Full CRM journey over HTTP
+  PASS create contact (HTTP 201)
+  PASS create lead (HTTP 201)
+  PASS qualify lead
+  PASS convert lead
+  PASS create task (HTTP 201)
+  PASS list contacts (1 row(s))
+  PASS event timeline populated (5 events)
+  PASS contact timeline populated (1 events)
+
+[5] Notification center (P0)
+  PASS website intake creates a real notification (HTTP 201)
+  PASS notification counts (HTTP 200)
+  PASS workspace notification settings (HTTP 200)
+  PASS settings persist (HTTP 200)
+  PASS bulk mark read (HTTP 200)
+  PASS real-time stream route registered
+
+RUNTIME SMOKE: PASS — real uvicorn server served the client and completed the journey.
+Second run after notification P0 work: 166 OpenAPI paths (was 160); all checks pass.
+
+[6] Customer inbox (P0)
+  PASS pre-chat identity reuses CRM contact (HTTP 201)
+  PASS conversation created with origin metadata (HTTP 201)
+  PASS reply stored with direction and channel (HTTP 201)
+  PASS queue counts reflect the ticket (HTTP 200)
+  PASS assignee list available to agents (HTTP 200)
+  PASS inbox stream route registered
+
+Third run after Customer Inbox P0 work: 170 OpenAPI paths (was 166); all checks pass.
+
+[7] Work items and delivery states (P0)
+  PASS configurable state created (HTTP 201)
+  PASS configurable done state created (HTTP 201)
+  PASS project created with due date (HTTP 201)
+  PASS work item uses configured state (HTTP 201)
+  PASS work item completion tracks state group (HTTP 200)
+  PASS progress reflects the completed item (HTTP 200)
+  PASS search returns typed work item (HTTP 200)
+
+Fourth run after Work Items P0 work: 173 OpenAPI paths (was 170); all checks pass.
+Latest static asset sizes served in that run: app.js 230878 bytes,
+styles.css 31540 bytes. First smoke attempt in this cycle failed with HTTP 422
+when patching to the built-in `done` after custom states were defined; that is
+correct validation behaviour, so the smoke was corrected to create and use an
+explicit done state rather than relaxing the API.
+
+Supporting environment evidence:
+- apps/api/pyproject.toml now declares python-multipart and pypdf. Both are installed
+  in D:\NOVARA\.venv. Without python-multipart the suite failed at import/collection;
+  without pypdf test_pdf_info was skipped.
+- Targeted verification after install: tests/test_batch2_smoke.py::test_pdf_info
+  -> 1 passed, 1 warning (StarletteDeprecationWarning only).
+- Prior full-suite run in the same venv after python-multipart install:
+  174 passed, 1 skipped, 1 warning in 63.01s. The skip was pypdf-only and is now closed.
+- Git HEAD unchanged at 73e9f76. No commit, push, tag, deploy or external send.
