@@ -1,0 +1,37 @@
+# Basic use needs NO infrastructure: `docker compose up --build` gives one
+# API + web container with a local SQLite volume. PostgreSQL is opt-in via
+# `--profile postgres`. No Redis is required.
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      NOVARA_DB_PATH: /data/novara.sqlite3
+      # Set a unique value in the environment before starting a deployed stack.
+      NOVARA_PRESIGN_SECRET: ${NOVARA_PRESIGN_SECRET:-}
+      # To use PostgreSQL instead, start with `--profile postgres` and set:
+      # NOVARA_DATABASE_URL: postgresql+psycopg://novara:novara@db:5432/novara
+    volumes:
+      - novara-data:/data
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    profiles: ["postgres"]
+    environment:
+      POSTGRES_USER: novara
+      POSTGRES_PASSWORD: novara
+      POSTGRES_DB: novara
+    volumes:
+      - novara-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U novara -d novara"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  novara-data:
+  novara-postgres:

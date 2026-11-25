@@ -1,0 +1,41 @@
+Container startup migration path — local verification, 2026-11-22
+=================================================================
+Scope: verify the exact command the Docker image now runs at startup
+(`alembic upgrade head`) against a brand-new, empty SQLite file. This tests the
+migration logic only. Docker itself is unavailable (B-01), so no image build or
+container run was performed; the Dockerfile change remains inspection-verified.
+
+Command (fresh temp DB, real alembic from the project checkout):
+  $db='C:\Users\ganes\AppData\Local\Temp\opencode\novara-fresh-container.sqlite3'
+  Remove-Item $db -Force -ErrorAction SilentlyContinue
+  $env:PYTHONPATH='D:\NOVARA\apps\api'
+  $env:NOVARA_DB_PATH=$db
+  Push-Location 'D:\NOVARA\apps\api'
+  python -m alembic upgrade head
+  python -m alembic check
+
+Observed output:
+  INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+  INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+  INFO  [alembic.runtime.migration] Running upgrade  -> 6d610706f4ff, initial schema
+  INFO  [alembic.runtime.migration] Running upgrade 6d610706f4ff -> 9951aadc14c8, add jobs and adapter calls
+  INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+  INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+  INFO  [alembic.runtime.plugins] setting up autogenerate plugin alembic.autogenerate.schemas
+  INFO  [alembic.runtime.plugins] setting up autogenerate plugin alembic.autogenerate.tables
+  INFO  [alembic.runtime.plugins] setting up autogenerate plugin alembic.autogenerate.types
+  INFO  [alembic.runtime.plugins] setting up autogenerate plugin alembic.autogenerate.constraints
+  INFO  [alembic.runtime.plugins] setting up autogenerate plugin alembic.autogenerate.defaults
+  INFO  [alembic.runtime.plugins] setting up autogenerate plugin alembic.autogenerate.comments
+  INFO  [alembic.runtime.plugins] setting up autogenerate plugin alembic.autogenerate.checkconstraint_byname
+  No new upgrade operations detected.
+
+Fresh-DB inspection after the upgrade:
+  revision    [('9951aadc14c8',)]
+  table_count 37
+
+Conclusion: on a fresh database the startup command produces the full schema and
+an Alembic version stamp at head 9951aadc14c8; `alembic check` reports no drift.
+The repository's dev database (`D:\NOVARA\novara_dev.sqlite3`) was not modified.
+Not verified: actual image build, container run, mounted /data volume behaviour,
+and PostgreSQL. No deployment was performed.

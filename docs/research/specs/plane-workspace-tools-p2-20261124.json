@@ -1,0 +1,33 @@
+{
+  "task": "T-110",
+  "title": "Clean-room Plane workspace tools P2/P3 integration",
+  "date": "2026-11-24",
+  "rows": ["PL-089", "PL-091", "PL-092", "PL-093", "PL-107", "PL-137", "PL-138", "PL-139", "PL-142", "PL-145"],
+  "source_basis": "documented public behaviour from the Plane docs sitemap and the held audit notes only; no upstream source, package or hosted instance copied",
+  "module": "apps/api/novara_core/modules/plane_workspace_tools.py",
+  "migration": "e6f7a8b9c1d2",
+  "tests": [
+    "apps/api/tests/test_plane_workspace_tools_p2.py",
+    "apps/api/tests/test_workflow.py::test_no_route_sends_external_messages"
+  ],
+  "evidence": "docs/evidence/plane-workspace-tools-p2-20261124.md",
+  "verification": {
+    "targeted": "10 passed, 1 warning in 9.97s",
+    "node_check": "exit 0",
+    "alembic_head": "e6f7a8b9c1d2",
+    "roundtrip": "upgrade -> downgrade -> upgrade with data preserved; fresh-DB alembic check clean",
+    "full_suite": "833 passed, 2 warnings in 520.04s, exit 0"
+  },
+  "frontend": "n/a: API/server-level acceptance criteria; hidden-navigation enforcement is a server-side direct-URL guard, so no dedicated SPA view is claimed",
+  "external_calls": false,
+  "matrix_after": {
+    "verified_complete": 619,
+    "licensing_restricted": 197,
+    "not_implemented": 387,
+    "partially_implemented": 80,
+    "external_dependency_blocked": 135,
+    "compatible_replacements": 70,
+    "complete_like": 689,
+    "total": 1488
+  }
+}

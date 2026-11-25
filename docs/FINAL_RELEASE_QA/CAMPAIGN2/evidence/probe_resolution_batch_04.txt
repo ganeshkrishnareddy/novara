@@ -1,0 +1,60 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- D:\NOVARA\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\NOVARA\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 43 items
+
+apps\api\tests\test_projects.py::test_project_crud_items_completion_and_events PASSED [  2%]
+apps\api\tests\test_ui_wiring.py::test_project_detail_view_is_routed_and_rendered PASSED [  4%]
+apps\api\tests\test_ui_wiring.py::test_every_new_project_control_has_a_dispatch_handler PASSED [  6%]
+apps\api\tests\test_ui_wiring.py::test_project_search_types_are_selectable_and_navigable PASSED [  9%]
+apps\api\tests\test_ui_wiring.py::test_new_project_handlers_are_declared_exactly_once PASSED [ 11%]
+apps\api\tests\test_ui_wiring.py::test_document_views_are_routed_and_permission_gated PASSED [ 13%]
+apps\api\tests\test_ui_wiring.py::test_every_document_control_has_a_dispatch_handler PASSED [ 16%]
+apps\api\tests\test_ui_wiring.py::test_customer_profile_ui_shows_linked_support_conversations PASSED [ 18%]
+apps\api\tests\test_ui_wiring.py::test_membership_lifecycle_controls_are_wired_and_guarded PASSED [ 20%]
+apps\api\tests\test_ui_wiring.py::test_survey_lifecycle_control_is_wired PASSED [ 23%]
+apps\api\tests\test_ui_wiring.py::test_consent_controls_are_wired_without_render_tokens PASSED [ 25%]
+apps\api\tests\test_ui_wiring.py::test_project_membership_controls_are_wired_and_guarded PASSED [ 27%]
+apps\api\tests\test_ui_wiring.py::test_campaign_journey_controls_are_wired_and_local_only PASSED [ 30%]
+apps\api\tests\test_ui_wiring.py::test_workspace_admin_surface_is_routed_and_wired PASSED [ 32%]
+apps\api\tests\test_ui_wiring.py::test_experiment_management_ui_is_routed_and_wired PASSED [ 34%]
+apps\api\tests\test_ui_wiring.py::test_feature_flag_p1_controls_are_wired_and_guarded PASSED [ 37%]
+apps\api\tests\test_ui_wiring.py::test_project_p1_work_management_controls_are_wired PASSED [ 39%]
+apps\api\tests\test_ui_wiring.py::test_support_p1_operations_ui_is_routed_and_wired PASSED [ 41%]
+apps\api\tests\test_ui_wiring.py::test_survey_extension_controls_are_rendered_and_dispatched PASSED [ 44%]
+apps\api\tests\test_ui_wiring.py::test_feedback_extension_p2b_controls_are_rendered_and_dispatched PASSED [ 46%]
+apps\api\tests\test_ui_wiring.py::test_feedback_targeting_controls_are_rendered_and_dispatched PASSED [ 48%]
+apps\api\tests\test_ui_wiring.py::test_search_engine_route_controls_are_rendered_and_dispatched PASSED [ 51%]
+apps\api\tests\test_ui_wiring.py::test_notification_workflow_route_controls_are_rendered_and_dispatched PASSED [ 53%]
+apps\api\tests\test_ui_wiring.py::test_feedback_intelligence_route_controls_are_rendered_and_dispatched PASSED [ 55%]
+apps\api\tests\test_ui_wiring.py::test_experiment_stats_route_controls_are_rendered_and_dispatched PASSED [ 58%]
+apps\api\tests\test_ui_wiring.py::test_experiment_ops_route_controls_are_rendered_and_dispatched PASSED [ 60%]
+apps\api\tests\test_ui_wiring.py::test_experiment_queries_route_controls_are_rendered_and_dispatched PASSED [ 62%]
+apps\api\tests\test_ui_wiring.py::test_experiment_platform_route_controls_are_rendered_and_dispatched PASSED [ 65%]
+apps\api\tests\test_ui_wiring.py::test_experiment_delivery_route_controls_are_rendered_and_dispatched PASSED [ 67%]
+apps\api\tests\test_ui_wiring.py::test_survey_delivery_route_controls_are_rendered_and_dispatched PASSED [ 69%]
+apps\api\tests\test_ui_wiring.py::test_search_advanced_route_controls_are_rendered_and_dispatched PASSED [ 72%]
+apps\api\tests\test_ui_wiring.py::test_document_engagement_route_controls_are_rendered_and_dispatched PASSED [ 74%]
+apps\api\tests\test_ui_wiring.py::test_notification_automation_route_controls_are_rendered_and_dispatched PASSED [ 76%]
+apps\api\tests\test_ui_wiring.py::test_sales_engagement_route_controls_are_rendered_and_dispatched PASSED [ 79%]
+apps\api\tests\test_ui_wiring.py::test_conversation_ops_route_controls_are_rendered_and_dispatched PASSED [ 81%]
+apps\api\tests\test_ui_wiring.py::test_exposure_route_controls_are_rendered_and_dispatched PASSED [ 83%]
+apps\api\tests\test_ui_wiring.py::test_wiki_pages_route_controls_are_rendered_and_dispatched PASSED [ 86%]
+apps\api\tests\test_ui_wiring.py::test_work_item_planning_route_controls_are_rendered_and_dispatched PASSED [ 88%]
+apps\api\tests\test_ui_wiring.py::test_marketing_content_route_controls_are_rendered_and_dispatched PASSED [ 90%]
+apps\api\tests\test_ui_wiring.py::test_support_reporting_route_controls_are_rendered_and_dispatched PASSED [ 93%]
+apps\api\tests\test_ui_wiring.py::test_email_engagement_route_controls_are_rendered_and_dispatched PASSED [ 95%]
+apps\api\tests\test_ui_wiring.py::test_work_collaboration_route_controls_are_rendered_and_dispatched PASSED [ 97%]
+apps\api\tests\test_ui_wiring.py::test_advanced_experimentation_route_controls_are_rendered_and_dispatched PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\NOVARA\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\NOVARA\docs\FINAL_RELEASE_QA\CAMPAIGN2\evidence\probe_batch_04.xml -
+======================== 43 passed, 1 warning in 2.24s ========================

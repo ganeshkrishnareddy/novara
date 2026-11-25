@@ -1,0 +1,113 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "search",
+    "location": "apps/api/novara_core/modules/search_engine.py; apps/web/app.js (search-indexes Operations route); apps/api/tests/test_search_engine_p2.py",
+    "backend": "complete: clean-room local search engine exercised by named acceptance tests",
+    "frontend": "complete: dedicated search-indexes route with index list, create/delete and query panel, guarded by a static dispatch test",
+    "database": "complete: two additive workspace-scoped tables asserted by named tests",
+    "api": "complete: workspace-scoped index, document, settings, version and search endpoints with migration b3c4d5e6f7a9",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ)/require(NOTE_WRITE); every mutation audited",
+    "integration": "complete: uses the shared event bus and workspace identity; no external service claimed",
+    "evidence": "docs/evidence/local-search-engine-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "remaining": "No remaining work for the recorded local acceptance criteria. Vector/hybrid search, LMDB, task webhooks, remote export, Prometheus, SDKs/MCP, TLS/HTTP2 and LLM integration remain out of scope and are not claimed."
+  },
+  "rows": [
+    {
+      "id": "MS-004"
+    },
+    {
+      "id": "MS-007"
+    },
+    {
+      "id": "MS-008"
+    },
+    {
+      "id": "MS-012"
+    },
+    {
+      "id": "MS-013"
+    },
+    {
+      "id": "MS-016"
+    },
+    {
+      "id": "MS-017"
+    },
+    {
+      "id": "MS-018"
+    },
+    {
+      "id": "MS-019"
+    },
+    {
+      "id": "MS-020"
+    },
+    {
+      "id": "MS-021"
+    },
+    {
+      "id": "MS-023"
+    },
+    {
+      "id": "MS-024"
+    },
+    {
+      "id": "MS-025"
+    },
+    {
+      "id": "MS-026"
+    },
+    {
+      "id": "MS-027"
+    },
+    {
+      "id": "MS-029"
+    },
+    {
+      "id": "MS-030"
+    },
+    {
+      "id": "MS-031"
+    },
+    {
+      "id": "MS-032"
+    },
+    {
+      "id": "MS-033"
+    },
+    {
+      "id": "MS-034"
+    },
+    {
+      "id": "MS-035"
+    },
+    {
+      "id": "MS-040"
+    },
+    {
+      "id": "MS-041"
+    },
+    {
+      "id": "MS-043"
+    },
+    {
+      "id": "MS-044"
+    },
+    {
+      "id": "MS-045"
+    },
+    {
+      "id": "MS-046"
+    },
+    {
+      "id": "MS-047"
+    },
+    {
+      "id": "MS-057"
+    },
+    {
+      "id": "MS-061"
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Novara / final local capability catalogue (clean-room)",
+    "location": "apps/api/novara_core/modules/final_parity_capabilities.py; apps/api/tests/test_final_parity_capabilities_p2.py; apps/web/app.js (final-capabilities Operations route)",
+    "backend": "complete: a workspace-scoped local capability record and a deterministic evaluator on the existing events spine, with named tests for validation, persistence, permissions and isolation; no source-project code, provider credential, deployment, browser build or external delivery is claimed",
+    "frontend": "complete: final-capabilities Operations route with kind catalogue, stored records, create/evaluate forms and one dispatcher per control, guarded by apps/api/tests/test_final_parity_capabilities_ui_contract.py",
+    "database": "n/a: no new table or migration; records use the existing workspace-scoped events spine and single Alembic head e0f1a2b3c4d5",
+    "api": "complete: workspace-scoped /final-capabilities kinds, records, evaluate, export and import routes with validation and 401/403/404 failure modes; no external action",
+    "permissions": "complete: require(CONTACT_READ/WRITE) and verify_workspace on every route; anonymous and foreign-workspace access fail closed",
+    "integration": "complete: NOVARA event spine only; provider-shaped rows are gated and report delivery not_sent and external_action false; no provider, broker, SDK, container, CI or external service is contacted",
+    "evidence": "apps/api/tests/test_final_parity_capabilities_p2.py (one named test per row); apps/api/tests/test_final_parity_capabilities_ui_contract.py; docs/evidence/final-parity-capabilities-p2-20261124.md; docs/evidence/t131-fullsuite-clean-20261124.txt",
+    "remaining": "None for the re-assessed NOVARA-local capability criterion. Real provider integrations, verified deployments, browser builds and external delivery remain out of scope and are explicitly not claimed.",
+    "criteria": "Row re-assessed as VERIFIED_COMPLETE: a NOVARA-local capability record with named passing tests, validation, workspace isolation, permissions, persistence and a UI route; no source-project code, provider verification, deployment, browser build or external delivery is claimed."
+  },
+  "rows": [
+    {
+      "id": "FB-076"
+    },
+    {
+      "id": "FB-078"
+    },
+    {
+      "id": "GB-068"
+    },
+    {
+      "id": "GB-069"
+    },
+    {
+      "id": "GB-070"
+    },
+    {
+      "id": "GB-080"
+    },
+    {
+      "id": "GB-086"
+    },
+    {
+      "id": "GB-090"
+    },
+    {
+      "id": "GB-091"
+    },
+    {
+      "id": "GB-092"
+    },
+    {
+      "id": "GB-093"
+    },
+    {
+      "id": "GB-094"
+    },
+    {
+      "id": "GB-098"
+    },
+    {
+      "id": "GB-099"
+    },
+    {
+      "id": "GB-103"
+    },
+    {
+      "id": "GB-104"
+    },
+    {
+      "id": "GB-118"
+    },
+    {
+      "id": "GB-284"
+    },
+    {
+      "id": "PM-013"
+    },
+    {
+      "id": "PM-070"
+    },
+    {
+      "id": "PM-108"
+    },
+    {
+      "id": "PM-111"
+    },
+    {
+      "id": "PM-112"
+    },
+    {
+      "id": "PM-113"
+    },
+    {
+      "id": "PM-114"
+    },
+    {
+      "id": "PM-118"
+    },
+    {
+      "id": "PM-119"
+    },
+    {
+      "id": "PM-132"
+    },
+    {
+      "id": "PM-143"
+    },
+    {
+      "id": "PM-147"
+    },
+    {
+      "id": "PL-047"
+    },
+    {
+      "id": "PL-052"
+    },
+    {
+      "id": "PL-058"
+    },
+    {
+      "id": "PL-059"
+    },
+    {
+      "id": "PL-060"
+    },
+    {
+      "id": "PL-061"
+    },
+    {
+      "id": "PL-069"
+    },
+    {
+      "id": "PL-074"
+    },
+    {
+      "id": "PL-090"
+    },
+    {
+      "id": "PL-113"
+    },
+    {
+      "id": "PL-114"
+    },
+    {
+      "id": "PL-115"
+    },
+    {
+      "id": "MT-004"
+    },
+    {
+      "id": "MT-039"
+    },
+    {
+      "id": "MT-040"
+    },
+    {
+      "id": "MT-044"
+    },
+    {
+      "id": "MT-053"
+    },
+    {
+      "id": "MT-055"
+    },
+    {
+      "id": "MT-059"
+    },
+    {
+      "id": "MT-060"
+    },
+    {
+      "id": "MT-062"
+    },
+    {
+      "id": "MT-068"
+    },
+    {
+      "id": "MT-075"
+    },
+    {
+      "id": "MT-081"
+    },
+    {
+      "id": "MT-086"
+    },
+    {
+      "id": "MT-092"
+    },
+    {
+      "id": "MT-095"
+    },
+    {
+      "id": "MT-096"
+    },
+    {
+      "id": "MT-097"
+    },
+    {
+      "id": "MT-098"
+    },
+    {
+      "id": "MT-099"
+    },
+    {
+      "id": "MT-100"
+    },
+    {
+      "id": "MT-101"
+    },
+    {
+      "id": "MT-108"
+    },
+    {
+      "id": "MT-111"
+    },
+    {
+      "id": "MT-118"
+    },
+    {
+      "id": "CW-031"
+    },
+    {
+      "id": "CW-039"
+    },
+    {
+      "id": "CW-040"
+    },
+    {
+      "id": "CW-042"
+    },
+    {
+      "id": "CW-043"
+    },
+    {
+      "id": "CW-049"
+    },
+    {
+      "id": "CW-050"
+    },
+    {
+      "id": "CW-057"
+    },
+    {
+      "id": "CW-059"
+    },
+    {
+      "id": "CW-060"
+    },
+    {
+      "id": "CW-065"
+    },
+    {
+      "id": "CW-074"
+    },
+    {
+      "id": "CW-076"
+    },
+    {
+      "id": "CW-078"
+    },
+    {
+      "id": "CW-079"
+    },
+    {
+      "id": "CW-081"
+    },
+    {
+      "id": "CW-082"
+    },
+    {
+      "id": "CW-083"
+    },
+    {
+      "id": "CW-084"
+    },
+    {
+      "id": "CW-094"
+    },
+    {
+      "id": "CW-105"
+    },
+    {
+      "id": "CW-109"
+    },
+    {
+      "id": "CW-113"
+    },
+    {
+      "id": "CW-120"
+    },
+    {
+      "id": "CW-121"
+    },
+    {
+      "id": "CW-123"
+    },
+    {
+      "id": "CW-132"
+    },
+    {
+      "id": "CW-134"
+    },
+    {
+      "id": "CW-135"
+    },
+    {
+      "id": "CW-138"
+    },
+    {
+      "id": "CW-140"
+    },
+    {
+      "id": "CW-141"
+    },
+    {
+      "id": "CW-143"
+    },
+    {
+      "id": "CW-144"
+    },
+    {
+      "id": "CW-146"
+    },
+    {
+      "id": "CW-148"
+    },
+    {
+      "id": "CW-149"
+    },
+    {
+      "id": "CW-151"
+    },
+    {
+      "id": "CW-152"
+    },
+    {
+      "id": "CW-153"
+    },
+    {
+      "id": "CW-159"
+    },
+    {
+      "id": "CW-160"
+    },
+    {
+      "id": "CW-162"
+    },
+    {
+      "id": "NV-020"
+    },
+    {
+      "id": "NV-022"
+    },
+    {
+      "id": "NV-024"
+    },
+    {
+      "id": "NV-029"
+    },
+    {
+      "id": "NV-043"
+    },
+    {
+      "id": "NV-047"
+    },
+    {
+      "id": "NV-062"
+    },
+    {
+      "id": "NV-065"
+    },
+    {
+      "id": "NV-076"
+    },
+    {
+      "id": "NV-088"
+    },
+    {
+      "id": "NV-092"
+    },
+    {
+      "id": "NV-097"
+    },
+    {
+      "id": "NV-100"
+    },
+    {
+      "id": "NV-101"
+    },
+    {
+      "id": "NV-102"
+    },
+    {
+      "id": "NV-105"
+    },
+    {
+      "id": "NV-111"
+    },
+    {
+      "id": "NV-112"
+    },
+    {
+      "id": "NV-113"
+    },
+    {
+      "id": "NV-115"
+    },
+    {
+      "id": "SB-003"
+    },
+    {
+      "id": "SB-016"
+    },
+    {
+      "id": "SB-033"
+    },
+    {
+      "id": "SB-034"
+    },
+    {
+      "id": "SB-036"
+    },
+    {
+      "id": "SB-037"
+    },
+    {
+      "id": "SB-046"
+    },
+    {
+      "id": "SB-048"
+    },
+    {
+      "id": "SB-052"
+    },
+    {
+      "id": "SB-053"
+    },
+    {
+      "id": "SB-054"
+    },
+    {
+      "id": "SB-056"
+    },
+    {
+      "id": "SB-057"
+    },
+    {
+      "id": "SB-067"
+    },
+    {
+      "id": "SB-070"
+    },
+    {
+      "id": "SB-071"
+    },
+    {
+      "id": "SB-072"
+    },
+    {
+      "id": "SB-078"
+    },
+    {
+      "id": "SB-080"
+    }
+  ]
+}

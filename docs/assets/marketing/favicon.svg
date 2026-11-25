@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="novara-favicon-title novara-favicon-desc">
+  <title id="novara-favicon-title">NOVARA mark</title>
+  <desc id="novara-favicon-desc">Four connected nodes forming the NOVARA N monogram, with gold joins.</desc>
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#176B55"/>
+  <g transform="translate(8 8)">
+    <path d="M11 38V10L37 38V10" fill="none" stroke="#F7F8F7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11 10L16.2 15.6M37 38L31.8 32.4" fill="none" stroke="#C4A66A" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#F7F8F7">
+      <circle cx="11" cy="10" r="5"/>
+      <circle cx="11" cy="38" r="5"/>
+      <circle cx="37" cy="10" r="5"/>
+      <circle cx="37" cy="38" r="5"/>
+    </g>
+  </g>
+</svg>

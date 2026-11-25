@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "feedback",
+    "location": "apps/api/novara_core/modules/feedback_intelligence.py; apps/web/app.js (feedback-intelligence Operations route); apps/api/tests/test_feedback_intelligence_p2.py",
+    "backend": "complete: clean-room field library, reserved response context, respondent metadata, contact-based audience segments, datasets/sources/records, unified ingestion and live analytics; deterministic local sentiment classifier; all behaviours exercised by named acceptance tests",
+    "frontend": "complete: dedicated feedback-intelligence Operations route renders live unified insights, datasets, fields, segments and dashboards with one dispatcher and one form handler per control; static guard in test_ui_wiring.py",
+    "database": "complete: seven additive workspace-scoped tables created by migration d5e6f7a8b1c2 with strict round-trip; persisted rows asserted by named tests",
+    "api": "complete: one stable unify-feedback API group (version 1, no legacy claim) covering fields, datasets, sources, feedbackRecords, segments, dashboards and insights",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads and require(NOTE_WRITE) for all mutations; every mutation and segment evaluation is audited on the shared event bus",
+    "integration": "complete: uses the shared workspace identity, permission, survey, contact and event contracts; no external feedback provider, analytics service or model is contacted",
+    "evidence": "docs/evidence/feedback-intelligence-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "remaining": "No remaining work for the recorded local acceptance criteria. Formbricks-hosted features, Cube.js, external feedback providers, third-party SDKs, model-based sentiment services, MCP servers and multi-region infrastructure remain out of scope and are not claimed."
+  },
+  "rows": [
+    { "id": "FB-024" },
+    { "id": "FB-025" },
+    { "id": "FB-029" },
+    { "id": "FB-085" },
+    { "id": "FB-096" },
+    { "id": "FB-097" },
+    { "id": "FB-098" },
+    { "id": "FB-099" },
+    { "id": "FB-100" },
+    { "id": "FB-101" }
+  ]
+}

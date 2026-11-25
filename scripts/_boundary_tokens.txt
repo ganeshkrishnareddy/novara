@@ -1,0 +1,277 @@
+@novu/framework
+@novu/novu
+@novu/stateless
+@plane
+@plane/
+aci channel
+activepieces integration
+adobe experience platform query service
+adv-presentations
+advanced-permissions
+agent-inbox-mcp
+ai chart creation and ai helpers
+ai enrichment (sentiment, emotions, language)
+ai integrations
+ai mode
+ai-byok
+ai-sdk
+ai-suggestions
+airtable integration
+amazon redshift
+api_access_token
+apk
+apm / monitoring integrations
+arbitrary agent code
+archetypes
+athena
+attio integration
+audit-logging
+auto-translate
+bandit configuration
+bandit results
+batch uid
+benchmark result
+bigquery
+boto3
+bounce handling and bounce kill switch
+boxhq
+brain model layer using operator claude/codex cli
+bridge endpoint
+bridge url
+business-tier
+capacitor
+cdn asset hosting
+cdn, custom ssl and custom subpath
+channel and ai provider keys
+circleci pipeline
+clickhouse
+cloud automated backups
+cloud monitoring, resource scaling and version management
+cloud teams, roles, sso and ip allowlist
+cloud-proxy
+cloud-region
+cloudflare realtimekit video calls
+cluster-experiments
+code-references
+company discovery run
+compliance claim
+container verification
+contextual bandit api
+contextual bandit configuration
+contextual-bandits
+cube analytics service
+custom-environments
+custom-hooks
+custom-launch-checklist
+custom-markdown
+custom-metadata
+data residency
+databricks
+datadog integration
+dataroom_member
+decision-framework
+decision-maker discovery
+design to variant
+desktop build
+desktop_app
+digest email
+discord integration
+discovery providers
+docker compose
+docker image builds and release workflows
+docker-compose
+docker_compose
+edition_gate
+ee entitlement
+ee source
+ee source file
+electron
+email channel adapter
+email conversation transcript
+email delivery (packages/email, smtp)
+email pattern finding
+email verification provider
+encrypt-features-endpoint
+enterprise asset
+enterprise grid
+enterprise packages
+entitlement marker
+environment sync
+environment-driven configuration
+events-forwarder
+executive reports
+experience suite
+experiment-impact
+external_ai_model_default
+fabricated provider metric
+facet-count
+formbricks hub
+framer plugin
+from openai
+funnel-metrics
+generic sql integration
+github metric version control
+google analytics
+google sheets integration
+google tag manager deployment
+headless inbox
+helm
+helm charts (formbricks, spicedb-operator)
+historical-power
+hosted dns management
+hosted free plan
+hosted managed domains
+hosted managed inboxes
+hosted managed sending
+hosted warmup
+hub / hub-worker service
+hubspot integration
+human-in-the-loop
+import openai
+incremental-refresh
+inlinerule
+insights dashboards
+interleaving
+interleaving results
+interleaving setup
+jira integration
+json-validation
+k8s
+kubectl
+kubernetes
+large-saved-groups
+learnings
+legacy slack webhooks
+license activation
+linkedin
+livechat
+llm tracing experiments
+log stream
+make integration
+manage-official-resources
+managed agent account
+managed cloud
+manual mode
+mcp bridge
+meilisearch cloud managed service
+metric-effects
+metric-groups
+metric-populations
+metric-slices
+microsoft clarity heatmaps
+minio
+mixpanel
+mobile build
+mobile_app
+monitoring, deployment check and cluster setup
+mssql or sql server
+multi-metric-queries
+multi-org
+multiple mailboxes and mailbox connections
+multiple-sdk-webhooks
+mysql or mariadb
+n8n integration
+network topology
+no-access-role
+notion integration
+novu branding
+novu cloud
+novu cloud account
+novu dashboard
+novu-branded
+novu-cli
+oauth provider / social login
+object or cdn storage dependency
+object storage / file uploads (packages/storage, rustfs, s3)
+object_storage
+observability integrations (sentry, new relic)
+one-click setup / docker setup / kubernetes deployment
+openai-sdk
+openai_api_key
+override-metrics
+paid cloud variable
+paid entitlement
+pipeline-mode
+plane ai agent
+plane ai credits
+plane billing
+plane edition
+plane entitlement
+plane-blocks
+plane_community
+plane_core
+plane_edition
+plane_license
+postgresql access
+postgresql persistence with prisma
+precomputed-dimensions
+prefix-only
+prestodb or trino
+product-analytics-dashboards
+project-admin-role
+proprietary translation
+public-post
+push notifications
+rasa chatbot
+remote-evaluation
+remote_storage
+replica
+reply classification and `processed_replies`
+require-approvals
+requires a subscription
+resend email delivery
+role-management
+s3 snapshot
+salesforce integration
+savesqlexplorerqueries
+scim
+search analytics dashboard
+search rule
+search-rule
+security certification
+self-hosted installation and deployment
+self-hosted slack setup
+self-hosting documentation set
+self-hosting stack (mongodb, redis, s3, multi-service docker compose)
+sending via mail providers
+shard
+shopify integration
+slack ai assistant
+slack integration
+snowflake
+sortableattributes
+spam protection (google recaptcha v3)
+spicedb fine-grained authorisation
+sso
+ssrf-safe public http
+stripe integration
+task cancellation
+task-stream
+tauri
+third-party integrations (cloud)
+tiktok dms channel
+topics and subtopics (preview)
+unlimited-cdn-usage
+unlimited-event-forwarder-usage
+unlimited-managed-warehouse-usage
+unlimited-projects
+unverified certification
+usenetwork
+valkey / redis-compatible queue and cache
+vercel blob
+vercel deployment and domain automation
+vercel native integration
+vercel postgres
+vertica
+visual editor images
+visual experiment anti-flicker
+visual experiment preview and qa
+visual-editor
+vllm / local ai endpoint
+webflow integration
+webhook connector
+website profiling
+whatsapp business channel
+wordpress integration
+x (twitter) dms and mentions
+zapier integration

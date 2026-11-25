@@ -1,0 +1,28 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "backend": "complete: real local implementation exercised by the named acceptance test",
+    "database": "complete: workspace-scoped persisted rows asserted by the named test",
+    "api": "complete: real FastAPI route exercised through the application test client",
+    "permissions": "complete: bearer session, workspace verification and permission gate asserted",
+    "integration": "complete: local event/delivery wiring exercised; no external provider delivery claimed",
+    "frontend": "n/a: backend/transport row; no user-facing control is required for this acceptance criterion",
+    "remaining": "None; acceptance criteria met and evidenced.",
+    "evidence": "docs/evidence/chatwoot-webhook-p1-20261123.md"
+  },
+  "rows": [
+    {
+      "id": "CW-108",
+      "module": "support + integrations",
+      "location": "apps/api/novara_core/modules/email_campaigns.py::WebhookCreate.http_url, ::deliver_webhook, ::create_webhook_subscription, ::list_webhook_deliveries; apps/api/tests/test_cw108_webhook_p1.py",
+      "integration": "complete: one signed HMAC-SHA256 callback to an allow-listed loopback URL with two real HTTP 503 retries, one success, durable attempt log and audit event; no external message sent"
+    },
+    {
+      "id": "CW-048",
+      "module": "support",
+      "location": "apps/api/novara_core/modules/support.py::SupportInbox, ::InboxAgent, ::list_inboxes, ::inbox_queue, ::list_tickets, ::add_inbox_agent; apps/api/tests/test_cw048_multi_inbox_p1.py",
+      "frontend": "present: openSupportInboxes in apps/web/app.js lists only inboxes permitted to the current principal; no external mailbox is connected",
+      "evidence": "docs/evidence/chatwoot-multi-inbox-p1-20261123.md"
+    }
+  ]
+}

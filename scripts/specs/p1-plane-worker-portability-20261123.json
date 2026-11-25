@@ -1,0 +1,34 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "backend": "complete: real local implementation exercised by a named acceptance test",
+    "database": "complete: workspace-scoped persisted rows asserted by the named test",
+    "api": "n/a: worker and schema portability are verified at the module/SQLAlchemy layer; no new HTTP route is claimed",
+    "permissions": "complete: worker sessions are workspace-scoped and every transition is audited",
+    "integration": "complete: local worker loop and compile-only PostgreSQL DDL verified; no broker, container or live PostgreSQL claimed",
+    "remaining": "None for the stated acceptance criteria; live PostgreSQL and distributed broker remain out of scope for this local-first build."
+  },
+  "rows": [
+    {
+      "id": "PL-071",
+      "module": "Platform / Jobs",
+      "location": "apps/api/novara_core/modules/jobs.py::JobWorker; scripts/job_worker.py; apps/api/tests/test_plane_worker_portability_p1.py",
+      "frontend": "n/a: background worker; no user-facing control required for the acceptance criterion",
+      "evidence": "docs/evidence/plane-worker-portability-p1-20261123.md"
+    },
+    {
+      "id": "PL-147",
+      "module": "Platform / Migrations",
+      "location": "apps/api/alembic/versions/*.py; apps/api/tests/test_plane_worker_portability_p1.py",
+      "frontend": "n/a: migration tooling; no user-facing control required for the acceptance criterion",
+      "evidence": "docs/evidence/plane-worker-portability-p1-20261123.md"
+    },
+    {
+      "id": "PL-148",
+      "module": "Platform / Database",
+      "location": "apps/api/novara_core/database.py; apps/api/tests/test_plane_worker_portability_p1.py",
+      "frontend": "n/a: persistence layer; no user-facing control required for the acceptance criterion",
+      "evidence": "docs/evidence/plane-worker-portability-p1-20261123.md"
+    }
+  ]
+}

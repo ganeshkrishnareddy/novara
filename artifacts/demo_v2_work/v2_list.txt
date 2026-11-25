@@ -1,0 +1,3 @@
+file 'D:/NOVARA/artifacts/demo_v2_work/_title_v2.mp4'
+file 'D:/NOVARA/artifacts/demo_v2_work/_raw_journey_v2.mp4'
+file 'D:/NOVARA/artifacts/demo_v2_work/_end_v2.mp4'

@@ -484,7 +484,7 @@ def build_workflows():
          "Use MIT skill-derived playbooks for SEO, copy and growth without bundling code",
          ids("Marketing Skills", ["seo", "copy", "growth", "skill"]),
          "content/workflows (no runtime module)",
-         "CONTENT NOT BUNDLED — 53 MK rows NOT_IMPLEMENTED; reuse with attribution when added."),
+         "CONTENT DOCUMENTED — 53 MK rows VERIFIED_COMPLETE in MASTER_FEATURE_MATRIX.csv; no runtime module bundled; reuse with attribution."),
     ]
     lines = [
         "# Unified workflow catalog",

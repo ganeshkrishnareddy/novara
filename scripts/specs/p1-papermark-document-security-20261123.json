@@ -1,0 +1,64 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "backend": "complete: real local implementation exercised by the named acceptance test",
+    "database": "complete: workspace-scoped persisted rows asserted by the named test",
+    "api": "complete: real FastAPI route exercised through the application test client",
+    "permissions": "complete: bearer session, workspace verification and permission gate asserted",
+    "integration": "complete: local event/delivery wiring exercised; no external provider delivery claimed",
+    "frontend": "n/a: backend/security row; no user-facing control is required for this acceptance criterion",
+    "remaining": "None; acceptance criteria met and evidenced.",
+    "evidence": "docs/evidence/papermark-document-security-p1-20261123.md"
+  },
+  "rows": [
+    {
+      "id": "PM-040",
+      "module": "documents + security",
+      "location": "apps/api/novara_core/modules/document_security.py::DocumentSecret, ::encrypt_secret, ::decrypt_secret, ::rotate_secrets",
+      "frontend": "n/a: deployment/crypto row; no end-user form is required for the acceptance criterion",
+      "permissions": "complete: DOCUMENT_ADMIN for store/rotate, DOCUMENT_READ for metadata; no key or plaintext returned"
+    },
+    {
+      "id": "PM-045",
+      "module": "documents + security",
+      "location": "apps/api/novara_core/modules/document_security.py::WatermarkView, ::create_watermark_view, ::watermark_overlay; apps/web/app.js::create-watermark-preview",
+      "frontend": "complete: permission-gated per-view watermark preview renders the real SVG over three pages; Chromium DOM and screenshot evidence included, no full Playwright suite run",
+      "integration": "complete: view identity, timestamp and id persist; overlay is generated at view time and the document row is unchanged"
+    },
+    {
+      "id": "PM-117",
+      "module": "integrations + documents",
+      "location": "apps/api/novara_core/modules/document_security.py::create_document_webhook_subscription, ::signed_share_delivery; modules/email_campaigns.py::deliver_webhook, ::webhook_signature",
+      "frontend": "n/a: delivery row; verified by loopback subscriber in the named test",
+      "integration": "complete: real HMAC signed HTTP delivery to a loopback subscriber, delivery log and audit event; no external message sent"
+    },
+    {
+      "id": "PM-123",
+      "module": "jobs + storage",
+      "location": "apps/api/novara_core/modules/jobs.py::_handle_document_conversion, ::claim_job, ::run_pending_jobs; modules/storage.py::run_document_conversion",
+      "frontend": "present: existing jobs UI case in apps/web/app.js",
+      "integration": "complete: document conversion is enqueued, executed, audited and workspace-scoped in the named test"
+    },
+    {
+      "id": "PM-141",
+      "module": "API + documents",
+      "location": "apps/api/novara_core/modules/storage.py::published_openapi_document_spec",
+      "frontend": "n/a: published API specification; consumed by API clients",
+      "integration": "complete: schema is generated from the live FastAPI app and compared with real routes in the named test"
+    },
+    {
+      "id": "PM-146",
+      "module": "API + security",
+      "location": "apps/api/novara_core/middleware.py::document_limiter, ::SecurityHeadersMiddleware.dispatch",
+      "frontend": "n/a: transport-level rate limit; error envelope is asserted by the named test",
+      "integration": "complete: in-process sliding-window limiter with canonical error envelope and security headers; auth limiter preserved"
+    },
+    {
+      "id": "PM-156",
+      "module": "security + documents",
+      "location": "apps/api/novara_core/modules/document_security.py::EncryptedDocumentBlob, ::store_encrypted_file, ::download_encrypted_file; apps/api/novara_core/middleware.py::SECURITY_HEADERS",
+      "frontend": "n/a: storage-encryption and transport-header row; download response asserted by the named test",
+      "remaining": "None; file bytes, checksum, download headers and security headers are evidenced. TLS termination and KMS/full-disk encryption remain deployment concerns outside this local claim."
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Local prototype for a fictional pediatric dental clinic: treatments, team, parent guides, FAQ and a non-submitting enquiry form.">
+  <title>Little Grins Pediatric Dental — Local Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Little Grins Pediatric Dental, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" focusable="false">
+            <path d="M20 6c-6.6 0-12 4.8-12 11 0 4.2 2.2 7.1 5.2 9.1.5 3.3 2.7 5.9 6.8 5.9s6.3-2.6 6.8-5.9C29.8 24.1 32 21.2 32 17c0-6.2-5.4-11-12-11Z" fill="currentColor" opacity=".18"/>
+            <path d="M14 19.5c1.6 0 1.6 2.4 3.2 2.4s1.6-2.4 3.2-2.4 1.6 2.4 3.2 2.4 1.6-2.4 3.2-2.4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 6c-6.6 0-12 4.8-12 11 0 4.2 2.2 7.1 5.2 9.1.5 3.3 2.7 5.9 6.8 5.9s6.3-2.6 6.8-5.9C29.8 24.1 32 21.2 32 17c0-6.2-5.4-11-12-11Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          </svg>
+        </span>
+        <span class="brand-text">Little Grins <span>Pediatric Dental</span></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#why-us">Why us</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#testimonials">Parent voices</a></li>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-small nav-cta" href="#enquiry" data-event="cta_start_enquiry">Start an enquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Non-functional prototype consent banner: no storage, no tracking -->
+  <aside class="consent-banner" id="consent-banner" aria-labelledby="consent-title">
+    <div class="container consent-inner">
+      <div class="consent-copy">
+        <p class="consent-title" id="consent-title"><strong>Local prototype privacy notice</strong></p>
+        <p>Everything here is illustrative. Nothing is tracked, stored or sent. The toggles below demonstrate the idea only.</p>
+      </div>
+      <div class="consent-controls">
+        <button class="toggle-chip" type="button" disabled aria-pressed="true">Essential: always on</button>
+        <button class="toggle-chip" id="analytics-toggle" type="button" aria-pressed="false" data-event="consent_analytics_toggle">Analytics: off</button>
+        <button class="text-button" id="consent-dismiss" type="button">Dismiss notice</button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Gentle dentistry for little people</p>
+          <h1 id="hero-title">A calmer kind of dental visit for your child.</h1>
+          <p class="hero-lede">We take the scare out of the chair. Think unhurried appointments, plain-language explanations and a team that knows how much a small reassurance can mean.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#enquiry" data-event="cta_start_enquiry">Start an enquiry <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="#services" data-event="cta_view_services">Explore treatments</a>
+          </div>
+          <ul class="hero-points" aria-label="What to expect">
+            <li>Patient, child-first pacing</li>
+            <li>Clear guidance for parents</li>
+            <li>A welcoming, playful space</li>
+          </ul>
+          <p class="prototype-note">Local design prototype — illustrative content only. No real clinic, booking or data capture.</p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-card art-card-main">
+            <div class="art-sun"></div>
+            <div class="art-tooth">
+              <svg viewBox="0 0 120 120" focusable="false">
+                <path d="M60 18c-22 0-38 15-38 35 0 14 8 24 18 31 3 11 10 18 20 18s17-7 20-18c10-7 18-17 18-31 0-20-16-35-38-35Z" fill="#fffdf9" stroke="#008299" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M45 58c5 0 5 8 10 8s5-8 10-8 5 8 10 8" fill="none" stroke="#008299" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="30" cy="84" r="5" fill="#c1472b"/>
+                <circle cx="91" cy="80" r="4" fill="#f6c453"/>
+              </svg>
+            </div>
+            <p class="art-caption">Small steps.<br>Big smiles.</p>
+          </div>
+          <div class="art-card art-card-float">
+            <span class="float-star">★</span>
+            <span>One gentle step at a time</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatments: one canonical taxonomy, grouped by need -->
+    <section class="section section-tint" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Treatments</p>
+          <h2 id="services-title">Care organised around your child's needs</h2>
+          <p>Eighteen illustrative service entries, grouped so you can scan by purpose. Descriptions are general prototype copy, not clinical advice.</p>
+        </div>
+
+        <div class="service-group">
+          <h3>Preventive &amp; routine</h3>
+          <ul class="service-grid">
+            <li class="card" data-event="service_view" data-service="first-visit"><h4>First visit</h4><p>A short, friendly hello to the chair, the mirror and the team.</p><p class="card-meta"><strong>What to expect:</strong> a look, a chat and a simple home plan.</p></li>
+            <li class="card" data-event="service_view" data-service="checkup-clean"><h4>Check-up &amp; clean</h4><p>A gentle review of teeth and gums with a tidy-up where needed.</p><p class="card-meta"><strong>What to expect:</strong> a clear summary you can take home.</p></li>
+            <li class="card" data-event="service_view" data-service="fluoride-varnish"><h4>Fluoride varnish</h4><p>A quick protective coating for teeth that need extra help.</p><p class="card-meta"><strong>What to expect:</strong> paint-on, brief setting time, no drilling.</p></li>
+            <li class="card" data-event="service_view" data-service="sealants"><h4>Sealants</h4><p>A smooth shield over the grooves at the back of little molars.</p><p class="card-meta"><strong>What to expect:</strong> cleaning, drying, then a thin resin layer.</p></li>
+          </ul>
+        </div>
+
+        <div class="service-group">
+          <h3>Restorative</h3>
+          <ul class="service-grid">
+            <li class="card" data-event="service_view" data-service="tooth-filling"><h4>Tooth-coloured filling</h4><p>A small, neat repair that blends in with the surrounding tooth.</p><p class="card-meta"><strong>What to expect:</strong> numbing if needed, then a shade-matched fill.</p></li>
+            <li class="card" data-event="service_view" data-service="steel-crown"><h4>Protective crown</h4><p>A cap that guards a baby tooth after larger repair work.</p><p class="card-meta"><strong>What to expect:</strong> fitting and cementing in one visit.</p></li>
+            <li class="card" data-event="service_view" data-service="tooth-crown"><h4>Tooth-shaped crown</h4><p>A more natural-looking option for visible teeth when appropriate.</p><p class="card-meta"><strong>What to expect:</strong> planning, preparation and a fitted final crown.</p></li>
+            <li class="card" data-event="service_view" data-service="space-maintainer"><h4>Space maintainer</h4><p>A small device that keeps room for a tooth still developing.</p><p class="card-meta"><strong>What to expect:</strong> measurements, fitting and review visits.</p></li>
+          </ul>
+        </div>
+
+        <div class="service-group">
+          <h3>Anxiety &amp; sedation</h3>
+          <ul class="service-grid">
+            <li class="card" data-event="service_view" data-service="calm-visit"><h4>Calm visit plan</h4><p>A step-by-step plan with pauses, signals and plenty of preparation.</p><p class="card-meta"><strong>What to expect:</strong> a conversation before any treatment.</p></li>
+            <li class="card" data-event="service_view" data-service="nitrous"><h4>Nitrous oxide</h4><p>An inhaled option sometimes used to take the edge off a visit.</p><p class="card-meta"><strong>What to expect:</strong> a suitability discussion and monitored use.</p></li>
+            <li class="card" data-event="service_view" data-service="oral-sedation"><h4>Oral sedation</h4><p>A prescribed medicine option for children who need more support.</p><p class="card-meta"><strong>What to expect:</strong> pre-visit instructions and an escort home.</p></li>
+            <li class="card" data-event="service_view" data-service="general-anaesthesia"><h4>General anaesthesia</h4><p>A hospital-style option for extensive treatment when clinically indicated.</p><p class="card-meta"><strong>What to expect:</strong> a separate assessment and care pathway.</p></li>
+          </ul>
+        </div>
+
+        <div class="service-group">
+          <h3>Orthodontic &amp; alignment</h3>
+          <ul class="service-grid">
+            <li class="card" data-event="service_view" data-service="alignment-check"><h4>Early alignment check</h4><p>A look at growth patterns and habits while teeth are still moving.</p><p class="card-meta"><strong>What to expect:</strong> observation first, referral only if useful.</p></li>
+            <li class="card" data-event="service_view" data-service="myobrace-style"><h4>Myobrace-style trainer</h4><p>A removable appliance concept sometimes used in early guidance.</p><p class="card-meta"><strong>What to expect:</strong> a fitting and a home-wear routine.</p></li>
+            <li class="card" data-event="service_view" data-service="clear-aligners"><h4>Clear aligner guidance</h4><p>Information about transparent aligners for older children and teens.</p><p class="card-meta"><strong>What to expect:</strong> an assessment and a staged plan.</p></li>
+          </ul>
+        </div>
+
+        <div class="service-group">
+          <h3>Surgical &amp; urgent care</h3>
+          <ul class="service-grid">
+            <li class="card" data-event="service_view" data-service="tongue-tie"><h4>Tongue-tie assessment</h4><p>A conversation about feeding, speech or movement concerns.</p><p class="card-meta"><strong>What to expect:</strong> assessment, then a gentle recommendation.</p></li>
+            <li class="card" data-event="service_view" data-service="lip-tie"><h4>Lip-tie assessment</h4><p>A review of how the lip moves and whether it causes difficulty.</p><p class="card-meta"><strong>What to expect:</strong> assessment and clear next steps.</p></li>
+            <li class="card" data-event="service_view" data-service="emergency"><h4>Urgent tooth care</h4><p>Advice for a bump, a lost filling or a sudden toothache.</p><p class="card-meta"><strong>What to expect:</strong> call a real dental service; this site is not live.</p></li>
+          </ul>
+        </div>
+        <p class="service-note">Service names are deliberately consistent across the page and the enquiry form. Illustrative entries only — no service is actually offered.</p>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="section" id="why-us" aria-labelledby="why-title">
+      <div class="container why-grid">
+        <div class="section-head section-head-left">
+          <p class="eyebrow">Why families choose us</p>
+          <h2 id="why-title">Built around how children actually feel</h2>
+          <p>A dental visit is a big deal at six. We design the whole experience around trust, tiny wins and a grown-up who stays in the loop.</p>
+          <a class="text-link" href="#faq">Read common questions <span aria-hidden="true">→</span></a>
+        </div>
+        <div>
+          <ul class="feature-list">
+            <li><span class="feature-num" aria-hidden="true">01</span><div><h3>Show, tell, then do</h3><p>We introduce the mirror, the light and the tools before anything happens. No surprises, no rushed moments.</p></div></li>
+            <li><span class="feature-num" aria-hidden="true">02</span><div><h3>Pace that can pause</h3><p>A child who needs a break gets one. We would rather finish a small step well than push through a big one.</p></div></li>
+            <li><span class="feature-num" aria-hidden="true">03</span><div><h3>Plain words for parents</h3><p>You'll hear what we found, what we suggest and what it costs — in language that makes sense the first time.</p></div></li>
+            <li><span class="feature-num" aria-hidden="true">04</span><div><h3>Home habits made simple</h3><p>Two-minute routines, realistic snack tips and encouragement that fits real family life, not a textbook.</p></div></li>
+          </ul>
+          <div class="proof-block">
+            <h3>Why families trust us</h3>
+            <ul>
+              <li>A written plan after every visit</li>
+              <li>One named contact for follow-up questions</li>
+              <li>A parent stays in the loop throughout</li>
+            </ul>
+            <p class="proof-note">Illustrative proof points for this prototype — not measured claims.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section section-tint" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The team</p>
+          <h2 id="team-title">Friendly faces, steady hands</h2>
+          <p>Illustrative profiles for this prototype — these are not real practitioners. Portrait areas are labelled placeholders with meaningful descriptions.</p>
+        </div>
+        <ul class="team-grid">
+          <li class="team-card">
+            <div class="avatar avatar-one" role="img" aria-label="Illustrative portrait placeholder for Dr. Maya Nile"><span>MN</span></div>
+            <h3>Dr. Maya Nile</h3>
+            <p class="role">Pediatric dentist</p>
+            <p class="team-qual">Qualifications: placeholder pediatric dentistry training</p>
+            <p class="team-lang">Languages: English, Arabic (illustrative)</p>
+            <p>Enjoys turning a first appointment into a story children want to tell their friends.</p>
+          </li>
+          <li class="team-card">
+            <div class="avatar avatar-two" role="img" aria-label="Illustrative portrait placeholder for Dr. Arif Sameer"><span>AS</span></div>
+            <h3>Dr. Arif Sameer</h3>
+            <p class="role">Pediatric dentist</p>
+            <p class="team-qual">Qualifications: placeholder restorative dentistry training</p>
+            <p class="team-lang">Languages: English, Hindi (illustrative)</p>
+            <p>Focused on preventive care and on making tricky treatment feel manageable.</p>
+          </li>
+          <li class="team-card">
+            <div class="avatar avatar-three" role="img" aria-label="Illustrative portrait placeholder for Sana Karim"><span>SK</span></div>
+            <h3>Sana Karim</h3>
+            <p class="role">Dental nurse &amp; child comfort lead</p>
+            <p class="team-qual">Qualifications: placeholder nursing qualification</p>
+            <p class="team-lang">Languages: English, Urdu (illustrative)</p>
+            <p>The person most likely to have a joke, a sticker and a calm word ready at the right moment.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Testimonials + gallery placeholders -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Parent voices</p>
+          <h2 id="testimonials-title">Little moments that matter</h2>
+          <p>Sample quotes written for this prototype — not real patient feedback and not pulled from any review widget.</p>
+        </div>
+        <ul class="quote-grid">
+          <li class="quote-card">
+            <p class="stars" aria-label="Sample rating: five out of five">★★★★★</p>
+            <blockquote>“Our son walked in holding my hand and walked out asking when he could come back. That says everything.”</blockquote>
+            <p class="quote-by">Parent of a 5-year-old · sample quote · sample date: Nov 2026</p>
+          </li>
+          <li class="quote-card">
+            <p class="stars" aria-label="Sample rating: five out of five">★★★★★</p>
+            <blockquote>“They explained each step before they did it. No jargon, no pressure, and plenty of time for questions.”</blockquote>
+            <p class="quote-by">Parent of an 8-year-old · sample quote · sample date: Nov 2026</p>
+          </li>
+          <li class="quote-card">
+            <p class="stars" aria-label="Sample rating: five out of five">★★★★★</p>
+            <blockquote>“The friendliest place we've been. Even the waiting room felt designed for real children, not just for photos.”</blockquote>
+            <p class="quote-by">Parent of twins, age 4 · sample quote · sample date: Nov 2026</p>
+          </li>
+        </ul>
+        <div class="gallery-placeholders" aria-labelledby="gallery-title">
+          <h3 id="gallery-title">Smile gallery placeholders</h3>
+          <p>No clinical images are used. These tiles stand in for a future before-and-after gallery.</p>
+          <ul>
+            <li><span class="gallery-tile tile-one" role="img" aria-label="Placeholder tile for a future before-image"></span><span>Before image placeholder</span></li>
+            <li><span class="gallery-tile tile-two" role="img" aria-label="Placeholder tile for a future after-image"></span><span>After image placeholder</span></li>
+            <li><span class="gallery-tile tile-three" role="img" aria-label="Placeholder tile for a future gallery caption"></span><span>Caption placeholder</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guides / blog placeholders -->
+    <section class="section section-tint" id="guides" aria-labelledby="guides-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Parent guides</p>
+          <h2 id="guides-title">Short reads for curious grown-ups</h2>
+          <p>Illustrative article cards with category, author, date and reading time. The filter works locally; no articles are loaded from anywhere.</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filter guides by category">
+          <button class="filter-chip" type="button" data-filter="all" aria-pressed="true" data-event="guide_filter">All guides</button>
+          <button class="filter-chip" type="button" data-filter="prevention" aria-pressed="false" data-event="guide_filter">Prevention</button>
+          <button class="filter-chip" type="button" data-filter="anxiety" aria-pressed="false" data-event="guide_filter">Anxiety</button>
+          <button class="filter-chip" type="button" data-filter="home" aria-pressed="false" data-event="guide_filter">At home</button>
+        </div>
+        <ul class="guide-grid" id="guide-grid">
+          <li class="guide-card" data-category="prevention" data-event="guide_view">
+            <p class="guide-meta">Prevention · Sample author · Nov 2026 · 3 min read</p>
+            <h3>Everyday enamel habits that actually stick</h3>
+            <p>A sample outline about small routines that fit around school mornings and bedtime.</p>
+            <p class="guide-links"><a href="#services">Related treatment</a> · <a href="#enquiry" data-event="cta_start_enquiry">Enquire after reading</a></p>
+          </li>
+          <li class="guide-card" data-category="anxiety" data-event="guide_view">
+            <p class="guide-meta">Anxiety · Sample author · Nov 2026 · 4 min read</p>
+            <h3>What to say when your child says “no dentist”</h3>
+            <p>A sample outline on preparation words, pause signals and choosing the first small step.</p>
+            <p class="guide-links"><a href="#faq">Related FAQ</a> · <a href="#enquiry" data-event="cta_start_enquiry">Enquire after reading</a></p>
+          </li>
+          <li class="guide-card" data-category="home" data-event="guide_view">
+            <p class="guide-meta">At home · Sample author · Nov 2026 · 2 min read</p>
+            <h3>A two-minute brushing game for reluctant brushers</h3>
+            <p>A sample outline with a timer idea and a reward chart your family could adapt.</p>
+            <p class="guide-links"><a href="#services">Related treatment</a> · <a href="#enquiry" data-event="cta_start_enquiry">Enquire after reading</a></p>
+          </li>
+          <li class="guide-card" data-category="prevention" data-event="guide_view">
+            <p class="guide-meta">Prevention · Sample author · Nov 2026 · 5 min read</p>
+            <h3>Snack swaps: kinder choices between meals</h3>
+            <p>A sample outline about frequency, water and realistic swaps rather than strict rules.</p>
+            <p class="guide-links"><a href="#services">Related treatment</a> · <a href="#enquiry" data-event="cta_start_enquiry">Enquire after reading</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="section-head section-head-left">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="faq-title">Questions parents ask us</h2>
+          <p>Answers are illustrative prototype copy. Clinical decisions should always come from a qualified dentist.</p>
+          <p class="faq-note">Each accordion item carries a <code>data-faq-topic</code> hook for future structured data — no structured data is emitted by this prototype.</p>
+        </div>
+        <div class="accordion" id="faq-accordion">
+          <div class="accordion-item" data-faq-topic="first-visit"><h3><button class="accordion-trigger" type="button" id="faq-trigger-1" aria-expanded="true" aria-controls="faq-panel-1" data-event="faq_open"><span>When should my child first see a dentist?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1"><p>Common guidance is to arrange a first visit once the first tooth appears, or by the first birthday. The aim is usually a quick, friendly look rather than treatment.</p></div></div>
+          <div class="accordion-item" data-faq-topic="anxiety"><h3><button class="accordion-trigger" type="button" id="faq-trigger-2" aria-expanded="false" aria-controls="faq-panel-2" data-event="faq_open"><span>What if my child is nervous?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden><p>Tell us before the visit. We can plan a short acclimatisation appointment, use show-tell-do, and agree a pause signal your child can use at any time.</p></div></div>
+          <div class="accordion-item" data-faq-topic="frequency"><h3><button class="accordion-trigger" type="button" id="faq-trigger-3" aria-expanded="false" aria-controls="faq-panel-3" data-event="faq_open"><span>How often do children need check-ups?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden><p>Many children are reviewed every six months, but the right interval depends on their teeth, risk of decay and age. Your dentist would tailor the schedule.</p></div></div>
+          <div class="accordion-item" data-faq-topic="numbing"><h3><button class="accordion-trigger" type="button" id="faq-trigger-4" aria-expanded="false" aria-controls="faq-panel-4" data-event="faq_open"><span>Do you use numbing medicine?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden><p>Only when it is genuinely needed. We explain the options in child-friendly language first, and a parent is always part of that conversation.</p></div></div>
+          <div class="accordion-item" data-faq-topic="parent-presence"><h3><button class="accordion-trigger" type="button" id="faq-trigger-5" aria-expanded="false" aria-controls="faq-panel-5" data-event="faq_open"><span>Can a parent stay during treatment?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden><p>For most pediatric visits, yes. We'll agree the arrangement that helps your child feel safest while keeping the treatment space calm and clear.</p></div></div>
+          <div class="accordion-item" data-faq-topic="emergency"><h3><button class="accordion-trigger" type="button" id="faq-trigger-6" aria-expanded="false" aria-controls="faq-panel-6" data-event="faq_open"><span>What should we do for a tooth emergency?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-6" role="region" aria-labelledby="faq-trigger-6" hidden><p>Stay calm, avoid putting pressure on the area, and call a qualified dental service for advice. The contact details here are placeholders and are not a live service.</p></div></div>
+          <div class="accordion-item" data-faq-topic="costs-insurance"><h3><button class="accordion-trigger" type="button" id="faq-trigger-7" aria-expanded="false" aria-controls="faq-panel-7" data-event="faq_open"><span>How do costs and insurance work?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-7" role="region" aria-labelledby="faq-trigger-7" hidden><p>A real clinic would share an estimate and check cover before treatment. In this prototype there are no prices, no insurer list and no financial transaction of any kind.</p></div></div>
+          <div class="accordion-item" data-faq-topic="sedation"><h3><button class="accordion-trigger" type="button" id="faq-trigger-8" aria-expanded="false" aria-controls="faq-panel-8" data-event="faq_open"><span>What should we know about sedation?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-8" role="region" aria-labelledby="faq-trigger-8" hidden><p>Sedation is a clinical decision after an assessment, with different options for different children. These descriptions are illustrative; ask a qualified provider for real guidance.</p></div></div>
+          <div class="accordion-item" data-faq-topic="data-privacy"><h3><button class="accordion-trigger" type="button" id="faq-trigger-9" aria-expanded="false" aria-controls="faq-panel-9" data-event="faq_open"><span>What happens to information I type here?</span><span class="accordion-icon" aria-hidden="true"></span></button></h3><div class="accordion-panel" id="faq-panel-9" role="region" aria-labelledby="faq-trigger-9" hidden><p>Nothing is sent, stored or shared. The form validates in your browser and then shows a local-only message. See the <a href="#privacy">privacy notice</a> for details.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact + enquiry -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">One clear way to get in touch</h2>
+          <p>Use the enquiry form on the right. There is no separate live contact page, and every call-to-action on this prototype leads to this one form.</p>
+          <ul class="contact-list">
+            <li><span aria-hidden="true">✉</span><span>hello@example.test <em>(placeholder, not monitored)</em></span></li>
+            <li><span aria-hidden="true">☎</span><span>+971 00 000 0000 <em>(placeholder, not in service)</em></span></li>
+            <li><span aria-hidden="true">⌁</span><span>WhatsApp: placeholder only — no live chat</span></li>
+            <li><span aria-hidden="true">◷</span><span>Opening hours: placeholder — confirm with a real provider</span></li>
+          </ul>
+
+          <h3>Our three clinics <span class="small-note">(consistent naming used everywhere)</span></h3>
+          <ul class="location-list">
+            <li><strong>Jumeirah Studio</strong><span>Placeholder street address, Jumeirah</span><span>Map link placeholder — no active map</span></li>
+            <li><strong>Barsha Heights Studio</strong><span>Placeholder street address, Barsha Heights</span><span>Map link placeholder — no active map</span></li>
+            <li><strong>Al Wasl Studio</strong><span>Placeholder street address, Al Wasl</span><span>Map link placeholder — no active map</span></li>
+          </ul>
+          <p class="prototype-note">These are fictional labels created for this prototype. No physical location or map service is represented.</p>
+        </div>
+
+        <div id="enquiry" class="enquiry-anchor">
+          <form class="enquiry-form" id="enquiry-form" novalidate data-event="form_start" aria-labelledby="form-title">
+            <h3 id="form-title">Enquiry form</h3>
+            <p class="form-intro">Fields marked * are required. Nothing you type leaves this browser, and no booking is created.</p>
+
+            <p class="form-summary" id="form-summary" role="alert" data-event="form_validation_error" hidden></p>
+
+            <div class="field">
+              <label for="parent-name">Parent / guardian name *</label>
+              <input id="parent-name" name="parentName" type="text" autocomplete="name" required aria-describedby="parent-name-error">
+              <p class="field-error" id="parent-name-error"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="child-name">Child's name *</label>
+                <input id="child-name" name="childName" type="text" required aria-describedby="child-name-error">
+                <p class="field-error" id="child-name-error"></p>
+              </div>
+              <div class="field">
+                <label for="child-age">Child's age *</label>
+                <input id="child-age" name="childAge" type="number" min="0" max="18" step="1" inputmode="numeric" required aria-describedby="child-age-hint child-age-error">
+                <p class="field-hint" id="child-age-hint">0–18 years</p>
+                <p class="field-error" id="child-age-error"></p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                <p class="field-error" id="email-error"></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="optional">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error">
+                <p class="field-error" id="phone-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="topic">Service of interest *</label>
+              <select id="topic" name="topic" required aria-describedby="topic-error">
+                <option value="">Choose one</option>
+                <option value="first-visit">First visit</option>
+                <option value="checkup-clean">Check-up &amp; clean</option>
+                <option value="tooth-filling">Tooth-coloured filling</option>
+                <option value="calm-visit">Calm visit plan</option>
+                <option value="emergency">Urgent tooth care</option>
+                <option value="other">Something else</option>
+              </select>
+              <p class="field-error" id="topic-error"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="preferred-date">Preferred date <span class="optional">(optional)</span></label>
+                <input id="preferred-date" name="preferredDate" type="date" aria-describedby="preferred-date-hint preferred-date-error">
+                <p class="field-hint" id="preferred-date-hint">Illustrative only — no date is held</p>
+                <p class="field-error" id="preferred-date-error"></p>
+              </div>
+              <div class="field">
+                <label for="preferred-time">Preferred time <span class="optional">(optional)</span></label>
+                <select id="preferred-time" name="preferredTime" aria-describedby="preferred-time-error">
+                  <option value="">No preference</option>
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                  <option value="evening">Evening</option>
+                </select>
+                <p class="field-error" id="preferred-time-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="clinic">Preferred clinic *</label>
+              <select id="clinic" name="clinic" required aria-describedby="clinic-error" data-event="location_select">
+                <option value="">Choose a clinic</option>
+                <option value="jumeirah">Jumeirah Studio</option>
+                <option value="barsha-heights">Barsha Heights Studio</option>
+                <option value="al-wasl">Al Wasl Studio</option>
+              </select>
+              <p class="field-error" id="clinic-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="message">Anything else? *</label>
+              <textarea id="message" name="message" rows="4" required minlength="10" aria-describedby="message-error"></textarea>
+              <p class="field-error" id="message-error"></p>
+            </div>
+
+            <div class="field consent-field">
+              <label class="checkbox-label" for="consent">
+                <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-hint consent-error">
+                <span>I have read the sample privacy notice and understand this is a local prototype. *</span>
+              </label>
+              <p class="field-hint" id="consent-hint">No personal information is transmitted or stored by this page. <a href="#privacy">Read the sample privacy notice</a>.</p>
+              <p class="field-error" id="consent-error"></p>
+            </div>
+
+            <button class="btn btn-primary form-submit" type="submit" data-event="form_submit_attempt">Check my enquiry</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite" data-event="form_local_confirmation"></p>
+            <p class="form-footnote">Prototype behaviour: on valid input you will see a local-only message. No booking is made and nothing is sent.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample privacy section (in-page, no external policy URL) -->
+    <section class="section section-tint" id="privacy" aria-labelledby="privacy-title">
+      <div class="container privacy-layout">
+        <div>
+          <p class="eyebrow">Privacy &amp; consent</p>
+          <h2 id="privacy-title">Sample privacy notice</h2>
+          <p>This section stands in for a real privacy page. It is illustrative and contains no legal commitment.</p>
+        </div>
+        <div class="privacy-body">
+          <p><strong>What happens in this prototype:</strong> nothing is transmitted, nothing is stored, no analytics run, no cookies are set and no third-party scripts load. Form values remain only in the current browser form until you close or reload the page.</p>
+          <p><strong>What a real service should explain:</strong> why data is collected, who sees it, how long it is kept, how a parent withdraws consent, and how to contact the clinic. None of those processes exist here.</p>
+          <p><strong>Consent controls:</strong> the notice near the top of the page has an essential control that is permanently on and an analytics control that toggles a label only. The state is not remembered and nothing is tracked.</p>
+          <p><strong>Placeholders:</strong> <a href="#contact">hello@example.test</a> and <a href="#contact">+971 00 000 0000</a> are fictional contact details. No real email address or phone number is used anywhere in this prototype.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Single pre-footer CTA -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <div><p class="eyebrow">Ready when you are</p><h2 id="cta-title">Start with one gentle question.</h2><p>Send a local enquiry note and see how this prototype guides you through the details.</p></div>
+        <a class="btn btn-primary" href="#enquiry" data-event="cta_start_enquiry">Start an enquiry <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="#top">Little Grins <span>Pediatric Dental</span></a>
+        <p>A fictional clinic concept used for a local design prototype. No real dental service is offered here.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#why-us">Why us</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#privacy">Privacy notice</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">Prototype details</h2>
+        <ul class="footer-links">
+          <li><a href="#contact">hello@example.test</a></li>
+          <li><a href="#contact">+971 00 000 0000</a></li>
+          <li>Jumeirah Studio · Barsha Heights Studio · Al Wasl Studio</li>
+          <li>No live booking · no data sent</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Little Grins prototype. Original sample copy; not affiliated with any real clinic.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

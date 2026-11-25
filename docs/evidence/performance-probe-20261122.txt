@@ -1,0 +1,21 @@
+Local performance probe — 2026-11-22 (Asia/Calcutta)
+Command: python scripts/performance_probe.py http://127.0.0.1:8000 20
+
+base_url: http://127.0.0.1:8000
+iterations_per_endpoint: 20
+workspace: 206226fb-52f6-41e4-9a65-fc2d318d2a33
+conditions: local uvicorn, single process, SQLite, sequential requests, no external calls
+
+endpoint                median_ms    p95_ms    min_ms    max_ms  status
+health                      15.00     27.42      1.79     27.66     200
+contacts                    15.31     30.86      4.73     31.08     200
+leads                       17.34     31.59      4.04     31.73     200
+tasks                       10.41     31.56      3.79     32.23     200
+events                      20.29     31.38      4.77     31.43     200
+operations summary          29.42     35.61      9.26     36.80     200
+BI funnel                    7.49     31.57      4.73     33.24     200
+event volume                 7.48     29.21      4.97     31.04     200
+job stats                    6.36     25.22      3.72     29.03     200
+adapter catalog              8.19     33.22      5.52     33.59     200
+
+Not a load test. No throughput or concurrency claim is made.

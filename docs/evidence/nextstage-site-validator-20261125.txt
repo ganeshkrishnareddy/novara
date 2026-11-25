@@ -1,0 +1,58 @@
+﻿=== & 'D:\NOVARA\.venv\Scripts\python.exe' scripts/validate_site.py ===
+NOVARA static site validation
+Site directory: D:\NOVARA\site
+========================================================================
+[PASS] Site directory exists - D:\NOVARA\site
+[PASS] index.html is readable UTF-8 - 54915 characters
+[PASS] index.html parses with html.parser
+[PASS] HTML doctype present - doctype html
+[PASS] HTML lang="en" - lang=en
+[PASS] Exactly one <title> containing NOVARA - found 1: NOVARA ΓÇö Your Entire Business. One Connected System.
+[PASS] Meta description present - NOVARA is a self-hostable business operating system connecting CRM, sales, marketing, support, projects, do...
+[PASS] Meta description <= 160 characters (recommended) - 141 chars
+[PASS] Canonical URL present (placeholder allowed) - https://ganeshkrishnareddy.github.io/novara/
+[PASS] Open Graph meta og:title present - NOVARA ΓÇö Your Entire Business. One Connected System.
+[PASS] Open Graph meta og:description present - One self-hostable workspace for customer management, sales, marketing, support, projects, documents, analyt...
+[PASS] Open Graph meta og:image present - https://ganeshkrishnareddy.github.io/novara/assets/img/og-cover.png
+[PASS] Open Graph meta og:type present - website
+[PASS] Open Graph meta og:url present - https://ganeshkrishnareddy.github.io/novara/
+[PASS] Twitter Card meta twitter:card present - summary_large_image
+[PASS] Twitter Card meta twitter:title present - NOVARA ΓÇö Your Entire Business. One Connected System.
+[PASS] Twitter Card meta twitter:description present - One self-hostable workspace for customer management, sales, marketing, support, projects, documents, analyt...
+[PASS] Twitter Card meta twitter:image present - https://ganeshkrishnareddy.github.io/novara/assets/img/twitter-card.png
+[PASS] Viewport meta present - width=device-width, initial-scale=1
+[PASS] theme-color meta present - #176B55
+[PASS] JSON-LD block 1 parses as JSON - line 23
+[PASS] All local href/src targets exist under site/ - 12 local reference(s) checked
+[PASS] All href="#id" fragments match an element id - 95 fragment link(s), 51 id(s) collected
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/blob/main/README.md
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/blob/main/THIRD_PARTY_NOTICES.md
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/blob/main/docs/COMMUNITY_CONTRIBUTION_PROGRAM.md
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/blob/main/docs/DEPLOYMENT_RUNBOOK.md
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/blob/main/docs/INSTALL.md
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/blob/main/docs/SECURITY_REPORT.md
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/blob/main/docs/research/LICENSE_COMPLIANCE.md
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/discussions
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/fork
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/issues/new
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/releases
+[INFO] External GitHub link kept as informational - https://github.com/ganeshkrishnareddy/novara/stargazers
+[INFO] Other external references (not resolved locally) - href=https://ganeshkrishnareddy.github.io/novara/; href=http://localhost:8000; meta og:image=https://ganeshkrishnareddy.github.io/novara/assets/img/og-cover.png; meta twitter:image=https://ganeshkrishnareddy.github.io/novara/assets/img/twitter-card...
+[PASS] No external HTTP(S) <script src> URLs - 1 local script(s)
+[PASS] No external HTTP(S) stylesheet URLs - 1 local stylesheet(s)
+[PASS] All required site files exist and are non-empty - 14 file(s) checked
+[PASS] PNG assets have valid PNG signatures - 3 PNG(s) checked
+[PASS] NOVARA_Product_Demo_1.0.mp4 is non-zero size - 2236056 bytes
+[PASS] NOVARA_Product_Demo_2.0.mp4 is non-zero size - 4981650 bytes
+[PASS] NOVARA_QA_Evidence_Walkthrough.mp4 is non-zero size - 4048244 bytes
+[PASS] Text files found under site/ - 5 file(s)
+[PASS] No mojibake sequences in site text files - 5 file(s) scanned
+[PASS] No credential-like secrets in site text files - 5 file(s) scanned
+[INFO] Secret keyword mentions reviewed (explanatory text allowed) - 1 mention(s)
+[PASS] sitemap.xml contains the canonical URL - https://ganeshkrishnareddy.github.io/novara/
+[PASS] robots.txt contains a Sitemap directive - Sitemap: https://ganeshkrishnareddy.github.io/novara/sitemap.xml
+========================================================================
+Summary: 35 passed, 0 failed, 0 warning(s), 15 informational note(s)
+RESULT: PASS
+exit=0

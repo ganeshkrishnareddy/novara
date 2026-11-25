@@ -1,0 +1,62 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "backend": "complete: real local implementation exercised by named acceptance tests",
+    "database": "complete: workspace-scoped persisted rows asserted by the named tests",
+    "api": "complete: real FastAPI route exercised through the application test client",
+    "permissions": "complete: bearer session, workspace verification and permission gate asserted",
+    "integration": "complete: local wiring exercised; no external provider delivery claimed",
+    "remaining": "None; acceptance criteria met and evidenced."
+  },
+  "rows": [
+    {
+      "id": "PL-045",
+      "module": "api_keys + web settings",
+      "location": "apps/api/novara_core/modules/api_keys.py; apps/api/novara_core/dependencies.py; apps/web/app.js::loadSettings; apps/api/tests/test_api_keys_p1.py; apps/api/tests/test_api_keys_ui_p1.py",
+      "frontend": "present: Settings lists keys and binds issue/rotate/revoke; secret shown once in a read-only dialog",
+      "evidence": "docs/evidence/plane-api-keys-p1-20261123.md"
+    },
+    {
+      "id": "PL-070",
+      "module": "api_keys + web settings",
+      "location": "apps/api/novara_core/dependencies.py::require; apps/api/novara_core/modules/api_keys.py::_validate_scopes; apps/api/tests/test_api_keys_p1.py; apps/api/tests/test_api_keys_ui_p1.py",
+      "frontend": "present: scope selection in the issue form; denial is enforced server-side and tested for read and write endpoints",
+      "evidence": "docs/evidence/plane-api-keys-p1-20261123.md"
+    },
+    {
+      "id": "PL-088",
+      "module": "project_intake",
+      "location": "apps/api/novara_core/modules/project_intake.py; apps/api/migrations/versions/e2f4a6b8c0d3_project_intake_p1.py; apps/api/tests/test_project_intake_p1.py",
+      "frontend": "n/a: acceptance criteria are the guest submit and admin triage flows; the local queue is exposed through real API endpoints and no hosted form builder is claimed",
+      "evidence": "docs/evidence/plane-project-intake-p1-20261123.md"
+    },
+    {
+      "id": "PL-021",
+      "module": "projects + web tasks",
+      "location": "apps/web/app.js::loadTasks grouped work-item renderer; apps/api/novara_core/modules/projects.py::ItemOut; apps/api/tests/test_plane_support_ui_p1.py",
+      "frontend": "present: state-grouped work-item list with state, priority, assignee and start/due dates from real ItemOut fields",
+      "evidence": "docs/evidence/plane-support-ui-p1-20261123.md"
+    },
+    {
+      "id": "PL-042",
+      "module": "projects + web tasks",
+      "location": "apps/web/app.js::loadTasks progress cards; apps/api/novara_core/modules/projects.py::project_progress; apps/api/tests/test_plane_support_ui_p1.py",
+      "frontend": "present: cards render the exact total/todo/in_progress/done counts and computed completion percentage returned by the API",
+      "evidence": "docs/evidence/plane-support-ui-p1-20261123.md"
+    },
+    {
+      "id": "CW-023",
+      "module": "support + web inbox",
+      "location": "apps/api/novara_core/modules/support.py::saved replies; apps/web/app.js::insert-saved-reply / expand-saved-reply; apps/api/tests/test_plane_support_ui_p1.py",
+      "frontend": "present: permission-gated insert control, reply modal, expand handler and unresolved-variable notice; insertion never sends",
+      "evidence": "docs/evidence/plane-support-ui-p1-20261123.md"
+    },
+    {
+      "id": "CW-075",
+      "module": "support + web inbox",
+      "location": "apps/api/novara_core/modules/support.py::segments; apps/web/app.js::ticket-segment toolbar select; apps/api/tests/test_plane_support_ui_p1.py",
+      "frontend": "present: stored segment select loads matching contacts and count and filters the local inbox",
+      "evidence": "docs/evidence/plane-support-ui-p1-20261123.md"
+    }
+  ]
+}

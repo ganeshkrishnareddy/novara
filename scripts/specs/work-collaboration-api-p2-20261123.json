@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Plane / work collaboration and API governance",
+    "location": "apps/api/novara_core/modules/plane_collaboration_api.py; apps/web/app.js (work-collab Operations route); apps/api/tests/test_plane_collaboration_api_p2.py",
+    "backend": "complete: clean-room collaboration service over existing ProjectItem, ProjectComment, ProjectMember and StoredFile rows, with item restrictions, opaque cursor pages, allow-listed shaping and provider-neutral CSV import",
+    "frontend": "complete: dedicated work-collab Operations route renders scope selectors, cursor navigation, CSV import, attachments, mentions, shared activity, shaped-item preview and restrictions; every control has one dispatcher guarded by test_ui_wiring.py",
+    "database": "complete: five additive workspace-scoped tables created by Alembic revision d4e5f6a7b8c9 (collab_attachments, collab_mentions, collab_activities, collab_cursor_pages, collab_item_restrictions); no existing table altered",
+    "api": "complete: one stable work-collab API group with generated OpenAPI 3.1 inventory, named operation ids and 400/404/409/422 failure modes; external_calls=false on local responses",
+    "permissions": "complete: verify_workspace plus require(TASK_READ) for reads and require(TASK_WRITE) for writes; cross-workspace ids fail closed with 404; item restrictions hide unauthorized reads with 404 and refuse unauthorized writes",
+    "integration": "complete: publishes collab.attachment_added, collab.mention_created, collab.team_note_created, collab.restriction_changed and collab.csv_imported to NOVARA's shared event spine; mentions add exact PlanningSubscriber rows for local notification recipients; no Plane source, Django transport, hosted endpoint, outbound HTTP or external import provider",
+    "evidence": "docs/evidence/work-collaboration-api-p2-20261123.md; apps/api/tests/test_plane_collaboration_api_p2.py; apps/api/tests/test_ui_wiring.py",
+    "remaining": "None for this row. Other unimplemented, restricted or externally blocked rows keep their existing matrix status."
+  },
+  "rows": [
+    {"id": "PL-031"},
+    {"id": "PL-032"},
+    {"id": "PL-039"},
+    {"id": "PL-048"},
+    {"id": "PL-050"},
+    {"id": "PL-051"},
+    {"id": "PL-130"},
+    {"id": "PL-132", "remaining": "None for provider-neutral CSV. External Asana/Jira importers remain separately blocked because no provider credentials or hosted API are claimed."}
+  ]
+}

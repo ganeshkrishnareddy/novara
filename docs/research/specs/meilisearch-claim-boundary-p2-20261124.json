@@ -1,0 +1,33 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "NOVARA / Meilisearch no-unverified-claim boundary",
+    "location": "apps/api/novara_core/modules/meilisearch_claim_boundary.py; apps/api/tests/test_meilisearch_claim_boundary_p2.py; docs/evidence/meilisearch-claim-boundary-p2-20261124.md",
+    "backend": "complete: immutable workspace-scoped catalogue records each negative claim with a NOVARA-local boundary, the preserved Meilisearch MIT notice, no declared dependency and no external endpoint",
+    "frontend": "n/a for these rows: acceptance is negative evidence about unverified search claims; no UI surface is claimed",
+    "database": "n/a: no new table or migration; workspace scope is enforced by the shared dependency",
+    "api": "complete: list and single-row lookup routes with 403/404 failure modes",
+    "permissions": "complete: require(EVENT_READ) and verify_workspace on every route; cross-workspace access fails closed",
+    "integration": "complete: no Meilisearch SDK import, vendored crate, external endpoint or mock search result is introduced; the Meilisearch MIT notice remains in THIRD_PARTY_NOTICES.md",
+    "evidence": "docs/evidence/meilisearch-claim-boundary-p2-20261124.md; apps/api/tests/test_meilisearch_claim_boundary_p2.py; full suite docs/evidence/t120-fullsuite-clean-20261124.txt",
+    "remaining": "None for this row. The row claims only the absence of an unverified Meilisearch dependency or fabricated capability; other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "MS-052"},
+    {"id": "MS-054"},
+    {"id": "MS-060"},
+    {"id": "MS-066"},
+    {"id": "MS-068"},
+    {"id": "MS-069"},
+    {"id": "MS-070"},
+    {"id": "MS-071"},
+    {"id": "MS-072"},
+    {"id": "MS-073"},
+    {"id": "MS-079"},
+    {"id": "MS-081"},
+    {"id": "MS-082"},
+    {"id": "MS-094"},
+    {"id": "MS-100"},
+    {"id": "MS-102"}
+  ]
+}

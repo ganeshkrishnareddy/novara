@@ -1,0 +1,14 @@
+{
+  "file": "videos\\NOVARA_Product_Demo_1.0.mp4",
+  "bytes": 2236056,
+  "media_lines": [
+    "Duration: 00:01:40.00, start: 0.000000, bitrate: 178 kb/s",
+    "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 125 kb/s, 15 fps, 15 tbr, 15360 tbn (default)",
+    "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 22050 Hz, mono, fltp, 48 kb/s (default)",
+    "Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))",
+    "Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))",
+    "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1920x1080, q=2-31, 200 kb/s, 15 fps, 15 tbn (default)",
+    "Stream #0:1(und): Audio: pcm_s16le, 22050 Hz, mono, s16, 352 kb/s (default)"
+  ],
+  "decode_exit": 0
+}

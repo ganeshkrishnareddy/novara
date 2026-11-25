@@ -1,0 +1,13 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "community": {
+    "ok": true,
+    "heading": true,
+    "policy": true,
+    "voluntary": true,
+    "mojibake": false,
+    "githubLinks": 9,
+    "allBlankSafe": true,
+    "textHead": "COMMUNITY\nNOVARA community\n\nVoluntary links to the public project. No feature is gated by stars, forks or follows.\n\nNo GitHub action is automated. Stars, forks, watches and issues are always performed by the user on GitHub. The public website is prepared locally and has not been published.\nPublic project links\nOpen-source participation stays voluntary\nWebsite \u2014 Prepared locally; not published.\nView source\nStar on GitHub\nFork on GitHub\nWatch releases\nDiscussions\nDocumentation\nContribute\nRecognition follows useful work, not engagement metrics\n\nAccepted bug reports, merged code, documentation, translations, accessibility work, reproducible QA reports and useful integration adapters are eligible for human review. Benefits are subject to published criteria and an approved budget. A star is not a qualifying contribution and never unlocks a feature.\n\nReport an issue\nContribution guide\nSecurity policy"
+  }
+}

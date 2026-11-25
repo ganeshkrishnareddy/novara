@@ -1,0 +1,29 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- D:\NOVARA\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\NOVARA\apps\api
+configfile: pyproject.toml
+plugins: anyio-4.16.0
+collecting ... collected 12 items
+
+apps\api\tests\test_api_surface_p0.py::test_workspace_can_be_created_switched_and_administered PASSED [  8%]
+apps\api\tests\test_customer_profile_p0.py::test_ticket_belongs_to_exactly_one_existing_workspace_contact PASSED [ 16%]
+apps\api\tests\test_customer_profile_p0.py::test_contact_profile_surfaces_only_its_linked_conversations PASSED [ 25%]
+apps\api\tests\test_customer_profile_p0.py::test_one_user_can_belong_to_multiple_workspaces PASSED [ 33%]
+apps\api\tests\test_customer_profile_p0.py::test_suspension_revokes_support_access_immediately_and_can_be_reversed PASSED [ 41%]
+apps\api\tests\test_customer_profile_p0.py::test_membership_changes_validate_roles_status_and_last_owner PASSED [ 50%]
+apps\api\tests\test_customer_profile_p0.py::test_support_list_filters_reject_foreign_contact_ids PASSED [ 58%]
+apps\api\tests\test_documents.py::test_dataroom_and_document_metadata_lifecycle PASSED [ 66%]
+apps\api\tests\test_documents.py::test_dataroom_name_must_be_unique_per_workspace PASSED [ 75%]
+apps\api\tests\test_documents.py::test_document_filters_and_bad_payloads PASSED [ 83%]
+apps\api\tests\test_documents.py::test_documents_and_rooms_are_workspace_isolated PASSED [ 91%]
+apps\api\tests\test_documents.py::test_room_delete_guarded_by_existing_document_metadata PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\NOVARA\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\NOVARA\docs\FINAL_RELEASE_QA\CAMPAIGN2\evidence\probe_batch_01.xml -
+======================= 12 passed, 1 warning in 11.82s ========================

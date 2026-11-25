@@ -1,0 +1,95 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Feedback / Surveys",
+    "location": "apps/api/novara_core/modules/feedback_targeting.py; apps/api/novara_core/modules/feedback_extensions.py (templates); apps/web/app.js (targeting controls + template dropdown)",
+    "backend": "complete: clean-room local implementation exercised by named acceptance tests",
+    "frontend": "complete: targeting panel, trigger evaluation modal, submission controls and full template dropdown wired in apps/web/app.js with static dispatch guards",
+    "database": "complete: five additive workspace-scoped tables (targeting) plus template-created survey/question rows, asserted by named tests",
+    "api": "complete: workspace-scoped REST endpoints under /api/v1/workspaces/{workspace_id}/feedback/targeting and the existing from-template endpoint, migration a2b3c4d5e6f8",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ)/require(NOTE_WRITE); every mutation and decision audited",
+    "integration": "complete: decisions create shared SurveyDisplay rows and publish events through the shared event bus; no external service claimed",
+    "evidence": "docs/evidence/feedback-targeting-p2c-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "remaining": "No remaining work for the recorded local acceptance criteria. Injected client scripts, real-time browser SDK events, external delivery and a background scheduler remain out of scope for this local-first build."
+  },
+  "rows": [
+    {
+      "id": "FB-055"
+    },
+    {
+      "id": "FB-056"
+    },
+    {
+      "id": "FB-057"
+    },
+    {
+      "id": "FB-058"
+    },
+    {
+      "id": "FB-059"
+    },
+    {
+      "id": "FB-060"
+    },
+    {
+      "id": "FB-061"
+    },
+    {
+      "id": "FB-062"
+    },
+    {
+      "id": "FB-063"
+    },
+    {
+      "id": "FB-064"
+    },
+    {
+      "id": "FB-081"
+    },
+    {
+      "id": "FB-082"
+    },
+    {
+      "id": "FB-083"
+    },
+    {
+      "id": "FB-084"
+    },
+    {
+      "id": "FB-192"
+    },
+    {
+      "id": "FB-194"
+    },
+    {
+      "id": "FB-195"
+    },
+    {
+      "id": "FB-196"
+    },
+    {
+      "id": "FB-197"
+    },
+    {
+      "id": "FB-198"
+    },
+    {
+      "id": "FB-199"
+    },
+    {
+      "id": "FB-200"
+    },
+    {
+      "id": "FB-201"
+    },
+    {
+      "id": "FB-202"
+    },
+    {
+      "id": "FB-203"
+    },
+    {
+      "id": "FB-204"
+    }
+  ]
+}

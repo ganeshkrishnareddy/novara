@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "app": {
+    "title": "NOVARA \u2014 Everything Connected. Everything Under Control.",
+    "textLength": 643,
+    "head": "N\nNOVARA\nBusiness operating system\nEverything Connected.\nEverything Under Control.\n\nOne calm place for your customer records, follow-up work and the events that connect them.\n\nOne customer record\nContacts, leads, tasks and notes share a single identity.\nA real audit trail\nEvery consequential action is an append-only event.\nAuthority, scoped\nWorkspace roles decide exactly what each person can do.\nNOVARA \u00b7 Everything Connected. Everything Under Control.\nN\nNOVARA\nBusiness operating system\nWelcome back\n\nSign in to your NOVARA workspace.\n\nEmail\nPassword\nSign in\nForgot password?\nCreate an account\nFresh installation? Complete first-run setup.",
+    "mojibake": false,
+    "hasSearchPlaceholder": false,
+    "communityNav": false,
+    "no_mojibake_in_render": true
+  }
+}

@@ -2,6 +2,8 @@
 
 Status: **POPULATED** — 2026-11-22. Replaces the earlier scaffold.
 
+> **Historical snapshot notice (2026-11-25):** the status labels and source-capability notes below record the original research audit. For final NOVARA release status, use `docs/FEATURE_PARITY/MASTER_FEATURE_MATRIX.csv` and `docs/FEATURE_PARITY/COMPLETION_DASHBOARD.md`. In particular, the Marketing Skills rows later reached 53/53 `VERIFIED_COMPLETE` in the authoritative matrix while remaining playbook/workflow capabilities with no runtime module bundled.
+
 Purpose: turn the ten deep repository audits into one checkable map from **source project → feature actually available under the community licence → NOVARA module → reuse approach → acceptance criteria → licence constraint**. It is the acceptance companion to `docs/VISION.md` (intent), `docs/research/LICENSE_COMPLIANCE.md` (licence decisions) and `docs/architecture/MODULE_CONTRACT.md` (how a module is built).
 
 Founder rule applied throughout: **advertised ≠ available**. A feature that merely appears in a public source tree is not treated as available under the community licence when the licence file, feature map or README carves it out. Where the audit could not confirm a boundary, the matrix says so instead of assuming.

@@ -1,0 +1,24 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Feedback / Surveys",
+    "location": "apps/api/novara_core/modules/survey_delivery.py; apps/api/novara_core/modules/feedback.py; apps/web/app.js (survey-delivery Operations route); apps/api/tests/test_survey_delivery_p2.py",
+    "backend": "complete: clean-room survey delivery slice with validated channels and embed snippets, a no-code multi-page flow with rules/fallbacks/endings, email branding and answer/ending follow-ups, PIN and head-script controls, host CSS modes, accessibility settings and local creatives with schedule/targeting evaluation",
+    "frontend": "complete: dedicated survey-delivery Operations route renders the local contract, delivery configs and creatives with config creation and creative evaluation controls; static guard in test_ui_wiring.py",
+    "database": "complete: seven additive workspace-scoped tables created by migration d3e4f5a7b8c9; all rows tenant-scoped and audited; PIN stored only as a SHA-256 hash",
+    "api": "complete: one stable survey-delivery API group (version 1, no legacy claim, external_calls=false) covering configs, pages, rules, flow outlines, branding, follow-ups, head scripts, creatives and a local contract",
+    "permissions": "complete: verify_workspace plus require(CONTACT_READ) for reads and require(NOTE_WRITE) for all config/flow/creative mutations; cross-workspace entity access fails closed with 404 and all mutations are audited",
+    "integration": "complete: extends NOVARA's existing surveys module and reuses workspace identity/event contracts; no Formbricks source, hosted platform, survey email, tracking pixel, external SDK or form provider is contacted",
+    "evidence": "docs/evidence/survey-delivery-p2-20261123.md; apps/api/tests/test_ui_wiring.py",
+    "criteria": "Nineteen named acceptance tests prove channel validation, local embed snippets, no-code page/rule persistence, branding, PIN hashing/verification, head scripts, host CSS isolation, accessibility settings, follow-ups, feedback-button and banner creatives with show conditions, workspace isolation and a wired UI route.",
+    "remaining": "No remaining work for the recorded local acceptance criteria. Formbricks-hosted workers, survey email delivery, tracking pixels, hosted widgets, external SDKs, MCP servers, agent tooling and AI adapters remain out of scope and are not claimed."
+  },
+  "rows": [
+    { "id": "FB-002" }, { "id": "FB-003" }, { "id": "FB-004" },
+    { "id": "FB-005" }, { "id": "FB-006" }, { "id": "FB-010" },
+    { "id": "FB-015" }, { "id": "FB-036" }, { "id": "FB-038" },
+    { "id": "FB-074" }, { "id": "FB-075" }, { "id": "FB-079" },
+    { "id": "FB-080" }, { "id": "FB-183" }, { "id": "FB-184" },
+    { "id": "FB-185" }, { "id": "FB-186" }, { "id": "FB-187" }
+  ]
+}

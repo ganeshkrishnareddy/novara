@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "Papermark / data-room governance (clean-room)",
+    "location": "apps/api/novara_core/modules/dataroom_governance.py; apps/api/tests/test_dataroom_governance_p2.py; docs/evidence/dataroom-governance-p2-20261124.md",
+    "backend": "complete: eleven additive workspace-scoped drg_* tables provide room settings, append-only audit events, nested folders, persisted item ordering, room-scoped viewer groups, email/domain rules, per-item group permissions, per-link file permissions, link/group bindings, room invitations and recorded entitlement decisions; rooms expose permissioned documents, visitor/link counts, links and audit events end to end",
+    "frontend": "n/a for these rows: every acceptance criterion is API/server-level and verified by a named test; no dedicated SPA surface or dark-mode UI is claimed",
+    "database": "complete: eleven additive workspace-scoped tables created by Alembic revision a7b8c9d0e1f2 (drg_room_settings, drg_room_events, drg_room_folders, drg_room_item_orders, drg_viewer_groups, drg_group_rules, drg_group_item_permissions, drg_link_item_permissions, drg_link_groups, drg_room_invitations, drg_access_decisions); no existing table altered",
+    "api": "complete: one workspace data-rooms API group with validated create/list/detail/folder/group/rule/invitation/permission/access/freeze endpoints and 401/403/404/409/422 failure modes; all responses are local with external_calls=false and external_delivery=false",
+    "permissions": "complete: verify_workspace on every route plus require() with DOCUMENT_READ, DOCUMENT_WRITE or DOCUMENT_ADMIN as appropriate; room scoping, group membership rules, invitation email matching, admin-only freeze and recorded access decisions fail closed",
+    "integration": "complete: publishes dataroom_governance.* events to NOVARA's shared event spine; reuses existing document, link and visitor records by reference; no Papermark EE source, hosted instance, outbound HTTP, email or external delivery is contacted",
+    "evidence": "docs/evidence/dataroom-governance-p2-20261124.md; apps/api/tests/test_dataroom_governance_p2.py; full suite docs/evidence/t111-fullsuite-20261124.txt",
+    "remaining": "None for this row. Each capability is a clean-room equivalent derived from the published behaviour and acceptance criteria; no upstream source, hosted service, external dependency or real email delivery is claimed. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "PM-050"},
+    {"id": "PM-057"},
+    {"id": "PM-058"},
+    {"id": "PM-059"},
+    {"id": "PM-060"},
+    {"id": "PM-061"},
+    {"id": "PM-062"},
+    {"id": "PM-064"},
+    {"id": "PM-065"},
+    {"id": "PM-066"}
+  ]
+}

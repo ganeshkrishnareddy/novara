@@ -1,0 +1,1 @@
+NOVARA desktop QA upload fixture. This file is used only to verify the local document upload path in the packaged desktop client.

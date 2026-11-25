@@ -1,0 +1,37 @@
+Final packaged-source verification — 2026-11-25
+Purpose: confirm the current Windows artifact contains the final security changes.
+
+1) Bundled backend source matches working tree
+Command: Get-FileHash apps\api\novara_core\modules\storage.py vs desktop\backend-payload\deps\novara_core\modules\storage.py
+source   = A5EC7F6D2F0C190D45C7609323EE56FC5FF47C944CF566F29BEA7DB578567D9B
+payload  = A5EC7F6D2F0C190D45C7609323EE56FC5FF47C944CF566F29BEA7DB578567D9B
+match    = True
+
+2) app.asar entries
+Command: npx asar list desktop\dist\win-unpacked\resources\app.asar
+Relevant entries:
+\src\main.js
+\preload.js
+\src\security-helpers.js
+
+3) Packaged main.js contains final hardening markers
+Command: npx asar extract-file ... src/main.js, then Select-String
+18: sanitizeBackendEnv,
+19: healthGet,
+253: req = healthGet(target, (res) => {
+316: const env = sanitizeBackendEnv(process.env, {
+445: win.webContents.on('will-frame-navigate', (event, url) => guardNavigation(event, url));
+647: const DENIED_PERMISSIONS = new Set([
+651: callback(!DENIED_PERMISSIONS.has(permission));
+
+4) Packaged security helper is byte-identical to source
+packaged = BEE841AF3E74783D7A3A7E103DFDBF64039E4CD23EB9A036CFC1F6A8E302035D
+source   = BEE841AF3E74783D7A3A7E103DFDBF64039E4CD23EB9A036CFC1F6A8E302035D
+match    = True
+
+5) Secret file / credential scan
+- No secrets.json found under desktop\backend-payload or desktop\dist\win-unpacked\resources.
+- No sk-, ghp_ or PRIVATE KEY pattern found in desktop\src.
+- The only literal presign fallback in the payload is the documented development-only value in storage.py line 51. It is used only when NOVARA_DEV_MODE is explicitly enabled; the desktop shell strips NOVARA_DEV_MODE from the inherited environment and generates a unique per-install NOVARA_PRESIGN_SECRET. This is not a production credential embedded for use.
+
+Conclusion: the final installer was built after the final source change and contains the final shell and backend security code. POSIX runtime behavior remains code-reviewed and unit-tested only, not natively executed.

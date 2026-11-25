@@ -1,0 +1,33 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "GrowthBook / clean-room SDK compatibility boundary (extended)",
+    "location": "apps/api/novara_core/modules/growthbook_sdk_boundary.py; apps/api/tests/test_growthbook_sdk_boundary_extended_p2.py; docs/evidence/growthbook-sdk-boundary-extended-p2-20261124.md",
+    "backend": "complete: the workspace-scoped gbsdk_boundaries catalogue records each additional advertised SDK/provider path with its public documentation reference, NOVARA-local boundary name, preserved MIT attribution, no default dependency and no external endpoint",
+    "frontend": "n/a for these rows: the acceptance criteria require a named boundary/attribution test, not a SPA surface; no SDK import is added to the static web client",
+    "database": "complete: no schema change; reuses the additive gbsdk_boundaries table created by Alembic revision e0f1a2b3c4d5 with its unique (workspace_id, sdk_id) constraint",
+    "api": "complete: idempotent seed, list and single-boundary lookup routes continue to serve the extended catalogue with 403/404/422 failure modes",
+    "permissions": "complete: require(WORKSPACE_MANAGE) for seeding, require(EVENT_READ) for reads, verify_workspace on every route and a local event publication on seed",
+    "integration": "complete: publishes growthbook_sdk_boundary.changed on NOVARA's shared event spine; no GrowthBook SDK package, hosted endpoint, licence server, warehouse or outbound HTTP is used",
+    "evidence": "docs/evidence/growthbook-sdk-boundary-extended-p2-20261124.md; apps/api/tests/test_growthbook_sdk_boundary_extended_p2.py; full suite docs/evidence/t116-fullsuite-20261124.txt",
+    "remaining": "None for this row. The row claims only a clean-room compatibility boundary and preserved attribution; it does not claim an installed SDK, a provider call or enterprise code. Other unimplemented, restricted or externally blocked rows keep their existing status."
+  },
+  "rows": [
+    {"id": "GB-158"},
+    {"id": "GB-159"},
+    {"id": "GB-160"},
+    {"id": "GB-161"},
+    {"id": "GB-162"},
+    {"id": "GB-163"},
+    {"id": "GB-164"},
+    {"id": "GB-165"},
+    {"id": "GB-166"},
+    {"id": "GB-167"},
+    {"id": "GB-168"},
+    {"id": "GB-169"},
+    {"id": "GB-170"},
+    {"id": "GB-171"},
+    {"id": "GB-172"},
+    {"id": "GB-173"}
+  ]
+}

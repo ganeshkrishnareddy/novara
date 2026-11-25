@@ -1,0 +1,18 @@
+{
+  "defaults": {
+    "status": "VERIFIED_COMPLETE",
+    "module": "visitor_conversations + support",
+    "location": "apps/api/novara_core/modules/visitor_conversations.py; apps/api/migrations/versions/f5a7b9c1d2e4_visitor_conversations_p1.py; apps/api/tests/test_cw035_visitor_conversation_p1.py",
+    "backend": "complete: real local implementation exercised by the named acceptance test",
+    "frontend": "present: the inbox renders the stored origin_channel; no hardcoded or visitor-supplied channel indicator is used",
+    "database": "complete: workspace-scoped site, conversation, ticket and message rows asserted by the named test",
+    "api": "complete: admin token management and public start/reply routes exercised through the application test client",
+    "permissions": "complete: admin routes require workspace management or contact read; public routes require a valid revocable site token and are bound to the issuing site",
+    "integration": "complete: local inbox routing and audited events exercised; no external channel or provider claimed",
+    "remaining": "None; acceptance criteria met and evidenced.",
+    "evidence": "docs/evidence/chatwoot-visitor-conversation-p1-20261123.md"
+  },
+  "rows": [
+    { "id": "CW-035" }
+  ]
+}

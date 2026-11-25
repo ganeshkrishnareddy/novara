@@ -1,0 +1,32 @@
+{
+  "defaults": {
+    "status": "INTENTIONALLY_REPLACED_WITH_COMPATIBLE_IMPLEMENTATION",
+    "module": "Projects / Clean-room Extensions",
+    "location": "apps/api/novara_core/modules/project_extensions.py; apps/api/migrations/versions/e7d2c4b8a1f6_project_extensions_cleanroom.py; apps/api/tests/test_p1_project_extensions_cleanroom.py",
+    "backend": "complete: independent clean-room implementation driven by a named acceptance test",
+    "database": "complete: four additive workspace-scoped tables with real persistence asserted by the named test",
+    "api": "complete: documented workspace-scoped routes driven through the live FastAPI app",
+    "permissions": "complete: real bearer auth, role/grant checks and verify_workspace; admin-only audit and cross-workspace denial",
+    "integration": "complete: additive on NOVARA's single application; no upstream source copied, no external service contacted",
+    "frontend": "n/a: backend capability; the existing project views drive the underlying project routes",
+    "remaining": "No upstream source copied; behaviour derived from the acceptance criteria only. None for the local criteria; no paid Plane feature or hosted instance is claimed."
+  },
+  "rows": [
+    {
+      "id": "PL-019",
+      "evidence": "docs/evidence/p1-plane-cleanroom-extensions-20261123.md; named test: test_pl019_milestones_link_work_and_render_on_a_timeline"
+    },
+    {
+      "id": "PL-028",
+      "evidence": "docs/evidence/p1-plane-cleanroom-extensions-20261123.md; named test: test_pl028_custom_properties_enforce_types_and_mandatory_rules"
+    },
+    {
+      "id": "PL-116",
+      "evidence": "docs/evidence/p1-plane-cleanroom-extensions-20261123.md; named test: test_pl116_resource_grants_override_role_defaults_and_deny_wins"
+    },
+    {
+      "id": "PL-117",
+      "evidence": "docs/evidence/p1-plane-cleanroom-extensions-20261123.md; named test: test_pl117_audit_view_is_admin_only_filterable_and_exportable"
+    }
+  ]
+}

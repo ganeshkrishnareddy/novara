@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-24T17:56:38+00:00",
+  "qa_started_after": "2026-11-24T22:40:00",
+  "databases": {
+    "development": {
+      "path": "D:\\NOVARA\\novara_dev.sqlite3",
+      "bytes": 7974912,
+      "last_write_local": "2026-11-24T22:27:30",
+      "tables": 404,
+      "synthetic_novara_invalid_markers": 0
+    },
+    "qa": {
+      "path": "D:\\NOVARA\\artifacts\\final_qa_2026-11-24\\qa_db\\novara_qa.sqlite3",
+      "bytes": 8114176,
+      "last_write_local": "2026-11-24T23:07:19",
+      "tables": 403,
+      "synthetic_novara_invalid_markers": 16
+    }
+  },
+  "development_db_untouched_during_qa": true,
+  "qa_db_contains_synthetic_markers": true,
+  "conclusion": "PASS"
+}
